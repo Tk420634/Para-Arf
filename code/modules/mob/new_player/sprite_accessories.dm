@@ -52,6 +52,7 @@
 	"Absol", "Alien", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 	"Skunk")
 	var/list/models_allowed = list() //Specifies which, if any, hairstyles or markings can be accessed by which prosthetics. Should equal the manufacturing company name in robolimbs.dm.
 	var/list/heads_allowed = null //Specifies which, if any, alt heads a head marking, hairstyle or facial hair style is compatible with.
@@ -83,6 +84,7 @@
 	"Absol", "Alien", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 	"Skunk")
 	glasses_over = 1
 
@@ -1284,9 +1286,8 @@
 	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask",
 	"Absol", "Alien", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Absol", "Alien", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 	,"Skunk")
 	gender = NEUTER
 
@@ -1296,9 +1297,8 @@
 	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
 	"Absol", "Alien", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Absol", "Alien", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 	"Skunk")
 
 
@@ -1423,9 +1423,8 @@
 	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
 	"Absol", "Alien", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Absol", "Alien", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 	"Skunk")
 
 	gender = NEUTER
@@ -1436,9 +1435,8 @@
 	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
 	"Absol", "Alien", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Absol", "Alien", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 	"Skunk")
 
 
@@ -1677,6 +1675,7 @@
 	"Absol", "Alien", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 	"Skunk")
 
 	gender = NEUTER
@@ -1690,6 +1689,7 @@
 	"Absol", "Alien", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 	"Skunk")
 
 /datum/sprite_accessory/socks/white_norm
