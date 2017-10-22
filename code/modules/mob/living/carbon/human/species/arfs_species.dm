@@ -3,6 +3,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 "Absol", "Alien", "Avali",
 "Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 "Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+"Dalmation", "Datashark", "Deer", "Drake", "Eevee",
 "Skunk")
 
 //	----------------------
@@ -62,6 +63,21 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/cutebold/New(var/new_loc)
     ..(new_loc, "Cutebold")
+
+/mob/living/carbon/human/dalmation/New(var/new_loc)
+    ..(new_loc, "Dalmation")
+
+/mob/living/carbon/human/datashark/New(var/new_loc)
+    ..(new_loc, "Datashark")
+
+/mob/living/carbon/human/deer/New(var/new_loc)
+    ..(new_loc, "Deer")
+
+/mob/living/carbon/human/drake/New(var/new_loc)
+    ..(new_loc, "Drake")
+
+/mob/living/carbon/human/eevee/New(var/new_loc)
+    ..(new_loc, "Eevee")
 
 /mob/living/carbon/human/skunk/New(var/new_loc)
     ..(new_loc, "Skunk")
@@ -367,6 +383,86 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "You may be brave, but are you bold?"
+
+/datum/species/dalmation
+	name = "Dalmation"
+	name_plural = "Damations"
+	icobase = 'icons/mob/human_races/ARF Races/r_dalmation_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_dalmation_arf.dmi'
+	primitive_form = "Wolpin"
+	path = /mob/living/carbon/human/dalmation
+	language = "Sol Common"
+	tail = "dalmationtail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Radar, speak!"
+
+/datum/species/datashark
+	name = "Datashark"
+	name_plural = "Datasharks"
+	icobase = 'icons/mob/human_races/ARF Races/r_datashark_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_datashark_arf.dmi'
+	primitive_form = "Monkey"
+	path = /mob/living/carbon/human/dalmation
+	language = "Sol Common"
+	tail = "datasharktail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Shorknort."
+
+/datum/species/deer
+	name = "Deer"
+	name_plural = "Deers"
+	icobase = 'icons/mob/human_races/ARF Races/r_deer_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_deer_arf.dmi'
+	primitive_form = "Deer"
+	path = /mob/living/carbon/human/deer
+	language = "Sol Common"
+	tail = "deertail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Deer are for raping. ~TK 2016"
+
+/datum/species/drake
+	name = "Drake"
+	name_plural = "Drakes"
+	icobase = 'icons/mob/human_races/ARF Races/r_drake_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_drake_arf.dmi'
+	primitive_form = "Lizard"
+	path = /mob/living/carbon/human/drake
+	language = "Sol Common"
+	tail = "draketail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Not a duck."
+
+/datum/species/eevee
+	name = "Eevee"
+	name_plural = "Eevees"
+	icobase = 'icons/mob/human_races/ARF Races/r_eevee_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_eevee_arf.dmi'
+	primitive_form = "Monkey"
+	path = /mob/living/carbon/human/eevee
+	language = "Sol Common"
+	tail = "eeveetail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Happy birthday, Jess."
 
 /datum/species/skunk
 	name = "Skunk"
