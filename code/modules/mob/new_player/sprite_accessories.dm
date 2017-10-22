@@ -48,7 +48,11 @@
 	var/gender = NEUTER	//Determines if the accessory will be skipped or included in random hair generations
 
 	// Restrict some styles to specific species
-	var/list/species_allowed = list("Human", "Slime People")
+	var/list/species_allowed = list("Human", "Slime People",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Skunk")
 	var/list/models_allowed = list() //Specifies which, if any, hairstyles or markings can be accessed by which prosthetics. Should equal the manufacturing company name in robolimbs.dm.
 	var/list/heads_allowed = null //Specifies which, if any, alt heads a head marking, hairstyle or facial hair style is compatible with.
 	var/list/tails_allowed = null //Specifies which, if any, tails a tail marking is compatible with.
@@ -75,7 +79,11 @@
 /datum/sprite_accessory/hair/bald
 	name = "Bald"
 	icon_state = "bald"
-	species_allowed = list("Human", "Unathi", "Vox", "Diona", "Kidan", "Grey", "Plasmaman", "Skeleton", "Vulpkanin", "Tajaran")
+	species_allowed = list("Human", "Unathi", "Vox", "Diona", "Kidan", "Grey", "Plasmaman", "Skeleton", "Vulpkanin", "Tajaran",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Skunk")
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/short
@@ -1273,13 +1281,26 @@
 ///////////////////////////
 /datum/sprite_accessory/underwear
 	icon = 'icons/mob/underwear.dmi'
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask")
+	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	,"Skunk")
 	gender = NEUTER
 
 /datum/sprite_accessory/underwear/nude
 	name = "Nude"
 	icon_state = null
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox")
+	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Skunk")
+
 
 /datum/sprite_accessory/underwear/male
 	gender = MALE
@@ -1399,18 +1420,33 @@
 ////////////////////////////
 /datum/sprite_accessory/undershirt
 	icon = 'icons/mob/underwear.dmi'
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask")
+	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Skunk")
+
 	gender = NEUTER
 
 /datum/sprite_accessory/undershirt/nude
 	name = "Nude"
 	icon_state = null
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox")
+	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Skunk")
+
 
 //plain color shirts
 /datum/sprite_accessory/undershirt/shirt_white
 	name = "White Shirt"
 	icon_state = "shirt_white"
+
 
 /datum/sprite_accessory/undershirt/shirt_black
 	name = "Black Shirt"
@@ -1635,13 +1671,26 @@
 ///////////////////////
 /datum/sprite_accessory/socks
 	icon = 'icons/mob/underwear.dmi'
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask")
+	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Skunk")
+
 	gender = NEUTER
 
 /datum/sprite_accessory/socks/nude
 	name = "Nude"
 	icon_state = null
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox")
+	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Absol", "Alien", "Avali",
+	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+	"Skunk")
 
 /datum/sprite_accessory/socks/white_norm
 	name = "Normal White"
