@@ -96,7 +96,7 @@
 	//Logs all hrefs
 	if(config && config.log_hrefs && href_logfile)
 		to_chat(href_logfile, "<small>[time2text(world.timeofday,"hh:mm")] [src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]<br>")
-
+/*
 	if(href_list["karmashop"])
 		if(config.disable_karma)
 			return
@@ -245,7 +245,7 @@
 					var/cost = href_list["KarmaRefundCost"]
 					karmarefund(type,job,cost)
 					return
-
+*/
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
 		if("usr")		hsrc = mob
