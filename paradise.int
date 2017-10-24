@@ -1,0 +1,11 @@
+// BEGIN_INTERNALS
+/*
+LAST_COMPILE_TIME: 1508819378
+DIR: _maps _maps\map_files _maps\map_files\cyberiad code code\dallus_content code\dallus_content\mob code\modules code\modules\mob code\modules\mob\living code\modules\mob\living\simple_animal code\modules\mob\living\simple_animal\friendly code\modules\mob\living\simple_animal\hostile icons icons\mob 
+AUTO_FILE_DIR: OFF
+MAP_ICON_TYPE: 0
+LAST_COMPILE_VERSION: 511.1385
+WINDOW: _maps\map_files\cyberiad\z2.dmm;icons\mob\animal.dmi;icons\mob\pets.dmi;code\modules\mob\living\simple_animal\friendly\cat.dm;code\dallus_content\mob\mobs.dm;_maps\map_files\cyberiad\cyberiad.dmm;icons\mob\alienqueen.dmi;code\modules\mob\living\simple_animal\hostile\mining_mobs.dm;_maps\mappallet.dmm
+FILE: code\dallus_content\mob\mobs.dm
+*/
+// END_INTERNALS
