@@ -424,7 +424,7 @@ BLIND     // can't see anything
 			return 0
 
 		if(H.m_intent == MOVE_INTENT_RUN)
-			if(shoe_sound_footstep >= 2)
+			if(shoe_sound_footstep >= 1)
 				if(T.shoe_running_volume)
 					playsound(src, shoe_sound, T.shoe_running_volume, 1)
 				shoe_sound_footstep = 0

@@ -39,12 +39,12 @@
 		if(!lying && !buckled && !throwing)
 			for(var/obj/item/organ/external/splinted in splinted_limbs)
 				splinted.update_splints()
-        
+
 	if(!has_gravity(loc))
 		return
-	
+
 	var/obj/item/clothing/shoes/S = shoes
-			
+
 	//Bloody footprints
 	var/turf/T = get_turf(src)
 	var/obj/item/organ/external/l_foot = get_organ("l_foot")
@@ -116,7 +116,7 @@
 					return 0 //people flying, lying down or sitting do not step
 
 				if(!has_gravity(src))
-					if(step_count % 3) //this basically says, every three moves make a noise
+					if(step_count % 2) //this basically says, every three moves make a noise //arfcode EDITED TO EVERY TWO STEPS
 						return 0       //1st - none, 1%3==1, 2nd - none, 2%3==2, 3rd - noise, 3%3==0
 
 				if(species.silent_steps)
