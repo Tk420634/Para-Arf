@@ -310,6 +310,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Edgy shenaningans."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/alien
 	name = "Alien"
@@ -326,6 +327,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Xenopeople."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/anubis
 	name = "Anubis"
@@ -341,6 +343,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/apex
 	name = "Apex"
@@ -357,6 +360,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/avali
 	name = "Avali"
@@ -373,6 +377,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Bound to the stars, they are."
+	reagent_tag = PROCESS_ORG
 
 
 /datum/species/bat
@@ -390,6 +395,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Eeeeeeeeeeeeeeeeee."
+	reagent_tag = PROCESS_ORG
 
 
 /datum/species/bear
@@ -407,7 +413,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "They sleep in cottages."
-
+	reagent_tag = PROCESS_ORG
 
 /datum/species/beaver
 	name = "Beaver"
@@ -420,11 +426,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "beavertail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Mr. Chews approves."
-
+	reagent_tag = PROCESS_ORG
 
 /datum/species/bee
 	name = "Bee"
@@ -441,7 +447,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "It's hip to fuck these."
-
+	reagent_tag = PROCESS_ORG
 
 /datum/species/beholder
 	name = "Beholder"
@@ -458,6 +464,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "These buy stock in Clear Eyes."
+	reagent_tag = PROCESS_ORG
 
 
 /datum/species/butterfly
@@ -475,6 +482,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Flitter-ditter."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/carno
 	name = "Carno"
@@ -491,6 +499,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Carnotaur.  Nibblenibble."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/ceratosaur
 	name = "Ceratosaur"
@@ -507,6 +516,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Carnotaur.  Nibblenibble."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/chicken
 	name = "Chicken"
@@ -523,6 +533,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "But why do they cross roads?"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/corgi
 	name = "Corgi"
@@ -539,6 +550,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "BARK BARK BARK BARKBARKBARKBARK."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/cow
 	name = "Cow"
@@ -555,6 +567,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Got milk?"
+	reagent_tag = PROCESS_ORG
 
 //Remember to fix their tail, it's grayscaled from our old code without any coloring at all.
 /datum/species/coyote
@@ -572,6 +585,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Yip yip, my dude."
+	reagent_tag = PROCESS_ORG
 
 //Remember to fix their tail, it's grayscaled from our old code without any coloring at all.
 /datum/species/croc
@@ -589,6 +603,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Crickey!"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/crow
 	name = "Crow"
@@ -605,6 +620,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Worst bird."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/cutebold
 	name = "Cutebold"
@@ -621,6 +637,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "You may be brave, but are you bold?"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/dalmation
 	name = "Dalmation"
@@ -637,6 +654,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Radar, speak!"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/datashark
 	name = "Datashark"
@@ -653,6 +671,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Shorknort."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/deer
 	name = "Deer"
@@ -669,6 +688,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Deer are for raping. ~TK 2016"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/drake
 	name = "Drake"
@@ -685,6 +705,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Not a duck."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/eevee
 	name = "Eevee"
@@ -701,6 +722,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Happy birthday, Jess."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/elephant
 	name = "Elephant"
@@ -717,6 +739,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/elf
 	name = "Elf"
@@ -733,6 +756,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/fennec
 	name = "Fennec"
@@ -749,6 +773,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/flareon
 	name = "Flareon"
@@ -765,6 +790,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/fox
 	name = "Fox"
@@ -781,6 +807,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/fung
 	name = "Fung"
@@ -796,6 +823,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/glaceon
 	name = "Glaceon"
@@ -812,6 +840,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/glaceons
 	name = "GlaceonS"
@@ -828,6 +857,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/glowfen
 	name = "Glowfen"
@@ -844,6 +874,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/goat
 	name = "Goat"
@@ -860,6 +891,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/gremlin
 	name = "Gremlin"
@@ -876,6 +908,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/gria
 	name = "Gria"
@@ -892,6 +925,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/grovyle
 	name = "Grovyle"
@@ -908,6 +942,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/hawk
 	name = "Hawk"
@@ -924,6 +959,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/hippo
 	name = "Hippo"
@@ -940,6 +976,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/husky
 	name = "Husky"
@@ -956,6 +993,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/hyena
 	name = "Hyena"
@@ -972,6 +1010,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/hylotl
 	name = "Hylotl"
@@ -988,6 +1027,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 //Something wrong with Jackalope?
 /datum/species/jackalope
@@ -1005,6 +1045,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/jelly
 	name = "Jelly"
@@ -1020,6 +1061,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/kangaroo
 	name = "Kangaroo"
@@ -1036,6 +1078,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/kitsune
 	name = "Kitsune"
@@ -1052,6 +1095,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lab
 	name = "Lab"
@@ -1068,6 +1112,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lopunny
 	name = "Lopunny"
@@ -1084,6 +1129,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lucky
 	name = "Lucky"
@@ -1100,6 +1146,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lugia
 	name = "Lugia"
@@ -1116,6 +1163,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lynx
 	name = "Lynx"
@@ -1132,7 +1180,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
-
+	reagent_tag = PROCESS_ORG
 
 /datum/species/orc
 	name = "Orc"
@@ -1148,6 +1196,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/orca
 	name = "Orca"
@@ -1164,6 +1213,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/otie
 	name = "Otie"
@@ -1180,6 +1230,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/otter
 	name = "Otter"
@@ -1196,6 +1247,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/panda
 	name = "Panda"
@@ -1212,6 +1264,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/panther
 	name = "Panther"
@@ -1228,6 +1281,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/penguin
 	name = "Penguin"
@@ -1243,6 +1297,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/pig
 	name = "Pig"
@@ -1259,6 +1314,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/pony
 	name = "Pony"
@@ -1275,6 +1331,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/porcupine
 	name = "Porcupine"
@@ -1291,6 +1348,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/possum
 	name = "Possum"
@@ -1307,6 +1365,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/pudding
 	name = "Pudding"
@@ -1322,6 +1381,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/pug
 	name = "Pug"
@@ -1337,6 +1397,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/rabbit
 	name = "Rabbit"
@@ -1353,6 +1414,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/raccoon
 	name = "Raccoon"
@@ -1369,6 +1431,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/redpanda
 	name = "Red Panda"
@@ -1385,6 +1448,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/renamon
 	name = "Renamon"
@@ -1401,6 +1465,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/roorat
 	name = "Roorat"
@@ -1417,6 +1482,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/sergal
 	name = "Sergal"
@@ -1433,6 +1499,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/shepherd
 	name = "Shepherd"
@@ -1449,6 +1516,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/shihtzu
 	name = "Shih Tzu"
@@ -1465,6 +1533,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/siamese
 	name = "Siamese"
@@ -1481,6 +1550,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/skunk
 	name = "Skunk"
@@ -1497,6 +1567,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Le pew."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/smilodon
 	name = "Smilodon"
@@ -1513,6 +1584,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/snail
 	name = "Snail"
@@ -1529,6 +1601,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/snarby
 	name = "Snarby"
@@ -1545,6 +1618,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/squirrel
 	name = "Squirrel"
@@ -1561,6 +1635,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/stego
 	name = "Stego"
@@ -1577,8 +1652,8 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
-//Invalid species?
 /datum/species/stitch
 	name = "Stitch"
 	name_plural = "Stitches"
@@ -1594,6 +1669,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/turtle
 	name = "Turtle"
@@ -1610,6 +1686,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/vulpix
 	name = "Vulpix"
@@ -1626,6 +1703,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/vulture
 	name = "Vulture"
@@ -1642,6 +1720,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/wolf
 	name = "Wolf"
@@ -1658,6 +1737,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/zebra
 	name = "Zebra"
@@ -1674,6 +1754,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/zigzagoon
 	name = "Zigzagoon"
@@ -1690,6 +1771,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 
 //	-----------------------------------
