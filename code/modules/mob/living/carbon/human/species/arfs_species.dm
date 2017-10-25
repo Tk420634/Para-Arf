@@ -14,7 +14,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
+	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
 	"Turtle",
 	"Vulpix", "Vulture",
 	"Wolf",
@@ -236,6 +236,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/sergal/New(var/new_loc)
     ..(new_loc, "Sergal")
+
+/mob/living/carbon/human/shark/New(var/new_loc)
+    ..(new_loc, "Shark")
 
 /mob/living/carbon/human/shepherd/New(var/new_loc)
     ..(new_loc, "Shepherd")
@@ -1493,6 +1496,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/sergal
 	language = "Sol Common"
 	tail = "sergaltail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
+/datum/species/shark
+	name = "Shark"
+	name_plural = "Shepherds"
+	icobase = 'icons/mob/human_races/ARF Races/r_shark_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_shark_arf.dmi'
+	primitive_form = "Monkey"
+	path = /mob/living/carbon/human/shark
+	language = "Sol Common"
+	tail = "sharktail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
