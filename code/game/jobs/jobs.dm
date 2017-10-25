@@ -114,7 +114,7 @@ var/list/support_positions = list(
 	"Mime",
 	"Barber",
 	"Magistrate",
-	"Nanotrasen Representative",
+	"A.R.F. Representative",
 	"Blueshield"
 )
 
@@ -151,7 +151,7 @@ var/list/nonhuman_positions = list(
 
 var/list/whitelisted_positions = list(
 	"Blueshield",
-	"Nanotrasen Representative",
+	"A.R.F. Representative",
 	"Barber",
 	"Mechanic",
 	"Brig Physician",

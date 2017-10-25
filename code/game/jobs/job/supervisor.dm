@@ -5,8 +5,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	department_flag = ENGSEC
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Nanotrasen officials"
-	department_head = list("Nanotrasen Navy Officer")
+	supervisors = "A.R.F. officials"
+	department_head = list("A.R.F. Navy Officer")
 	selection_color = "#ccccff"
 	req_admin_notify = 1
 	is_command = 1
@@ -107,7 +107,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 
 
 /datum/job/nanotrasenrep
-	title = "Nanotrasen Representative"
+	title = "A.R.F. Representative"
 	flag = NANO
 	department_flag = KARMA
 	total_positions = 1
@@ -134,7 +134,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	outfit = /datum/outfit/job/nanotrasenrep
 
 /datum/outfit/job/nanotrasenrep
-	name = "Nanotrasen Representative"
+	name = "A.R.F. Representative"
 	jobtype = /datum/job/nanotrasenrep
 
 	uniform = /obj/item/clothing/under/rank/ntrep
@@ -158,7 +158,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	department_flag = KARMA
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Nanotrasen representative"
+	supervisors = "the A.R.F. representative"
 	department_head = list("Captain")
 	selection_color = "#ddddff"
 	req_admin_notify = 1
@@ -205,7 +205,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	department_flag = KARMA
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Nanotrasen Supreme Court"
+	supervisors = "the A.R.F. Supreme Court"
 	department_head = list("Captain")
 	selection_color = "#ddddff"
 	req_admin_notify = 1

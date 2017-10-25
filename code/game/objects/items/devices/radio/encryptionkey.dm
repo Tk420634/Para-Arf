@@ -102,7 +102,7 @@
 	channels = list("Supply" = 1, "Service" = 1, "Security" = 0, "Command" = 1)
 
 /obj/item/device/encryptionkey/heads/ntrep
-	name = "Nanotrasen Representative's Encryption Key"
+	name = "A.R.F. Representative's Encryption Key"
 	icon_state = "com_cypherkey"
 	channels = list("Command" = 1, "Security" = 0, "Engineering" = 0, "Science" = 0, "Medical" = 0, "Supply" = 0, "Service" = 0)
 
@@ -138,7 +138,7 @@
 	channels = list("Service" = 1)
 
 /obj/item/device/encryptionkey/ert
-	name = "Nanotrasen ERT Radio Encryption Key"
+	name = "A.R.F. ERT Radio Encryption Key"
 	channels = list("Response Team" = 1, "Science" = 1, "Command" = 1, "Medical" = 1, "Engineering" = 1, "Security" = 1, "Supply" = 1, "Service" = 1)
 
 /obj/item/device/encryptionkey/centcom
