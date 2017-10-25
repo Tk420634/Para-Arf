@@ -209,11 +209,11 @@ var/const/access_trade_sol = 160
 			return get_all_centcom_access() + get_all_accesses()
 		if("Special Operations Officer")
 			return get_all_centcom_access() + get_all_accesses()
-		if("Nanotrasen Navy Representative")
+		if("A.R.F. Navy Representative")
 			return get_all_centcom_access() + get_all_accesses()
-		if("Nanotrasen Navy Officer")
+		if("A.R.F. Navy Officer")
 			return get_all_centcom_access() + get_all_accesses()
-		if("Nanotrasen Navy Captain")
+		if("A.R.F. Navy Captain")
 			return get_all_centcom_access() + get_all_accesses()
 		if("Supreme Commander")
 			return get_all_centcom_access() + get_all_accesses()
@@ -437,7 +437,7 @@ var/const/access_trade_sol = 160
 		if(access_blueshield)
 			return "Blueshield"
 		if(access_ntrep)
-			return "Nanotrasen Rep."
+			return "A.R.F. Rep."
 		if(access_paramedic)
 			return "Paramedic"
 		if(access_mechanic)
@@ -504,7 +504,7 @@ var/const/access_trade_sol = 160
 	return all_jobs
 
 /proc/get_all_centcom_jobs()
-	return list("VIP Guest","Custodian","Thunderdome Overseer","Emergency Response Team Member","Emergency Response Team Leader","Intel Officer","Medical Officer","Death Commando","Research Officer","Deathsquad Officer","Special Operations Officer","Nanotrasen Navy Representative","Nanotrasen Navy Officer","Nanotrasen Navy Captain","Supreme Commander")
+	return list("VIP Guest","Custodian","Thunderdome Overseer","Emergency Response Team Member","Emergency Response Team Leader","Intel Officer","Medical Officer","Death Commando","Research Officer","Deathsquad Officer","Special Operations Officer","A.R.F. Navy Representative","A.R.F. Navy Officer","A.R.F. Navy Captain","Supreme Commander")
 
 //gets the actual job rank (ignoring alt titles)
 //this is used solely for sechuds
