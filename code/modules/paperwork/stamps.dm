@@ -73,7 +73,7 @@
 	item_color = "clown"
 
 /obj/item/weapon/stamp/centcom
-	name = "Nanotrasen Representative's rubber stamp"
+	name = "A.R.F. Representative's rubber stamp"
 	icon_state = "stamp-cent"
 	item_color = "centcom"
 
