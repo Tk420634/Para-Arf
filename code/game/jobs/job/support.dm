@@ -11,6 +11,7 @@
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue, access_weapons, access_mineral_storeroom)
 	minimal_access = list(access_bar, access_maint_tunnels, access_weapons, access_mineral_storeroom)
+	alt_titles = list("Barista", "Mixologist", "Barmaid", "Taverner")
 	outfit = /datum/outfit/job/bartender
 
 /datum/outfit/job/bartender
@@ -51,7 +52,7 @@
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue)
 	minimal_access = list(access_kitchen, access_maint_tunnels)
-	alt_titles = list("Cook","Culinary Artist","Butcher")
+	alt_titles = list("Cook", "Baker", "Sous Chef", "Teppanyaki Chef", "Pastry Chef", "Fry Cook", "Burger Flipper", "Culinary Artist")
 	outfit = /datum/outfit/job/chef
 
 /datum/outfit/job/chef
@@ -79,7 +80,7 @@
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue)
 	minimal_access = list(access_hydroponics, access_morgue, access_maint_tunnels)
-	alt_titles = list("Hydroponicist", "Botanical Researcher")
+	alt_titles = list("Hydroponicist", "Botanical Researcher", "Farmer", "Horticulturalist", "Florist", "Beekeeper")
 	outfit = /datum/outfit/job/hydro
 
 /datum/outfit/job/hydro
@@ -113,6 +114,7 @@
 	selection_color = "#dddddd"
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station, access_mineral_storeroom)
 	minimal_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station, access_mineral_storeroom)
+	alt_titles = list("Supply Chief", "Seneschal", "Storage Manager", "Material Aquisistions Manager")
 	outfit = /datum/outfit/job/qm
 
 /datum/outfit/job/qm
@@ -141,6 +143,7 @@
 	selection_color = "#dddddd"
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station, access_mineral_storeroom)
 	minimal_access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting, access_mineral_storeroom)
+	alt_titles = list("Courier", "Warehouse Staff", "Inventory Specialist", "Storage Associate", "Material Aquisition Underofficer", "Material Export Underofficer")
 	outfit = /datum/outfit/job/cargo_tech
 
 /datum/outfit/job/cargo_tech
@@ -167,7 +170,7 @@
 	selection_color = "#dddddd"
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station, access_mineral_storeroom)
 	minimal_access = list(access_mining, access_mint, access_mining_station, access_mailsorting, access_maint_tunnels, access_mineral_storeroom)
-	alt_titles = list("Spelunker")
+	alt_titles = list("Spelunker", "Drill Technician", "Prospector", "Asteroid Miner", "Licensed Adventurer", "Astro-Medic", "Smithy")
 	outfit = /datum/outfit/job/mining
 
 /datum/outfit/job/mining
@@ -206,6 +209,7 @@
 	selection_color = "#dddddd"
 	access = list(access_clown, access_theatre, access_maint_tunnels)
 	minimal_access = list(access_clown, access_theatre, access_maint_tunnels)
+	alt_titles = list("Comedian", "Ragamuffin", "Magician", "Prankster", "Tripologist","'Head' of Laughter","Giggle Lord")
 	outfit = /datum/outfit/job/clown
 
 /datum/outfit/job/clown
@@ -265,6 +269,7 @@
 	selection_color = "#dddddd"
 	access = list(access_mime, access_theatre, access_maint_tunnels)
 	minimal_access = list(access_mime, access_theatre, access_maint_tunnels)
+	alt_titles = list("French Clown", "Head of Berets")
 	outfit = /datum/outfit/job/mime
 
 /datum/outfit/job/mime
@@ -317,7 +322,7 @@
 	selection_color = "#dddddd"
 	access = list(access_janitor, access_maint_tunnels)
 	minimal_access = list(access_janitor, access_maint_tunnels)
-	alt_titles = list("Custodial Technician")
+	alt_titles = list("Custodial Technician", "Sanitation Technician", "Maid")
 	outfit = /datum/outfit/job/janitor
 
 /datum/outfit/job/janitor
@@ -343,7 +348,8 @@
 	selection_color = "#dddddd"
 	access = list(access_library, access_maint_tunnels)
 	minimal_access = list(access_library, access_maint_tunnels)
-	alt_titles = list("Journalist")
+	alt_titles = list("Journalist", "Professor", "Historian", "Writer", "Poet", "Cataloger", "Archivist", 
+	"Chronicler", "Reporter", "Game Master", "Dungeon Master", "Story Teller", "Bookkeeper")
 	outfit = /datum/outfit/job/librarian
 
 /datum/outfit/job/librarian
