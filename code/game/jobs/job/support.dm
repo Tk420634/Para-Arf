@@ -209,7 +209,7 @@
 	selection_color = "#dddddd"
 	access = list(access_clown, access_theatre, access_maint_tunnels)
 	minimal_access = list(access_clown, access_theatre, access_maint_tunnels)
-	alt_titles = list("Comedian", "Ragamuffin", "Magician", "Prankster", "Tripologist","'Head' of Laughter","Giggle Lord")
+	alt_titles = list("Comedian", "Ragamuffin", "Magician", "Prankster", "Tripologist","Head of Laughter","Giggle Lord")
 	outfit = /datum/outfit/job/clown
 
 /datum/outfit/job/clown
