@@ -1119,7 +1119,7 @@ var/list/ghostteleportlocs = list()
 	icon_state = "server"
 
 /area/ntrep
-	name = "\improper Nanotrasen Representative's Office"
+	name = "\improper A.R.F. Representative's Office"
 	icon_state = "bluenew"
 
 /area/blueshield
@@ -2459,7 +2459,7 @@ area/security/podbay
 	requires_power = 0
 
 /area/awaymission/spacebattle/cruiser
-	name = "\improper Nanotrasen Cruiser"
+	name = "\improper A.R.F. Cruiser"
 
 /area/awaymission/spacebattle/syndicate1
 	name = "\improper Syndicate Assault Ship 1"
