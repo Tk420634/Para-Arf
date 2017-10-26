@@ -232,8 +232,8 @@
 	ks2type = /obj/item/device/encryptionkey/headset_service
 
 /obj/item/device/radio/headset/heads/ntrep
-	name = "nanotrasen representative's headset"
-	desc = "The headset of the Nanotrasen Representative."
+	name = "A.R.F. representative's headset"
+	desc = "The headset of the A.R.F. Representative."
 	icon_state = "com_headset"
 	item_state = "headset"
 	ks2type = /obj/item/device/encryptionkey/heads/ntrep

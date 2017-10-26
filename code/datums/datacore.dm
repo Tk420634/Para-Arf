@@ -472,7 +472,7 @@ var/record_id_num = 1001
 		if("Head of Personnel")
 			clothes_s = new /icon('icons/mob/uniform.dmi', "hop_s")
 			clothes_s.Blend(new /icon('icons/mob/feet.dmi', "brown"), ICON_UNDERLAY)
-		if("Nanotrasen Representative")
+		if("A.R.F. Representative")
 			clothes_s = new /icon('icons/mob/uniform.dmi', "officer_s")
 			clothes_s.Blend(new /icon('icons/mob/feet.dmi', "laceups"), ICON_UNDERLAY)
 		if("Blueshield")

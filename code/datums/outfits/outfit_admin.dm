@@ -214,7 +214,7 @@
 
 	var/obj/item/weapon/card/id/I = H.wear_id
 	if(istype(I))
-		apply_to_card(I, H, get_centcom_access("Nanotrasen Navy Officer"), "Nanotrasen Navy Officer")
+		apply_to_card(I, H, get_centcom_access("A.R.F. Navy Officer"), "A.R.F. Navy Officer")
 
 	var/obj/item/weapon/implant/L = new /obj/item/weapon/implant/mindshield(H)
 	L.implant(H)
@@ -323,7 +323,7 @@
 
 	var/obj/item/weapon/card/id/I = H.wear_id
 	if(istype(I))
-		apply_to_card(I, H, get_centcom_access("Nanotrasen Navy Captain"), "Nanotrasen Navy Captain")
+		apply_to_card(I, H, get_centcom_access("A.R.F. Navy Captain"), "A.R.F. Navy Captain")
 
 	var/obj/item/weapon/implant/L = new /obj/item/weapon/implant/mindshield(H)
 	L.implant(H)
@@ -353,7 +353,7 @@
 
 	var/obj/item/weapon/card/id/I = H.wear_id
 	if(istype(I))
-		apply_to_card(I, H, get_centcom_access("Nanotrasen Navy Representative"), "Nanotrasen Diplomat")
+		apply_to_card(I, H, get_centcom_access("A.R.F. Navy Representative"), "A.R.F. Diplomat")
 
 /datum/outfit/admin/death_commando
 	name = "NT Death Commando"
