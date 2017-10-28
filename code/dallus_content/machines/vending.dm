@@ -1,3 +1,4 @@
+/*
 /obj/machinery/vending/clothing
 	name = "ClothesMate" //renamed to make the slogan rhyme
 	desc = "A vending machine for clothing."
@@ -258,26 +259,20 @@
 	/obj/item/clothing/accessory/wcoat/swvest/red = 4, /obj/item/clothing/accessory/locket = 4,
 	/obj/item/clothing/accessory/mantelet = 4, /obj/item/clothing/accessory/mantelet/white = 4,
 	/obj/item/clothing/accessory/mantelet/cc = 4,/obj/item/clothing/accessory/watch = 4)
-
+*/
 /obj/machinery/vending/kink
 	name = "KinkMate"
 	desc = "A vending machine for all your unmentionable desires."
 	icon_state = "lewd"
-	icon = 'icons/obj/vending_vr.dmi'
+	icon = 'icons/obj/vending.dmi'
 	product_slogans = "Kinky!;Sexy!;Check me out, big boy!"
 	vend_delay = 15
 	vend_reply = "Have fun, you shameless pervert!"
 	products = list(/obj/item/clothing/under/schoolgirl=3,/obj/item/clothing/ears/earmuffs=2,/obj/item/clothing/glasses/sunglasses/blindfold=2,
-	/obj/item/clothing/mask/muzzle=2,/obj/item/weapon/dildo=10,/obj/item/weapon/dildos/canine=4,
-	/obj/item/weapon/dildos/purpledong=4,/obj/item/weapon/dildos/bigblackdick=4,
-	/obj/item/weapon/dildos/floppydick=4,/obj/item/weapon/bulletvibe=4,
-	/obj/item/weapon/fleshlight=2, /obj/item/clothing/under/birthdaysuit = 4,
-	/obj/item/weapon/dildos/analbeads=2, /obj/item/clothing/accessory/collar = 4,
-	/obj/item/clothing/accessory/collar/silver = 4, /obj/item/clothing/accessory/collar/gold = 4,
-	/obj/item/clothing/accessory/collar/bell = 4, /obj/item/clothing/accessory/collar/spike = 4,
-	/obj/item/clothing/accessory/collar/pink = 4,/obj/item/clothing/accessory/collar/holo = 4,/obj/item/clothing/mask/muzzle/ballgag = 4,
-	/obj/item/clothing/under/stripper/stripper_pink = 4, /obj/item/clothing/under/stripper/stripper_green = 4,
-	/obj/item/clothing/under/stripper/mankini = 4)
+	/obj/item/clothing/mask/muzzle=2,/obj/item/weapon/sextoy/dildo/canine=4,
+	/obj/item/weapon/sextoy/dildo/purpledong=4,/obj/item/weapon/sextoy/dildo/bigblackdick=4,
+	/obj/item/weapon/sextoy/dildo/floppydick=4,/obj/item/weapon/sextoy/dildo/bulletvibe=4,
+	/obj/item/weapon/sextoy/dildo/fleshlight=2,/obj/item/weapon/sextoy/dildo/analbeads=2)
 
 /obj/machinery/vending/thingpony/toy
 	name = "Toy Vendor"
@@ -285,7 +280,17 @@
 	product_ads = "Action figures!"
 	icon_state = "toy"
 	vend_reply = "Get to donk-ing!"
-	products = list(/obj/item/toy/plushie/corgi=5, /obj/item/toy/plushie/girly_corgi=5,
+	products = list(/obj/item/toy/balloon=5, /obj/item/toy/snappop=5,
+	/obj/item/toy/cards/deck=5, /obj/item/toy/therapy/red=5,
+	/obj/item/toy/therapy/purple=5, /obj/item/toy/therapy/blue=5,
+	/obj/item/toy/therapy/yellow=5, /obj/item/toy/therapy/orange=5,
+	/obj/item/toy/therapy/green=5, /obj/item/toy/carpplushie=5,
+	/obj/item/toy/carpplushie/ice=5, /obj/item/toy/carpplushie/silent=5,
+	/obj/item/toy/carpplushie/electric=5, /obj/item/toy/carpplushie/gold=5,
+	/obj/item/toy/carpplushie/toxin=5, /obj/item/toy/carpplushie/dragon=5,
+	/obj/item/toy/carpplushie/pink=5, /obj/item/toy/carpplushie/candy=5,
+	/obj/item/toy/carpplushie/nebula=5, /obj/item/toy/carpplushie/void=5,
+	/obj/item/toy/plushie/corgi=5, /obj/item/toy/plushie/girly_corgi=5,
 	/obj/item/toy/plushie/robo_corgi=5, /obj/item/toy/plushie/octopus=5,
 	/obj/item/toy/plushie/face_hugger=5, /obj/item/toy/plushie/red_fox=5,
 	/obj/item/toy/plushie/black_fox=5, /obj/item/toy/plushie/marble_fox=5,
@@ -296,9 +301,4 @@
 	/obj/item/toy/plushie/grey_cat=5, /obj/item/toy/plushie/white_cat=5,
 	/obj/item/toy/plushie/orange_cat=5, /obj/item/toy/plushie/siamese_cat=5,
 	/obj/item/toy/plushie/tabby_cat=5, /obj/item/toy/plushie/tuxedo_cat=5,
-	/obj/item/toy/plushie/ice=5, /obj/item/toy/plushie/silent=5,
-	/obj/item/toy/plushie/electric=5, /obj/item/toy/plushie/gold=5,
-	/obj/item/toy/plushie/toxin=5, /obj/item/toy/plushie/dragon=5,
-	/obj/item/toy/plushie/pink=5, /obj/item/toy/plushie/candy=5,
-	/obj/item/toy/plushie/nebula=5, /obj/item/toy/plushie/void=5,
-	/obj/item/toy/plushie/rune=5)
+	/obj/item/toy/eight_ball=5, /obj/item/toy/eight_ball/conch=5)
