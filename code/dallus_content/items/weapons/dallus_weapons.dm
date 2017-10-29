@@ -16,7 +16,7 @@
 	slot_flags = SLOT_BELT
 	force = 25
 	throwforce = 20
-	w_class = ITEMSIZE_NORMAL
+	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("cut", "slashed", "sliced", "stabbed", "lacerated")
 
@@ -27,7 +27,7 @@
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
-	w_class = ITEMSIZE_NORMAL
+	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("chopped", "stabbed", "cut")
 
@@ -38,7 +38,7 @@
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
-	w_class = ITEMSIZE_NORMAL
+	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("chopped", "stabbed", "hacked")
 
@@ -49,7 +49,7 @@
 	slot_flags = SLOT_BACK
 	force = 25
 	throwforce = 20
-	w_class = ITEMSIZE_HUGE //HOPEFULLY this is big enough.
+	w_class = WEIGHT_CLASS_HUGE //HOPEFULLY this is big enough.
 	origin_tech = list(TECH_COMBAT = 3)
 	attack_verb = list("slashed", "chopped", "eviscerated", "disemboweled")
 
@@ -60,7 +60,7 @@
 	slot_flags = SLOT_BACK
 	force = 25
 	throwforce = 20
-	w_class = ITEMSIZE_HUGE
+	w_class = WEIGHT_CLASS_HUGE
 	origin_tech = list(TECH_COMBAT = 3)
 	attack_verb = list("pounded", "pummeled", "slammed", "hammered")
 
@@ -71,7 +71,7 @@
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
-	w_class = ITEMSIZE_NORMAL
+	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("pounded", "pummeled", "slammed", "hammered")
 
@@ -82,7 +82,7 @@
 	slot_flags = SLOT_BACK
 	force = 25
 	throwforce = 20
-	w_class = ITEMSIZE_HUGE
+	w_class = WEIGHT_CLASS_HUGE
 	origin_tech = list(TECH_COMBAT = 3)
 	attack_verb = list("chopped", "stabbed", "slapped", "hacked")
 
@@ -93,7 +93,7 @@
 	slot_flags = SLOT_BACK
 	force = 20
 	throwforce = 20
-	w_class = ITEMSIZE_HUGE
+	w_class = WEIGHT_CLASS_HUGE
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("poked", "stabbed", "jabbed", "prodded")
 
@@ -104,6 +104,6 @@
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
-	w_class = ITEMSIZE_NORMAL
+	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("slashed", "poked", "sliced", "jabbed")
