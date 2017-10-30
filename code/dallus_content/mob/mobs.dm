@@ -762,3 +762,303 @@
 	maxbodytemp = 1500
 	speed = 2
 */
+
+//The mobs from VORE. Catgirls, Wolfgirls etc.
+
+/mob/living/simple_animal/catgirl
+	name = "catgirl"
+	desc = "Her hobbies are catnaps, knocking things over, and headpats."
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "catgirl"
+
+	speed = 5
+
+	harm_intent_damage = 5
+	melee_damage_lower = 5
+	melee_damage_upper = 10
+
+	speak_chance = 2
+	speak = list("Meow!","Esp!","Purr!","HSSSSS","Mew?","Nya~")
+	speak_emote = list("purrs","meows")
+	emote_hear = list("meows","mews")
+	emote_see = list("shakes her head","shivers")
+	attacktext = "swatted"
+
+	var/random_skin = 1
+	var/list/skins = list(
+		"catgirlnude",
+		"catgirlbikini",
+		"catgirlrednude",
+		"catgirlredbikini",
+		"catgirlblacknude",
+		"catgirlblackbikini",
+		"catgirlbrownnude",
+		"catgirlbrownbikini",
+		"catgirlred",
+		"catgirlblack",
+		"catgirlbrown"
+	)
+
+/mob/living/simple_animal/catgirl/New()
+	..()
+	if(random_skin)
+		icon_living = pick(skins)
+//		icon_rest = "[icon_living]asleep"
+		icon_dead = "[icon_living]-dead"
+//		update_icon()
+
+///mob/living/simple_animal/catgirl/retaliate
+//	retaliate = 1
+
+/mob/living/simple_animal/retaliate/awoo
+	name = "wolfgirl"
+	desc = "AwooOOOOoooo!"
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "awoo"
+	icon_living = "awoo"
+	icon_dead = "awoo-dead"
+
+	faction = "awoo"
+	maxHealth = 30
+	health = 30
+
+	response_help = "pats the"
+	response_disarm = "gently pushes aside the"
+	response_harm = "hits the"
+
+	harm_intent_damage = 8
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+	attacktext = "slashed"
+
+	speak_chance = 1
+	speak = list("AwoooOOOOoooo!",
+				"Awoo~",
+				"I'll protect the forest! ... Where's the forest again?",
+				"All I need is my sword!",
+				"Awoo?",
+				"Anyone else smell that?")
+	emote_hear = list("awoooos!","hmms to herself","plays with her sword")
+	emote_see = list("narrows her eyes","sniffs the air")
+//	say_understood = list()
+//	say_cannot = list()
+//	say_maybe_target = list("An enemy!?","What was that?","Is that...?","Hmm?")
+//	say_got_target = list("You won't get away!","I've had it!","I'll vanquish you!","AWOOOOO!")
+//	reactions = list("Are you a dog?" = "Who, me?! No! Stop saying that!",
+//					"Awoo!" = "AwooooOOOOooo!",
+//					"Awoo?" = "Awoo.",
+//					"Awoo." = "Awoo?",)
+
+	var/loopstop = 0 //To prevent circular awoooos.
+
+/mob/living/simple_animal/retaliate/awoo/hear_say()
+	if(world.time - loopstop < 5 SECONDS)
+		return
+	else
+		loopstop = world.time
+		..()
+
+/mob/living/simple_animal/hostile/carp/white
+	name = "great white carp"
+	desc = "You're going to need a bigger ship."
+	icon = 'icons/mob/alienqueen.dmi'
+	icon_dead = "megacarp-dead"
+	icon_living = "megacarp"
+	icon_state = "megacarp"
+
+	maxHealth = 600 // Boss
+	health = 600
+	speed = 3
+
+//	meat_amount = 10
+
+	melee_damage_lower = 10
+	melee_damage_upper = 25
+//	old_x = -16
+//	old_y = -16
+	pixel_x = -16
+	pixel_y = -16
+
+
+/mob/living/simple_animal/hostile/deathclaw
+	name = "deathclaw"
+	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart!"
+	icon = 'icons/mob/alienqueen.dmi'
+	icon_dead = "deathclaw-dead"
+	icon_living = "deathclaw"
+	icon_state = "deathclaw"
+	attacktext = "mauled"
+
+	maxHealth = 200
+	health = 200
+
+//	old_x = -16
+//	old_y = 0
+	pixel_x = -16
+	pixel_y = 0
+
+/mob/living/simple_animal/hostile/large/dragon
+	name = "phoron dragon"
+	desc = "Here to pillage stations and kidnap princesses, and there probably aren't any princesses."
+	icon = 'icons/mob/alienqueen.dmi'
+	icon_dead = "reddragon-dead"
+	icon_living = "reddragon"
+	icon_state = "reddragon"
+
+	faction = "dragon"
+	maxHealth = 500 // Boss
+	health = 500
+
+	melee_damage_lower = 10
+	melee_damage_upper = 60
+
+	//Space dragons aren't affected by atmos.
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	minbodytemp = 0
+	maxbodytemp = 1500
+
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/carpmeat = 3)
+
+//	old_x = -16
+//	old_y = 0
+	pixel_x = -16
+	pixel_y = 0
+
+/mob/living/simple_animal/hostile/large/dragon/Process_Spacemove(var/check_drift = 0)
+	return 1	//No drifting in space for space dragons!
+
+/mob/living/simple_animal/hostile/large/dragon/FindTarget()
+	. = ..()
+	if(.)
+		custom_emote(1,"snaps at [.]")
+
+/mob/living/simple_animal/hostile/snake
+	name = "giant snake"
+	desc = "Snakes. Why did it have to be snakes?"
+	icon = 'icons/mob/alienqueen.dmi'
+	icon_dead = "snake-dead"
+	icon_living = "snake"
+	icon_state = "snake"
+
+	faction = "snake"
+	maxHealth = 200
+	health = 200
+
+	melee_damage_lower = 10
+	melee_damage_upper = 25
+
+//	old_x = -16
+//	old_y = -16
+	pixel_x = -16
+	pixel_y = -16
+
+/mob/living/simple_animal/horse
+	name = "horse"
+	desc = "Don't look it in the mouth."
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "horse"
+	icon_living = "horse"
+	icon_dead = "horse-dead"
+
+	faction = "horse"
+	maxHealth = 60
+	health = 60
+
+	turns_per_move = 5
+	see_in_dark = 6
+
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "kicks"
+
+	melee_damage_lower = 1
+	melee_damage_upper = 5
+	attacktext = "kicked"
+
+	speak_chance = 1
+	speak = list("NEHEHEHEHEH","Neh?")
+	speak_emote = list("whinnies")
+	emote_hear = list("snorts")
+	emote_see = list("shakes its head", "stamps a hoof", "looks around")
+
+//	meat_amount = 4
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat = 4)
+
+/mob/living/simple_animal/hostile/frog
+	name = "giant frog"
+	desc = "You've heard of having a frog in your throat, now get ready for the reverse."
+	icon = 'icons/mob/animal.dmi'
+	icon_dead = "frog-dead"
+	icon_living = "frog"
+	icon_state = "frog"
+
+	speed = 5
+
+	harm_intent_damage = 5
+	melee_damage_lower = 10
+	melee_damage_upper = 25
+
+/mob/living/simple_animal/redpanda
+	name = "red panda"
+	desc = "It's a Red Panda! Beware of doom pounce!"
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "wah"
+	icon_living = "wah"
+	icon_dead = "wah_dead"
+//	icon_rest = "wah_rest"
+
+	faction = "wah"
+	maxHealth = 30
+	health = 30
+
+	response_help = "pats the"
+	response_disarm = "gently pushes aside the"
+	response_harm = "hits the"
+
+	harm_intent_damage = 5
+	melee_damage_lower = 5
+	melee_damage_upper = 2
+	attacktext = "bapped"
+
+	speak_chance = 1
+	speak = list("Wah!",
+				"Wah?",
+				"Waaaah.")
+	emote_hear = list("wahs!","chitters.")
+	emote_see = list("trundles around","rears up onto their hind legs and pounces a bug")
+
+/mob/living/simple_animal/redpanda/fae
+	name = "dark panda"
+	desc = "Ominous, but still cute!"
+
+	icon_state = "wah_fae"
+	icon_living = "wah_fae"
+	icon_dead = "wah_fae_dead"
+//	icon_rest = "wah_fae_rest"
+
+	maxHealth = 100
+	health = 100
+	melee_damage_lower = 10
+	melee_damage_upper = 20
+
+/mob/living/simple_animal/hostile/wolf
+	name = "grey wolf"
+	desc = "My, what big jaws it has!"
+	icon = 'icons/mob/animal.dmi'
+	icon_dead = "wolf-dead"
+	icon_living = "wolf"
+	icon_state = "wolf"
+
+	speed = 5
+
+//	run_at_them = 0
+//	cooperative = 1
+//	investigates = 1
+//	returns_home = 1
+//	reacts = 1
+
+	harm_intent_damage = 5
+	melee_damage_lower = 10
+	melee_damage_upper = 25
+
+	minbodytemp = 200
