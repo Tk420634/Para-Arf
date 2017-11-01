@@ -157,6 +157,8 @@ var/list/whitelisted_positions = list(
 	"Brig Physician",
 	"Magistrate",
 	"Security Pod Pilot",
+	"Clown",
+	"Mime"
 )
 
 
