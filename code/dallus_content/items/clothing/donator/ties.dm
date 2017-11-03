@@ -2,9 +2,11 @@
 /obj/item/clothing/accessory/watch
 	name = "Watch"
 	desc = "A fine timepiece, it doesn't seem to be working at the moment."
+	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
 	icon_state = "watch"
 	item_state = "watch"
-
+	item_color = "watch"
+/*
 //TechnicalMagi
 /obj/item/clothing/accessory/collar/bell/naomi
 	name = "bell collar tagged \"Naomi\""
@@ -24,3 +26,4 @@
 /obj/item/clothing/accessory/collar/bell/naomi/Destroy()
 	..()
 	processing_objects.Remove(src)
+*/
