@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1509828056
+LAST_COMPILE_TIME: 1509829993
 DIR: code code\__DEFINES code\__HELPERS code\defines code\defines\procs code\game code\game\machinery code\game\objects code\game\objects\items code\game\objects\items\weapons code\modules code\modules\admin code\modules\assembly code\modules\client code\modules\client\preference code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\alien code\modules\mob\living\carbon\alien\humanoid code\modules\mob\living\carbon\alien\humanoid\caste code\modules\mob\living\carbon\alien\larva code\modules\mob\living\carbon\human code\modules\mob\living\carbon\human\species code\modules\mob\living\simple_animal code\modules\mob\living\simple_animal\friendly code\modules\mob\new_player code\modules\reagents code\modules\reagents\chemistry code\modules\reagents\chemistry\reagents code\modules\store icons icons\goonstation icons\goonstation\objects icons\obj 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 511.1385
-WINDOW: code\modules\mob\living\size.dm;code\__DEFINES\size_lists.dm;code\modules\client\preference\preferences.dm;code\modules\client\preference\preferences_mysql.dm;code\defines\procs\dbcore.dm
-FILE: code\modules\client\preference\preferences_mysql.dm
+WINDOW: code\modules\mob\living\size.dm;code\__DEFINES\size_lists.dm;code\modules\client\preference\preferences.dm;code\modules\client\preference\preferences_mysql.dm;code\defines\procs\dbcore.dm;code\modules\mob\living\carbon\human\species\golem.dm;code\modules\mob\living\carbon\human\species\arfs_species.dm;code\modules\mob\living\carbon\human\species\species.dm;code\modules\mob\living\carbon\human\species\station.dm
+FILE: code\modules\mob\living\carbon\human\species\arfs_species.dm
 */
 // END_INTERNALS
