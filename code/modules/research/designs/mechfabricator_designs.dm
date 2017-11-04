@@ -396,6 +396,7 @@
 	category = list("Durand")
 
 //H.O.N.K
+/*
 /datum/design/honk_chassis
 	name = "Exosuit Chassis (\"H.O.N.K\")"
 	id = "honk_chassis"
@@ -522,7 +523,7 @@
 	materials = list(MAT_METAL=20000,MAT_TRANQUILLITE=5000)
 	construction_time = 200
 	category = list("Reticence")
-
+*/
 //Phazon
 /datum/design/phazon_chassis
 	name = "Exosuit Chassis (\"Phazon\")"

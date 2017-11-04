@@ -235,7 +235,7 @@
 	materials = list(MAT_METAL = 1000, MAT_GLASS = 200)
 	build_path = /obj/item/ammo_casing/shotgun/techshell
 	category = list("Weapons")
-
+/*
 /datum/design/xray
 	name = "Xray Laser Gun"
 	desc = "Not quite as menacing as it sounds"
@@ -246,6 +246,7 @@
 	build_path = /obj/item/weapon/gun/energy/xray
 	locked = 1
 	category = list("Weapons")
+*/
 
 /datum/design/immolator
 	name = "Immolator Laser Gun"
