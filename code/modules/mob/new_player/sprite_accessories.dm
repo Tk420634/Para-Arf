@@ -171,13 +171,11 @@
 /datum/sprite_accessory/hair/ponytail1
 	name = "Ponytail male"
 	icon_state = "hair_ponytailm"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/ponytail2
 	name = "Ponytail female"
 	icon_state = "hair_ponytailf"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/ponytail3
 	name = "Ponytail alt"
@@ -187,19 +185,16 @@
 /datum/sprite_accessory/hair/sideponytail
 	name = "Side Ponytail"
 	icon_state = "hair_stail"
-	gender = FEMALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/highponytail
 	name = "High Ponytail"
 	icon_state = "hair_highponytail"
-	gender = FEMALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/wisp
 	name = "Wisp"
 	icon_state = "hair_wisp"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/parted
 	name = "Parted"
@@ -208,14 +203,11 @@
 /datum/sprite_accessory/hair/pompadour
 	name = "Pompadour"
 	icon_state = "hair_pompadour"
-	gender = MALE
-	species_allowed = list("Human", "Slime People", "Unathi")
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/quiff
 	name = "Quiff"
 	icon_state = "hair_quiff"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/bedhead
@@ -233,31 +225,25 @@
 /datum/sprite_accessory/hair/beehive
 	name = "Beehive"
 	icon_state = "hair_beehive"
-	gender = FEMALE
-	species_allowed = list("Human", "Slime People", "Unathi")
+
 
 /datum/sprite_accessory/hair/bobcurl
 	name = "Bobcurl"
 	icon_state = "hair_bobcurl"
-	gender = FEMALE
-	species_allowed = list("Human", "Slime People", "Unathi")
 
 /datum/sprite_accessory/hair/bob
 	name = "Bob"
 	icon_state = "hair_bobcut"
-	gender = FEMALE
-	species_allowed = list("Human", "Slime People", "Unathi")
+
 
 /datum/sprite_accessory/hair/bowl
 	name = "Bowl"
 	icon_state = "hair_bowlcut"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/braid2
 	name = "Long Braid"
 	icon_state = "hair_hbraid"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/braid_hip
 	name = "Hippie Braid"
@@ -267,26 +253,21 @@
 /datum/sprite_accessory/hair/braid_hip_una
 	name = "Unathi Hippie Braid"
 	icon_state = "hair_ubraid"
-	species_allowed = list("Unathi")
 	secondary_theme = "beads"
 
 /datum/sprite_accessory/hair/buzz
 	name = "Buzzcut"
 	icon_state = "hair_buzzcut"
-	gender = MALE
-	species_allowed = list("Human", "Slime People", "Unathi")
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/crew
 	name = "Crewcut"
 	icon_state = "hair_crewcut"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/combover
 	name = "Combover"
 	icon_state = "hair_combover"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/devillock
@@ -314,12 +295,10 @@
 /datum/sprite_accessory/hair/afro_large
 	name = "Big Afro"
 	icon_state = "hair_bigafro"
-	gender = MALE
 
 /datum/sprite_accessory/hair/sergeant
 	name = "Flat Top"
 	icon_state = "hair_sergeant"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/emo
@@ -337,48 +316,40 @@
 /datum/sprite_accessory/hair/hitop
 	name = "Hitop"
 	icon_state = "hair_hitop"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/mohawk
 	name = "Mohawk"
 	icon_state = "hair_d"
-	species_allowed = list("Human", "Slime People", "Unathi")
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/jensen
 	name = "Adam Jensen Hair"
 	icon_state = "hair_jensen"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/cia
 	name = "CIA"
 	icon_state = "hair_cia"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/mulder
 	name = "Mulder"
 	icon_state = "hair_mulder"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/gelled
 	name = "Gelled Back"
 	icon_state = "hair_gelled"
-	gender = FEMALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/gentle
 	name = "Gentle"
 	icon_state = "hair_gentle"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/spiky
 	name = "Spiky"
 	icon_state = "hair_spikey"
-	species_allowed = list("Human", "Slime People", "Unathi")
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/kusanagi
@@ -388,34 +359,30 @@
 /datum/sprite_accessory/hair/kagami
 	name = "Pigtails"
 	icon_state = "hair_kagami"
-	gender = FEMALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/himecut
 	name = "Hime Cut"
 	icon_state = "hair_himecut"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/braid
 	name = "Floorlength Braid"
 	icon_state = "hair_braid"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/odango
 	name = "Odango"
 	icon_state = "hair_odango"
-	gender = FEMALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/ombre
 	name = "Ombre"
 	icon_state = "hair_ombre"
-	gender = FEMALE
+
 
 /datum/sprite_accessory/hair/updo
 	name = "Updo"
 	icon_state = "hair_updo"
-	gender = FEMALE
+
 
 /datum/sprite_accessory/hair/skinhead
 	name = "Skinhead"
@@ -425,13 +392,11 @@
 /datum/sprite_accessory/hair/balding
 	name = "Balding Hair"
 	icon_state = "hair_e"
-	gender = MALE // turnoff!
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/longemo
 	name = "Long Emo"
 	icon_state = "hair_emolong"
-	gender = FEMALE
 
 //////////////////////////////
 //////START VG HAIRSTYLES/////
@@ -447,31 +412,64 @@
 /datum/sprite_accessory/hair/duelist
 	name = "Duelist"
 	icon_state = "hair_duelist"
-	gender = MALE
 
 /datum/sprite_accessory/hair/modern
 	name = "Modern"
 	icon_state = "hair_modern"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/unshavenmohawk
 	name = "Unshaven Mohawk"
 	icon_state = "hair_unshavenmohawk"
-	gender = MALE
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/drills
 	name = "Twincurls"
 	icon_state = "hair_twincurl"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/minidrills
 	name = "Twincurls 2"
 	icon_state = "hair_twincurl2"
-	gender = FEMALE
 //////////////////////////////
 //////END VG HAIRSTYLES///////
 //////////////////////////////
+
+//////////////////////////////////////////////////
+//////START PORTED ARFS HAIRSTYLES HAIRSTYLES/////
+/////////////////////////////////////////////////
+
+/datum/sprite_accessory/hair/nia
+	name = "Nia"
+	icon_state = "hair_nia"
+
+/datum/sprite_accessory/hair/chrono
+	name = "Chrono"
+	icon_state = "hair_toriyama"
+
+/datum/sprite_accessory/hair/vegeta
+	name = "Vegeta"
+	icon_state = "hair_toriyama2"
+
+/datum/sprite_accessory/hair/joestar
+	name = "Joestar"
+	icon_state = "hair_joestar"
+
+/datum/sprite_accessory/hair/fingerwave
+	name = "Fingerwave"
+	icon_state = "hair_fingerwave"
+
+/datum/sprite_accessory/hair/ziegler
+	name = "Ziegler"
+	icon_state = "hair_ziegler"
+
+/datum/sprite_accessory/hair/eighties
+	name = "80s"
+	icon_state = "hair_80s"
+
+
+
+//////////////////////////////////////////////////
+//////END PORTED ARFS HAIRSTYLES HAIRSTYLES/////
+/////////////////////////////////////////////////
 
 /datum/sprite_accessory/hair/ipc
 	species_allowed = list("Machine")
