@@ -162,6 +162,7 @@
 					socks,
 					body_accessory,
 					gear,
+					char_size,
 					autohiss
 				 	FROM [format_table_name("characters")] WHERE ckey='[C.ckey]' AND slot='[slot]'"})
 	if(!query.Execute())
@@ -240,7 +241,8 @@
 		socks = query.item[49]
 		body_accessory = query.item[50]
 		gear = params2list(query.item[51])
-		autohiss_mode = text2num(query.item[52])
+		char_size = text2num(query.item[52])
+		autohiss_mode = text2num(query.item[53])
 
 	//Sanitize
 	var/datum/species/SP = all_species[species]
@@ -290,6 +292,9 @@
 	job_karma_med = sanitize_integer(job_karma_med, 0, 65535, initial(job_karma_med))
 	job_karma_low = sanitize_integer(job_karma_low, 0, 65535, initial(job_karma_low))
 	disabilities = sanitize_integer(disabilities, 0, 65535, initial(disabilities))
+
+	var/valid_scales = list(RESIZE_HUGE, RESIZE_BIG, RESIZE_NORMAL, RESIZE_SMALL, RESIZE_TINY);
+	char_size	= sanitize_inlist(char_size, valid_scales, initial(char_size))
 
 	socks			= sanitize_text(socks, initial(socks))
 	body_accessory	= sanitize_text(body_accessory, initial(body_accessory))
@@ -374,6 +379,7 @@
 												socks='[socks]',
 												body_accessory='[body_accessory]',
 												gear='[gearlist]',
+												char_size='[char_size]',
 												autohiss='[autohiss_mode]'
 												WHERE ckey='[C.ckey]'
 												AND slot='[default_slot]'"}
@@ -412,7 +418,7 @@
 											gen_record,
 											player_alt_titles,
 											disabilities, organ_data, rlimb_data, nanotrasen_relation, speciesprefs,
-											socks, body_accessory, gear, autohiss)
+											socks, body_accessory, gear, char_size, autohiss)
 
 					VALUES
 											('[C.ckey]', '[default_slot]', '[sanitizeSQL(metadata)]', '[sanitizeSQL(real_name)]', '[be_random_name]','[gender]',
@@ -440,7 +446,7 @@
 											'[sanitizeSQL(gen_record)]',
 											'[playertitlelist]',
 											'[disabilities]', '[organlist]', '[rlimblist]', '[nanotrasen_relation]', '[speciesprefs]',
-											'[socks]', '[body_accessory]', '[gearlist]', '[autohiss_mode]')
+											'[socks]', '[body_accessory]', '[gearlist]', '[char_size]', '[autohiss_mode]')
 
 "}
 )

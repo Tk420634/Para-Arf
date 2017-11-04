@@ -5,6 +5,16 @@
 	icon = 'icons/obj/objects.dmi'
 	slot_flags = SLOT_HEAD
 
+	origin_tech = null
+	item_state = list(
+		slot_l_hand_str = 'icons/mob/inhands/lefthand_holder.dmi',
+		slot_r_hand_str = 'icons/mob/inhands/righthand_holder.dmi',
+		)
+
+	pixel_y = 8
+	var/mob/living/held_mob
+
+
 /obj/item/weapon/holder/New()
 	..()
 	processing_objects.Add(src)
@@ -61,6 +71,25 @@
 
 	return
 
+/obj/item/weapon/holder/proc/sync(var/mob/living/M)
+	dir = 2
+	overlays.Cut()
+	icon = M.icon
+	icon_state = M.icon_state
+	color = M.color
+	name = M.name
+	desc = M.desc
+	overlays |= M.overlays
+	var/mob/living/carbon/human/H = loc
+	if(istype(H))
+		if(H.l_hand == src)
+			H.update_inv_l_hand()
+		else if(H.r_hand == src)
+			H.update_inv_r_hand()
+		else
+			H.regenerate_icons()
+
+
 //Mob procs and vars for scooping up
 /mob/living/var/holder_type
 
@@ -78,6 +107,19 @@
 	to_chat(src, "<span class='notice'>\The [grabber] scoops you up.</span>")
 	grabber.status_flags |= PASSEMOTES
 	return H
+
+/obj/item/weapon/holder/proc/update_state()
+	if(istype(loc,/turf) || !(contents.len))
+		if(held_mob)
+			held_mob.forceMove(loc)
+		drop_items()
+		qdel(src)
+
+/obj/item/weapon/holder/proc/drop_items()
+	for(var/atom/movable/M in contents)
+		if(M == held_mob)
+			continue
+		M.forceMove(get_turf(src))
 
 //Mob specific holders.
 
@@ -105,3 +147,9 @@
 	desc = "It's a small, disease-ridden rodent."
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "mouse_gray"
+
+
+/obj/item/weapon/holder/human
+	icon = 'icons/mob/holder_complex.dmi'
+	var/list/generate_for_slots = list(slot_l_hand, slot_r_hand, slot_back)
+	slot_flags = SLOT_BACK

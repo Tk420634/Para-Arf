@@ -202,6 +202,8 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	var/list/gear = list()
 	var/gear_tab = "General"
 
+	var/char_size = RESIZE_NORMAL
+
 /datum/preferences/New(client/C)
 	b_type = pick(4;"O-", 36;"O+", 3;"A-", 28;"A+", 1;"B-", 20;"B+", 1;"AB-", 5;"AB+")
 
@@ -415,6 +417,8 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				dat += "<b>Socks:</b> <a href ='?_src_=prefs;preference=socks;task=input'>[socks]</a><BR>"
 			dat += "<b>Backpack Type:</b> <a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><br>"
 
+			dat += "<h3>Size</h3>"
+			dat += "<b>Size:<b/> <a href ='?_src_=prefs;preference=char_size;task=input'>[round(char_size*100)]%</a><br>"
 			dat += "</td></tr></table>"
 
 		if(TAB_GAME) // General Preferences
@@ -1235,6 +1239,10 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						s_colour = rand_hex_color()
 				if("bag")
 					backbag = pick(backbaglist)
+
+				if("char_size")
+					char_size = pick(player_sizes_list)
+
 				/*if("skin_style")
 					h_style = random_skin_style(gender)*/
 				if("all")
@@ -1724,6 +1732,13 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 					if(new_backbag)
 						backbag = new_backbag
 
+				if("char_size")
+					var/list/size_types = player_sizes_list
+					var/new_size = input(user, "Choose your character's size:", "Character Preference") as null|anything in size_types
+					if(new_size)
+						char_size = size_types[new_size]
+
+
 				if("nt_relation")
 					var/new_relation = input(user, "Choose your relation to NT. Note that this represents what others can find out about your character by researching your background, not what your character actually thinks.", "Character Preference")  as null|anything in list("Loyal", "Supportive", "Neutral", "Skeptical", "Opposed")
 					if(new_relation)
@@ -2044,6 +2059,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				if("tab")
 					if(href_list["tab"])
 						current_tab = text2num(href_list["tab"])
+
 
 	ShowChoices(user)
 	return 1

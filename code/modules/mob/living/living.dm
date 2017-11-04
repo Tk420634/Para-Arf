@@ -73,6 +73,8 @@
 			var/oldloc = loc
 			var/oldMloc = M.loc
 
+			if (handle_micro_bump_helping(M)) return
+
 			var/M_passmob = (M.pass_flags & PASSMOB) // we give PASSMOB to both mobs to avoid bumping other mobs during swap.
 			var/src_passmob = (pass_flags & PASSMOB)
 			M.pass_flags |= PASSMOB
@@ -88,6 +90,8 @@
 
 			now_pushing = 0
 			return 1
+
+	if(handle_micro_bump_other(M)) return
 
 	// okay, so we didn't switch. but should we push?
 	// not if he's not CANPUSH of course

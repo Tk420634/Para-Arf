@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1508819378
-DIR: _maps _maps\map_files _maps\map_files\cyberiad code code\dallus_content code\dallus_content\mob code\dallus_content\modules\habits code\game code\game\jobs code\modules code\modules\mob code\modules\mob\living code\modules\mob\living\simple_animal code\modules\mob\living\simple_animal\friendly icons icons\mob 
+LAST_COMPILE_TIME: 1509828056
+DIR: code code\__DEFINES code\__HELPERS code\defines code\defines\procs code\game code\game\machinery code\game\objects code\game\objects\items code\game\objects\items\weapons code\modules code\modules\admin code\modules\assembly code\modules\client code\modules\client\preference code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\alien code\modules\mob\living\carbon\alien\humanoid code\modules\mob\living\carbon\alien\humanoid\caste code\modules\mob\living\carbon\alien\larva code\modules\mob\living\carbon\human code\modules\mob\living\carbon\human\species code\modules\mob\living\simple_animal code\modules\mob\living\simple_animal\friendly code\modules\mob\new_player code\modules\reagents code\modules\reagents\chemistry code\modules\reagents\chemistry\reagents code\modules\store icons icons\goonstation icons\goonstation\objects icons\obj 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 511.1385
-WINDOW: _maps\map_files\cyberiad\z2.dmm;icons\mob\animal.dmi;icons\mob\pets.dmi;code\modules\mob\living\simple_animal\friendly\cat.dm;code\dallus_content\mob\mobs.dm;code\dallus_content\mob\shadowbeast.dm;code\game\jobs\jobs.dm;code\game\jobs\whitelist.dm
-FILE: code\game\jobs\jobs.dm
+WINDOW: code\modules\mob\living\size.dm;code\__DEFINES\size_lists.dm;code\modules\client\preference\preferences.dm;code\modules\client\preference\preferences_mysql.dm;code\defines\procs\dbcore.dm
+FILE: code\modules\client\preference\preferences_mysql.dm
 */
 // END_INTERNALS
