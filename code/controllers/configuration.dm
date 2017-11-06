@@ -55,7 +55,7 @@
 	var/hostedby = null
 	var/respawn = 0
 	var/guest_jobban = 1
-	var/usewhitelist = 1
+	var/usewhitelist = 0
 	var/mods_are_mentors = 0
 	var/kick_inactive = 0				//force disconnect for inactive players
 	var/load_jobs_from_txt = 0
@@ -75,7 +75,7 @@
 	var/allow_drone_spawn = 1				//assuming the admin allow them to.
 	var/drone_build_time = 1200				//A drone will become available every X ticks since last drone spawn. Default is 2 minutes.
 
-	var/usealienwhitelist = 1
+	var/usealienwhitelist = 0
 	var/limitalienplayers = 0
 	var/alien_to_human_ratio = 0.5
 
