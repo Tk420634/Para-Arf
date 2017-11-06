@@ -606,7 +606,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 		var/rank = job.title
 		lastJob = job
 		if(!is_job_whitelisted(user, rank))
-			HTML += "<font color=red>[rank]</font></td><td><font color=red><b> \[KARMA]</b></font></td></tr>"
+			HTML += "<font color=red>[rank]</font></td><td><font color=red><b> \[WHITELISTED]</b></font></td></tr>"
 			continue
 		if(jobban_isbanned(user, rank))
 			HTML += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
@@ -1268,17 +1268,13 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				if("species")
 					var/list/new_species = playable_species
 					var/prev_species = species
-//						var/whitelisted = 0
 
 					if(config.usealienwhitelist) //If we're using the whitelist, make sure to check it!
-						for(var/Spec in whitelisted_species)
-							if(is_alien_whitelisted(user,Spec))
-								new_species += Spec
-//									whitelisted = 1
-//							if(!whitelisted)
-//								alert(user, "You cannot change your species as you need to be whitelisted. If you wish to be whitelisted contact an admin in-game, on the forums, or on IRC.")
-					else //Not using the whitelist? Aliens for everyone!
-						new_species += whitelisted_species
+						for(var/spec in whitelisted_species)
+							if(is_alien_whitelisted(user,spec))
+								new_species += spec
+//					else //Not using the whitelist? Aliens for everyone!
+//						new_species += whitelisted_species
 
 					species = input("Please select a species", "Character Generation", null) in new_species
 					var/datum/species/NS = all_species[species]
@@ -1359,9 +1355,9 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				if("speciesprefs")
 					speciesprefs = !speciesprefs //Starts 0, so if someone clicks the button up top there, this won't be 0 anymore. If they click it again, it'll go back to 0.
 				if("language")
-//						var/languages_available
+					var/languages_available
 					var/list/new_languages = list("None")
-/*
+
 					if(config.usealienwhitelist)
 						for(var/L in all_languages)
 							var/datum/language/lang = all_languages[L]
@@ -1372,11 +1368,10 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						if(!(languages_available))
 							alert(user, "There are not currently any available secondary languages.")
 					else
-*/
-					for(var/L in all_languages)
-						var/datum/language/lang = all_languages[L]
-						if(!(lang.flags & RESTRICTED))
-							new_languages += lang.name
+						for(var/L in all_languages)
+							var/datum/language/lang = all_languages[L]
+							if(!(lang.flags & RESTRICTED))
+								new_languages += lang.name
 
 					language = input("Please select a secondary language", "Character Generation", null) in new_languages
 

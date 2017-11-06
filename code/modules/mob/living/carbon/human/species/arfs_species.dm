@@ -1,16 +1,16 @@
 // Playable species
 var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vulpkanin",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
+	"Alien", "Anubis", "Apex", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle",
+	"Dalmation", "Deer", "Drake",
+	"Elephant", "Elf",
+	"Fennec", "Fox", "Fung",
+	"Glaceon", "Glowfen", "Goat", "Gremlin", "Gria",
 	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
 	"Jackalope", "Jelly",
 	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
+	"Lab", "Lugia", "Lynx",
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
@@ -307,7 +307,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/absol
 	language = "Sol Common"
 	tail = "absoltail"
-	species_traits = list(LIPS,IS_WHITELISTED)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags = HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
@@ -720,7 +720,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/eevee
 	language = "Sol Common"
 	tail = "eeveetail"
-	species_traits = list(LIPS,IS_WHITELISTED)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
@@ -788,7 +788,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/flareon
 	language = "Sol Common"
 	tail = "flareontail"
-	species_traits = list(LIPS,IS_WHITELISTED)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
@@ -855,7 +855,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/glaceons
 	language = "Sol Common"
 	tail = "glaceonstail"
-	species_traits = list(LIPS,IS_WHITELISTED)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
@@ -940,7 +940,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/grovyle
 	language = "Sol Common"
 	tail = "grovyletail"
-	species_traits = list(LIPS,IS_WHITELISTED)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
@@ -1126,7 +1126,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/lopunny
 	language = "Sol Common"
 	tail = "lopunnytail"
-	species_traits = list(LIPS,IS_WHITELISTED)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
@@ -1143,7 +1143,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/lucky
 	language = "Sol Common"
 	tail = "luckytail"
-	species_traits = list(LIPS)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
@@ -1160,7 +1160,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/lucky
 	language = "Sol Common"
 	tail = "lugiatail"
-	species_traits = list(LIPS,IS_WHITELISTED)
+	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI

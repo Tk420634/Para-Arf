@@ -10,19 +10,19 @@ var/list/whitelist = list()
 /proc/load_whitelist()
 	whitelist = file2list(WHITELISTFILE)
 	if(!whitelist.len)	whitelist = null
-/*
+
 /proc/check_whitelist(mob/M, var/rank)
 	if(!whitelist)
 		return 0
 	return ("[M.ckey]" in whitelist)
-*/
+
 
 /proc/is_job_whitelisted(mob/M, var/rank)
 	if(guest_jobbans(rank))
 		if(!config.usewhitelist)
 			return 1
-		if(config.disable_karma)
-			return 1
+//		if(config.disable_karma)
+//			return 1
 		if(check_rights(R_ADMIN, 0, M))
 			return 1
 		if(!dbcon.IsConnected())
@@ -58,14 +58,15 @@ var/list/whitelist = list()
 	if(!text)
 		diary << "Failed to load config/alienwhitelist.txt\n"
 	else
+		diary << "Successfully loaded config/alienwhitelist.txt"
 		alien_whitelist = splittext(text, "\n")
 
 //todo: admin aliens
 /proc/is_alien_whitelisted(mob/M, var/species)
 	if(!config.usealienwhitelist)
 		return 1
-	if(config.disable_karma)
-		return 1
+//	if(config.disable_karma)
+//		return 1
 	if(species == "human" || species == "Human")
 		return 1
 	if(check_rights(R_ADMIN, 0))
@@ -86,14 +87,13 @@ var/list/whitelist = list()
 				if(species in allowed_species) return 1
 			else return 1
 		return 0
-/*
-	if(M && species)
+	/*if(M && species)
 		for(var/s in alien_whitelist)
 			if(findtext(s,"[M.ckey] - [species]"))
 				return 1
 			if(findtext(s,"[M.ckey] - All"))
-				return 1
-*/
+				return 1*/
+
 
 
 #undef WHITELISTFILE
