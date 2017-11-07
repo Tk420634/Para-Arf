@@ -171,7 +171,7 @@
 				soundin = pick('sound/arf/footstep/sock-floor1.ogg', 'sound/arf/footstep/sock-floor2.ogg', 'sound/arf/footstep/sock-floor3.ogg')
 			//arfcode end
 
-			/*
+			/* template
 			if("")
 				soundin = pick('')
 			*/
