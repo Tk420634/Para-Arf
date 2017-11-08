@@ -135,4 +135,45 @@
 							  'sound/machines/terminal_button07.ogg', 'sound/machines/terminal_button08.ogg')
 			if("growls")
 				soundin = pick('sound/goonstation/voice/growl1.ogg', 'sound/goonstation/voice/growl2.ogg', 'sound/goonstation/voice/growl3.ogg')
+
+
+			//arfcode start
+			//This must go here unfortunately; unless we move the whole thing.
+			if("step_boots")
+				soundin = pick('sound/arf/footstep/boot-floor1.ogg', 'sound/arf/footstep/boot-floor2.ogg', 'sound/arf/footstep/boot-floor3.ogg', 'sound/arf/footstep/boot-floor4.ogg',\
+							 'sound/arf/footstep/boot-floor5.ogg')
+			if("step_generic_floor")
+				soundin = pick('sound/arf/footstep/shoe-floor1.ogg', 'sound/arf/footstep/shoe-floor2.ogg', 'sound/arf/footstep/shoe-floor3.ogg', 'sound/arf/footstep/shoe-floor4.ogg',\
+					 		'sound/arf/footstep/shoe-floor5.ogg', 'sound/arf/footstep/shoe-floor6.ogg', 'sound/arf/footstep/shoe-floor7.ogg')
+			if("step_heels")
+				soundin = pick('sound/arf/footstep/heel-floor1.ogg', 'sound/arf/footstep/heel-floor2.ogg')
+			if("step_bare")
+				soundin = pick('sound/arf/footstep/barefoot-floor1.ogg', 'sound/arf/footstep/barefoot-floor2.ogg', 'sound/arf/footstep/barefoot-floor3.ogg', 'sound/arf/footstep/barefoot-floor4.ogg')
+			if("step_paw")
+				soundin = pick('sound/arf/footstep/paw-floor1.ogg')
+			if("step_snow")
+				soundin = pick('sound/arf/footstep/all-snow1.ogg', 'sound/arf/footstep/all-snow2.ogg', 'sound/arf/footstep/all-snow3.ogg')
+			if("step_resin")
+				soundin = pick('sound/arf/footstep/all-resin1.ogg', 'sound/arf/footstep/all-resin2.ogg', 'sound/arf/footstep/all-resin3.ogg',\
+							 'sound/arf/footstep/all-resin4.ogg', 'sound/arf/footstep/all-resin5.ogg')
+			if("step_sand")
+				soundin = pick('sound/arf/footstep/all-sand1.ogg', 'sound/arf/footstep/all-sand2.ogg', 'sound/arf/footstep/all-sand3.ogg')
+			if("step_generic_rock")
+				soundin = pick('sound/arf/footstep/shoe-rock1.ogg', 'sound/arf/footstep/shoe-rock2.ogg', 'sound/arf/footstep/shoe-rock3.ogg',\
+							 'sound/arf/footstep/shoe-rock4.ogg', 'sound/arf/footstep/shoe-rock5.ogg', 'sound/arf/footstep/shoe-rock6.ogg')
+			if("step_puddle")	//Small puddle of water, < 1 inch deep.
+				soundin = pick('sound/arf/footstep/all-puddle1.ogg', 'sound/arf/footstep/all-puddle2.ogg', 'sound/arf/footstep/all-puddle3.ogg')
+			if("step_water")	//Semi-deep water, no deeper than a foot.
+				soundin = pick('sound/arf/footstep/all-water1.ogg', 'sound/arf/footstep/all-water2.ogg', 'sound/arf/footstep/all-water3.ogg', 'sound/arf/footstep/all-water4.ogg')
+			if("step_metal")
+				soundin = pick('sound/arf/footstep/all-plating1.ogg', 'sound/arf/footstep/all-plating2.ogg')
+			if("step_sock")
+				soundin = pick('sound/arf/footstep/sock-floor1.ogg', 'sound/arf/footstep/sock-floor2.ogg', 'sound/arf/footstep/sock-floor3.ogg')
+			//arfcode end
+
+			/* template
+			if("")
+				soundin = pick('')
+			*/
+
 	return soundin

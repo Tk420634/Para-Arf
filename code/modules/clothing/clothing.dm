@@ -422,16 +422,13 @@ BLIND     // can't see anything
 
 		if(!istype(H) || !istype(T))
 			return 0
-
-		if(H.m_intent == MOVE_INTENT_RUN)
-			if(shoe_sound_footstep >= 2)
-				if(T.shoe_running_volume)
-					playsound(src, shoe_sound, T.shoe_running_volume, 1)
-				shoe_sound_footstep = 0
+		if((H.step_count % 2))
+			var/volume
+			if(H.m_intent == MOVE_INTENT_RUN)
+				volume = T.shoe_running_volume
 			else
-				shoe_sound_footstep++
-		else if(T.shoe_walking_volume)
-			playsound(src, shoe_sound, T.shoe_walking_volume, 1)
+				volume = T.shoe_walking_volume
+			playsound(src, shoe_sound, volume, 1)
 
 	return 1
 
