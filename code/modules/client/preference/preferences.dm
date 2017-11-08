@@ -2089,6 +2089,10 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	character.age = age
 	character.b_type = b_type
 
+
+	character.resize(char_size)
+
+
 	//Head-specific
 	var/obj/item/organ/external/head/H = character.get_organ("head")
 
@@ -2226,6 +2230,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	character.force_update_limbs()
 	character.update_eyes()
 	character.regenerate_icons()
+	character.update_icons()
 
 /datum/preferences/proc/open_load_dialog(mob/user)
 
