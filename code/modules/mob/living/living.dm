@@ -569,7 +569,7 @@
 	var/turf/T = loc
 	. = ..()
 	if(.)
-		if(loc = newloc)
+		if(loc == newloc)
 			handle_footstep(loc)
 			step_count++
 
