@@ -73,8 +73,6 @@
 			var/oldloc = loc
 			var/oldMloc = M.loc
 
-			if (handle_micro_bump_helping(M)) return
-
 			var/M_passmob = (M.pass_flags & PASSMOB) // we give PASSMOB to both mobs to avoid bumping other mobs during swap.
 			var/src_passmob = (pass_flags & PASSMOB)
 			M.pass_flags |= PASSMOB
@@ -90,8 +88,6 @@
 
 			now_pushing = 0
 			return 1
-
-	if(handle_micro_bump_other(M)) return
 
 	// okay, so we didn't switch. but should we push?
 	// not if he's not CANPUSH of course
@@ -573,8 +569,9 @@
 	var/turf/T = loc
 	. = ..()
 	if(.)
-		handle_footstep(loc)
-		step_count++
+		if(loc = newloc)
+			handle_footstep(loc)
+			step_count++
 
 		if(pulling && pulling == pullee) // we were pulling a thing and didn't lose it during our move.
 			if(pulling.anchored)
