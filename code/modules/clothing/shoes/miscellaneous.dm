@@ -88,7 +88,6 @@
 	burn_state = FIRE_PROOF
 	var/footstep = 1
 	silence_steps = 1
-	shoe_sound = "jackboot"
 
 /obj/item/clothing/shoes/jackboots/jacksandals
 	name = "jacksandals"
