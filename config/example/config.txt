@@ -349,3 +349,6 @@ DISABLE_SPACE_RUINS
 
 ## Uncomment this to disable karma and unlock all karma purchases for players by default
 #DISABLE_KARMA
+
+## Comment to disable the choice of a vote for the end of round shuttle.
+#VOTE_FOR_AUTOTRANSFER

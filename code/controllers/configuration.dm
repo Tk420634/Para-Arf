@@ -28,6 +28,7 @@
 	var/vote_period = 600				// length of voting period (deciseconds, default 1 minute)
 	var/vote_autotransfer_initial = 72000 // Length of time before the first autotransfer vote is called
 	var/vote_autotransfer_interval = 18000 // length of time before next sequential autotransfer vote
+	var/vote_for_autotransfer = 0
 	var/vote_no_default = 0				// vote does not default to nochange/norestart (tbi)
 	var/vote_no_dead = 0				// dead people can't vote (tbi)
 //	var/enable_authentication = 0		// goon authentication
@@ -53,7 +54,7 @@
 	var/forbid_secborg = 0				// disallow secborg module to be chosen.
 	var/forbid_peaceborg = 0			// disallow peacekeeper module to be chosen.
 	var/hostedby = null
-	var/respawn = 0
+	var/respawn = 1
 	var/guest_jobban = 1
 	var/usewhitelist = 1
 	var/mods_are_mentors = 0
@@ -332,6 +333,9 @@
 
 				if("vote_period")
 					config.vote_period = text2num(value)
+
+				if("vote_for_autotransfer")
+					config.vote_for_autotransfer = 1
 
 				if("allow_ai")
 					config.allow_ai = 1
