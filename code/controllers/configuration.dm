@@ -334,6 +334,12 @@
 				if("vote_period")
 					config.vote_period = text2num(value)
 
+				if("vote_autotransfer_initial")
+					config.vote_autotransfer_initial = text2num(value)
+
+				if("vote_autotransfer_interval")
+					config.vote_autotransfer_interval = text2num(value)
+
 				if("vote_for_autotransfer")
 					config.vote_for_autotransfer = 1
 

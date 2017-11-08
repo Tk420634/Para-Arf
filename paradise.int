@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1510138893
+LAST_COMPILE_TIME: 1510139167
 DIR: code code\__DEFINES code\__HELPERS code\_globalvars code\_globalvars\lists code\controllers code\datums code\game code\game\gamemodes code\game\jobs code\game\machinery code\game\machinery\computer code\game\objects code\game\objects\items code\game\objects\items\weapons code\modules code\modules\arcade code\modules\client code\modules\client\preference code\modules\karma code\modules\mob code\modules\mob\living code\modules\mob\living\silicon code\modules\mob\living\silicon\robot code\modules\mob\new_player code\modules\projectiles code\modules\projectiles\guns code\modules\projectiles\guns\projectile code\modules\projectiles\projectile code\modules\research code\modules\research\designs code\modules\surgery code\modules\surgery\organs 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 511.1385
 WINDOW: code\game\jobs\whitelist.dm;code\modules\client\preference\preferences.dm;code\_globalvars\lists\mobs.dm;code\modules\mob\new_player\new_player.dm;code\controllers\configuration.dm;code\game\gamemodes\gameticker.dm;code\controllers\voting.dm;code\game\machinery\computer\communications.dm;code\modules\mob\living\size.dm
-FILE: code\modules\client\preference\preferences.dm
+FILE: code\controllers\configuration.dm
 */
 // END_INTERNALS
