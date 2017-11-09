@@ -536,57 +536,46 @@
 /datum/sprite_accessory/hair/partfade
 	name = "Parted Fade"
 	icon_state = "hair_shavedpart"
-	gender = MALE
 
 /datum/sprite_accessory/hair/undercut3
 	name = "Undercut Swept Left"
 	icon_state = "hair_undercut3"
-	gender = MALE
 
 /datum/sprite_accessory/hair/undercut2
 	name = "Undercut Swept Right"
 	icon_state = "hair_undercut2"
-	gender = MALE
 
 /datum/sprite_accessory/hair/undercut1
 	name = "Undercut"
 	icon_state = "hair_undercut1"
-	gender = MALE
 
 /datum/sprite_accessory/hair/coffeehouse
 	name = "Coffee House Cut"
 	icon_state = "hair_coffeehouse"
-	gender = MALE
 
 /datum/sprite_accessory/hair/tightbun
 	name = "Tight Bun"
 	icon_state = "hair_tightbun"
-	gender = FEMALE
 
 /datum/sprite_accessory/hair/trimmed
 	name = "Trimmed"
 	icon_state = "hair_trimmed"
-	gender = MALE
 
 /datum/sprite_accessory/hair/trimflat
 	name = "Trimmed Flat Top"
 	icon_state = "hair_trimflat"
-	gender = MALE
 
 /datum/sprite_accessory/hair/nofade
 	name = "Regulation Cut"
 	icon_state = "hair_nofade"
-	gender = MALE
 
 /datum/sprite_accessory/hair/baldfade
 	name = "Balding Fade"
 	icon_state = "hair_baldfade"
-	gender = MALE
 
 /datum/sprite_accessory/hair/highfade
 	name = "High Fade"
 	icon_state = "hair_highfade"
-	gender = MALE
 
 /datum/sprite_accessory/hair/medfade
 	name = "Medium Fade"
@@ -595,7 +584,6 @@
 /datum/sprite_accessory/hair/lowfade
 	name = "Low Fade"
 	icon_state = "hair_lowfade"
-	gender = MALE
 
 /datum/sprite_accessory/hair/oxton
 	name = "Oxton"
@@ -632,7 +620,6 @@
 /datum/sprite_accessory/hair/joestar
 	name = "Joestar"
 	icon_state = "hair_joestar"
-	gender = MALE
 
 /datum/sprite_accessory/hair/nitori
 	name = "Nitori"
