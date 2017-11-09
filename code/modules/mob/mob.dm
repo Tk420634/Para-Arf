@@ -710,7 +710,7 @@ var/list/slot_equipment_priority = list( \
 	set name = "Respawn"
 	set category = "OOC"
 
-	if(!abandon_allowed)
+	if(!config.respawn)
 		to_chat(usr, "<span class='warning'>Respawning is disabled.</span>")
 		return
 
