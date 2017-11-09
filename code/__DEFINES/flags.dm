@@ -42,6 +42,7 @@
 #define NO_EYES				1024
 #define HAS_ALT_HEADS		2048
 #define ALL_RPARTS			4096
+#define HAS_TAIL_COLORING	8192
 
 //Species Diet Flags
 #define DIET_CARN		1

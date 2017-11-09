@@ -306,6 +306,9 @@
 		if(current_species && (current_species.bodyflags & HAS_SKIN_COLOR))
 			temp.Blend(s_colour, blend_mode)
 
+		if(current_species && (current_species.bodyflags & HAS_TAIL_COLORING))
+			temp.Blend(s_colour, blend_mode)
+
 		if(current_species && (current_species.bodyflags & HAS_TAIL_MARKINGS))
 			var/tail_marking = m_styles["tail"]
 			var/datum/sprite_accessory/tail_marking_style = marking_styles_list[tail_marking]
