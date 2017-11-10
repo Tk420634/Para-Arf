@@ -1,7 +1,7 @@
 
 // General-purpose CC official. Can hear out grievances, investigate cases, issue demotions, etc.
 /datum/job/ntnavyofficer
-	title = "Nanotrasen Navy Officer"
+	title = "A.R.F. Navy Officer"
 	flag = CENTCOM
 	department_flag = CENTCOM
 	total_positions = 5
@@ -17,7 +17,7 @@
 	return get_centcom_access(title)
 
 /datum/outfit/job/ntnavyofficer
-	name = "Nanotrasen Navy Officer"
+	name = "A.R.F. Navy Officer"
 	jobtype = /datum/job/ntnavyofficer
 
 	uniform = /obj/item/clothing/under/rank/centcom/officer

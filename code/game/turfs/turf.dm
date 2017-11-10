@@ -31,8 +31,8 @@
 	var/list/blueprint_data //for the station blueprints, images of objects eg: pipes
 
 	var/list/footstep_sounds = list()
-	var/shoe_running_volume = 50
-	var/shoe_walking_volume = 20
+	var/shoe_running_volume = 100
+	var/shoe_walking_volume = 50
 
 /turf/New()
 	..()

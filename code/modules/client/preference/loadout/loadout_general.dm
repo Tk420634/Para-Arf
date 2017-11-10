@@ -79,3 +79,54 @@
 	display_name = "Nano-Mob Hunter GO! Cartridge"
 	path = /obj/item/weapon/cartridge/mob_hunt_game
 	cost = 2
+
+//instruments
+/datum/gear/instruments/guitar
+	display_name = "Guitar"
+	path = /obj/item/device/instrument/guitar
+	cost = 10
+
+/datum/gear/instruments/eguitar
+	display_name = "Electric Guitar"
+	path = /obj/item/device/instrument/eguitar
+	cost = 10
+
+/datum/gear/instruments/glockenspiel
+	display_name = "Glockenspiel"
+	path = /obj/item/device/instrument/glockenspiel
+	cost = 10
+
+/datum/gear/instruments/accordion
+	display_name = "Accordion"
+	path = /obj/item/device/instrument/accordion
+	cost = 10
+
+/datum/gear/instruments/saxophone
+	display_name = "Saxophone"
+	path = /obj/item/device/instrument/saxophone
+	cost = 10
+
+/datum/gear/instruments/trombone
+	display_name = "Trombone"
+	path = /obj/item/device/instrument/trombone
+	cost = 10
+
+/datum/gear/instruments/recorder
+	display_name = "Recorder"
+	path = /obj/item/device/instrument/recorder
+	cost = 10
+
+/datum/gear/instruments/harmonica
+	display_name = "Harmonica"
+	path = /obj/item/device/instrument/harmonica
+	cost = 10
+
+/datum/gear/instruments/xylophone
+	display_name = "Xylophone"
+	path = /obj/item/device/instrument/xylophone
+	cost = 10
+
+/datum/gear/instruments/violin
+	display_name = "Violin"
+	path = /obj/item/device/instrument/violin
+	cost = 10

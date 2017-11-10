@@ -114,7 +114,7 @@ var/list/support_positions = list(
 	"Mime",
 	"Barber",
 	"Magistrate",
-	"Nanotrasen Representative",
+	"A.R.F. Representative",
 	"Blueshield"
 )
 
@@ -137,7 +137,6 @@ var/list/security_positions = list(
 	"Security Pod Pilot"
 )
 
-
 var/list/civilian_positions = list(
 	"Civilian"
 )
@@ -151,17 +150,20 @@ var/list/nonhuman_positions = list(
 
 var/list/whitelisted_positions = list(
 	"Blueshield",
-	"Nanotrasen Representative",
+	"A.R.F. Representative",
 	"Barber",
 	"Mechanic",
 	"Brig Physician",
 	"Magistrate",
 	"Security Pod Pilot",
+	"Clown",
+	"Mime"
 )
 
 
 /proc/guest_jobbans(var/job)
-	return (job in whitelisted_positions)
+	var/whitelisted_jobs = whitelisted_positions + command_positions + nonhuman_positions + security_positions
+	return (job in whitelisted_jobs)
 
 /proc/get_job_datums()
 	var/list/occupations = list()

@@ -678,8 +678,9 @@
 	result_amount = 1
 	required_other = 1
 	required_container = /obj/item/slime_extract/rainbow
-
+/*
 /datum/chemical_reaction/slime_transfer/on_reaction(datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/transference/P = new /obj/item/slimepotion/transference
 	P.forceMove(get_turf(holder.my_atom))
+*/

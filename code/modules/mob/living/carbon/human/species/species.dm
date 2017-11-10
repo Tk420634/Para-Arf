@@ -174,6 +174,8 @@
 		)
 	var/list/proc/species_abilities = list()
 
+	var/holder_type = /obj/item/weapon/holder/micro
+
 /datum/species/New()
 	//If the species has eyes, they are the default vision organ
 	if(!vision_organ && has_organ["eyes"])
@@ -745,3 +747,7 @@ It'll return null if the organ doesn't correspond, so include null checks when u
 		M.bodytemperature = M.bodytemperature + (temperature - M.bodytemperature)
 	if(temperature <= 280)
 		M.bodytemperature = M.bodytemperature - (M.bodytemperature - temperature)
+
+
+/datum/species/proc/get_bodytype(var/mob/living/carbon/human/H)
+	return name

@@ -20,6 +20,7 @@
 	minimal_player_age = 21
 	exp_requirements = 600
 	exp_type = EXP_TYPE_CREW
+	alt_titles = list("Commander", "Chief of Security", "Sheriff", "Arch-Militant")
 	outfit = /datum/outfit/job/hos
 
 /datum/outfit/job/hos
@@ -64,6 +65,7 @@
 	minimal_player_age = 21
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
+	alt_titles = list("Jailor")
 	outfit = /datum/outfit/job/warden
 
 /datum/outfit/job/warden
@@ -106,7 +108,7 @@
 	alt_titles = list("Forensic Technician")
 	access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_court, access_weapons)
 	minimal_access = list(access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_court, access_weapons)
-	alt_titles = list("Forensic Technician")
+	alt_titles = list("Forensic Technician","Private Investigator")
 	minimal_player_age = 14
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
@@ -167,6 +169,7 @@
 	minimal_player_age = 14
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
+	alt_titles = list("Security Cadet", "Security Secretary", "Deputy")
 	outfit = /datum/outfit/job/officer
 
 /datum/outfit/job/officer

@@ -9,7 +9,8 @@
 	selection_color = "#dddddd"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
-	alt_titles = list("Tourist","Businessman","Trader","Assistant")
+	alt_titles = list("Tourist","Businessman","Trader","Assistant","Technical Assistant","Medical Intern","Research Assistant","Passenger",
+	"Entertainer","Lifeguard","Waiter","Waitress","Secretary","Delivery Staff","Holo-Gladiator","Musician","Masseuse","Massager","Test Subject", "Fish Breeder")
 	outfit = /datum/outfit/job/assistant
 
 /datum/job/civilian/get_access()

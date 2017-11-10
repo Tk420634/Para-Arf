@@ -90,7 +90,7 @@
 		if("Head of Personnel")
 			suit=/obj/item/clothing/suit/space/eva/plasmaman/security/hop
 			helm=/obj/item/clothing/head/helmet/space/eva/plasmaman/security/hop
-		if("Nanotrasen Representative")
+		if("A.R.F. Representative")
 			suit = /obj/item/clothing/suit/space/eva/plasmaman/nt_rep
 			helm = /obj/item/clothing/head/helmet/space/eva/plasmaman/nt_rep
 		if("Medical Doctor","Brig Physician","Virologist")

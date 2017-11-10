@@ -11,7 +11,8 @@
 	selection_color = "#dddddd"
 	access = list(access_morgue, access_chapel_office, access_crematorium, access_maint_tunnels)
 	minimal_access = list(access_morgue, access_chapel_office, access_crematorium, access_maint_tunnels)
-
+	alt_titles = list("Counselor", "Priest", "Priestess", "Cleric", "Nun", "Preacher", "Soothsayer", "Archbishop", "Bishop", "Bhikkhu", "Reverend", "Granthi", 
+	, "Bhikkhuni", "Guru", "Imam", "Minister", "Monk", "Mullah", "Pastor", "Rabbi", "Shaman", "Sheikh", "Daoshi", "Oracle"  )
 	outfit = /datum/outfit/job/chaplain
 
 /datum/outfit/job/chaplain

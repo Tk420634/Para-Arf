@@ -569,8 +569,9 @@
 	var/turf/T = loc
 	. = ..()
 	if(.)
-		handle_footstep(loc)
-		step_count++
+		if(loc == newloc)
+			handle_footstep(loc)
+			step_count++
 
 		if(pulling && pulling == pullee) // we were pulling a thing and didn't lose it during our move.
 			if(pulling.anchored)

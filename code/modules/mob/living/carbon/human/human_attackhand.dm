@@ -54,6 +54,8 @@
 
 	switch(M.a_intent)
 		if(INTENT_HELP)
+			if (istype(H) && attempt_to_scoop(H))
+				return 0;
 			if(attacker_style && attacker_style.help_act(H, src))//adminfu only...
 				return 1
 			if(can_operate(src))

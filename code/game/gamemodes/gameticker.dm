@@ -64,7 +64,10 @@ var/round_start_time = 0
 	else
 		timerbuffer = config.vote_autotransfer_interval
 	spawn(timerbuffer)
-		vote.autotransfer()
+		if(config.vote_for_autotransfer)
+			vote.autotransfer()
+		else
+			init_shift_change(null, 1)
 		initialtpass = 1
 		votetimer()
 

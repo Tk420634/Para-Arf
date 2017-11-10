@@ -319,7 +319,7 @@
 			favoured_types = list(/obj/item/clothing, /obj/item/weapon)
 		if("Captain", "Head of Personnel")
 			favoured_types = list(/obj/item/clothing, /obj/item/weapon/stamp/captain,/obj/item/weapon/disk/nuclear)
-		if("Nanotrasen Representative")
+		if("A.R.F. Representative")
 			favoured_types = list(/obj/item/clothing, /obj/item/weapon/stamp/centcom, /obj/item/weapon/paper, /obj/item/weapon/melee/classic_baton/ntcane)
 			functions += "paperwork"
 		if("Magistrate", "Internal Affairs Agent")

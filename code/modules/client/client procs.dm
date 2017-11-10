@@ -133,9 +133,9 @@
 								to_chat(usr, "You do not have enough karma!")
 								return
 							else
-								if(alert("Are you sure you want to unlock Nanotrasen Representative?", "Confirmation", "No", "Yes") != "Yes")
+								if(alert("Are you sure you want to unlock A.R.F. Representative?", "Confirmation", "No", "Yes") != "Yes")
 									return
-								DB_job_unlock("Nanotrasen Representative",30)
+								DB_job_unlock("A.R.F. Representative",30)
 								return
 						if("5")
 							if(karma <30)

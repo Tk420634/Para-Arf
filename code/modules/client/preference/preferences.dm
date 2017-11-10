@@ -202,6 +202,8 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	var/list/gear = list()
 	var/gear_tab = "General"
 
+	var/char_size = RESIZE_NORMAL
+
 /datum/preferences/New(client/C)
 	b_type = pick(4;"O-", 36;"O+", 3;"A-", 28;"A+", 1;"B-", 20;"B+", 1;"AB-", 5;"AB+")
 
@@ -415,6 +417,8 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				dat += "<b>Socks:</b> <a href ='?_src_=prefs;preference=socks;task=input'>[socks]</a><BR>"
 			dat += "<b>Backpack Type:</b> <a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><br>"
 
+			dat += "<h3>Size</h3>"
+			dat += "<b>Size:<b/> <a href ='?_src_=prefs;preference=char_size;task=input'>[round(char_size*100)]%</a><br>"
 			dat += "</td></tr></table>"
 
 		if(TAB_GAME) // General Preferences
@@ -602,7 +606,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 		var/rank = job.title
 		lastJob = job
 		if(!is_job_whitelisted(user, rank))
-			HTML += "<font color=red>[rank]</font></td><td><font color=red><b> \[KARMA]</b></font></td></tr>"
+			HTML += "<font color=red>[rank]</font></td><td><font color=red><b> \[WHITELISTED]</b></font></td></tr>"
 			continue
 		if(jobban_isbanned(user, rank))
 			HTML += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
@@ -1235,6 +1239,10 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						s_colour = rand_hex_color()
 				if("bag")
 					backbag = pick(backbaglist)
+
+				if("char_size")
+					char_size = pick(player_sizes_list)
+
 				/*if("skin_style")
 					h_style = random_skin_style(gender)*/
 				if("all")
@@ -1260,17 +1268,13 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				if("species")
 					var/list/new_species = playable_species
 					var/prev_species = species
-//						var/whitelisted = 0
 
 					if(config.usealienwhitelist) //If we're using the whitelist, make sure to check it!
-						for(var/Spec in whitelisted_species)
-							if(is_alien_whitelisted(user,Spec))
-								new_species += Spec
-//									whitelisted = 1
-//							if(!whitelisted)
-//								alert(user, "You cannot change your species as you need to be whitelisted. If you wish to be whitelisted contact an admin in-game, on the forums, or on IRC.")
-					else //Not using the whitelist? Aliens for everyone!
-						new_species += whitelisted_species
+						for(var/spec in whitelisted_species)
+							if(is_alien_whitelisted(user,spec))
+								new_species += spec
+//					else //Not using the whitelist? Aliens for everyone!
+//						new_species += whitelisted_species
 
 					species = input("Please select a species", "Character Generation", null) in new_species
 					var/datum/species/NS = all_species[species]
@@ -1351,9 +1355,9 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				if("speciesprefs")
 					speciesprefs = !speciesprefs //Starts 0, so if someone clicks the button up top there, this won't be 0 anymore. If they click it again, it'll go back to 0.
 				if("language")
-//						var/languages_available
+					var/languages_available
 					var/list/new_languages = list("None")
-/*
+
 					if(config.usealienwhitelist)
 						for(var/L in all_languages)
 							var/datum/language/lang = all_languages[L]
@@ -1364,11 +1368,10 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						if(!(languages_available))
 							alert(user, "There are not currently any available secondary languages.")
 					else
-*/
-					for(var/L in all_languages)
-						var/datum/language/lang = all_languages[L]
-						if(!(lang.flags & RESTRICTED))
-							new_languages += lang.name
+						for(var/L in all_languages)
+							var/datum/language/lang = all_languages[L]
+							if(!(lang.flags & RESTRICTED))
+								new_languages += lang.name
 
 					language = input("Please select a secondary language", "Character Generation", null) in new_languages
 
@@ -1389,14 +1392,14 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						b_type = new_b_type
 
 				if("hair")
-					if(species in list("Human", "Unathi", "Tajaran", "Skrell", "Machine", "Vulpkanin", "Vox")) //Species that have hair. (No HAS_HAIR flag)
+					if(species in playable_species) //Species that have hair. (No HAS_HAIR flag)
 						var/input = "Choose your character's hair colour:"
 						var/new_hair = input(user, input, "Character Preference", h_colour) as color|null
 						if(new_hair)
 							h_colour = new_hair
 
 				if("secondary_hair")
-					if(species in list("Human", "Unathi", "Tajaran", "Skrell", "Machine", "Vulpkanin", "Vox"))
+					if(species in playable_species)
 						var/datum/sprite_accessory/hair_style = hair_styles_public_list[h_style]
 						if(hair_style.secondary_theme && !hair_style.no_sec_colour)
 							var/new_hair = input(user, "Choose your character's secondary hair colour:", "Character Preference", h_sec_colour) as color|null
@@ -1591,13 +1594,13 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						body_accessory = (new_body_accessory == "None") ? null : new_body_accessory
 
 				if("facial")
-					if(species in list("Human", "Unathi", "Tajaran", "Skrell", "Machine", "Vulpkanin", "Vox")) //Species that have facial hair. (No HAS_HAIR_FACIAL flag)
+					if(species in playable_species) //Species that have facial hair. (No HAS_HAIR_FACIAL flag)
 						var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference", f_colour) as color|null
 						if(new_facial)
 							f_colour = new_facial
 
 				if("secondary_facial")
-					if(species in list("Human", "Unathi", "Tajaran", "Skrell", "Machine", "Vulpkanin", "Vox"))
+					if(species in playable_species)
 						var/datum/sprite_accessory/facial_hair_style = facial_hair_styles_list[f_style]
 						if(facial_hair_style.secondary_theme && !facial_hair_style.no_sec_colour)
 							var/new_facial = input(user, "Choose your character's secondary facial-hair colour:", "Character Preference", f_sec_colour) as color|null
@@ -1723,6 +1726,13 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 					var/new_backbag = input(user, "Choose your character's style of bag:", "Character Preference") as null|anything in backbaglist
 					if(new_backbag)
 						backbag = new_backbag
+
+				if("char_size")
+					var/list/size_types = player_sizes_list
+					var/new_size = input(user, "Choose your character's size:", "Character Preference") as null|anything in size_types
+					if(new_size)
+						char_size = size_types[new_size]
+
 
 				if("nt_relation")
 					var/new_relation = input(user, "Choose your relation to NT. Note that this represents what others can find out about your character by researching your background, not what your character actually thinks.", "Character Preference")  as null|anything in list("Loyal", "Supportive", "Neutral", "Skeptical", "Opposed")
@@ -2045,6 +2055,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 					if(href_list["tab"])
 						current_tab = text2num(href_list["tab"])
 
+
 	ShowChoices(user)
 	return 1
 
@@ -2077,6 +2088,10 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	character.change_gender(gender)
 	character.age = age
 	character.b_type = b_type
+
+
+	character.resize(char_size)
+
 
 	//Head-specific
 	var/obj/item/organ/external/head/H = character.get_organ("head")
@@ -2215,6 +2230,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	character.force_update_limbs()
 	character.update_eyes()
 	character.regenerate_icons()
+	character.update_icons()
 
 /datum/preferences/proc/open_load_dialog(mob/user)
 

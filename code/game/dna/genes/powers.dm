@@ -8,7 +8,7 @@
 	deactivation_messages=list("You feel the need to breathe, once more.")
 	instability = GENE_INSTABILITY_MODERATE
 	mutation=NO_BREATH
-	activation_prob=25
+	activation_prob=0
 
 /datum/dna/gene/basic/nobreath/New()
 	block=NOBREATHBLOCK
@@ -20,6 +20,7 @@
 	deactivation_messages=list("Your regenerative powers feel like they've vanished.")
 	instability = GENE_INSTABILITY_MINOR
 	mutation=REGEN
+	activation_prob=0
 
 /datum/dna/gene/basic/regenerate/New()
 	block=REGENERATEBLOCK
@@ -30,6 +31,7 @@
 	deactivation_messages=list("You feel slow.")
 	instability = GENE_INSTABILITY_MINOR
 	mutation=RUN
+	activation_prob=0
 
 /datum/dna/gene/basic/increaserun/New()
 	block=INCREASERUNBLOCK
@@ -49,6 +51,7 @@
 	deactivation_messages=list("Your skin no longer feels icy to the touch.")
 	instability = GENE_INSTABILITY_MODERATE
 	mutation=RESIST_HEAT
+	activation_prob=0
 
 /datum/dna/gene/basic/heat_resist/New()
 	block=COLDBLOCK
@@ -62,6 +65,7 @@
 	deactivation_messages=list("Your body is no longer filled with warmth.")
 	instability = GENE_INSTABILITY_MODERATE
 	mutation=RESIST_COLD
+	activation_prob=0
 
 /datum/dna/gene/basic/cold_resist/New()
 	block=FIREBLOCK
@@ -75,6 +79,7 @@
 	deactivation_messages=list("your fingers no longer feel numb.")
 	instability = GENE_INSTABILITY_MINOR
 	mutation=FINGERPRINTS
+	activation_prob=0
 
 /datum/dna/gene/basic/noprints/New()
 	block=NOPRINTSBLOCK
@@ -95,6 +100,7 @@
 	deactivation_messages = list("Everything around you seems to shrink...")
 	instability = GENE_INSTABILITY_MINOR
 	mutation=DWARF
+	activation_prob=0
 
 /datum/dna/gene/basic/midget/New()
 	block=SMALLSIZEBLOCK
@@ -116,7 +122,7 @@
 	deactivation_messages=list("Your muscles shrink.")
 	instability = GENE_INSTABILITY_MAJOR
 	mutation=HULK
-	activation_prob=15
+	activation_prob=0
 
 /datum/dna/gene/basic/hulk/New()
 	block=HULKBLOCK
@@ -156,7 +162,7 @@
 	deactivation_messages=list("the walls around you re-appear.")
 	instability = GENE_INSTABILITY_MAJOR
 	mutation=XRAY
-	activation_prob=15
+	activation_prob=0
 
 /datum/dna/gene/basic/xray/New()
 	block=XRAYBLOCK
@@ -175,7 +181,7 @@
 	deactivation_messages = list("You feel dumber.")
 	instability = GENE_INSTABILITY_MAJOR
 	mutation=TK
-	activation_prob=15
+	activation_prob=0
 
 /datum/dna/gene/basic/tk/New()
 	block=TELEBLOCK

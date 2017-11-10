@@ -29,7 +29,8 @@
 	default_language = "Galactic Common"
 	language = "Sinta'unathi"
 	tail = "sogtail"
-	unarmed_type = /datum/unarmed_attack/claws
+//	unarmed_type = /datum/unarmed_attack/claws
+	unarmed_type = /datum/unarmed_attack/punch
 	primitive_form = "Stok"
 
 	blurb = "A heavily reptillian species, Unathi (or 'Sinta as they call themselves) hail from the \
@@ -41,16 +42,9 @@
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags = HAS_TAIL | HAS_HEAD_ACCESSORY | HAS_BODY_MARKINGS | HAS_HEAD_MARKINGS | HAS_SKIN_COLOR | HAS_ALT_HEADS | TAIL_WAGGING
-	dietflags = DIET_CARN
 
-	cold_level_1 = 280 //Default 260 - Lower is better
-	cold_level_2 = 220 //Default 200
-	cold_level_3 = 140 //Default 120
-
-	heat_level_1 = 380 //Default 360 - Higher is better
-	heat_level_2 = 420 //Default 400
-	heat_level_3 = 480 //Default 460
-	heat_level_3_breathe = 1100 //Default 1000
+//	dietflags = DIET_CARN
+	dietflags = DIET_OMNI
 
 	flesh_color = "#34AF10"
 	reagent_tag = PROCESS_ORG
@@ -91,22 +85,14 @@
 	default_language = "Galactic Common"
 	language = "Siik'tajr"
 	tail = "tajtail"
-	unarmed_type = /datum/unarmed_attack/claws
+//	unarmed_type = /datum/unarmed_attack/claws
+	unarmed_type = /datum/unarmed_attack/punch
 
 	blurb = "The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
 	S'randarr system. They have been brought up into the space age by the Humans and Skrell, and have been \
 	influenced heavily by their long history of Slavemaster rule. They have a structured, clan-influenced way \
 	of family and politics. They prefer colder environments, and speak a variety of languages, mostly Siik'Maas, \
 	using unique inflections their mouths form."
-
-	cold_level_1 = 240
-	cold_level_2 = 180
-	cold_level_3 = 100
-
-	heat_level_1 = 340
-	heat_level_2 = 380
-	heat_level_3 = 440
-	heat_level_3_breathe = 900
 
 	primitive_form = "Farwa"
 
@@ -153,7 +139,8 @@
 	language = "Canilunzt"
 	primitive_form = "Wolpin"
 	tail = "vulptail"
-	unarmed_type = /datum/unarmed_attack/claws
+//	unarmed_type = /datum/unarmed_attack/claws
+	unarmed_type = /datum/unarmed_attack/punch
 
 	blurb = "Vulpkanin are a species of sharp-witted canine-pideds residing on the planet Altam just barely within the \
 	dual-star Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and \
@@ -258,7 +245,8 @@
 	tail = "voxtail"
 	speech_sounds = list('sound/voice/shriek1.ogg')
 	speech_chance = 20
-	unarmed_type = /datum/unarmed_attack/claws	//I dont think it will hurt to give vox claws too.
+//	unarmed_type = /datum/unarmed_attack/claws	//I dont think it will hurt to give vox claws too.
+	unarmed_type = /datum/unarmed_attack/punch
 
 	blurb = "The Vox are the broken remnants of a once-proud race, now reduced to little more than \
 	scavenging vermin who prey on isolated stations, ships or planets to keep their own ancient arkships \
@@ -419,7 +407,7 @@
 	H.verbs += /mob/living/carbon/human/proc/leap
 	H.verbs += /mob/living/carbon/human/proc/gut
 	..()
-
+/*
 /datum/species/vox/armalis
 	name = "Vox Armalis"
 	name_plural = "Vox Armalis"
@@ -478,6 +466,7 @@
 
 /datum/species/vox/armalis/handle_reagents() //Skip the Vox oxygen reagent toxicity. Armalis are above such things.
 	return 1
+*/
 
 /datum/species/kidan
 	name = "Kidan"
@@ -487,9 +476,10 @@
 	path = /mob/living/carbon/human/kidan
 	default_language = "Galactic Common"
 	language = "Chittin"
-	unarmed_type = /datum/unarmed_attack/claws
+//	unarmed_type = /datum/unarmed_attack/claws
+	unarmed_type = /datum/unarmed_attack/punch
 
-	brute_mod = 0.8
+//	brute_mod = 0.8
 
 	species_traits = list(IS_WHITELISTED)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
@@ -549,7 +539,8 @@
 	species_traits = list(LIPS, IS_WHITELISTED, NO_BREATHE, NO_INTORGANS, NO_SCAN)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags = HAS_SKIN_COLOR | NO_EYES
-	dietflags = DIET_CARN
+//	dietflags = DIET_CARN
+	dietflags = DIET_OMNI
 	reagent_tag = PROCESS_ORG
 
 	blood_color = "#0064C8"
@@ -778,19 +769,6 @@
 	slowdown = 5
 	remains_type = /obj/effect/decal/cleanable/ash
 
-
-	warning_low_pressure = 50
-	hazard_low_pressure = -1
-
-	cold_level_1 = 50
-	cold_level_2 = -1
-	cold_level_3 = -1
-
-	heat_level_1 = 300
-	heat_level_2 = 340
-	heat_level_3 = 400
-	heat_level_3_breathe = 700
-
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \
 	there is no effective upper limit to the number that can fuse in gestalt, and reports exist	of the Epsilon Ursae \
@@ -803,8 +781,6 @@
 	clothing_flags = HAS_SOCKS
 	dietflags = 0		//Diona regenerate nutrition in light, no diet necessary
 	taste_sensitivity = TASTE_SENSITIVITY_NO_TASTE
-
-	oxy_mod = 0
 
 	body_temperature = T0C + 15		//make the plant people have a bit lower body temperature, why not
 	blood_color = "#004400"

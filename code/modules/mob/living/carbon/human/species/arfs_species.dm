@@ -1,20 +1,20 @@
 // Playable species
 var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vulpkanin",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
+	"Alien", "Anubis", "Apex", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle",
+	"Dalmation", "Deer", "Drake",
+	"Elephant", "Elf",
+	"Fennec", "Fox", "Fung",
+	"Glaceon", "Glowfen", "Goat", "Gremlin", "Gria",
 	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
 	"Jackalope", "Jelly",
 	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
+	"Lab", "Lugia", "Lynx",
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
+	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
 	"Turtle",
 	"Vulpix", "Vulture",
 	"Wolf",
@@ -237,6 +237,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 /mob/living/carbon/human/sergal/New(var/new_loc)
     ..(new_loc, "Sergal")
 
+/mob/living/carbon/human/shark/New(var/new_loc)
+    ..(new_loc, "Shark")
+
 /mob/living/carbon/human/shepherd/New(var/new_loc)
     ..(new_loc, "Shepherd")
 
@@ -304,12 +307,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/absol
 	language = "Sol Common"
 	tail = "absoltail"
-	species_traits = list(LIPS)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags = HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Edgy shenaningans."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/alien
 	name = "Alien"
@@ -322,10 +326,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "alientail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Xenopeople."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/anubis
 	name = "Anubis"
@@ -337,10 +342,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	language = "Sol Common"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS
+	bodyflags = HAS_BODY_MARKINGS | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/apex
 	name = "Apex"
@@ -353,10 +359,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "monkeytail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/avali
 	name = "Avali"
@@ -369,10 +376,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "avalitail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Bound to the stars, they are."
+	reagent_tag = PROCESS_ORG
 
 
 /datum/species/bat
@@ -386,10 +394,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "battail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Eeeeeeeeeeeeeeeeee."
+	reagent_tag = PROCESS_ORG
 
 
 /datum/species/bear
@@ -403,11 +412,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "beartail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "They sleep in cottages."
-
+	reagent_tag = PROCESS_ORG
 
 /datum/species/beaver
 	name = "Beaver"
@@ -420,11 +429,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "beavertail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Mr. Chews approves."
-
+	reagent_tag = PROCESS_ORG
 
 /datum/species/bee
 	name = "Bee"
@@ -437,12 +446,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "beetail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "It's hip to fuck these."
+	reagent_tag = PROCESS_ORG
 
-
+/*  Temporarily removed until we can blackscale the animated sprites
 /datum/species/beholder
 	name = "Beholder"
 	name_plural = "Beholders"
@@ -454,11 +464,12 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "beholdertail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "These buy stock in Clear Eyes."
-
+	reagent_tag = PROCESS_ORG
+*/
 
 /datum/species/butterfly
 	name = "Butterfly"
@@ -468,13 +479,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	primitive_form = "Butterfly"
 	path = /mob/living/carbon/human/butterfly
 	language = "Sol Common"
-	tail = "beholdertail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Flitter-ditter."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/carno
 	name = "Carno"
@@ -487,10 +498,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "carnotail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Carnotaur.  Nibblenibble."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/ceratosaur
 	name = "Ceratosaur"
@@ -503,10 +515,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "ceratotail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Carnotaur.  Nibblenibble."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/chicken
 	name = "Chicken"
@@ -519,10 +532,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "chickentail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "But why do they cross roads?"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/corgi
 	name = "Corgi"
@@ -535,10 +549,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "corgitail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "BARK BARK BARK BARKBARKBARKBARK."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/cow
 	name = "Cow"
@@ -551,10 +566,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "cowtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Got milk?"
+	reagent_tag = PROCESS_ORG
 
 //Remember to fix their tail, it's grayscaled from our old code without any coloring at all.
 /datum/species/coyote
@@ -568,12 +584,12 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "coyotetail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Yip yip, my dude."
+	reagent_tag = PROCESS_ORG
 
-//Remember to fix their tail, it's grayscaled from our old code without any coloring at all.
 /datum/species/croc
 	name = "Croc"
 	name_plural = "Crocs"
@@ -585,10 +601,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "sogtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Crickey!"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/crow
 	name = "Crow"
@@ -601,10 +618,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "crowtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Worst bird."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/cutebold
 	name = "Cutebold"
@@ -617,10 +635,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "cuteboldtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "You may be brave, but are you bold?"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/dalmation
 	name = "Dalmation"
@@ -633,11 +652,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "dalmationtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Radar, speak!"
+	reagent_tag = PROCESS_ORG
 
+/*  Turned off for now, it needs either color layers or to use our unblackscaled version chopped up.  ~Tk
 /datum/species/datashark
 	name = "Datashark"
 	name_plural = "Datasharks"
@@ -647,12 +668,14 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/dalmation
 	language = "Sol Common"
 	tail = "datasharktail"
-	species_traits = list(LIPS)
+	species_traits = list(LIPS,IS_WHITELISTED)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Shorknort."
+	reagent_tag = PROCESS_ORG
+*/
 
 /datum/species/deer
 	name = "Deer"
@@ -665,10 +688,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "deertail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Deer are for raping. ~TK 2016"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/drake
 	name = "Drake"
@@ -681,10 +705,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "draketail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Not a duck."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/eevee
 	name = "Eevee"
@@ -695,12 +720,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/eevee
 	language = "Sol Common"
 	tail = "eeveetail"
-	species_traits = list(LIPS)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Happy birthday, Jess."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/elephant
 	name = "Elephant"
@@ -713,10 +739,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "elephanttail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/elf
 	name = "Elf"
@@ -729,10 +756,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "elftail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/fennec
 	name = "Fennec"
@@ -745,10 +773,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "fennectail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/flareon
 	name = "Flareon"
@@ -759,12 +788,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/flareon
 	language = "Sol Common"
 	tail = "flareontail"
-	species_traits = list(LIPS)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/fox
 	name = "Fox"
@@ -777,10 +807,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "foxtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/fung
 	name = "Fung"
@@ -792,10 +823,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	language = "Sol Common"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS
+	bodyflags =  HAS_BODY_MARKINGS  | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/glaceon
 	name = "Glaceon"
@@ -808,10 +840,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "glaceontail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/glaceons
 	name = "GlaceonS"
@@ -822,12 +855,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/glaceons
 	language = "Sol Common"
 	tail = "glaceonstail"
-	species_traits = list(LIPS)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/glowfen
 	name = "Glowfen"
@@ -840,10 +874,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "glowfentail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/goat
 	name = "Goat"
@@ -856,10 +891,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "goattail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR | HAS_HEAD_ACCESSORY
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/gremlin
 	name = "Gremlin"
@@ -872,10 +908,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "gremlintail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/gria
 	name = "Gria"
@@ -888,10 +925,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "griatail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/grovyle
 	name = "Grovyle"
@@ -902,12 +940,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/grovyle
 	language = "Sol Common"
 	tail = "grovyletail"
-	species_traits = list(LIPS)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/hawk
 	name = "Hawk"
@@ -920,10 +959,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "hawktail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/hippo
 	name = "Hippo"
@@ -936,10 +976,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "hippotail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/husky
 	name = "Husky"
@@ -952,10 +993,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "huskytail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/hyena
 	name = "Hyena"
@@ -968,10 +1010,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "hyenatail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/hylotl
 	name = "Hylotl"
@@ -984,12 +1027,12 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "hylotltail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
-//Something wrong with Jackalope?
 /datum/species/jackalope
 	name = "Jackalope"
 	name_plural = "Jackalopes"
@@ -1001,10 +1044,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "jackalopetail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/jelly
 	name = "Jelly"
@@ -1016,10 +1060,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	language = "Sol Common"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/kangaroo
 	name = "Kangaroo"
@@ -1032,10 +1077,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "kangarootail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/kitsune
 	name = "Kitsune"
@@ -1048,10 +1094,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "kitsunetail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lab
 	name = "Lab"
@@ -1064,10 +1111,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "labtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lopunny
 	name = "Lopunny"
@@ -1078,12 +1126,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/lopunny
 	language = "Sol Common"
 	tail = "lopunnytail"
-	species_traits = list(LIPS)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lucky
 	name = "Lucky"
@@ -1094,12 +1143,13 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/lucky
 	language = "Sol Common"
 	tail = "luckytail"
-	species_traits = list(LIPS)
+	species_traits = list(IS_WHITELISTED, LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lugia
 	name = "Lugia"
@@ -1112,10 +1162,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "lugiatail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/lynx
 	name = "Lynx"
@@ -1128,11 +1179,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "lynxtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
-
+	reagent_tag = PROCESS_ORG
 
 /datum/species/orc
 	name = "Orc"
@@ -1144,10 +1195,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	language = "Sol Common"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/orca
 	name = "Orca"
@@ -1160,10 +1212,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "orcatail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/otie
 	name = "Otie"
@@ -1176,10 +1229,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "otietail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/otter
 	name = "Otter"
@@ -1192,10 +1246,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "ottertail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/panda
 	name = "Panda"
@@ -1208,10 +1263,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "pandatail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/panther
 	name = "Panther"
@@ -1224,10 +1280,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "panthertail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/penguin
 	name = "Penguin"
@@ -1239,10 +1296,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	language = "Sol Common"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS
+	bodyflags =  HAS_BODY_MARKINGS
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/pig
 	name = "Pig"
@@ -1255,10 +1313,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "pigtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/pony
 	name = "Pony"
@@ -1271,10 +1330,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "ponytail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/porcupine
 	name = "Porcupine"
@@ -1287,10 +1347,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "porcupinetail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/possum
 	name = "Possum"
@@ -1303,10 +1364,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "possumtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/pudding
 	name = "Pudding"
@@ -1318,10 +1380,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	language = "Sol Common"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/pug
 	name = "Pug"
@@ -1333,10 +1396,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	language = "Sol Common"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS
+	bodyflags =  HAS_BODY_MARKINGS
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/rabbit
 	name = "Rabbit"
@@ -1349,10 +1413,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "rabbittail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/raccoon
 	name = "Raccoon"
@@ -1365,10 +1430,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "raccoontail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/redpanda
 	name = "Red Panda"
@@ -1381,10 +1447,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "redpandatail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/renamon
 	name = "Renamon"
@@ -1397,10 +1464,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "renamontail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/roorat
 	name = "Roorat"
@@ -1413,10 +1481,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "roorattail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/sergal
 	name = "Sergal"
@@ -1429,10 +1498,28 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "sergaltail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
+/datum/species/shark
+	name = "Shark"
+	name_plural = "Shepherds"
+	icobase = 'icons/mob/human_races/ARF Races/r_shark_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_shark_arf.dmi'
+	primitive_form = "Monkey"
+	path = /mob/living/carbon/human/shark
+	language = "Sol Common"
+	tail = "sharktail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/shepherd
 	name = "Shepherd"
@@ -1445,10 +1532,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "shepherdtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/shihtzu
 	name = "Shih Tzu"
@@ -1461,10 +1549,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "shihtzutail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/siamese
 	name = "Siamese"
@@ -1477,10 +1566,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "siamesetail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/skunk
 	name = "Skunk"
@@ -1493,10 +1583,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "skunktail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Le pew."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/smilodon
 	name = "Smilodon"
@@ -1509,10 +1600,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "smilodontail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/snail
 	name = "Snail"
@@ -1525,10 +1617,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "snailtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/snarby
 	name = "Snarby"
@@ -1541,10 +1634,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "snarbytail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/squirrel
 	name = "Squirrel"
@@ -1557,10 +1651,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "squirreltail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/stego
 	name = "Stego"
@@ -1573,12 +1668,12 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "stegotail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
-//Invalid species?
 /datum/species/stitch
 	name = "Stitch"
 	name_plural = "Stitches"
@@ -1590,10 +1685,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "stitchtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/turtle
 	name = "Turtle"
@@ -1606,10 +1702,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "turtletail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/vulpix
 	name = "Vulpix"
@@ -1622,10 +1719,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "vulpixtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/vulture
 	name = "Vulture"
@@ -1638,10 +1736,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "vulturetail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/wolf
 	name = "Wolf"
@@ -1654,10 +1753,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "wolftail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/zebra
 	name = "Zebra"
@@ -1670,10 +1770,11 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "zebratail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 /datum/species/zigzagoon
 	name = "Zigzagoon"
@@ -1686,20 +1787,583 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	tail = "zigtail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags = HAS_SKIN_TONE | HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
 
 
 //	-----------------------------------
 //		SPRITE ACCESSORY DEFINITION
 //	-----------------------------------
 
-/* removed cause it's an example.
-/datum/sprite_accessory/body_markings/skunk_color1
-	name = "Skunk Color Layer 1"
+
+/datum/sprite_accessory/body_markings/anubism_color2
+	name = "Male Anubis Rings"
+	species_allowed = list ("Anubis")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/anubis2.dmi'
+	icon_state = "anubis_m_s_2"
+
+
+/datum/sprite_accessory/body_markings/anubisf_color2
+	name = "Female Anubis Rings"
+	species_allowed = list ("Anubis")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/anubis4.dmi'
+	icon_state = "anubis_f_s_2"
+
+/datum/sprite_accessory/body_markings/monkeym_color1
+	name = "Male Apex Highlights"
+	species_allowed = list ("Apex")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/apexm2.dmi'
+	icon_state = "monkey_m_s_2"
+
+/datum/sprite_accessory/body_markings/monkeyf_color1
+	name = "Female Apex Highlights"
+	species_allowed = list ("Apex")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/apexf2.dmi'
+	icon_state = "monkey_f_s_2"
+
+/datum/sprite_accessory/body_markings/avalim_color1
+	name = "Male Avali Highlights"
+	species_allowed = list ("Avali")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/avalim2.dmi'
+	icon_state = "avali_m_s_2"
+
+/datum/sprite_accessory/body_markings/avalif_color1
+	name = "Female Avali Highlights"
+	species_allowed = list ("Avali")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/avalif2.dmi'
+	icon_state = "avali_f_s_2"
+
+/datum/sprite_accessory/body_markings/beaverm_color1
+	name = "Male Beaver Highlights"
+	species_allowed = list ("Beaver")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/beaverm2.dmi'
+	icon_state = "beaver_m_s_2"
+
+/datum/sprite_accessory/body_markings/beaverf_color1
+	name = "Female Beaver Highlights"
+	species_allowed = list ("Beaver")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/beaverf2.dmi'
+	icon_state = "beaver_fd_s_2"
+
+/datum/sprite_accessory/body_markings/beem_color1
+	name = "Male Bee Highlights"
+	species_allowed = list ("Bee")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/beem2.dmi'
+	icon_state = "bee_m_s_2"
+
+/datum/sprite_accessory/body_markings/beef_color1
+	name = "Female Bee Highlights"
+	species_allowed = list ("Bee")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/beef2.dmi' //DA BEEF
+	icon_state = "bee_f_s_2"
+
+/datum/sprite_accessory/body_markings/beholderm_color1
+	name = "Male Beholder Highlights"
+	species_allowed = list ("Beholder")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/beholderm2.dmi'
+	icon_state = "beholder_m_s_2"
+
+/datum/sprite_accessory/body_markings/beholderf_color1
+	name = "Female Beholder Highlights"
+	species_allowed = list ("Beholder")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/beholderf2.dmi'
+	icon_state = "beholder_f_s_2"
+
+/datum/sprite_accessory/body_markings/butterm_color1
+	name = "Male Butterfly Highlights"
+	species_allowed = list ("Butterfly")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/butterm2.dmi'
+	icon_state = "butterfly_m_s_2"
+
+/datum/sprite_accessory/body_markings/butterf_color1
+	name = "Female Butterfly Highlights"
+	species_allowed = list ("Butterfly")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/butterf2.dmi'
+	icon_state = "butterfly_f_s_2"
+
+/datum/sprite_accessory/body_markings/capram_color1
+	name = "Male Goat Highlights"
+	species_allowed = list ("Goat")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/capram2.dmi'
+	icon_state = "capra_m_s_2"
+
+/datum/sprite_accessory/body_markings/capraf_color1
+	name = "Female Goat Highlights"
+	species_allowed = list ("Goat")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/capraf2.dmi'
+	icon_state = "capra_f_s_2"
+
+/datum/sprite_accessory/body_markings/ceram_color1
+	name = "Male Ceratosaur Highlights"
+	species_allowed = list ("Ceratosaur")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/ceram2.dmi'
+	icon_state = "ceratotaur_m_s_2"
+
+/datum/sprite_accessory/body_markings/ceraf_color1
+	name = "Female Ceratosaur Highlights"
+	species_allowed = list ("Ceratosaur")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/ceraf2.dmi'
+	icon_state = "ceratotaur_f_s_2"
+
+/datum/sprite_accessory/body_markings/chickenm_color1
+	name = "Male Chicken Highlights"
+	species_allowed = list ("Chicken")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/chickenm2.dmi'
+	icon_state = "chicken_m_s_2"
+
+/datum/sprite_accessory/body_markings/chickenf_color1
+	name = "Female Chicken Highlights"
+	species_allowed = list ("Chicken")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/chickenf2.dmi'
+	icon_state = "chicken_f_s_2"
+
+/datum/sprite_accessory/body_markings/corgim_color1
+	name = "Male Corgi Highlights"
+	species_allowed = list ("Corgi")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/corgim2.dmi'
+	icon_state = "corgi_m_s_2"
+
+/datum/sprite_accessory/body_markings/corgif_color1
+	name = "Female Corgi Highlights"
+	species_allowed = list ("Corgi")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/corgif2.dmi'
+	icon_state = "corgi_f_s_2"
+
+/datum/sprite_accessory/body_markings/cowm_color1
+	name = "Male Cow Highlights"
+	species_allowed = list ("Cow")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/cowm2.dmi'
+	icon_state = "cow_m_s_2"
+
+/datum/sprite_accessory/body_markings/cowf_color1
+	name = "Female Cow Highlights"
+	species_allowed = list ("Cow")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/cowm2.dmi'
+	icon_state = "cow_f_s_2"
+
+/datum/sprite_accessory/body_markings/coym_color1
+	name = "Male Coyote Highlights"
+	species_allowed = list ("Coyote")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/coym2.dmi'
+	icon_state = "coyote_m_s_2"
+
+/datum/sprite_accessory/body_markings/coyf_color1
+	name = "Female Coyote Highlights"
+	species_allowed = list ("Coyote")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/coyf2.dmi'
+	icon_state = "coyote_f_s_2"
+
+/datum/sprite_accessory/body_markings/crowm_color1
+	name = "Male Crow Highlights"
+	species_allowed = list ("Crow")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/crowm2.dmi'
+	icon_state = "corvid_m_s_2"
+
+/datum/sprite_accessory/body_markings/crowf_color1
+	name = "Female Crow Highlights"
+	species_allowed = list ("Crow")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/crowf2.dmi'
+	icon_state = "corvid_f_s_2"
+
+/datum/sprite_accessory/body_markings/deerm_color1
+	name = "Male Deer Highlights"
+	species_allowed = list ("Deer")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/deerm2.dmi'
+	icon_state = "deer_m_s_2"
+
+/datum/sprite_accessory/body_markings/deerf_color1
+	name = "Female Deer Highlights"
+	species_allowed = list ("Deer")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/deerf2.dmi'
+	icon_state = "deer_f_s_2"
+
+/datum/sprite_accessory/body_markings/drakem_color1
+	name = "Male Drake Highlights"
+	species_allowed = list ("Drake")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/drakem2.dmi'
+	icon_state = "drake_m_s_2"
+
+/datum/sprite_accessory/body_markings/drakef_color1
+	name = "Female Drake Highlights"
+	species_allowed = list ("Drake")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/drakef2.dmi'
+	icon_state = "drake_f_s_2"
+
+/datum/sprite_accessory/body_markings/fennecm_color1
+	name = "Male Fennec Highlights"
+	species_allowed = list ("Fennec")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/fenm2.dmi'
+	icon_state = "fennec_m_s_2"
+
+/datum/sprite_accessory/body_markings/fennecf_color1
+	name = "Female Fennec Highlights"
+	species_allowed = list ("Fennec")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/fenf2.dmi'
+	icon_state = "fennec_f_s_2"
+
+/datum/sprite_accessory/body_markings/flarem_color1
+	name = "Male Flareon Highlights"
+	species_allowed = list ("Flareon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/flarem1.dmi'
+	icon_state = "flareon_m_s_1"
+
+/datum/sprite_accessory/body_markings/flaref_color1
+	name = "Female Flareon Highlights"
+	species_allowed = list ("Flareon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/flaref1.dmi'
+	icon_state = "flareon_f_s_1"
+
+/datum/sprite_accessory/body_markings/foxm_color1
+	name = "Male Fox Highlights"
+	species_allowed = list ("Fox")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/foxm1.dmi'
+	icon_state = "fox_m_s_1"
+
+/datum/sprite_accessory/body_markings/foxf_color1
+	name = "Female Fox Highlights"
+	species_allowed = list ("Fox")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/foxf1.dmi'
+	icon_state = "fox_f_s_1"
+
+/datum/sprite_accessory/body_markings/fungm_color1
+	name = "Male Fungus Highlights"
+	species_allowed = list ("Fung")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/fungm1.dmi'
+	icon_state = "fung_m_s_1"
+
+/datum/sprite_accessory/body_markings/fungf_color1
+	name = "Female Fungus Highlights"
+	species_allowed = list ("Fung")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/fungf1.dmi'
+	icon_state = "fung_f_s_1"
+
+/datum/sprite_accessory/body_markings/hawkm_color1
+	name = "Male Hawk Highlights"
+	species_allowed = list ("Hawk")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/hawkm1.dmi'
+	icon_state = "hawk_m_s_1"
+
+/datum/sprite_accessory/body_markings/hawkf_color1
+	name = "Female Hawk Highlights"
+	species_allowed = list ("Hawk")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/hawkf1.dmi'
+	icon_state = "hawk_f_s_1"
+
+/datum/sprite_accessory/body_markings/hippom_color1
+	name = "Male Hippo Highlights"
+	species_allowed = list ("Hippo")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/hippom2.dmi'
+	icon_state = "hippo_m_s_2"
+
+/datum/sprite_accessory/body_markings/hippof_color1
+	name = "Female Hippo Highlights"
+	species_allowed = list ("Hippo")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/hippof2.dmi'
+	icon_state = "hippo_f_s_2"
+
+/datum/sprite_accessory/body_markings/huskym_color1
+	name = "Male Husky Highlights"
+	species_allowed = list ("Husky")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/huskym2.dmi'
+	icon_state = "husky_m_s_2"
+
+/datum/sprite_accessory/body_markings/huskyf_color1
+	name = "Female Husky Highlights"
+	species_allowed = list ("Husky")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/huskyf2.dmi'
+	icon_state = "husky_f_s_2"
+
+/datum/sprite_accessory/body_markings/hyenam_color1
+	name = "Male Hyena Highlights"
+	species_allowed = list ("Hyena")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/hyenam2.dmi'
+	icon_state = "hyena_m_s_2"
+
+/datum/sprite_accessory/body_markings/huskyf_color1
+	name = "Female Hyena Highlights"
+	species_allowed = list ("Hyena")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/hyenaf2.dmi'
+	icon_state = "hyena_f_s_2"
+
+/datum/sprite_accessory/body_markings/hylotlm_color1
+	name = "Male Hylotl Highlights"
+	species_allowed = list ("Hylotl")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/hylotlm1.dmi'
+	icon_state = "hylotl_m_s_1"
+
+/datum/sprite_accessory/body_markings/hylotlf_color1
+	name = "Female Hylotl Highlights"
+	species_allowed = list ("Hylotl")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/hylotlf1.dmi'
+	icon_state = "hylotl_f_s_1"
+
+/datum/sprite_accessory/body_markings/jackalopem_color1
+	name = "Male Jackalope Highlights"
+	species_allowed = list ("Jackalope")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/jackm2.dmi'
+	icon_state = "jackalope_m_s_2"
+
+/datum/sprite_accessory/body_markings/jackalopef_color1
+	name = "Female Jackalope Highlights"
+	species_allowed = list ("Jackalope")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/jackf2.dmi'
+	icon_state = "jackalope_f_s_2"
+
+/datum/sprite_accessory/body_markings/kitm_color1
+	name = "Male Kitsune Highlights"
+	species_allowed = list ("Kitsune")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/foxm1.dmi'
+	icon_state = "fox_m_s_1"
+
+/datum/sprite_accessory/body_markings/kitf_color1
+	name = "Female Kitsune Highlights"
+	species_allowed = list ("Kitsune")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/foxf1.dmi'
+	icon_state = "fox_f_s_1"
+
+/datum/sprite_accessory/body_markings/rabm_color1
+	name = "Male Rabbit Highlights"
+	species_allowed = list ("Rabbit")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/jackm2.dmi'
+	icon_state = "jackalope_m_s_2"
+
+/datum/sprite_accessory/body_markings/rabf_color1
+	name = "Female Rabbit Highlights"
+	species_allowed = list ("Rabbit")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/jackf2.dmi'
+	icon_state = "jackalope_f_s_2"
+
+/datum/sprite_accessory/body_markings/lugiam_color1
+	name = "Male Lugia Highlights"
+	species_allowed = list ("Lugia")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/lugiam2.dmi'
+	icon_state = "lugia_m_s_2"
+
+/datum/sprite_accessory/body_markings/lugiaf_color1
+	name = "Female Lugia Highlights"
+	species_allowed = list ("Lugia")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/lugiaf2.dmi'
+	icon_state = "lugia_f_s_2"
+
+/datum/sprite_accessory/body_markings/lynxm_color1
+	name = "Male Lynx Highlights"
+	species_allowed = list ("Lynx")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/lynxm2.dmi'
+	icon_state = "lynx_m_s_2"
+
+/datum/sprite_accessory/body_markings/lynxf_color1
+	name = "Female Lynx Highlights"
+	species_allowed = list ("Lynx")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/lynxf2.dmi'
+	icon_state = "lynx_f_s_2"
+
+/datum/sprite_accessory/body_markings/orcam_color1
+	name = "Male Orca Highlights"
+	species_allowed = list ("Orca")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/orcam1.dmi'
+	icon_state = "orca_m_s_1"
+
+/datum/sprite_accessory/body_markings/orcaf_color1
+	name = "female Orca Highlights"
+	species_allowed = list ("Orca")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/orcaf1.dmi'
+	icon_state = "orca_f_s_1"
+
+/datum/sprite_accessory/body_markings/otiem_color1
+	name = "Male Otie Highlights"
+	species_allowed = list ("Otie")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/otiem2.dmi'
+	icon_state = "otie_m_s_2"
+
+/datum/sprite_accessory/body_markings/otief_color1
+	name = "female Otie Highlights"
+	species_allowed = list ("Otie")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/otief2.dmi'
+	icon_state = "otie_f_s_2"
+
+/datum/sprite_accessory/body_markings/otterm_color1
+	name = "Male Otter Highlights"
+	species_allowed = list ("Otter")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/otterm2.dmi'
+	icon_state = "otter_m_s_2"
+
+/datum/sprite_accessory/body_markings/otterf_color1
+	name = "female Otter Highlights"
+	species_allowed = list ("Otter")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/otterf2.dmi'
+	icon_state = "otter_f_s_2"
+
+/datum/sprite_accessory/body_markings/pandarm_color1
+	name = "Male Panda Highlights"
+	species_allowed = list ("Panda")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/pandam1.dmi'
+	icon_state = "panda_m_s_1"
+
+/datum/sprite_accessory/body_markings/pandarf_color1
+	name = "Female Panda Highlights"
+	species_allowed = list ("Panda")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/pandaf1.dmi'
+	icon_state = "panda_f_s_1"
+
+/datum/sprite_accessory/body_markings/pugm_color1
+	name = "Male Pug Highlights"
+	species_allowed = list ("Pug")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/pugm2.dmi'
+	icon_state = "pug_m_s_2"
+
+/datum/sprite_accessory/body_markings/pugf_color1
+	name = "Female Pug Highlights"
+	species_allowed = list ("Pug")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/pugf2.dmi'
+	icon_state = "pug_f_s_2"
+
+/datum/sprite_accessory/body_markings/racm_color1
+	name = "Male Raccoon Highlights"
+	species_allowed = list ("Raccoon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/racm2.dmi'
+	icon_state = "raccoon_m_s_2"
+
+/datum/sprite_accessory/body_markings/racf_color1
+	name = "Female Raccoon Highlights"
+	species_allowed = list ("Raccoon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/racf2.dmi'
+	icon_state = "raccoon_f_s_2"
+
+/datum/sprite_accessory/body_markings/sharkm_color1
+	name = "Male Shark Highlights"
+	species_allowed = list ("Shark")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/sharkm2.dmi'
+	icon_state = "shark_m_s_2"
+
+/datum/sprite_accessory/body_markings/sharkf_color1
+	name = "Female Shark Highlights"
+	species_allowed = list ("Shark")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/sharkf2.dmi'
+	icon_state = "shark_f_s_2"
+
+/datum/sprite_accessory/body_markings/shim_color1
+	name = "Male Shih Tzu Highlights"
+	species_allowed = list ("Shih Tzu")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/shim2.dmi'
+	icon_state = "shihtzu_m_s_2"
+
+/datum/sprite_accessory/body_markings/shif_color1
+	name = "Female Shih Tzu Highlights"
+	species_allowed = list ("Shih Tzu")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/shif2.dmi'
+	icon_state = "shihtzu_f_s_2"
+
+/datum/sprite_accessory/body_markings/siam_color1
+	name = "Male Siamese Highlights"
+	species_allowed = list ("Siamese")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/siam2.dmi'
+	icon_state = "siamese_m_s_2"
+
+/datum/sprite_accessory/body_markings/siaf_color1
+	name = "Female Siamese Highlights"
+	species_allowed = list ("Siamese")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/siaf2.dmi'
+	icon_state = "siamese_f_s_2"
+
+/* Removed until I can get this sprites layers worked out
+/datum/sprite_accessory/body_markings/skunkm_color1
+	name = "Male Skunk Highlights"
 	species_allowed = list ("Skunk")
-	icon = 'icons/mob/patterns/skunk.dmi'
-	icon_state = "skunk layer 1"
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/skunkm1.dmi'
+	icon_state = "skunk_m_s_1"
+
+/datum/sprite_accessory/body_markings/skunkf_color1
+	name = "Female Skunk Highlights"
+	species_allowed = list ("Skunk")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/skunkf1.dmi'
+	icon_state = "skunk_f_s_1"
 */
+
+/datum/sprite_accessory/body_markings/smilom_color1
+	name = "Male Smilodon Highlights"
+	species_allowed = list ("Smilodon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/smilm2.dmi'
+	icon_state = "smilodon_m_s_2"
+
+/datum/sprite_accessory/body_markings/smilof_color1
+	name = "Female Smilodon Highlights"
+	species_allowed = list ("Smilodon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/smilf2.dmi'
+	icon_state = "smilodon_f_s_2"
+
+/datum/sprite_accessory/body_markings/snailm_color1
+	name = "Male Snail Highlights"
+	species_allowed = list ("Snail")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/snailm2.dmi'
+	icon_state = "snail_m_s_2"
+
+/datum/sprite_accessory/body_markings/snailf_color1
+	name = "Female Snail Highlights"
+	species_allowed = list ("Snail")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/snailf2.dmi'
+	icon_state = "snail_f_s_2"
+
+/datum/sprite_accessory/body_markings/snarbym_color1
+	name = "Male Snarby Highlights"
+	species_allowed = list ("Snarby")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/snarbym2.dmi'
+	icon_state = "snarby_m_s_2"
+
+/datum/sprite_accessory/body_markings/snarbyf_color1
+	name = "Female Snarby Highlights"
+	species_allowed = list ("Snarby")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/snarbyf2.dmi'
+	icon_state = "snarby_f_s_2"
+
+/*  Removed Squirrels color layers until I have time to actually fix them properly.
+/datum/sprite_accessory/body_markings/squirrelm_color1
+	name = "Male Squirrel Highlights"
+	species_allowed = list ("Squirrel")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/squirrelm1.dmi'
+	icon_state = "squirrel_m_s_1"
+
+/datum/sprite_accessory/body_markings/squirrelf_color1
+	name = "Female Squirrel Highlights"
+	species_allowed = list ("Squirrel")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/squirrelf1.dmi'
+	icon_state = "squirrel_f_s_1"
+*/
+
+/datum/sprite_accessory/body_markings/stitchm_color1
+	name = "Male Stitch Highlights"
+	species_allowed = list ("Stitch")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/stitchm2.dmi'
+	icon_state = "stitch_m_s_2"
+
+/datum/sprite_accessory/body_markings/stitchf_color1
+	name = "Female Stitch Highlights"
+	species_allowed = list ("Stitch")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/stitchf2.dmi'
+	icon_state = "stitch_f_s_2"
+
+/datum/sprite_accessory/body_markings/wolfm_color1
+	name = "Male Wolf Highlights"
+	species_allowed = list ("Wolf")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/wolfm2.dmi'
+	icon_state = "wolf_m_s_2"
+
+/datum/sprite_accessory/body_markings/wolff_color1
+	name = "Female Wolf Highlights"
+	species_allowed = list ("Wolf")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/wolff2.dmi'
+	icon_state = "wolf_f_s_2"
+
+/datum/sprite_accessory/body_markings/zebram_color1
+	name = "Male Zebra Highlights"
+	species_allowed = list ("Zebra")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/zebram2.dmi'
+	icon_state = "zebra_m_s_2"
+
+/datum/sprite_accessory/body_markings/zebraf_color1
+	name = "Female Zebra Highlights"
+	species_allowed = list ("Zebra")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/zebraf2.dmi'
+	icon_state = "zebra_f_s_2"
