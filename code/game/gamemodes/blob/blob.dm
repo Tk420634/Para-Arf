@@ -11,7 +11,7 @@ var/list/blob_nodes = list()
 	required_players = 30
 	required_enemies = 1
 	recommended_enemies = 1
-	restricted_jobs = list("Cyborg", "AI")
+	restricted_jobs = list("Cyborg", "AI","Drone")
 
 	var/declared = 0
 	var/burst = 0
