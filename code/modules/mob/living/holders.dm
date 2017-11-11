@@ -38,3 +38,23 @@ var/list/holder_mob_icon_cache = list()
 	for(var/atom/movable/A in src)
 		A.forceMove(here)
 	..()
+
+/obj/item/weapon/holder/micro/proc/get_turf_air()
+	var/turf/T = get_turf(src.loc)
+	if(T)
+		. = held_mob.return_air()
+
+/obj/item/weapon/holder/micro/return_air()
+	return get_turf_air()
+
+/obj/item/weapon/holder/micro/proc/return_pressure()
+	. = 0
+	var/datum/gas_mixture/t_air = get_turf_air()
+	if(t_air)
+		. = t_air.return_pressure()
+
+/obj/item/weapon/holder/micro/proc/return_temperature()
+	. = 0
+	var/datum/gas_mixture/t_air = get_turf_air()
+	if(t_air)
+		. = t_air.return_temperature()
