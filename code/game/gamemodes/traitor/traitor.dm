@@ -10,7 +10,7 @@
 /datum/game_mode/traitor
 	name = "traitor"
 	config_tag = "traitor"
-	restricted_jobs = list("Cyborg")//They are part of the AI if he is traitor so are they, they use to get double chances
+	restricted_jobs = list("Cyborg","Drone")//They are part of the AI if he is traitor so are they, they use to get double chances
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Blueshield", "A.R.F. Representative", "Security Pod Pilot", "Magistrate", "Internal Affairs Agent", "Brig Physician", "A.R.F. Navy Officer", "Special Operations Officer")
 	required_players = 0
 	required_enemies = 1

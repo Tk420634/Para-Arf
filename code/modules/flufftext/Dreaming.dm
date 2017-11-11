@@ -14,7 +14,7 @@ mob/living/carbon/proc/dream()
 		"the barber", "the mechanic", "the magistrate", "the A.R.F. representative", "the blueshield", "a mouse","an ert member",
 		"a beach","the holodeck","a smokey room","a voice","the cold","a mouse","an operating table","the bar","the rain","a skrell",
 		"a unathi","a tajaran", "a vulpkanin", "a slime", "an ipc", "a vox", "a plasmaman", "a grey", "a kidan", "a diona", "the ai core",
-		"the mining station","the research station", "a beaker of strange liquid"
+		"the mining station","the research station", "a beaker of strange liquid","a dork", " nerd", "pussy"
 		)
 	spawn(0)
 		for(var/i = rand(1,4),i > 0, i--)

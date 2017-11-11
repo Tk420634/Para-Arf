@@ -12,6 +12,7 @@
 		)
 
 	pixel_y = 8
+
 	var/mob/living/held_mob
 
 
