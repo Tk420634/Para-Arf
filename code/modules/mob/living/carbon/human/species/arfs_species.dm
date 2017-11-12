@@ -15,7 +15,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
+	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch", "Subterranean Slime",
 	"Turtle",
 	"Vulpix", "Vulture",
 	"Wolf",
@@ -273,6 +273,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/stitch/New(var/new_loc)
     ..(new_loc, "Stitch")
+
+/mob/living/carbon/human/subslime/New(var/new_loc)
+    ..(new_loc, "Subterranean Slime")
 
 /mob/living/carbon/human/turtle/New(var/new_loc)
     ..(new_loc, "Turtle")
@@ -1195,7 +1198,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	icobase = 'icons/mob/human_races/ARF Races/r_rabbit_arf.dmi'
 	deform = 'icons/mob/human_races/ARF Races/r_rabbit_arf.dmi'
 	primitive_form = "Mouse"
-	path = /mob/living/carbon/human/lucky
+	path = /mob/living/carbon/human/mouse
 	language = "Sol Common"
 	tail = "mouse"
 	species_traits = list(LIPS)
@@ -1707,6 +1710,22 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
+/datum/species/subslime
+	name = "Subterranean Slime"
+	name_plural = "Subterranean Slimes"
+	icobase = 'icons/mob/human_races/ARF Races/r_slime.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_slime.dmi'
+	primitive_form = "Monkey"
+	path = /mob/living/carbon/human/subslime
+	language = "Sol Common"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
