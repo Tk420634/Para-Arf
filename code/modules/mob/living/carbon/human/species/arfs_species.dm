@@ -6,11 +6,12 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	"Dalmation", "Deer", "Drake",
 	"Elephant", "Elf",
 	"Fennec", "Fox", "Fung",
-	"Guilmon","Glaceon", "Glowfen", "Goat", "Gremlin", "Gria",
+	"Glaceon", "Glowfen", "Goat", "Gremlin", "Gria",
 	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
 	"Jackalope", "Jelly",
 	"Kangaroo", "Kitsune",
 	"Lab", "Lugia", "Lynx",
+	"Mouse",
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
@@ -117,9 +118,6 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 /mob/living/carbon/human/fung/New(var/new_loc)
     ..(new_loc, "Fung")
 
-/mob/living/carbon/human/fung/New(var/new_loc)
-    ..(new_loc, "Guilmon")
-
 /mob/living/carbon/human/glaceon/New(var/new_loc)
     ..(new_loc, "Glaceon")
 
@@ -182,6 +180,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/lynx/New(var/new_loc)
     ..(new_loc, "Lynx")
+
+/mob/living/carbon/human/mouse/New(var/new_loc)
+    ..(new_loc, "Mouse")
 
 /mob/living/carbon/human/orc/New(var/new_loc)
     ..(new_loc, "Orc")
@@ -832,23 +833,6 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	blurb = "Placeholder."
 	reagent_tag = PROCESS_ORG
 
-/datum/species/guilmon
-	name = "Guilmon"
-	name_plural = "Guilmons"
-	icobase = 'icons/mob/human_races/ARF Races/guilmon.dmi'
-	deform = 'icons/mob/human_races/ARF Races/guilmon.dmi'
-	primitive_form = "Monkey"
-	path = /mob/living/carbon/human/guilmon
-	language = "Sol Common"
-	tail = "guilmon_tail"
-	species_traits = list(LIPS)
-	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
-	dietflags = DIET_OMNI
-	unarmed_type = /datum/unarmed_attack/punch
-	blurb = "Placeholder."
-	reagent_tag = PROCESS_ORG
-
 /datum/species/glaceon
 	name = "Glaceon"
 	name_plural = "Glaceons"
@@ -1197,6 +1181,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/lucky
 	language = "Sol Common"
 	tail = "lynxtail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
+/datum/species/mouse
+	name = "Mouse"
+	name_plural = "Mice"
+	icobase = 'icons/mob/human_races/ARF Races/r_rabbit_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_rabbit_arf.dmi'
+	primitive_form = "Mouse"
+	path = /mob/living/carbon/human/lucky
+	language = "Sol Common"
+	tail = "mouse"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
