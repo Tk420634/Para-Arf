@@ -6,7 +6,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	"Dalmation", "Deer", "Drake",
 	"Elephant", "Elf",
 	"Fennec", "Fox", "Fung",
-	"Glaceon", "Glowfen", "Goat", "Gremlin", "Gria",
+	"Guilmon","Glaceon", "Glowfen", "Goat", "Gremlin", "Gria",
 	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
 	"Jackalope", "Jelly",
 	"Kangaroo", "Kitsune",
@@ -116,6 +116,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/fung/New(var/new_loc)
     ..(new_loc, "Fung")
+
+/mob/living/carbon/human/fung/New(var/new_loc)
+    ..(new_loc, "Guilmon")
 
 /mob/living/carbon/human/glaceon/New(var/new_loc)
     ..(new_loc, "Glaceon")
@@ -824,6 +827,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS  | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
+/datum/species/guilmon
+	name = "Guilmon"
+	name_plural = "Guilmons"
+	icobase = 'icons/mob/human_races/ARF Races/guilmon.dmi'
+	deform = 'icons/mob/human_races/ARF Races/guilmon.dmi'
+	primitive_form = "Monkey"
+	path = /mob/living/carbon/human/guilmon
+	language = "Sol Common"
+	tail = "guilmon_tail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
