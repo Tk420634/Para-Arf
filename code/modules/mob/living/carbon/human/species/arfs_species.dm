@@ -117,7 +117,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 /mob/living/carbon/human/fung/New(var/new_loc)
     ..(new_loc, "Fung")
 
-/mob/living/carbon/human/fung/New(var/new_loc)
+/mob/living/carbon/human/guilmon/New(var/new_loc)
     ..(new_loc, "Guilmon")
 
 /mob/living/carbon/human/glaceon/New(var/new_loc)
