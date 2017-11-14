@@ -6,15 +6,16 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	"Dalmation", "Deer", "Drake",
 	"Elephant", "Elf",
 	"Fennec", "Fox", "Fung",
-	"Guilmon","Glaceon", "Glowfen", "Goat", "Gremlin", "Gria",
+	"Glaceon", "Glowfen", "Goat", "Gremlin", "Gria", "Guilmon",
 	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
 	"Jackalope", "Jelly",
 	"Kangaroo", "Kitsune",
 	"Lab", "Lugia", "Lynx",
+	"Mouse",
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
+	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch", "Subterranean Slime",
 	"Turtle",
 	"Vulpix", "Vulture",
 	"Wolf",
@@ -183,6 +184,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 /mob/living/carbon/human/lynx/New(var/new_loc)
     ..(new_loc, "Lynx")
 
+/mob/living/carbon/human/mouse/New(var/new_loc)
+    ..(new_loc, "Mouse")
+
 /mob/living/carbon/human/orc/New(var/new_loc)
     ..(new_loc, "Orc")
 
@@ -272,6 +276,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/stitch/New(var/new_loc)
     ..(new_loc, "Stitch")
+
+/mob/living/carbon/human/subslime/New(var/new_loc)
+    ..(new_loc, "Subterranean Slime")
 
 /mob/living/carbon/human/turtle/New(var/new_loc)
     ..(new_loc, "Turtle")
@@ -838,9 +845,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	icobase = 'icons/mob/human_races/ARF Races/guilmon.dmi'
 	deform = 'icons/mob/human_races/ARF Races/guilmon.dmi'
 	primitive_form = "Monkey"
-	path = /mob/living/carbon/human/guilmon
+	path = /mob/living/carbon/human/glaceon
 	language = "Sol Common"
-	tail = "guilmon_tail"
+//	tail = "glaceontail" No tail in the sprite file?
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
@@ -1197,6 +1204,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/lucky
 	language = "Sol Common"
 	tail = "lynxtail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
+/datum/species/mouse
+	name = "Mouse"
+	name_plural = "Mice"
+	icobase = 'icons/mob/human_races/ARF Races/r_rabbit_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_rabbit_arf.dmi'
+	primitive_form = "Mouse"
+	path = /mob/living/carbon/human/mouse
+	language = "Sol Common"
+	tail = "mouse"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
@@ -1711,6 +1735,22 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	blurb = "Placeholder."
 	reagent_tag = PROCESS_ORG
 
+/datum/species/subslime
+	name = "Subterranean Slime"
+	name_plural = "Subterranean Slimes"
+	icobase = 'icons/mob/human_races/r_slime.dmi'
+	deform = 'icons/mob/human_races/r_slime.dmi'
+	primitive_form = "Monkey"
+	path = /mob/living/carbon/human/subslime
+	language = "Sol Common"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
 /datum/species/turtle
 	name = "Turtle"
 	name_plural = "Turtles"
@@ -2059,6 +2099,19 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	species_allowed = list ("Fung")
 	icon = 'icons/mob/human_races/ARF Races/arf color layers/fungf1.dmi'
 	icon_state = "fung_f_s_1"
+
+/datum/sprite_accessory/body_markings/guilmonm_color1
+	name = "Male Guilmon Highlights"
+	species_allowed = list ("Guilmon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/guilmon.dmi'
+	icon_state = "guilmon_m_markings_2"
+
+/datum/sprite_accessory/body_markings/guilmonf_color1
+	name = "Female Guilmon Highlights"
+	species_allowed = list ("Guilmon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/guilmon.dmi'
+	icon_state = "guilmon_f_markings_2"
+
 
 /datum/sprite_accessory/body_markings/hawkm_color1
 	name = "Male Hawk Highlights"
