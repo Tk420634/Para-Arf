@@ -9,101 +9,174 @@
 		viewers(user) << "<span class='danger'>\The [user] is falling on their own [src]! It looks like [tempgender] trying to commit suicide.</span>"
 		return (OXYLOSS)
 
-/obj/item/weapon/melee/dallus/longsword
+//At last, you can master the sword forms of ending them rightly. ~TK
+//If someone can find the variable to, or make the variable to, vary the click attack speed for these.  That'd be grand. ~TK
+/obj/item/weapon/twohanded/dallus/longsword
 	name = "longsword"
-	desc = "A lengthy, hand-and-a-half bladed weapon."
+	desc = "A lengthy, hand-and-a-half bladed weapon. It is well balanced, and comfortable to wield."
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "longsword"
+	item_state = "longsword_onhand"
 	slot_flags = SLOT_BELT
-	force = 25
-	throwforce = 20
-	w_class = WEIGHT_CLASS_NORMAL
+	force_unwielded = 20
+	force_wielded = 25
+	throwforce = 15
+	block_chance = 15
+	sharp = 1
+	embed_chance = 15
+	embedded_pain_multiplier = 6
+	embedded_fall_chance = 70
+	throw_speed = 2
+	throw_range = 4
+	w_class = WEIGHT_CLASS_HUGE
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	origin_tech = list(TECH_COMBAT = 2)
-	attack_verb = list("cut", "slashed", "sliced", "stabbed", "lacerated")
+	attack_verb = list("cut", "slashed", "sliced", "stabbed", "lacerated", "impaled", "gutted")
 
 /obj/item/weapon/melee/dallus/shortsword
 	name = "shortsword"
-	desc = "A one-handed blade designed to chop and thrust."
+	desc = "A one-handed blade designed to chop, thrust, slice, dice, and sell melons."
 	icon_state = "shortsword"
+	item_state = "shortsword_onhand"
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
+	block_chance = 20
+	sharp = 1
+	embed_chance = 15
+	embedded_pain_multiplier = 6
+	embedded_fall_chance = 70
+	throw_speed = 2
+	throw_range = 4
 	w_class = WEIGHT_CLASS_NORMAL
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	origin_tech = list(TECH_COMBAT = 2)
-	attack_verb = list("chopped", "stabbed", "cut")
+	attack_verb = list("chopped", "stabbed", "sliced", "slashed", "lacerated", "diced", "impaled")
 
 /obj/item/weapon/melee/dallus/gladius
 	name = "gladius"
-	desc = "For those who are about to die, we salute you."
+	desc = "A Roman style gladius, the blade looks good for slipping past armored plates."
 	icon_state = "gladius"
+	item_state = "gladius_onhand"
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
+	block_chance = 10
+	sharp = 1
+	embed_chance = 15
+	embedded_pain_multiplier = 6
+	embedded_fall_chance = 70
+	armour_penetration = 15
+	throw_speed = 2
+	throw_range = 4
 	w_class = WEIGHT_CLASS_NORMAL
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	origin_tech = list(TECH_COMBAT = 2)
-	attack_verb = list("chopped", "stabbed", "hacked")
+	attack_verb = list("chopped", "stabbed", "hacked", "sliced", "slashed", "legionairred")
 
-/obj/item/weapon/melee/dallus/zweihander
+/obj/item/weapon/twohanded/required/dallus/zweihander
 	name = "zweihander"
-	desc = "An enormous, two-handed sword designed to fight pike formations."
+	desc = "An enormous, two-handed sword designed to fight pike formations, dragons, and rabid Vox."
 	icon_state = "zweihander"
+	item_state = "zweihander_onhand"
 	slot_flags = SLOT_BACK
-	force = 25
+	force_unwielded = 25
+	force_wielded = 25
 	throwforce = 20
+	block_chance = 15
+	sharp = 1
+	embed_chance = 15
+	embedded_pain_multiplier = 6
+	embedded_fall_chance = 70
+	armour_penetration = 15
+	throw_speed = 2
+	throw_range = 2
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	w_class = WEIGHT_CLASS_HUGE //HOPEFULLY this is big enough.
 	origin_tech = list(TECH_COMBAT = 3)
-	attack_verb = list("slashed", "chopped", "eviscerated", "disemboweled")
+	attack_verb = list("slashed", "chopped", "eviscerated", "disemboweled", "hacked", "maimed")
 
-/obj/item/weapon/melee/dallus/warhammer //Might have to turn this into a two-handed weapon at some point.
+/obj/item/weapon/twohanded/required/dallus/warhammer //This is another weapon that needs an attack speed var. ~TK
 	name = "warhammer"
-	desc = "An enormous, weaponized sledge-hammer."
+	desc = "An enormous, weaponized sledge-hammer.  There are not 40,000 of these."
 	icon_state = "warhammer"
 	slot_flags = SLOT_BACK
-	force = 25
-	throwforce = 20
-	w_class = WEIGHT_CLASS_HUGE
-	origin_tech = list(TECH_COMBAT = 3)
-	attack_verb = list("pounded", "pummeled", "slammed", "hammered")
+	force_unwielded = 28
+	force_wielded = 28
+	throwforce = 25
+	block_chance = 15
+	throw_speed = 2
+	throw_range = 2
+	w_class = WEIGHT_CLASS_BULKY
+	hitsound = 'sound/weapons/genhit3.ogg'
+	origin_tech = list(TECH_COMBAT = 2)
+	attack_verb = list("pounded", "pummeled", "slammed", "hammered", "bludgeoned", "battered", "crushed")
 
 /obj/item/weapon/melee/dallus/mace
 	name = "mace"
-	desc = "A pointed, weighted piece of metal on a stick."
+	desc = "A pointed, weighted piece of metal on a stick.  Designed to crush armor, flesh, bone, and rats alike. "
 	icon_state = "mace"
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
+	block_chance = 10
+	throw_speed = 2
+	throw_range = 4
 	w_class = WEIGHT_CLASS_NORMAL
+	armour_penetration = 15
+	hitsound = 'sound/weapons/genhit3.ogg'
 	origin_tech = list(TECH_COMBAT = 2)
-	attack_verb = list("pounded", "pummeled", "slammed", "hammered")
+	attack_verb = list("pounded", "pummeled", "slammed", "hammered", "battered", "bludgeoned", "crushed")
 
-/obj/item/weapon/melee/dallus/halberd
+/obj/item/weapon/twohanded/required/dallus/halberd
 	name = "halberd"
-	desc = "The polearm. A long stick with an axehead on the end."
+	desc = "A polearm. This long stick has an axehead on the end."
 	icon_state = "halberd"
 	slot_flags = SLOT_BACK
-	force = 25
+	force_unwielded = 25
+	force_wielded = 25
 	throwforce = 20
-	w_class = WEIGHT_CLASS_HUGE
-	origin_tech = list(TECH_COMBAT = 3)
-	attack_verb = list("chopped", "stabbed", "slapped", "hacked")
-
-/obj/item/weapon/melee/dallus/spear
-	name = "spear"
-	desc = "A martial spear."
-	icon_state = "spear"
-	slot_flags = SLOT_BACK
-	force = 20
-	throwforce = 20
+	block_chance = 20
+	sharp = 1
+	throw_speed = 2
+	throw_range = 2
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	w_class = WEIGHT_CLASS_HUGE
 	origin_tech = list(TECH_COMBAT = 2)
-	attack_verb = list("poked", "stabbed", "jabbed", "prodded")
+	attack_verb = list("chopped", "stabbed", "slapped", "hacked", "poleaxed", "mauled")
 
-/obj/item/weapon/melee/dallus/rapier
+/obj/item/weapon/twohanded/required/dallus/classicspear
+	name = "spear"
+	desc = "The long arm of the militia.  This is a weapon that even the most debased peasant should be able to master swiftly."
+	icon_state = "classicspear"
+	slot_flags = SLOT_BACK
+	force_unwielded = 20
+	force_wielded = 20
+	throwforce = 20
+	block_chance = 25
+	throw_speed = 2
+	throw_range = 3
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	w_class = WEIGHT_CLASS_HUGE
+	origin_tech = list(TECH_COMBAT = 2)
+	attack_verb = list("poked", "stabbed", "jabbed", "prodded", "impaled", "shafted")
+
+/obj/item/weapon/melee/dallus/classicrapier
 	name = "rapier"
 	desc = "A thin, long sword designed for slashing and poking. En garde!"
-	icon_state = "rapier"
+	icon_state = "classicrapier"
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
+	block_chance = 10
+	sharp = 1
+	embed_chance = 15
+	embedded_pain_multiplier = 6
+	embedded_fall_chance = 70
+	armour_penetration = 25
+	throw_speed = 2
+	throw_range = 3
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("slashed", "poked", "sliced", "jabbed")

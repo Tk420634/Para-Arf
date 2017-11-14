@@ -266,6 +266,12 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	icon_state = "glaceontail"
 	allowed_species = list()
 
+/datum/body_accessory/tail/guilmontail
+	name = "Guilmon Tail"
+	icon_state = "guilmon"
+	animated_icon_state = "guilmon_a"
+	allowed_species = list()
+
 /datum/body_accessory/tail/hawktail
 	name = "Hawk Tail"
 	icon_state = "hawktail"
