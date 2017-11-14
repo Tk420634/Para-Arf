@@ -133,7 +133,8 @@
 	desc = "A polearm. This long stick has an axehead on the end."
 	icon_state = "halberd"
 	slot_flags = SLOT_BACK
-	force = 25
+	force_unwielded = 25
+	force_wielded = 25
 	throwforce = 20
 	block_chance = 20
 	sharp = 1
@@ -144,12 +145,13 @@
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("chopped", "stabbed", "slapped", "hacked", "poleaxed", "mauled")
 
-/obj/item/weapon/melee/dallus/classicspear
+/obj/item/weapon/twohanded/required/dallus/classicspear
 	name = "spear"
 	desc = "The long arm of the militia.  This is a weapon that even the most debased peasant should be able to master swiftly."
 	icon_state = "classicspear"
 	slot_flags = SLOT_BACK
-	force = 20
+	force_unwielded = 20
+	force_wielded = 20
 	throwforce = 20
 	block_chance = 25
 	throw_speed = 2
