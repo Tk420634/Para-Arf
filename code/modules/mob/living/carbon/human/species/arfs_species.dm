@@ -1718,8 +1718,8 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 /datum/species/subslime
 	name = "Subterranean Slime"
 	name_plural = "Subterranean Slimes"
-	icobase = 'icons/mob/human_races/ARF Races/r_slime.dmi'
-	deform = 'icons/mob/human_races/ARF Races/r_slime.dmi'
+	icobase = 'icons/mob/human_races/r_slime.dmi'
+	deform = 'icons/mob/human_races/r_slime.dmi'
 	primitive_form = "Monkey"
 	path = /mob/living/carbon/human/subslime
 	language = "Sol Common"
