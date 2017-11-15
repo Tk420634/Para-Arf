@@ -167,22 +167,21 @@
 		if(rpm<1000)
 			rpmtarget = 0
 
-
 	if(rpm>50000)
-		overlays += image('icons/obj/pipes.dmi', "comp-o4", FLY_LAYER)
+		overlays += image('icons/obj/pipes.dmi', "comp-o4", FLY_LAYER, dir = src.dir)
 	else if(rpm>10000)
-		overlays += image('icons/obj/pipes.dmi', "comp-o3", FLY_LAYER)
+		overlays += image('icons/obj/pipes.dmi', "comp-o3", FLY_LAYER, dir = src.dir)
 	else if(rpm>2000)
-		overlays += image('icons/obj/pipes.dmi', "comp-o2", FLY_LAYER)
-	else if(rpm>500)
-		overlays += image('icons/obj/pipes.dmi', "comp-o1", FLY_LAYER)
+		overlays += image('icons/obj/pipes.dmi', "comp-o2", FLY_LAYER, dir = src.dir)
+	else if(rpm>0)
+		overlays += image('icons/obj/pipes.dmi', "comp-o1", FLY_LAYER, dir = src.dir)
 	 //TODO: DEFERRED
 
 // These are crucial to working of a turbine - the stats modify the power output. TurbGenQ modifies how much raw energy can you get from
 // rpms, TurbGenG modifies the shape of the curve - the lower the value the less straight the curve is.
 
 #define TURBPRES 9000000
-#define TURBGENQ 100000
+#define TURBGENQ 300000
 #define TURBGENG 0.5
 
 /obj/machinery/power/turbine/New()

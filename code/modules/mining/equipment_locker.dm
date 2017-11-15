@@ -365,7 +365,17 @@
 		new /datum/data/mining_equipment("KA Damage Increase",	/obj/item/borg/upgrade/modkit/damage,									1000),
 		new /datum/data/mining_equipment("KA Cooldown Decrease",/obj/item/borg/upgrade/modkit/cooldown,									1000),
 		new /datum/data/mining_equipment("KA AoE Damage",		/obj/item/borg/upgrade/modkit/aoe/mobs,									2000),
-		new /datum/data/mining_equipment("Point Transfer Card", /obj/item/weapon/card/mining_point_card,               			   500),
+		new /datum/data/mining_equipment("Point Transfer Card", /obj/item/weapon/card/mining_point_card,               		 		  500),
+		new /datum/data/mining_equipment("Short Sword", /obj/item/weapon/melee/dallus/shortsword,               					  1000),
+		new /datum/data/mining_equipment("Gladius", /obj/item/weapon/melee/dallus/gladius,               							  1000),
+		new /datum/data/mining_equipment("Long Sword", /obj/item/weapon/twohanded/dallus/longsword,               				  2000),
+		new /datum/data/mining_equipment("Zwiehander", /obj/item/weapon/twohanded/required/dallus/zweihander,               		  2500),
+		new /datum/data/mining_equipment("War Hammer", /obj/item/weapon/twohanded/required/dallus/warhammer,               		  2500),
+		new /datum/data/mining_equipment("Mace", /obj/item/weapon/melee/dallus/mace,               		 						  1250),
+		new /datum/data/mining_equipment("Halberd", /obj/item/weapon/twohanded/required/dallus/halberd,               			  2250),
+		new /datum/data/mining_equipment("Spear", /obj/item/weapon/twohanded/required/dallus/classicspear,               		  2250),
+		new /datum/data/mining_equipment("Rapier", /obj/item/weapon/melee/dallus/classicrapier,               		  2250),
+		new /datum/data/mining_equipment("Buckler", /obj/item/weapon/shield/riot/buckler,               		  1500)
 		)
 
 
