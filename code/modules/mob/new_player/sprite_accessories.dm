@@ -55,12 +55,12 @@
 	"Dalmation", "Datashark", "Deer", "Drake",
 	"Eevee", "Elephant", "Elf",
 	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon"
+	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon",
 	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
 	"Jackalope", "Jelly",
 	"Kangaroo", "Kitsune",
 	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse"
+	"Mouse",
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
@@ -104,12 +104,12 @@
 	"Dalmation", "Datashark", "Deer", "Drake",
 	"Eevee", "Elephant", "Elf",
 	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon"
+	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon",
 	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
 	"Jackalope", "Jelly",
 	"Kangaroo", "Kitsune",
 	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse"
+	"Mouse",
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
@@ -1668,12 +1668,12 @@
 	"Dalmation", "Datashark", "Deer", "Drake",
 	"Eevee", "Elephant", "Elf",
 	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon"
+	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon",
 	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
 	"Jackalope", "Jelly",
 	"Kangaroo", "Kitsune",
 	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse"
+	"Mouse",
 	"Orc", "Orca", "Otie", "Otter",
 	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
 	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
