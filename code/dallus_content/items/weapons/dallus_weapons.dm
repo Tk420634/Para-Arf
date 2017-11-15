@@ -79,6 +79,7 @@
 	desc = "An enormous, two-handed sword designed to fight pike formations, dragons, and rabid Vox."
 	icon_state = "zweihander"
 	item_state = "zweihander_onhand"
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	slot_flags = SLOT_BACK
 	force_unwielded = 25
 	force_wielded = 25
@@ -99,7 +100,9 @@
 /obj/item/weapon/twohanded/required/dallus/warhammer //This is another weapon that needs an attack speed var. ~TK
 	name = "warhammer"
 	desc = "An enormous, weaponized sledge-hammer.  There are not 40,000 of these."
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "warhammer"
+	item_state = "warhammer_onhand"
 	slot_flags = SLOT_BACK
 	force_unwielded = 28
 	force_wielded = 28
@@ -116,6 +119,7 @@
 	name = "mace"
 	desc = "A pointed, weighted piece of metal on a stick.  Designed to crush armor, flesh, bone, and rats alike. "
 	icon_state = "mace"
+	item_state = "mace_onhand"
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
@@ -131,7 +135,9 @@
 /obj/item/weapon/twohanded/required/dallus/halberd
 	name = "halberd"
 	desc = "A polearm. This long stick has an axehead on the end."
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "halberd"
+	item_state = "halberd_onhand"
 	slot_flags = SLOT_BACK
 	force_unwielded = 25
 	force_wielded = 25
@@ -148,7 +154,9 @@
 /obj/item/weapon/twohanded/required/dallus/classicspear
 	name = "spear"
 	desc = "The long arm of the militia.  This is a weapon that even the most debased peasant should be able to master swiftly."
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "classicspear"
+	item_state = "classicspear_onhand"
 	slot_flags = SLOT_BACK
 	force_unwielded = 20
 	force_wielded = 20
@@ -164,7 +172,9 @@
 /obj/item/weapon/melee/dallus/classicrapier
 	name = "rapier"
 	desc = "A thin, long sword designed for slashing and poking. En garde!"
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "classicrapier"
+	item_state = "classicrapier_onhand"
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
