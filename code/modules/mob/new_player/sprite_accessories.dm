@@ -48,7 +48,7 @@
 	var/gender = NEUTER	//Determines if the accessory will be skipped or included in random hair generations
 
 	// Restrict some styles to specific species
-	var/list/species_allowed = list("Human", "Slime People",
+	var/list/species_allowed = list("Human", "Slime People", "Tajaran", "Unathi",
 	"Absol", "Alien", "Anubis", "Apex", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
