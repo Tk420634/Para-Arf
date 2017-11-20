@@ -41,7 +41,7 @@ var/global/list/all_cults = list()
 	config_tag = "cult"
 	restricted_jobs = list("Chaplain","AI", "Cyborg", "Internal Affairs Agent", "Security Officer", "Warden", "Detective", "Security Pod Pilot", "Head of Security", "Captain", "Head of Personnel", "Blueshield", "A.R.F. Representative", "Magistrate", "Brig Physician", "A.R.F. Navy Officer", "Special Operations Officer")
 	protected_jobs = list()
-	required_players = 30
+	required_players = 18
 	required_enemies = 3
 	recommended_enemies = 4
 
