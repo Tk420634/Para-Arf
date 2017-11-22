@@ -549,3 +549,19 @@
 			nanomanager.update_uis(src)
 			return 0
 	return ..()
+
+
+//FISH STORAGE THINGY
+/obj/machinery/smartfridge/fish
+	name = "\improper Fish Storage System"
+	desc = "A refrigerated storage unit for Fish and Fish Eggs"
+	req_access_txt = "47"
+
+/obj/machinery/smartfridge/fish/accept_check(obj/item/O)
+	if(istype(O,/obj/item/weapon/fish/))
+		return 1
+	if(istype(O,/obj/item/fish_eggs/))
+		return 1
+	if(ispill(O))
+		return 1
+	return 0
