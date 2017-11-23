@@ -11,7 +11,7 @@
 	restricted_jobs = list("AI", "Cyborg")
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Blueshield", "A.R.F. Representative", "Security Pod Pilot", "Magistrate", "Chaplain", "Brig Physician", "Internal Affairs Agent", "A.R.F. Navy Officer", "Special Operations Officer")
 	protected_species = list("Machine")
-	required_players = 15
+	required_players = 10
 	required_enemies = 1
 	recommended_enemies = 4
 

@@ -272,7 +272,8 @@
 	/obj/item/clothing/mask/muzzle=2,/obj/item/weapon/sextoy/dildo/canine=4,
 	/obj/item/weapon/sextoy/dildo/purpledong=4,/obj/item/weapon/sextoy/dildo/bigblackdick=4,
 	/obj/item/weapon/sextoy/dildo/floppydick=4,/obj/item/weapon/sextoy/dildo/bulletvibe=4,
-	/obj/item/weapon/sextoy/dildo/fleshlight=2,/obj/item/weapon/sextoy/dildo/analbeads=2)
+	/obj/item/weapon/sextoy/dildo/fleshlight=2,/obj/item/weapon/sextoy/dildo/analbeads=2,
+	/obj/item/clothing/under/birthdaysuit=5)
 
 /obj/machinery/vending/thingpony/toy
 	name = "Toy Vendor"

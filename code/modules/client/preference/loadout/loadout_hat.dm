@@ -156,3 +156,59 @@
 /datum/gear/hat/flowerpinpurp
 	display_name = "hair flower, purple"
 	path = /obj/item/clothing/head/hairflower/purple
+
+/datum/gear/hat/redcoat
+	display_name = "redcoat's hat"
+	path = /obj/item/clothing/head/redcoat
+
+/datum/gear/hat/mailman
+	display_name = "Mailman's Hat"
+	path = /obj/item/clothing/head/mailman
+
+/datum/gear/hat/snowman
+	display_name = "snowman's head"
+	path = /obj/item/clothing/head/snowman
+	allowed_roles = list("Clown")
+
+/datum/gear/hat/greenbandana
+	display_name = "green bandana"
+	path = /obj/item/clothing/head/greenbandana
+
+/datum/gear/hat/justice
+	display_name = "justice"
+	path = /obj/item/clothing/head/justice
+	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
+	cost = 5
+
+/datum/gear/hat/justiceblue
+	display_name = "justice, blue"
+	path = /obj/item/clothing/head/justice/blue
+	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
+	cost = 5
+
+/datum/gear/hat/justiceyellow
+	display_name = "justice, yellow"
+	path = /obj/item/clothing/head/justice/yellow
+	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
+	cost = 5
+
+/datum/gear/hat/justicegreen
+	display_name = "justice, green"
+	path = /obj/item/clothing/head/justice/green
+	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
+	cost = 5
+
+/datum/gear/hat/justicepink
+	display_name = "justice,  pink"
+	path = /obj/item/clothing/head/justice/pink
+	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
+	cost = 5
+
+/datum/gear/hat/bowlerhat
+	display_name = "bowler hat"
+	path = /obj/item/clothing/head/bowlerhat
+
+/datum/gear/hat/beaverhat
+	display_name = "beaver hat"
+	path = /obj/item/clothing/head/beaverhat
+

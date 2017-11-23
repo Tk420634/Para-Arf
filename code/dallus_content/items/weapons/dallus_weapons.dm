@@ -17,11 +17,11 @@
 	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "longsword"
 	item_state = "longsword_onhand"
-	slot_flags = SLOT_BELT
+	slot_flags = SLOT_BELT | SLOT_BACK
 	force_unwielded = 20
 	force_wielded = 25
 	throwforce = 15
-	block_chance = 15
+	block_chance = 30
 	sharp = 1
 	embed_chance = 15
 	embedded_pain_multiplier = 6
@@ -41,7 +41,7 @@
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
-	block_chance = 20
+	block_chance = 40
 	sharp = 1
 	embed_chance = 15
 	embedded_pain_multiplier = 6
@@ -61,7 +61,7 @@
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
-	block_chance = 10
+	block_chance = 20
 	sharp = 1
 	embed_chance = 15
 	embedded_pain_multiplier = 6
@@ -79,11 +79,12 @@
 	desc = "An enormous, two-handed sword designed to fight pike formations, dragons, and rabid Vox."
 	icon_state = "zweihander"
 	item_state = "zweihander_onhand"
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	slot_flags = SLOT_BACK
 	force_unwielded = 25
 	force_wielded = 25
 	throwforce = 20
-	block_chance = 15
+	block_chance = 30
 	sharp = 1
 	embed_chance = 15
 	embedded_pain_multiplier = 6
@@ -99,12 +100,14 @@
 /obj/item/weapon/twohanded/required/dallus/warhammer //This is another weapon that needs an attack speed var. ~TK
 	name = "warhammer"
 	desc = "An enormous, weaponized sledge-hammer.  There are not 40,000 of these."
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "warhammer"
+	item_state = "warhammer_onhand"
 	slot_flags = SLOT_BACK
 	force_unwielded = 28
 	force_wielded = 28
 	throwforce = 25
-	block_chance = 15
+	block_chance = 30
 	throw_speed = 2
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
@@ -116,10 +119,11 @@
 	name = "mace"
 	desc = "A pointed, weighted piece of metal on a stick.  Designed to crush armor, flesh, bone, and rats alike. "
 	icon_state = "mace"
+	item_state = "mace_onhand"
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
-	block_chance = 10
+	block_chance = 20
 	throw_speed = 2
 	throw_range = 4
 	w_class = WEIGHT_CLASS_NORMAL
@@ -131,12 +135,14 @@
 /obj/item/weapon/twohanded/required/dallus/halberd
 	name = "halberd"
 	desc = "A polearm. This long stick has an axehead on the end."
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "halberd"
+	item_state = "halberd_onhand"
 	slot_flags = SLOT_BACK
 	force_unwielded = 25
 	force_wielded = 25
 	throwforce = 20
-	block_chance = 20
+	block_chance = 40
 	sharp = 1
 	throw_speed = 2
 	throw_range = 2
@@ -148,12 +154,14 @@
 /obj/item/weapon/twohanded/required/dallus/classicspear
 	name = "spear"
 	desc = "The long arm of the militia.  This is a weapon that even the most debased peasant should be able to master swiftly."
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "classicspear"
+	item_state = "classicspear_onhand"
 	slot_flags = SLOT_BACK
 	force_unwielded = 20
 	force_wielded = 20
 	throwforce = 20
-	block_chance = 25
+	block_chance = 50
 	throw_speed = 2
 	throw_range = 3
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -164,11 +172,13 @@
 /obj/item/weapon/melee/dallus/classicrapier
 	name = "rapier"
 	desc = "A thin, long sword designed for slashing and poking. En garde!"
+	icon = 'code/dallus_content/icons/killbow_weapon.dmi'
 	icon_state = "classicrapier"
+	item_state = "classicrapier_onhand"
 	slot_flags = SLOT_BELT
 	force = 15
 	throwforce = 10
-	block_chance = 10
+	block_chance = 20
 	sharp = 1
 	embed_chance = 15
 	embedded_pain_multiplier = 6
