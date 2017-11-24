@@ -1,7 +1,7 @@
 //TODO: Make these simple_animals
 
-var/const/MIN_IMPREGNATION_TIME = 100 //time it takes to impregnate someone
-var/const/MAX_IMPREGNATION_TIME = 150
+var/const/MIN_IMPREGNATION_TIME = 150 //time it takes to impregnate someone
+var/const/MAX_IMPREGNATION_TIME = 300
 
 var/const/MIN_ACTIVE_TIME = 200 //time between being dropped and going idle
 var/const/MAX_ACTIVE_TIME = 400
@@ -13,7 +13,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	icon_state = "facehugger"
 	item_state = "facehugger"
 	w_class = WEIGHT_CLASS_TINY //note: can be picked up by aliens unlike most other items of w_class below 4
-	throw_range = 5
+	throw_range = 2
 	tint = 3
 	flags = AIRTIGHT
 	flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES
@@ -82,7 +82,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	return 0
 
 /obj/item/clothing/mask/facehugger/HasProximity(atom/movable/AM as mob|obj)
-	if(CanHug(AM) && Adjacent(AM))
+	if(CanHug(AM) && Adjacent(AM) && locate(src) in view(1,AM))//will only run the locate in view thing if they can hug so it's not that expensive
 		return Attach(AM)
 	return 0
 
@@ -120,7 +120,8 @@ var/const/MAX_ACTIVE_TIME = 400
 		return 0
 	if(stat != CONSCIOUS)
 		return 0
-	if(!sterile) M.take_organ_damage(strength,0) //done here so that even borgs and humans in helmets take damage
+	if(M.stat == DEAD)
+		return 0
 	M.visible_message("<span class='danger'>[src] leaps at [M]'s face!</span>", \
 						"<span class='userdanger'>[src] leaps at [M]'s face!</span>")
 	if(ishuman(M))
@@ -138,8 +139,10 @@ var/const/MAX_ACTIVE_TIME = 400
 			var/obj/item/clothing/W = target.wear_mask
 			if(W.flags & NODROP)
 				return 0
-			target.unEquip(W)
+			if(W.type == /obj/item/clothing/mask/facehugger)
+				return 0
 
+			target.unEquip(W)
 			target.visible_message("<span class='danger'>[src] tears [W] off of [target]'s face!</span>", \
 									"<span class='userdanger'>[src] tears [W] off of [target]'s face!</span>")
 

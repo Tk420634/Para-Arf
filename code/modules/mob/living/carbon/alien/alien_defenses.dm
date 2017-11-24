@@ -13,7 +13,6 @@ In all, this is a lot like the monkey code. /N
 	if(istype(loc, /turf) && istype(loc.loc, /area/start))
 		to_chat(M, "No attacking people at spawn, you jackass.")
 		return
-
 	switch(M.a_intent)
 		if(INTENT_HELP)
 			AdjustSleeping(-5)
@@ -21,13 +20,18 @@ In all, this is a lot like the monkey code. /N
 			AdjustParalysis(-3)
 			AdjustStunned(-3)
 			AdjustWeakened(-3)
-			visible_message("<span class='notice'>[M.name] nuzzles [src] trying to wake it up!</span>")
+			if(M.stat)
+				visible_message("<span class='notice'>[M.name] nuzzles [src] to try to wake them up!</span>")
+			else
+				visible_message("<span class='notice'>[M.name] nuzzles [src]!</span>")
 
 		if(INTENT_GRAB)
 			grabbedby(M)
 			return 1
 
 		else
+			if(M == src)//Don't attack yourself by accident. Helps with large-sprited mobs.
+				return
 			if(health > 0)
 				M.do_attack_animation(src)
 				playsound(loc, 'sound/weapons/bite.ogg', 50, 1, -1)

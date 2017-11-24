@@ -694,6 +694,8 @@
 		return
 	if(!istype(user,/mob/living/carbon/alien/humanoid))
 		return
+	if(user.IsAdvancedToolUser() && user.a_intent == "help")
+		return attack_hand(user)
 	if(indestructible)
 		return
 	user.changeNext_move(CLICK_CD_MELEE)

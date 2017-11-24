@@ -122,15 +122,24 @@
 		wires.Interact(user)
 
 /obj/machinery/camera/attack_alien(mob/living/carbon/alien/humanoid/user)
+	user.changeNext_move(CLICK_CD_MELEE)
 	if(!istype(user))
+		return
+	if(!status)
+		to_chat(user, "<span class='notice'>[src] isn't moving.</span>")
 		return
 	user.do_attack_animation(src)
 	add_hiddenprint(user)
-	status = 0
-	visible_message("<span class='warning'>\The [user] slashes at [src]!</span>")
 	playsound(src.loc, 'sound/weapons/slash.ogg', 100, 1)
-	toggle_cam(user, 0)
-
+	if(prob(33))
+		toggle_cam(user, 0)
+		var/datum/effect/system/spark_spread/spark_system = new /datum/effect/system/spark_spread()
+		spark_system.set_up(5, 0, loc)
+		spark_system.start()
+		playsound(loc, "sparks", 50, 1)
+		visible_message("<span class='warning'>\The <b>[user]</b> eviscerates [src] in a shower of sparks!</span>")
+	else
+		visible_message("<span class='warning'>\The <b>[user]</b> slashes at [src]!</span>")
 
 /obj/machinery/camera/proc/setViewRange(num = 7)
 	src.view_range = num

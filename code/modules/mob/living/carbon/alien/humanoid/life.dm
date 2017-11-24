@@ -54,15 +54,17 @@
 		blinded = 1
 		SetSilence(0)
 	else				//ALIVE. LIGHTS ARE ON
-		if(health < config.health_threshold_dead || !get_int_organ(/obj/item/organ/internal/brain))
+		var/crit_threshold = 0 //Overriding the server configs for balance reasons.
+		var/death_threshhold = maxHealth*-0.5
+		if(health < death_threshhold || !get_int_organ(/obj/item/organ/internal/brain))
 			death()
 			blinded = 1
 			SetSilence(0)
 			return 1
 
 		//UNCONSCIOUS. NO-ONE IS HOME
-		if((getOxyLoss() > 50) || (config.health_threshold_crit >= health))
-			if(health <= 20 && prob(1))
+		if((getOxyLoss() > 50) || (health < crit_threshold))
+			if(prob(10))
 				emote("gasp")
 			if(!reagents.has_reagent("epinephrine"))
 				adjustOxyLoss(1)
@@ -74,8 +76,6 @@
 		else if(sleeping)
 			blinded = 1
 			stat = UNCONSCIOUS
-			if(prob(10) && health)
-				emote("hiss")
 		//CONSCIOUS
 		else
 			stat = CONSCIOUS

@@ -93,6 +93,12 @@
 	typepath = /obj/item/toy/katana
 	cost = 500
 
+/datum/storeitem/videocamera
+	name = "video camera"
+	desc = "A video camera that can send live feed to the entertainment network."
+	typepath = /obj/item/device/videocam
+	cost = 500
+
 /datum/storeitem/piano_synth
 	name = "piano synthesizer"
 	desc = "An advanced electronic synthesizer that can be used as various instruments."
