@@ -86,7 +86,61 @@ var/global/list/body_accessory_by_species = list("None" = null)
 
 	pixel_x_offset = -16
 
+/datum/body_accessory/body/horse
+	name = "Horse"
 
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "horse"
+
+	pixel_x_offset = -16
+
+/datum/body_accessory/body/cow
+	name = "Cow"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "cow"
+
+	pixel_x_offset = -16
+
+/datum/body_accessory/body/slug
+	name = "Slug"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "slug"
+
+	pixel_x_offset = -16
+
+/datum/body_accessory/body/wolf
+	name = "Wolf"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "wolf"
+
+	pixel_x_offset = -16
+
+/datum/body_accessory/body/spider
+	name = "Spider"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "spider"
+
+	pixel_x_offset = -16
+
+/datum/body_accessory/body/tent
+	name = "Tentacles"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "tent"
+
+	pixel_x_offset = -16
+
+/datum/body_accessory/body/feline
+	name = "Feline"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "feline"
+
+	pixel_x_offset = -16
 
 //Tails
 /datum/body_accessory/tail
