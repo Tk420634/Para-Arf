@@ -833,10 +833,10 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_TOURETTES,"Tourettes syndrome") // this will / can not be abused. It also SEVERELY stuns. It's just for fun.
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_NERVOUS,"Stutter")
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_SWEDISH,"Swedish accent")
+	HTML += ShowDisabilityState(user,DISABILITY_FLAG_CHAV,"Chav accent")
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_LISP,"Lisp")
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_DIZZY,"Dizziness")
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_SCRAMBLED,"Can't speak properly")
-
 
 	HTML += {"</ul>
 		<a href=\"?_src_=prefs;task=close;preference=disabilities\">\[Done\]</a>
