@@ -15,7 +15,6 @@
 "o" = (/obj/structure/barricade/wooden,/turf/simulated/floor/plating,/area/ruin/unpowered)
 "p" = (/obj/structure/barricade/wooden,/obj/machinery/door/airlock/external,/turf/simulated/floor/plating/airless/asteroid,/area/ruin/unpowered)
 "q" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/plating,/area/ruin/unpowered)
-"r" = (/turf/simulated/floor/plating/airless/asteroid,/area/space)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -43,10 +42,10 @@ aaaaaaaaaaadddbbbbbbbbeoebbbbbbbbbbbbaaa
 aaaaaaaaaaadddddddbbbbeqebbbbbbbbbbbbaaa
 aaaaaaaaaaaaadddddbbbbbdbbbbbbbbbbbbbaaa
 aaaaabaaaaaaadddddddddddddbbbbbbbbbbbaaa
-aaaaaaaaaaaaaaaaadddddddddbccbbbbbbbbaaa
-aaaaaaabbaaaaaaaaaddddddddbccbbbbbbbbaaa
-aaaaaaabbbbaaaaaaarrrrrrrrrccddbbbbbbaaa
-aaaaaaabbbbaaaaaaarrdddddddddddddbbbbbaa
+aaaaaaaaaaaaaaaaadddddddddbbbbbbbbbbbaaa
+aaaaaaabbaaaaaaaaaddddddddbbbbbbbbbbbaaa
+aaaaaaabbbbaaaaaaadddddddddbbddbbbbbbaaa
+aaaaaaabbbbaaaaaaadddddddddddddddbbbbbaa
 aaaaaaaaabbaaaaaaaaddddddddddddddbbbbbaa
 aaaaaaaaabbaaaaaaaaddddddddddddddbbbbbaa
 aaaaaaaaaaaaaaaaaaaddddddddddddddbbbbbaa
