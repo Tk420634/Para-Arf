@@ -373,6 +373,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/monkey1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/monkey1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/monkey1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/avali
@@ -408,6 +412,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Eeeeeeeeeeeeeeeeee."
+	speech_sounds = list('sound/misc/arf_race_sounds/bat1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/bat1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/bat1.ogg'
 	reagent_tag = PROCESS_ORG
 
 
@@ -426,6 +434,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "They sleep in cottages."
+	speech_sounds = list('sound/misc/arf_race_sounds/bear1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/bear1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/bear1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/beaver
@@ -443,6 +455,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Mr. Chews approves."
+	speech_sounds = list('sound/misc/arf_race_sounds/beaver1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/beaver1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/beaver1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/bee
@@ -512,6 +528,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Carnotaur.  Nibblenibble."
+	speech_sounds = list('sound/misc/arf_race_sounds/theropod1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/theropod1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/theropod1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/ceratosaur
@@ -529,6 +549,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Carnotaur.  Nibblenibble."
+	speech_sounds = list('sound/misc/arf_race_sounds/theropod1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/theropod1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/theropod1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/chicken
@@ -563,6 +587,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "BARK BARK BARK BARKBARKBARKBARK."
+	speech_sounds = list('sound/misc/arf_race_sounds/corgi1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/corgi1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/corgi1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/cow
@@ -580,6 +608,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Got milk?"
+	speech_sounds = list('sound/misc/arf_race_sounds/cow1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/cow1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/cow1.ogg'
 	reagent_tag = PROCESS_ORG
 
 //Remember to fix their tail, it's grayscaled from our old code without any coloring at all.
@@ -598,6 +630,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Yip yip, my dude."
+	speech_sounds = list('sound/misc/arf_race_sounds/coyote1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/coyote1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/coyote1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/croc
@@ -615,6 +651,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Crickey!"
+	speech_sounds = list('sound/misc/arf_race_sounds/croc1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/croc1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/croc1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/crow
@@ -632,6 +672,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Worst bird."
+	speech_sounds = list('sound/misc/arf_race_sounds/bird1.ogg')
+	speech_chance = 5
+	male_scream_sound = 'sound/misc/arf_race_sounds/bird1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/bird1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/cutebold
@@ -666,6 +710,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Radar, speak!"
+	speech_sounds = list('sound/misc/arf_race_sounds/dalmation1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/dalmation1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/dalmation1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /*  Turned off for now, it needs either color layers or to use our unblackscaled version chopped up.  ~Tk
@@ -702,6 +750,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Deer are for raping. ~TK 2016"
+	speech_sounds = list('sound/misc/arf_race_sounds/deer1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/deer1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/deer1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/drake
@@ -719,6 +771,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Not a duck."
+	speech_sounds = list('sound/misc/arf_race_sounds/drake1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/drake1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/drake1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/eevee
@@ -736,6 +792,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Happy birthday, Jess."
+	speech_sounds = list('sound/misc/arf_race_sounds/eevee1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/eevee1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/eevee1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/elephant
@@ -753,6 +813,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/elephant1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/elephant1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/elephant1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/elf
@@ -787,6 +851,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/fennec1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/fennec1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/fennec1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/flareon
@@ -804,6 +872,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/flareon1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/flareon1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/flareon1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/fox
@@ -821,6 +893,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/fox1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/fox1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/fox1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/fung
@@ -828,7 +904,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	name_plural = "Fungii"
 	icobase = 'icons/mob/human_races/ARF Races/r_fung_arf.dmi'
 	deform = 'icons/mob/human_races/ARF Races/r_fung_arf.dmi'
-	primitive_form = "Monkey"
+	primitive_form = "Walking Mushroom"
 	path = /mob/living/carbon/human/fung
 	language = "Sol Common"
 	species_traits = list(LIPS)
@@ -871,6 +947,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/glaceon1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/glaceon1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/glaceon1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/glaceons
@@ -888,6 +968,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/glaceon1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/glaceon1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/glaceon1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/glowfen
@@ -922,6 +1006,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/glaceon1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/glaceon1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/glaceon1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/gremlin
@@ -973,6 +1061,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/grov1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/grov1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/grov1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/hawk
@@ -990,6 +1082,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/bird1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/bird1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/bird1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/hippo
@@ -1007,6 +1103,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/hippo1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/hippo1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/hippo1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/husky
@@ -1024,6 +1124,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/husky1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/husky1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/husky1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/hyena
@@ -1041,6 +1145,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/hyena1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/hyena1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/hyena1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/hylotl
@@ -1075,6 +1183,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/rabbit1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/rabbit1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/rabbit1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/jelly
@@ -1108,6 +1220,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/kangaroo1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/kangaroo1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/kangaroo1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/kitsune
@@ -1125,6 +1241,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/kitsune1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/kitsune1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/kitsune1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/lab
@@ -1142,6 +1262,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/lab1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/lab1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/lab1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/lopunny
@@ -1159,6 +1283,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/lopunny1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/lopunny1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/lopunny1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/lucky
@@ -1210,6 +1338,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/lynx1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/lynx1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/lynx1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/mouse
@@ -1227,6 +1359,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/mouse1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/mouse1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/mouse1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/orc
@@ -1243,6 +1379,8 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	male_scream_sound = 'sound/misc/arf_race_sounds/orc1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/orc1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/orca
@@ -1260,6 +1398,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/orca1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/orca1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/orca1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/otie
@@ -1277,6 +1419,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/ottie1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/ottie1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/ottie1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/otter
@@ -1311,6 +1457,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/panda1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/panda1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/panda1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/panther
@@ -1344,6 +1494,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/penguin1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/penguin1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/penguin1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/pig
@@ -1361,6 +1515,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/pig1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/pig1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/pig1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/pony
@@ -1395,6 +1553,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/porcupine1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/porcupine1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/porcupine1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/possum
@@ -1412,6 +1574,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/possum1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/possum1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/possum1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/pudding
@@ -1444,6 +1610,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/pug1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/pug1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/pug1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/rabbit
@@ -1461,6 +1631,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/rabbit1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/rabbit1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/rabbit1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/raccoon
@@ -1478,6 +1652,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/raccoon1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/raccoon1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/raccoon1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/redpanda
@@ -1495,6 +1673,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/redpanda1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/redpanda1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/redpanda1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/renamon
@@ -1580,6 +1762,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/shepherd1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/shepherd1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/shepherd1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/shihtzu
@@ -1597,6 +1783,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/shihtzu1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/shihtzu1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/shihtzu1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/siamese
@@ -1614,6 +1804,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/siamese1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/siamese1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/siamese1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/skunk
@@ -1631,6 +1825,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Le pew."
+	speech_sounds = list('sound/misc/arf_race_sounds/skunk1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/skunk1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/skunk1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/smilodon
@@ -1699,6 +1897,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/squirrel1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/squirrel1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/squirrel1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/stego
@@ -1800,6 +2002,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/vulture1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/vulture1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/vulture1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/wolf
@@ -1817,6 +2023,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/wolf1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/wolf1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/wolf1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/zebra
@@ -1834,6 +2044,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/zebra1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/zebra1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/zebra1.ogg'
 	reagent_tag = PROCESS_ORG
 
 /datum/species/zigzagoon
@@ -1851,6 +2065,10 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
+	speech_sounds = list('sound/misc/arf_race_sounds/zig1.ogg')
+	speech_chance = 20
+	male_scream_sound = 'sound/misc/arf_race_sounds/zig1.ogg'
+	female_scream_sound = 'sound/misc/arf_race_sounds/zig1.ogg'
 	reagent_tag = PROCESS_ORG
 
 
