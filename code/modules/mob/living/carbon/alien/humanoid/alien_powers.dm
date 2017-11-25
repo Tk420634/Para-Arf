@@ -29,9 +29,12 @@ Doesn't work on other aliens/AI.*/
 
 	if(powerc(50,1))
 		adjustPlasma(-50)
-		for(var/mob/O in viewers(src, null))
-			O.show_message(text("<span class='alertalien'>[src] has planted some alien weeds!</span>"), 1)
+		visible_message("<span class='alertalien'>[src] has planted some alien weeds!</span>")
+		var/obj/structure/alien/weeds/W = (locate(/obj/structure/alien/weeds) in get_turf(src))
+		if(W)
+			qdel(W)
 		new /obj/structure/alien/weeds/node(loc)
+		playsound(loc, "alien_secrete", 100, 1, 7)
 	return
 
 /mob/living/carbon/alien/humanoid/verb/whisp(mob/M as mob in oview())
@@ -100,6 +103,7 @@ Doesn't work on other aliens/AI.*/
 			adjustPlasma(-200)
 			new /obj/effect/acid(get_turf(O), O)
 			visible_message("<span class='alertalien'>[src] vomits globs of vile stuff all over [O]. It begins to sizzle and melt under the bubbling mess of acid!</span>")
+			playsound(O, "alien_secrete", 100, 1, 7)
 		else
 			to_chat(src, "<span class='noticealien'>Target is too far away.</span>")
 	return
@@ -112,7 +116,7 @@ Doesn't work on other aliens/AI.*/
 	if(powerc(50))
 		adjustPlasma(-50)
 		src.visible_message("<span class='danger'>[src] spits neurotoxin!", "<span class='alertalien'>You spit neurotoxin.</span>")
-
+		playsound(src, "alien_spit", 100, 1, 7)
 		var/turf/T = loc
 		var/turf/U = get_step(src, dir) // Get the tile infront of the move, based on their direction
 		if(!isturf(U) || !isturf(T))
@@ -140,6 +144,7 @@ Doesn't work on other aliens/AI.*/
 		adjustPlasma(-55)
 		for(var/mob/O in viewers(src, null))
 			O.show_message(text("<span class='alertalien'>[src] vomits up a thick purple substance and shapes it!</span>"), 1)
+		playsound(loc, "alien_secrete", 100, 1, 7)
 		switch(choice)
 			if("resin wall")
 				new /obj/structure/alien/resin/wall(loc)

@@ -16,6 +16,12 @@
 	switch(act)
 		if("roar")
 			on_CD = handle_emote_CD()
+		if("screech")
+			on_CD = handle_emote_CD()
+		if("hurt")
+			on_CD = handle_emote_CD()
+		if("growl")
+			on_CD = handle_emote_CD()
 		if("deathgasp")
 			on_CD = handle_emote_CD()
 		if("hiss")
@@ -29,9 +35,6 @@
 		return
 
 	switch(act)
-
-
-
 		if("sign")
 			if(!restrained())
 				var/num = null
@@ -57,11 +60,11 @@
 				m_type = 2
 		if("roar")
 			if(!muzzled)
-				message = "<B>\The [src]</B> roars."
+				message = "<B>\The [src]</B> roars!"
 				m_type = 2
 		if("hiss")
 			if(!muzzled)
-				message = "<B>\The [src]</B> hisses."
+				message = "<B>\The [src]</B> hisses!"
 				m_type = 2
 		if("tail")
 			message = "<B>\The [src]</B> waves its tail."
@@ -126,16 +129,34 @@
 			m_type = 1
 			message = "<B>\The [src]</B> does a flip!"
 			SpinAnimation(5,1)
+		if("screech")
+			if(!muzzled)
+				message = "<B>\The [src]</B> screeches!"
+				m_type = 2
+		if("growl")
+			if(!muzzled)
+				message = "<B>\The [src]</B> growls!"
+				m_type = 2
+		if("hurt")
+			message = "<B>\The [src]</B> screeches and writhes in pain!"
+			m_type = 2
 		if("help")
-			to_chat(src, "burp, flip, deathgasp, choke, collapse, dance, drool, gasp, shiver, gnarl, jump, moan, nod, roar, roll, scratch,\nscretch, shake, sign-#, sit, sulk, sway, tail, twitch, whimper")
+			to_chat(src, "burp, flip, <B>deathgasp</B>, choke, collapse, dance, drool, gasp, shiver, <B>gnarl</B>, jump, moan, nod, <B>roar</B>, roll, scratch,\nscretch, shake, sign-#, sit, sulk, sway, tail, twitch, whimper, <B>screech</B>, <B>growl</B>, <B>hurt</B>")
 
 	if(!stat)
-		if(act == "roar")
-			playsound(src.loc, 'sound/voice/hiss5.ogg', 50, 1, 1)
-		if(act == "deathgasp")
-			playsound(src.loc, 'sound/voice/hiss6.ogg', 80, 1, 1)
-		if(act == "hiss")
-			playsound(src.loc, 'sound/voice/hiss1.ogg', 30, 1, 1)
-		if(act == "gnarl")
-			playsound(src.loc, 'sound/voice/hiss4.ogg', 30, 1, 1)
+		switch(act)
+			if("screech")
+				playsound(src.loc, "alien_screech", 75, 0, 7)
+			if("roar")
+				playsound(src.loc, "alien_screech", 75, 0, 7)
+			if("deathgasp")
+				playsound(src.loc, 'sound/voice/hiss6.ogg', 75, 0, 7)
+			if("hiss")
+				playsound(src.loc, "alien_hiss", 75, 0, 7)
+			if("gnarl")
+				playsound(src.loc, "alien_gnarl", 75, 0, 7)
+			if("growl")
+				playsound(src.loc, "alien_growl", 75, 0, 7)
+			if("hurt")
+				playsound(src.loc, "alien_hurt", 100, 0, 7)
 		..(act, m_type, message)

@@ -206,6 +206,7 @@
 #include "code\dallus_content\items\weapons\weapons.dm"
 #include "code\dallus_content\items\weapons\donator\weapons.dm"
 #include "code\dallus_content\machines\vending.dm"
+#include "code\dallus_content\mob\alien.dm"
 #include "code\dallus_content\mob\mobs.dm"
 #include "code\dallus_content\modules\footsteps\footsteps.dm"
 #include "code\datums\action.dm"

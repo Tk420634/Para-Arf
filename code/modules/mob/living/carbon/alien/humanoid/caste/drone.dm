@@ -1,18 +1,23 @@
 /mob/living/carbon/alien/humanoid/drone
 	name = "alien drone"
 	caste = "d"
-	maxHealth = 100
-	health = 100
-	icon_state = "aliend_s"
+	maxHealth = 75
+	health = 75
+	icon_state = "aliend"
+	default_alien_organs = list(/obj/item/organ/internal/brain/xeno,
+								/obj/item/organ/internal/xenos/hivenode,
+								/obj/item/organ/internal/xenos/plasmavessel/drone,
+								/obj/item/organ/internal/xenos/acidgland,
+								/obj/item/organ/internal/xenos/resinspinner)
 
 /mob/living/carbon/alien/humanoid/drone/New()
 	create_reagents(100)
 	if(src.name == "alien drone")
 		src.name = text("alien drone ([rand(1, 1000)])")
 	src.real_name = src.name
-	alien_organs += new /obj/item/organ/internal/xenos/plasmavessel/drone
-	alien_organs += new /obj/item/organ/internal/xenos/acidgland
-	alien_organs += new /obj/item/organ/internal/xenos/resinspinner
+//	alien_organs += new /obj/item/organ/internal/xenos/plasmavessel/drone
+//	alien_organs += new /obj/item/organ/internal/xenos/acidgland
+//	alien_organs += new /obj/item/organ/internal/xenos/resinspinner
 	..()
 
 //Drones use the same base as generic humanoids.

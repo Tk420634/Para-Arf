@@ -14,14 +14,14 @@
 		blinded = 1
 		SetSilence(0)
 	else				//ALIVE. LIGHTS ARE ON
-		if(health < -25 || !get_int_organ(/obj/item/organ/internal/brain))
+		if((health < 0) || !get_int_organ(/obj/item/organ/internal/brain))
 			death()
 			blinded = 1
 			SetSilence(0)
 			return 1
 
 		//UNCONSCIOUS. NO-ONE IS HOME
-		if( (getOxyLoss() > 25) || (config.health_threshold_crit >= health) )
+		if( (getOxyLoss() > (maxHealth)) || (config.health_threshold_crit >= health) )
 			//if( health <= 20 && prob(1) )
 			//	spawn(0)
 			//		emote("gasp")

@@ -96,6 +96,7 @@
 
 /obj/structure/table/attack_alien(mob/living/user)
 	user.do_attack_animation(src)
+	user.changeNext_move(CLICK_CD_MELEE)
 	visible_message("<span class='danger'>[user] slices [src] apart!</span>")
 	destroy()
 

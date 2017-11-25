@@ -7,7 +7,7 @@
 #define X_FIRE_LAYER			6
 #define X_TOTAL_LAYERS			6
 /////////////////////////////////
-
+#define ALIEN_STALK_ALPHA		48
 /mob/living/carbon/alien/humanoid
 	var/list/overlays_standing[X_TOTAL_LAYERS]
 
@@ -18,7 +18,7 @@
 
 	if(stat == DEAD)
 		//If we mostly took damage from fire
-		if(fireloss > 125)
+		if(fireloss > (maxHealth*0.667))
 			icon_state = "alien[caste]_husked"
 			pixel_y = 0
 		else
@@ -33,10 +33,10 @@
 
 	else if(lying || resting)
 		icon_state = "alien[caste]_sleep"
-	else if(m_intent == MOVE_INTENT_RUN)
-		icon_state = "alien[caste]_running"
 	else
-		icon_state = "alien[caste]_s"
+		icon_state = "alien[caste]"
+		update_inv_handcuffed()
+		update_hud_handcuffed()
 
 	if(leaping)
 		if(alt_icon == initial(alt_icon))
@@ -53,6 +53,12 @@
 			alt_icon = old_icon
 		pixel_x = get_standard_pixel_x_offset(lying)
 		pixel_y = get_standard_pixel_y_offset(lying)
+
+	if(!large && m_intent == "walk" && !resting && !stat)
+		alpha = ALIEN_STALK_ALPHA
+	else
+		alpha = 255
+
 
 /mob/living/carbon/alien/humanoid/regenerate_icons()
 	..()

@@ -1,50 +1,21 @@
 /mob/living/carbon/alien/humanoid/hunter
 	name = "alien hunter"
 	caste = "h"
-	maxHealth = 125
-	health = 125
-	icon_state = "alienh_s"
-
+	maxHealth = 100
+	health = 100
+	icon_state = "alienh"
+	default_alien_organs = list(/obj/item/organ/internal/brain/xeno,
+								/obj/item/organ/internal/xenos/hivenode)
 /mob/living/carbon/alien/humanoid/hunter/New()
-	create_reagents(100)
 	if(name == "alien hunter")
 		name = text("alien hunter ([rand(1, 1000)])")
 	real_name = name
-	alien_organs += new /obj/item/organ/internal/xenos/plasmavessel/hunter
+	default_alien_organs |= /obj/item/organ/internal/xenos/plasmavessel/hunter
 	..()
 
 /mob/living/carbon/alien/humanoid/hunter/movement_delay()
-	. = -1		//hunters are sanic
+	. = -0.75		//hunters are sanic
 	. += ..()	//but they still need to slow down on stun
-
-/mob/living/carbon/alien/humanoid/hunter/handle_regular_hud_updates()
-	..() //-Yvarov
-
-	if(healths)
-		if(stat != 2)
-			switch(health)
-				if(125 to INFINITY)
-					healths.icon_state = "health0"
-				if(100 to 125)
-					healths.icon_state = "health1"
-				if(50 to 100)
-					healths.icon_state = "health2"
-				if(25 to 50)
-					healths.icon_state = "health3"
-				if(0 to 25)
-					healths.icon_state = "health4"
-				else
-					healths.icon_state = "health5"
-		else
-			healths.icon_state = "health6"
-
-
-/mob/living/carbon/alien/humanoid/hunter/handle_environment()
-	if(m_intent == MOVE_INTENT_RUN || resting)
-		..()
-	else
-		adjustPlasma(-heal_rate)
-
 
 //Hunter verbs
 
@@ -80,13 +51,16 @@
 	if(lying)
 		return
 
-	else //Maybe uses plasma in the future, although that wouldn't make any sense...
+	else if(powerc(25))//Maybe uses plasma in the future, although that wouldn't make any sense... FUTURE EDIT: BALANCE
+		adjustPlasma(-25)
 		leaping = 1
 		update_icons()
 		throw_at(A, MAX_ALIEN_LEAP_DIST, 1, spin = 0, diagonals_first = 1, callback = CALLBACK(src, .leap_end))
 
 /mob/living/carbon/alien/humanoid/hunter/proc/leap_end()
-	leaping = 0
+	if(leaping)//we didn't hit anything, but still landed on the ground so we make a sound.
+		playsound(loc, "alien_step", 150, 1, 3)
+		leaping = 0
 	update_icons()
 
 /mob/living/carbon/alien/humanoid/hunter/throw_impact(atom/A)
@@ -105,27 +79,28 @@
 				L.visible_message("<span class ='danger'>[src] pounces on [L]!</span>", "<span class ='userdanger'>[src] pounces on you!</span>")
 				if(ishuman(L))
 					var/mob/living/carbon/human/H = L
-					H.apply_effect(5, WEAKEN, H.run_armor_check(null, "melee"))
+					playsound(loc, "alien_step", 150, 1, 3)
+					H.apply_effect(strength, WEAKEN, H.run_armor_check(null, "melee"))
 				else
-					L.Weaken(5)
+					L.Weaken(strength)
 				sleep(2)//Runtime prevention (infinite bump() calls on hulks)
 				step_towards(src,L)
 			else
 				Weaken(2, 1, 1)
 
 			toggle_leap(0)
-			pounce_cooldown = !pounce_cooldown
-			spawn(pounce_cooldown_time) //3s by default
-				pounce_cooldown = !pounce_cooldown
 		else if(A.density && !A.CanPass(src))
 			visible_message("<span class ='danger'>[src] smashes into [A]!</span>", "<span class ='alertalien'>[src] smashes into [A]!</span>")
+			playsound(loc, "alien_step_run", 150, 1, 7)
 			Weaken(2, 1, 1)
 
 		if(leaping)
 			leaping = 0
 			update_icons()
 			update_canmove()
-
+	pounce_cooldown = !pounce_cooldown
+	spawn(pounce_cooldown_time) //3s by default
+		pounce_cooldown = !pounce_cooldown
 
 /mob/living/carbon/alien/humanoid/float(on)
 	if(leaping)

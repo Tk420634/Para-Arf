@@ -125,6 +125,13 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 		master.show_message(rendered, 2)
 	return
 
+/obj/machinery/hologram/holopad/see_message(mob/living/M as mob, text)
+	if(M&&hologram&&master)//Master is mostly a safety in case lag hits or something.
+		var/name_used = M.GetVoice()
+		var/rendered = "<i><span class='game say'>Holopad received, <span class='name'>[name_used]</span> [text]</span></i>"
+		master.show_message(rendered, 1)
+	return
+
 /obj/machinery/hologram/holopad/proc/create_holo(mob/living/silicon/ai/A, turf/T = loc)
 	hologram = new(T)//Spawn a blank effect at the location.
 	hologram.icon = A.holo_icon

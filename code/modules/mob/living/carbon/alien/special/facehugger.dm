@@ -1,7 +1,7 @@
 //TODO: Make these simple_animals
 
-var/const/MIN_IMPREGNATION_TIME = 100 //time it takes to impregnate someone
-var/const/MAX_IMPREGNATION_TIME = 150
+var/const/MIN_IMPREGNATION_TIME = 200 //time it takes to impregnate someone
+var/const/MAX_IMPREGNATION_TIME = 300
 
 var/const/MIN_ACTIVE_TIME = 200 //time between being dropped and going idle
 var/const/MAX_ACTIVE_TIME = 400
@@ -13,7 +13,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	icon_state = "facehugger"
 	item_state = "facehugger"
 	w_class = WEIGHT_CLASS_TINY //note: can be picked up by aliens unlike most other items of w_class below 4
-	throw_range = 5
+	throw_range = 2
 	tint = 3
 	flags = AIRTIGHT
 	flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES
@@ -82,7 +82,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	return 0
 
 /obj/item/clothing/mask/facehugger/HasProximity(atom/movable/AM as mob|obj)
-	if(CanHug(AM) && Adjacent(AM))
+	if(CanHug(AM) && Adjacent(AM) && locate(src) in view(1,AM))//will only run the locate in view thing if they can hug so it's not that expensive
 		return Attach(AM)
 	return 0
 
@@ -92,7 +92,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	if(stat == CONSCIOUS)
 		icon_state = "[initial(icon_state)]_thrown"
 		spawn(15)
-			if(icon_state == "[initial(icon_state)]_thrown")
+			if(!qdeleted(src) && icon_state == "[initial(icon_state)]_thrown")
 				icon_state = "[initial(icon_state)]"
 
 /obj/item/clothing/mask/facehugger/throw_impact(atom/hit_atom)
@@ -120,7 +120,8 @@ var/const/MAX_ACTIVE_TIME = 400
 		return 0
 	if(stat != CONSCIOUS)
 		return 0
-	if(!sterile) M.take_organ_damage(strength,0) //done here so that even borgs and humans in helmets take damage
+	if(M.stat == DEAD)
+		return 0
 	M.visible_message("<span class='danger'>[src] leaps at [M]'s face!</span>", \
 						"<span class='userdanger'>[src] leaps at [M]'s face!</span>")
 	if(ishuman(M))
@@ -138,8 +139,10 @@ var/const/MAX_ACTIVE_TIME = 400
 			var/obj/item/clothing/W = target.wear_mask
 			if(W.flags & NODROP)
 				return 0
-			target.unEquip(W)
+			if(W.type == /obj/item/clothing/mask/facehugger)
+				return 0
 
+			target.unEquip(W)
 			target.visible_message("<span class='danger'>[src] tears [W] off of [target]'s face!</span>", \
 									"<span class='userdanger'>[src] tears [W] off of [target]'s face!</span>")
 
@@ -154,7 +157,7 @@ var/const/MAX_ACTIVE_TIME = 400
 			F.forceMove(C.loc)
 		forceMove(C)
 		C.facehugger = src
-		C.regenerate_icons()
+		C.update_inv_wear_mask()
 
 	GoIdle() //so it doesn't jump the people that tear it off
 
@@ -164,7 +167,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	return 1
 
 /obj/item/clothing/mask/facehugger/proc/Impregnate(mob/living/target as mob)
-	if(!target || target.stat == DEAD || loc != target) //was taken off or something
+	if(qdeleted(src) || qdeleted(target) || !target || target.stat == DEAD || loc != target) //was taken off or something
 		return
 
 	if(iscarbon(target))
@@ -192,6 +195,12 @@ var/const/MAX_ACTIVE_TIME = 400
 			var/mob/living/simple_animal/pet/corgi/C = target
 			src.loc = get_turf(C)
 			C.facehugger = null
+		spawn(100)
+			if(!qdeleted(src) && !qdeleted(target) && src.loc == target && iscarbon(target))
+				var/mob/living/carbon/C = target
+				if(C.wear_mask == src)//Have it fall off after ten seconds so they can see.
+					C.unEquip(src, 0)
+
 	else
 		target.visible_message("<span class='danger'>[src] violates [target]'s face!</span>", \
 								"<span class='userdanger'>[src] violates [target]'s face!</span>")

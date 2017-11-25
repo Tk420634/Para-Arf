@@ -3,7 +3,7 @@
 	caste = "q"
 	maxHealth = 700
 	health = 700
-	icon_state = "alienq_s"
+	icon_state = "alienq"
 	status_flags = CANPARALYSE
 	mob_size = MOB_SIZE_LARGE
 	large = 1
@@ -13,7 +13,7 @@
 	name = "alien empress"
 	caste = "e"
 	icon = 'icons/mob/alienhuge.dmi'
-	icon_state = "empress_s"
+	icon_state = "aliene"
 	pixel_x = -32
 
 /mob/living/carbon/alien/humanoid/empress/large/update_icons()
@@ -47,30 +47,6 @@
 	alien_organs += new /obj/item/organ/internal/xenos/resinspinner
 	alien_organs += new /obj/item/organ/internal/xenos/neurotoxin
 	..()
-
-/mob/living/carbon/alien/humanoid/empress
-
-	handle_regular_hud_updates()
-
-		..() //-Yvarov
-
-		if(src.healths)
-			if(src.stat != 2)
-				switch(health)
-					if(250 to INFINITY)
-						src.healths.icon_state = "health0"
-					if(175 to 250)
-						src.healths.icon_state = "health1"
-					if(100 to 175)
-						src.healths.icon_state = "health2"
-					if(50 to 100)
-						src.healths.icon_state = "health3"
-					if(0 to 50)
-						src.healths.icon_state = "health4"
-					else
-						src.healths.icon_state = "health5"
-			else
-				src.healths.icon_state = "health6"
 
 /mob/living/carbon/alien/humanoid/empress/verb/lay_egg()
 	set name = "Lay Egg (250)"

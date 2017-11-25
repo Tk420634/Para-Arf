@@ -169,11 +169,40 @@
 				soundin = pick('sound/arf/footstep/all-plating1.ogg', 'sound/arf/footstep/all-plating2.ogg')
 			if("step_sock")
 				soundin = pick('sound/arf/footstep/sock-floor1.ogg', 'sound/arf/footstep/sock-floor2.ogg', 'sound/arf/footstep/sock-floor3.ogg')
-			//arfcode end
-
+			//Alien related sound effects
+			if("alien_step")
+				soundin = pick('sound/arf/alien/effects/step1.ogg', 'sound/arf/alien/effects/step2.ogg', 'sound/arf/alien/effects/step3.ogg', 'sound/arf/alien/effects/step4.ogg', 'sound/arf/alien/effects/step5.ogg')
+			if("alien_step_run")
+				soundin = pick('sound/arf/alien/effects/bang1.ogg', 'sound/arf/alien/effects/bang2.ogg', 'sound/arf/alien/effects/bang3.ogg', 'sound/arf/alien/effects/bang5.ogg')
+			if("alien_screech")
+				soundin = pick('sound/arf/alien/voice/screech1.ogg', 'sound/arf/alien/voice/screech2.ogg', 'sound/arf/alien/voice/screech3.ogg', 'sound/arf/alien/voice/screech4.ogg')
+			if("alien_screech_far")
+				soundin = pick('sound/arf/alien/voice/screechFar1.ogg', 'sound/arf/alien/voice/screechFar2.ogg', 'sound/arf/alien/voice/screechFar3.ogg', 'sound/arf/alien/voice/screechFar4.ogg',\
+							   'sound/arf/alien/voice/screechFar5.ogg', 'sound/arf/alien/voice/screechFar6.ogg', 'sound/arf/alien/voice/screechFar7.ogg')
+			if("alien_hiss")
+				soundin = pick('sound/arf/alien/voice/hiss1.ogg', 'sound/arf/alien/voice/hiss2.ogg', 'sound/arf/alien/voice/hiss3.ogg')
+			if("alien_hurt")
+				soundin = pick('sound/arf/alien/voice/hurt1.ogg', 'sound/arf/alien/voice/hurt2.ogg')
+			if("alien_gnarl")
+				soundin = pick('sound/arf/alien/voice/gnarl1.ogg')
+			if("alien_spit")
+				soundin = pick('sound/arf/alien/effects/spit1.ogg')
+			if("alien_growl")
+				soundin = pick('sound/arf/alien/voice/growl1.ogg', 'sound/arf/alien/voice/growl3.ogg', 'sound/arf/alien/voice/growl8.ogg', 'sound/arf/alien/voice/growl9.ogg')
+			if("alien_talk")
+				soundin = pick('sound/arf/alien/voice/talk1.ogg', 'sound/arf/alien/voice/talk2.ogg', 'sound/arf/alien/voice/talk3.ogg', 'sound/arf/alien/voice/talk4.ogg')
+			if("alien_resin_hit")
+				soundin = pick('sound/arf/alien/effects/resinHit1.ogg', 'sound/arf/alien/effects/resinHit2.ogg', 'sound/arf/alien/effects/resinHit3.ogg')
+			if("alien_weed")
+				soundin = pick('sound/arf/alien/effects/weeds1.ogg', 'sound/arf/alien/effects/weeds2.ogg')
+			if("alien_egg_hatch")
+				soundin = pick('sound/arf/alien/effects/hatch1.ogg', 'sound/arf/alien/effects/hatch2.ogg', 'sound/arf/alien/effects/hatch3.ogg', 'sound/arf/alien/effects/hatch4.ogg')
+			if("alien_secrete")
+				soundin = pick('sound/arf/alien/effects/resin1.ogg', 'sound/arf/alien/effects/resin2.ogg', 'sound/arf/alien/effects/resin3.ogg', 'sound/arf/alien/effects/resin4.ogg')
 			/* template
 			if("")
-				soundin = pick('')
+				soundin = pick('sound/arf/')
 			*/
+			//arfcode end
 
 	return soundin

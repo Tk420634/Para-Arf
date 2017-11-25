@@ -35,9 +35,18 @@
 		//green is impossible to read, so i made these blue and changed the formatting slightly
 		to_chat(src, "<span class='boldnotice'>You are growing into a beautiful alien! It is time to choose a caste.</span>")
 		to_chat(src, "<span class='notice'>There are three to choose from:</span>")
-		to_chat(src, "<B>Hunters</B> <span class='notice'>are strong and agile, able to hunt away from the hive and rapidly move through ventilation shafts. Hunters generate plasma slowly and have low reserves.</span>")
-		to_chat(src, "<B>Sentinels</B> <span class='notice'>are tasked with protecting the hive and are deadly up close and at a range. They are not as physically imposing nor fast as the hunters.</span>")
-		to_chat(src, "<B>Drones</B> <span class='notice'>are the working class, offering the largest plasma storage and generation. They are the only caste which may evolve again, turning into the dreaded alien queen.</span>")
+		to_chat(src, "<B>Hunters</B> <span class='notice'>are strong and agile, able to hunt away from the hive and rapidly move through ventilation shafts. \
+					Hunters have low plasma reserves and cannot plant their own weeds to heal. \
+					Hunters are physically the strongest of the three basic castes, aiding in their ability to brawl threats to the hive and to subdue and capture hosts. \
+					Using hit and run tactics, hunters should strike swiftly before retreating to the nest to heal and/or drop off captured hosts.</span>")
+		to_chat(src, "<B>Sentinels</B> <span class='notice'>are tasked with protecting the hive and are deadly up close and at a range. \
+					They are not as physically imposing nor fast as the hunters, but they are tough and equipped with a paralysing saliva which they \
+					can spit over long distances.</span>")
+		to_chat(src, "<B>Drones</B> <span class='notice'>are the working class, offering the largest plasma storage and generation. \
+					They are the only caste which may evolve again, turning into a queen if there isn't already one. \
+					They are also the only caste which can build the hive and plant weeds. Weeds are essential for generating plasma, healing, and slowing fleeing hosts. \
+					Drones are the backbone of the hive, though they are frail. Hunting parties often benefit from keeping a drone in their ranks for their versatility as \
+					a healer and builder; Capable of building quick cover or laying a patch of healing weeds on the fly.</span>")
 		var/alien_caste = alert(src, "Please choose which alien caste you shall belong to.",,"Hunter","Sentinel","Drone")
 
 		var/mob/living/carbon/alien/humanoid/new_xeno

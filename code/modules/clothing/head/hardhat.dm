@@ -71,7 +71,8 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	cold_protection = HEAD
 	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
-	species_fit = list("Grey")
+	species_fit = list("Grey", "Vulpkanin")
 	sprite_sheets = list(
-		"Grey" = 'icons/mob/species/grey/helmet.dmi'
+		"Grey" = 'icons/mob/species/grey/helmet.dmi',
+		"Vulpkanin" = 'icons/mob/species/vulpkanin/helmet.dmi'
 		)

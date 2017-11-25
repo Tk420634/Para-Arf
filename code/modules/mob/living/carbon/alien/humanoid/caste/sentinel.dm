@@ -1,9 +1,14 @@
 /mob/living/carbon/alien/humanoid/sentinel
 	name = "alien sentinel"
 	caste = "s"
-	maxHealth = 150
-	health = 150
-	icon_state = "aliens_s"
+	maxHealth = 125
+	health = 125
+	icon_state = "aliens"
+	default_alien_organs = list(/obj/item/organ/internal/brain/xeno,
+								/obj/item/organ/internal/xenos/hivenode,
+								/obj/item/organ/internal/xenos/plasmavessel/sentinel,
+								/obj/item/organ/internal/xenos/acidgland,
+								/obj/item/organ/internal/xenos/neurotoxin)
 
 /mob/living/carbon/alien/humanoid/sentinel/large
 	name = "alien praetorian"
@@ -37,31 +42,7 @@
 	if(name == "alien sentinel")
 		name = text("alien sentinel ([rand(1, 1000)])")
 	real_name = name
-	alien_organs += new /obj/item/organ/internal/xenos/plasmavessel
-	alien_organs += new /obj/item/organ/internal/xenos/acidgland
-	alien_organs += new /obj/item/organ/internal/xenos/neurotoxin
 	..()
-
-/mob/living/carbon/alien/humanoid/sentinel/handle_regular_hud_updates()
-	..() //-Yvarov
-
-	if(healths)
-		if(stat != 2)
-			switch(health)
-				if(150 to INFINITY)
-					healths.icon_state = "health0"
-				if(100 to 150)
-					healths.icon_state = "health1"
-				if(75 to 100)
-					healths.icon_state = "health2"
-				if(25 to 75)
-					healths.icon_state = "health3"
-				if(0 to 25)
-					healths.icon_state = "health4"
-				else
-					healths.icon_state = "health5"
-		else
-			healths.icon_state = "health6"
 
 /*
 /mob/living/carbon/alien/humanoid/sentinel/verb/evolve() // -- TLE

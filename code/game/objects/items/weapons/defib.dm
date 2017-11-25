@@ -305,7 +305,6 @@
 /obj/item/weapon/twohanded/shockpaddles/attack(mob/M, mob/user)
 	var/tobehealed
 	var/threshold = -config.health_threshold_dead
-	var/mob/living/carbon/human/H = M
 
 	if(busy)
 		return
@@ -319,10 +318,11 @@
 	if(cooldown)
 		to_chat(user, "<span class='notice'>[defib] is recharging.</span>")
 		return
-	if(!ishuman(M))
+	if(!ishuman(M) && !isalienadult(M))
 		to_chat(user, "<span class='notice'>The instructions on [defib] don't mention how to revive that...</span>")
 		return
-	else
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
 		if(user.a_intent == INTENT_HARM && !defib.safety)
 			busy = 1
 			H.visible_message("<span class='danger'>[user] has touched [H.name] with [src]!</span>", \
@@ -435,6 +435,90 @@
 					playsound(get_turf(src), 'sound/machines/defib_failed.ogg', 50, 0)
 		busy = 0
 		update_icon()
+
+	//Handle reviving aliens.
+	else if(isalienadult(M))
+		var/mob/living/carbon/alien/humanoid/H = M
+		if(user.a_intent == INTENT_HARM && !defib.safety)
+			busy = 1
+			H.visible_message("<span class='danger'>[user] has touched [H.name] with [src]!</span>", \
+					"<span class='userdanger'>[user] has touched [H.name] with [src]!</span>")
+			H.adjustStaminaLoss(20)
+			H.adjustFireLoss(20)//Deal some burn damage
+			H.Weaken(5)
+			H.updatehealth() //forces health update before next life tick
+			playsound(get_turf(src), 'sound/machines/defib_zap.ogg', 50, 1, -1)
+			add_logs(user, M, "stunned", object="defibrillator")
+			defib.deductcharge(revivecost)
+			cooldown = 1
+			busy = 0
+			update_icon()
+			defib.cooldowncheck(user)
+			return
+		user.visible_message("<span class='warning'>[user] begins to place [src] on [M.name]'s chest.</span>", "<span class='warning'>You begin to place [src] on [M.name]'s chest.</span>")
+		busy = 1
+		update_icon()
+		if(do_after(user, 30 * toolspeed, target = M)) //beginning to place the paddles on patient's chest to allow some time for people to move away to stop the process
+			user.visible_message("<span class='notice'>[user] places [src] on [M.name]'s chest.</span>", "<span class='warning'>You place [src] on [M.name]'s chest.</span>")
+			playsound(get_turf(src), 'sound/machines/defib_charge.ogg', 50, 0)
+			var/mob/dead/observer/ghost = H.get_ghost()
+			if(ghost && !ghost.client)
+				// In case the ghost's not getting deleted for some reason
+				H.key = ghost.key
+				log_runtime(EXCEPTION("Ghost of name [ghost.name] is bound to [H.real_name], but lacks a client. Deleting ghost."), src)
+
+				QDEL_NULL(ghost)
+			var/total_burn	= H.fireloss
+			var/total_brute	= H.bruteloss
+			threshold = H.maxHealth * -0.5 //Health var threshhold
+			var/burn_threshold = H.maxHealth*1.7 //Max burn damage to be revived
+			var/brute_threshhold = H.maxHealth*1.7 //Max brute damage to be revived
+			if(do_after(user, 20 * toolspeed, target = M)) //placed on chest and short delay to shock for dramatic effect, revive time is 5sec total
+				if(H.stat == DEAD)
+					var/health = H.health
+					M.visible_message("<span class='warning'>[M]'s body convulses a bit.")
+					playsound(get_turf(src), "bodyfall", 50, 1)
+					playsound(get_turf(src), 'sound/machines/defib_zap.ogg', 50, 1, -1)
+					if(total_burn <= burn_threshold && total_brute <= brute_threshhold && !H.suiciding && !ghost && H.get_int_organ(/obj/item/organ/internal/brain))
+						tobehealed = (min(0, (health - threshold)))//If you're -200 health and -50 is the death threshold, it will heal you for 160.
+						tobehealed -= 10//Epinephrine works on aliens and trauma/burn kits also work apparently.
+						H.adjustOxyLoss(tobehealed)
+						H.adjustToxLoss(tobehealed)
+						H.adjustFireLoss(tobehealed)
+						H.adjustBruteLoss(tobehealed)
+						user.visible_message("<span class='boldnotice'>[defib] pings: Resuscitation successful.</span>")
+						playsound(get_turf(src), 'sound/machines/defib_success.ogg', 50, 0)
+						H.update_revive(FALSE)
+						H.KnockOut(FALSE)
+						H.Paralyse(5)
+						H.emote("gasp")
+						H.update_icons()
+						defib.deductcharge(revivecost)
+						add_logs(user, M, "revived", object="defibrillator")
+					else
+						if(total_burn >= burn_threshold || total_brute >= brute_threshhold)
+							user.visible_message("<span class='boldnotice'>[defib] buzzes: Resuscitation failed - Severe tissue damage detected.</span>")
+						else if(ghost)
+							user.visible_message("<span class='notice'>[defib] buzzes: Resuscitation failed: Patient's brain is unresponsive. Further attempts may succeed.</span>")
+							to_chat(ghost, "<span class='ghostalert'>Your heart is being defibrillated. Return to your body if you want to be revived!</span> (Verbs -> Ghost -> Re-enter corpse)")
+							window_flash(ghost.client)
+							ghost << sound('sound/effects/genetics.ogg')
+						else
+							user.visible_message("<span class='notice'>[defib] buzzes: Resuscitation failed.</span>")
+						playsound(get_turf(src), 'sound/machines/defib_failed.ogg', 50, 0)
+						defib.deductcharge(revivecost)
+					update_icon()
+					cooldown = 1
+					defib.cooldowncheck(user)
+				else
+					user.visible_message("<span class='notice'>[defib] buzzes: Patient is not in a valid state. Operation aborted.</span>")
+					playsound(get_turf(src), 'sound/machines/defib_failed.ogg', 50, 0)
+			busy = 0
+			update_icon()
+
+
+
+
 
 /obj/item/weapon/borg_defib
 	name = "defibrillator paddles"

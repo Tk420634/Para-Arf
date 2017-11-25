@@ -18,10 +18,18 @@
 
 		if(user.get_int_organ(/obj/item/organ/internal/xenos/plasmavessel))
 			unbuckle_mob()
+			playsound(loc, "alien_resin_hit", 100, 1)
 			add_fingerprint(user)
 			return
 
 		if(M != user)
+			M.visible_message(\
+				"<span class='notice'>[user.name] starts pulling [M.name] free from the sticky nest!</span>",\
+				"<span class='notice'>[user.name] starts pulling you free from the gelatinous resin!</span>",\
+				"<span class='notice'>You hear squelching...</span>")
+			playsound(loc, "alien_resin_hit", 50, 1)
+			if(!do_after(user, 30, 1, src))
+				return
 			M.visible_message(\
 				"<span class='notice'>[user.name] pulls [M.name] free from the sticky nest!</span>",\
 				"<span class='notice'>[user.name] pulls you free from the gelatinous resin.</span>",\
@@ -43,6 +51,7 @@
 			"<span class='notice'>You break free from the gelatinous resin!</span>",\
 			"<span class='italics'>You hear squelching...</span>")
 		unbuckle_mob()
+		playsound(loc, "alien_resin_hit", 100, 5)
 		add_fingerprint(user)
 
 
@@ -62,6 +71,7 @@
 			"[user.name] secretes a thick vile goo, securing [M.name] into [src]!",\
 			"<span class='danger'>[user.name] drenches you in a foul-smelling resin, trapping you in [src]!</span>",\
 			"<span class='italics'>You hear squelching...</span>")
+		playsound(loc, "alien_secrete", 100, 1, 7)
 
 
 /obj/structure/stool/bed/nest/post_buckle_mob(mob/living/M)
@@ -80,7 +90,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	var/aforce = W.force
 	health = max(0, health - aforce)
-	playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
+	playsound(loc, "alien_resin_hit", 100, 1)
 	visible_message("<span class='warning'>[user] hits [src] with [W]!</span>", 1)
 	healthcheck()
 

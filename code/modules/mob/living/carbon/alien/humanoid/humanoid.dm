@@ -1,6 +1,6 @@
 /mob/living/carbon/alien/humanoid
 	name = "alien"
-	icon_state = "alien_s"
+	icon_state = "alienh"
 
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/xenomeat = 5, /obj/item/stack/sheet/animalhide/xeno = 1)
 	var/obj/item/weapon/r_store = null
@@ -244,7 +244,7 @@
 	return 1
 
 /mob/living/carbon/alien/humanoid/cuff_resist(obj/item/I)
-	playsound(src, 'sound/voice/hiss5.ogg', 40, 1, 1)  //Alien roars when starting to break free
+	playsound(src.loc, "alien_screech", 75, 0, 7)  //Alien roars when starting to break free
 	..(I, cuff_break = 1)
 
 /mob/living/carbon/alien/humanoid/get_standard_pixel_y_offset(lying = 0)

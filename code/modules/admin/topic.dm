@@ -322,6 +322,7 @@
 			if("drone")				M.change_mob_type( /mob/living/carbon/alien/humanoid/drone , null, null, delmob, 1 )
 			if("hunter")			M.change_mob_type( /mob/living/carbon/alien/humanoid/hunter , null, null, delmob, 1 )
 			if("queen")				M.change_mob_type( /mob/living/carbon/alien/humanoid/queen/large , null, null, delmob, 1 )
+			if("queen_small")		M.change_mob_type( /mob/living/carbon/alien/humanoid/queen , null, null, delmob, 1 )
 			if("sentinel")			M.change_mob_type( /mob/living/carbon/alien/humanoid/sentinel , null, null, delmob, 1 )
 			if("larva")				M.change_mob_type( /mob/living/carbon/alien/larva , null, null, delmob, 1 )
 			if("human")				M.change_mob_type( /mob/living/carbon/human/human , null, null, delmob, 1 )
@@ -340,6 +341,7 @@
 			if("constructbuilder")	M.change_mob_type( /mob/living/simple_animal/hostile/construct/builder , null, null, delmob, 1 )
 			if("constructwraith")	M.change_mob_type( /mob/living/simple_animal/hostile/construct/wraith , null, null, delmob, 1 )
 			if("shade")				M.change_mob_type( /mob/living/simple_animal/shade , null, null, delmob, 1 )
+			if("alien_admin")		M.change_mob_type( /mob/living/carbon/alien/humanoid/admin , null, null, delmob, 1 )
 
 
 	/////////////////////////////////////new ban stuff
