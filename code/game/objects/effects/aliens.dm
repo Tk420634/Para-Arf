@@ -223,7 +223,7 @@
 		var/obj/item/weapon/weldingtool/WT = I
 		if(WT.remove_fuel(0, user))
 			playsound(loc, WT.usesound, 100, 1, 7)
-	if(I.damtype = "fire")
+	if(I.damtype == "fire")
 		damage *= 2
 	if(damage)
 		health -= damage
@@ -392,7 +392,7 @@
 		var/obj/item/weapon/weldingtool/WT = I
 		if(WT.remove_fuel(0, user))
 			playsound(loc, WT.usesound, 100, 1)
-	if(I.damtype = "fire")
+	if(I.damtype == "fire")
 		damage *= 2
 	if(damage)
 		health -= damage
