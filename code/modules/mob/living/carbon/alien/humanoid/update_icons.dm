@@ -54,7 +54,7 @@
 		pixel_x = get_standard_pixel_x_offset(lying)
 		pixel_y = get_standard_pixel_y_offset(lying)
 
-	if(!large && m_intent == "walk" && !resting)
+	if(!large && m_intent == "walk" && !resting && !stat)
 		alpha = ALIEN_STALK_ALPHA
 	else
 		alpha = 255
