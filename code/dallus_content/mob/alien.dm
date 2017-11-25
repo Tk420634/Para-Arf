@@ -1,17 +1,16 @@
-#define ALIEN_HEALTH_DESCRIPTION_100 "They are in perfect health."
-#define ALIEN_HEALTH_DESCRIPTION_99 "They are slightly injured."
-#define ALIEN_HEALTH_DESCRIPTION_75	"They look injured."
-#define ALIEN_HEALTH_DESCRIPTION_50 "They are very hurt."
-#define ALIEN_HEALTH_DESCRIPTION_25 "They are heavily injured and limping badly!"
-#define ALIEN_HEALTH_DESCRIPTION_0 "They are on the verge of death!"
-#define ALIEN_HEALTH_DESCRIPTION_DEAD "They have deceased."
+#define ALIEN_HEALTH_DESCRIPTION_100 "<span class='noticealien'>They are in perfect health.</span>"
+#define ALIEN_HEALTH_DESCRIPTION_99 "<span class='warning'>They are slightly injured.</span>"
+#define ALIEN_HEALTH_DESCRIPTION_75	"<span class='warning'>They look injured.</span>"
+#define ALIEN_HEALTH_DESCRIPTION_50 "<span class='warning'>They are very hurt!</span>"
+#define ALIEN_HEALTH_DESCRIPTION_25 "<span class='warning'><b>They are heavily injured and limping badly!</b></span>"
+#define ALIEN_HEALTH_DESCRIPTION_0 "<span class='warning'><b>They are on the verge of death!</b></span>"
+#define ALIEN_HEALTH_DESCRIPTION_DEAD "<span class='warning'>They have deceased.</span>"
 
 /mob/living/carbon/alien
 	var/footstep_sound = "alien_step"
 	var/footstep_volume = 25
 	var/footstep_range = 10 //Maximum range you can hear them moving around. Will be very quiet at maximum range and much less when walking/sneaking.
 	var/strength = 1		//Arbitrary value used for damage and swiftness when performing things like ripping open doors.
-	var/examine_health_info = ALIEN_HEALTH_DESCRIPTION_100
 /mob/living/carbon/alien/humanoid/hunter
 	strength = 2
 
@@ -42,7 +41,7 @@
 				soundrange = -6
 			if("run")
 				soundrange = -3
-		playsound(get_turf(src), pick('sound/arf/alien/voice/lowHiss2.ogg', 'sound/arf/alien/voice/lowHiss3.ogg', 'sound/arf/alien/voice/lowHiss4.ogg'), 50, 0, soundrange)
+		playsound(get_turf(src), pick('sound/arf/alien/voice/lowHiss2.ogg', 'sound/arf/alien/voice/lowHiss3.ogg', 'sound/arf/alien/voice/lowHiss4.ogg'), 75, 0, soundrange)
 	..()
 
 
@@ -55,25 +54,18 @@
 			switch(health_percent)
 				if(100 to INFINITY)
 					healths.icon_state = "health0"
-					examine_health_info = ALIEN_HEALTH_DESCRIPTION_100
 				if(76 to 99)
 					healths.icon_state = "health1"
-					examine_health_info = ALIEN_HEALTH_DESCRIPTION_99
 				if(51 to 75)
 					healths.icon_state = "health2"
-					examine_health_info = ALIEN_HEALTH_DESCRIPTION_75
 				if(26 to 50)
 					healths.icon_state = "health3"
-					examine_health_info = ALIEN_HEALTH_DESCRIPTION_50
 				if(1 to 25)
 					healths.icon_state = "health4"
-					examine_health_info = ALIEN_HEALTH_DESCRIPTION_25
 				else
 					healths.icon_state = "health5"
-					examine_health_info = ALIEN_HEALTH_DESCRIPTION_0
 		else
 			healths.icon_state = "health6"
-			examine_health_info = ALIEN_HEALTH_DESCRIPTION_DEAD
 
 /mob/living/carbon/alien/humanoid/admin
 	name = "alien"
@@ -131,3 +123,76 @@
 /obj/structure/alien/weeds/attack_alien(mob/living/carbon/alien/humanoid/user)
 	..()
 	return attack_hand(user)
+
+
+
+/mob/living/carbon/alien/examine(mob/user)
+	..()
+	// crappy hacks because you can't do \his[src] etc. I'm sorry this proc is so unreadable, blame the text macros :<
+	var/t_He = "It" //capitalised for use at the start of each line.
+	var/t_his = "its"
+//Commented for now because they're not in use and warnings aren't fun to look at :(
+//	var/t_him = "it"
+//	var/t_has = "has"
+	var/t_is = "is"
+	var/examine_health_info
+	var/msg
+	switch(gender)
+		if(MALE)
+			t_He = "He"
+			t_his = "his"
+//			t_him = "him"
+		if(FEMALE)
+			t_He = "She"
+			t_his = "her"
+//			t_him = "her"
+		if(PLURAL)
+			t_He = "They"
+			t_his = "their"
+//			t_him = "them"
+//			t_has = "have"
+			t_is = "are"
+	//left hand
+	if(l_hand && !(l_hand.flags & ABSTRACT))
+		if(l_hand.blood_DNA)
+			msg += "<span class='warning'>[t_He] [t_is] holding [bicon(l_hand)] [l_hand.gender==PLURAL?"some":"a"] [l_hand.blood_color != "#030303" ? "blood-stained":"oil-stained"] [l_hand.name] in [t_his] left hand!</span>\n"
+		else
+			msg += "[t_He] [t_is] holding [bicon(l_hand)] \a [l_hand] in [t_his] left hand.\n"
+	//right hand
+	if(r_hand && !(r_hand.flags & ABSTRACT))
+		if(r_hand.blood_DNA)
+			msg += "<span class='warning'>[t_He] [t_is] holding [bicon(r_hand)] [r_hand.gender==PLURAL?"some":"a"] [r_hand.blood_color != "#030303" ? "blood-stained":"oil-stained"] [r_hand.name] in [t_his] right hand!</span>\n"
+		else
+			msg += "[t_He] [t_is] holding [bicon(r_hand)] \a [r_hand] in [t_his] right hand.\n"
+	//handcuffed?
+	if(handcuffed)
+		if(istype(handcuffed, /obj/item/weapon/restraints/handcuffs/cable/zipties))
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] restrained with zipties!</span>\n"
+		else if(istype(handcuffed, /obj/item/weapon/restraints/handcuffs/cable))
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] restrained with cable!</span>\n"
+		else
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] handcuffed!</span>\n"
+	//Basic health information.
+	if(stat != DEAD)
+		var/health_percent = round((health/maxHealth)*100)
+		switch(health_percent)
+			if(100 to INFINITY)
+				examine_health_info = ALIEN_HEALTH_DESCRIPTION_100
+			if(76 to 99)
+				examine_health_info = ALIEN_HEALTH_DESCRIPTION_99
+			if(51 to 75)
+				examine_health_info = ALIEN_HEALTH_DESCRIPTION_75
+			if(26 to 50)
+				examine_health_info = ALIEN_HEALTH_DESCRIPTION_50
+			if(1 to 25)
+				examine_health_info = ALIEN_HEALTH_DESCRIPTION_25
+			else
+				examine_health_info = ALIEN_HEALTH_DESCRIPTION_0
+	else
+		examine_health_info = ALIEN_HEALTH_DESCRIPTION_DEAD
+	msg += "[examine_health_info]\n"
+
+	if(print_flavor_text())
+		msg += "[print_flavor_text()]\n"
+
+	to_chat(user, msg)
