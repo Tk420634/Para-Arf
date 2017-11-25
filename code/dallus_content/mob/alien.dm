@@ -196,3 +196,12 @@
 		msg += "[print_flavor_text()]\n"
 
 	to_chat(user, msg)
+
+
+
+/mob/living/carbon/alien/verb/set_flavor()
+	set name = "Set Flavour Text"
+	set desc = "Sets an extended description of your character's features."
+	set category = "IC"
+
+	update_flavor_text()

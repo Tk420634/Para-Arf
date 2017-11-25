@@ -34,6 +34,7 @@
 /mob/living/carbon/alien/New()
 	verbs += /mob/living/verb/mob_sleep
 	verbs += /mob/living/verb/lay_down
+	verbs += /mob/living/carbon/alien/verb/set_flavor
 	for(var/O in default_alien_organs)
 		alien_organs += new O
 	for(var/obj/item/organ/internal/I in alien_organs)
