@@ -10,7 +10,9 @@
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	alt_titles = list("Tourist","Businessman","Trader","Assistant","Technical Assistant","Medical Intern","Research Assistant","Passenger",
-	"Entertainer","Lifeguard","Waiter","Waitress","Secretary","Delivery Staff","Holo-Gladiator","Musician","Masseuse","Massager","Test Subject", "Fish Breeder")
+	"Entertainer","Lifeguard","Waiter","Waitress","Secretary","Delivery Staff","Holo-Gladiator","Musician", "Busker", "Rock Star", "Country Star", "Rap Star",
+	"Pop Idol", "Jazz Artist", "Painter", "Maintenance Explorer", "Masseuse","Massager","Test Subject", "Fish Breeder",
+	"Vidcam Model", "Escort", "Actor", "Actress", "Professional Cuddle Artist", "Pet", "Laser Tag Warrior", "Stripper", "Belly Dancer", "Fashion Model")
 	outfit = /datum/outfit/job/assistant
 
 /datum/job/civilian/get_access()
