@@ -470,8 +470,9 @@
 				QDEL_NULL(ghost)
 			var/total_burn	= H.fireloss
 			var/total_brute	= H.bruteloss
-			var/burn_threshold = H.maxHealth*1.5 //Max burn damage to be revived
-			var/brute_threshhold = H.maxHealth*1.5 //Max brute damage to be revived
+			threshold = H.maxHealth * -0.5 //Health var threshhold
+			var/burn_threshold = H.maxHealth*1.7 //Max burn damage to be revived
+			var/brute_threshhold = H.maxHealth*1.7 //Max brute damage to be revived
 			if(do_after(user, 20 * toolspeed, target = M)) //placed on chest and short delay to shock for dramatic effect, revive time is 5sec total
 				if(H.stat == DEAD)
 					var/health = H.health
@@ -479,8 +480,8 @@
 					playsound(get_turf(src), "bodyfall", 50, 1)
 					playsound(get_turf(src), 'sound/machines/defib_zap.ogg', 50, 1, -1)
 					if(total_burn <= burn_threshold && total_brute <= brute_threshhold && !H.suiciding && !ghost && H.get_int_organ(/obj/item/organ/internal/brain))
-						tobehealed = min(health + threshold, 0)
-						tobehealed -= 10
+						tobehealed = ((health - threshold) * -1)//If you're -200 health and -50 is the death threshold, it will heal you for 150 + 10.
+						tobehealed += 10//Epinephrine works an aliens and trauma/burn kits also work apparently.
 						H.adjustOxyLoss(tobehealed)
 						H.adjustToxLoss(tobehealed)
 						H.adjustFireLoss(tobehealed)
