@@ -3,7 +3,7 @@
 	caste = "q"
 	maxHealth = 700
 	health = 700
-	icon_state = "alienq_s"
+	icon_state = "alienq"
 	status_flags = CANPARALYSE
 	mob_size = MOB_SIZE_LARGE
 	large = 1
@@ -13,7 +13,7 @@
 	name = "alien empress"
 	caste = "e"
 	icon = 'icons/mob/alienhuge.dmi'
-	icon_state = "empress_s"
+	icon_state = "aliene"
 	pixel_x = -32
 
 /mob/living/carbon/alien/humanoid/empress/large/update_icons()
