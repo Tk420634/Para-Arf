@@ -24,6 +24,13 @@
 
 		if(M != user)
 			M.visible_message(\
+				"<span class='notice'>[user.name] starts pulling [M.name] free from the sticky nest!</span>",\
+				"<span class='notice'>[user.name] starts pulling you free from the gelatinous resin!</span>",\
+				"<span class='notice'>You hear squelching...</span>")
+			playsound(loc, "alien_resin_hit", 50, 1)
+			if(!do_after(user, 30, 1, src))
+				return
+			M.visible_message(\
 				"<span class='notice'>[user.name] pulls [M.name] free from the sticky nest!</span>",\
 				"<span class='notice'>[user.name] pulls you free from the gelatinous resin.</span>",\
 				"<span class='notice'>You hear squelching...</span>")
@@ -44,7 +51,7 @@
 			"<span class='notice'>You break free from the gelatinous resin!</span>",\
 			"<span class='italics'>You hear squelching...</span>")
 		unbuckle_mob()
-		playsound(loc, "alien_resin_hit", 100, 1)
+		playsound(loc, "alien_resin_hit", 100, 5)
 		add_fingerprint(user)
 
 
