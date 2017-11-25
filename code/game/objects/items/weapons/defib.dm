@@ -480,8 +480,8 @@
 					playsound(get_turf(src), "bodyfall", 50, 1)
 					playsound(get_turf(src), 'sound/machines/defib_zap.ogg', 50, 1, -1)
 					if(total_burn <= burn_threshold && total_brute <= brute_threshhold && !H.suiciding && !ghost && H.get_int_organ(/obj/item/organ/internal/brain))
-						tobehealed = ((health - threshold) * -1)//If you're -200 health and -50 is the death threshold, it will heal you for 150 + 10.
-						tobehealed += 10//Epinephrine works an aliens and trauma/burn kits also work apparently.
+						tobehealed = ((health - threshold))//If you're -200 health and -50 is the death threshold, it will heal you for 160.
+						tobehealed -= 10//Epinephrine works on aliens and trauma/burn kits also work apparently.
 						H.adjustOxyLoss(tobehealed)
 						H.adjustToxLoss(tobehealed)
 						H.adjustFireLoss(tobehealed)
