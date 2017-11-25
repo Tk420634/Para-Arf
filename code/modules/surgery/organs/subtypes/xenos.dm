@@ -96,7 +96,9 @@
 			owner.adjustOxyLoss(-heal_amt)
 			owner.adjustCloneLoss(-heal_amt)
 	else if(emergency_generation && stored_plasma < 50 && prob(25))//Just enough to plant some weeds.
-		owner.adjustPlasma(round(max(1,plasma_rate/10)))//1/10 plasma rate or 1, whichever is more; Rounded.
+		owner.adjustPlasma(round(max(1,plasma_rate/10)))// 1/10 plasma rate or 1, whichever is more; Rounded.
+		if(stored_plasma > 50)//round off neatly at 50 because it looks better.
+			stored_plasma = 50
 
 /obj/item/organ/internal/xenos/plasmavessel/insert(mob/living/carbon/M, special = 0)
 	..()
