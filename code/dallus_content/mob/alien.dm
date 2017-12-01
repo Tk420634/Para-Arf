@@ -11,8 +11,13 @@
 	var/footstep_volume = 25
 	var/footstep_range = 10 //Maximum range you can hear them moving around. Will be very quiet at maximum range and much less when walking/sneaking.
 	var/strength = 1		//Arbitrary value used for damage and swiftness when performing things like ripping open doors.
+
+/mob/living/carbon/alien/humanoid
+	var/can_leap = FALSE
+
 /mob/living/carbon/alien/humanoid/hunter
 	strength = 2
+	can_leap = TRUE
 
 /mob/living/carbon/alien/humanoid/queen
 	strength = 3
@@ -67,12 +72,15 @@
 		else
 			healths.icon_state = "health6"
 
+
+//ADMIN ALIENS//
 /mob/living/carbon/alien/humanoid/admin
 	name = "alien"
 	caste = "h"
 	maxHealth = 100
 	health = 100
 	icon_state = "alienh"
+	can_leap = TRUE
 	has_fine_manipulation = TRUE
 	default_alien_organs = list(/obj/item/organ/internal/brain/xeno,
 	 					/obj/item/organ/internal/xenos/hivenode,
@@ -84,6 +92,21 @@
 	..()
 	add_language("Galactic Common")
 
+/mob/living/carbon/alien/humanoid/admin/lusty
+	caste = "lusty"
+/mob/living/carbon/alien/humanoid/admin/roly
+	name = "Roly"
+/mob/living/carbon/alien/humanoid/admin/molly
+	name = "Molly"
+	caste = "lusty"
+/mob/living/carbon/alien/humanoid/admin/sally
+	name = "Sally"
+	caste = "lusty"
+
+//END ADMIN ALIENS//
+
+
+
 
 /obj/machinery/door/airlock/attack_alien(mob/living/carbon/alien/humanoid/user)
 	add_fingerprint(user)
@@ -91,13 +114,13 @@
 	if(isElectrified())
 		shock(user, 100) //Mmm, fried xeno!
 		return
+	if(user.a_intent == "help")//Only pry the airlock if they're not on help intent
+		return attack_hand(user)
 	if(!density) //Already open
 		return
 	if(locked || welded) //Extremely generic, as aliens only understand the basics of how airlocks work.
 		to_chat(user, "<span class='warning'>[src] refuses to budge!</span>")
 		return
-	if(user.a_intent == "help")//Only pry the airlock if they're not on help intent
-		return attack_hand(user)
 	user.visible_message("<span class='warning'>[user] begins prying open [src].</span>",\
 						"<span class='noticealien'>You begin digging your claws into [src] with all your might!</span>",\
 						"<span class='warning'>You hear groaning metal...</span>")
@@ -205,3 +228,19 @@
 	set category = "IC"
 
 	update_flavor_text()
+
+
+/mob/living/carbon/alien/say(var/message, var/datum/language/speaking = null, var/verb = "says", var/alt_name = "", var/sanitize = TRUE, var/ignore_speech_problems = FALSE, var/ignore_atmospherics = FALSE)
+	var/ending = copytext(message, length(message))
+	var/voice_sound = "alien_talk"
+	if(ending=="!")
+		voice_sound = "alien_screech"
+	else if(ending=="?")
+		voice_sound = "alien_growl"
+	if(speaking && (speaking.name == "Hivemind"))
+		voice_sound = null
+	if(voice_sound)
+		playsound(loc, voice_sound, 100, 0, 7)
+	..()
+
+/mob/living/carbon/alien/humanoid/proc/update_abilities()//

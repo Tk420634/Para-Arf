@@ -46,6 +46,9 @@
 		icon_state = "alien[caste]_leap"
 		pixel_x = -32
 		pixel_y = -32
+	else if(buckled && istype(buckled, /obj/vehicle))
+		var/obj/vehicle/V = buckled
+		V.handle_vehicle_offsets()
 	else
 		if(alt_icon != initial(alt_icon))
 			var/old_icon = icon

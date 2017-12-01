@@ -8,6 +8,7 @@
 /mob/living/carbon/alien/humanoid/Life()
 	. = ..()
 	update_icons()
+	update_abilities()
 
 
 

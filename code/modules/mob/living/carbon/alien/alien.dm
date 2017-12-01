@@ -54,16 +54,10 @@
 /mob/living/carbon/alien/say_quote(var/message, var/datum/language/speaking = null)
 	var/verb = "hisses"
 	var/ending = copytext(message, length(message))
-	var/voice_sound = "alien_talk"
 	if(ending=="!")
 		verb = "roars"
-		voice_sound = "alien_screech"
 	else if(ending=="?")
 		verb = "hisses curiously"
-		voice_sound = "alien_growl"
-	if(speaking && (speaking.name == "Hivemind"))
-		voice_sound = null
-	playsound(loc, voice_sound, 100, 0, 7)
 	return verb
 
 
