@@ -25,9 +25,11 @@
 	l_ear = /obj/item/device/radio/headset/headset_service
 	glasses = /obj/item/clothing/glasses/sunglasses/reagent
 	pda = /obj/item/device/pda/bar
+/*
 	backpack_contents = list(
 		/obj/item/toy/russian_revolver = 1
 	)
+	*/
 
 /datum/outfit/job/bartender/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
@@ -348,7 +350,7 @@
 	selection_color = "#dddddd"
 	access = list(access_library, access_maint_tunnels)
 	minimal_access = list(access_library, access_maint_tunnels)
-	alt_titles = list("Journalist", "Professor", "Historian", "Writer", "Poet", "Cataloger", "Archivist", 
+	alt_titles = list("Journalist", "Professor", "Historian", "Writer", "Poet", "Cataloger", "Archivist",
 	"Chronicler", "Reporter", "Game Master", "Dungeon Master", "Story Teller", "Bookkeeper")
 	outfit = /datum/outfit/job/librarian
 
@@ -391,3 +393,46 @@
 		/obj/item/weapon/storage/box/lip_stick = 1,
 		/obj/item/weapon/storage/box/barber = 1
 	)
+
+
+/////////////////
+///A.R.F. Jobs///
+/////////////////
+
+//Bridge Officers are basically bridge bunnies who spend their time on the bridge watching consoles.  This job used to be for heads of staff to have easy lewd targets, but seeing as
+//how we no longer let heads lewd, they're really just more of a warm body watching cameras.  Not that that is bad thing, per say.  Whenever we roll back the rule for heads lewding
+//they can go back to being lewd bunnies. ~TK
+
+//I can't quite figure out how to make them work so that you can select a priority level for them at round start, I'm going to go ahead and push them though, as they do work.
+//You just gotta sign on as one after the round starts, which to be honest isn't a SUPER big deal. ~TK
+
+/datum/job/bridgeofficer
+	title = "Bridge Officer"
+	flag = BRIDGE_OFFICER
+	department_head = list("Captain")
+	department_flag = CIVILIAN
+	faction = "Station"
+	total_positions = 2
+	spawn_positions = 2
+	alt_titles = list("Console Monitor","Bridge Bunny", "Bridge Liason", "Bridge Secretary")
+	supervisors = "the Command Staff.  You are also <b>NOT A MEMBER OF COMMAND STAFF, YOU ARE NOT IN THE CHAIN OF COMMAND.</b>  You are not a beat cop, you aren't here to arrest people.  <b>You are a glorified console watcher</b>, and probably cocksleeve."
+	selection_color = "#DAA520"
+
+	outfit = /datum/outfit/job/bridgeofficer
+
+	access = list(access_heads)
+	minimal_access = list(access_heads, access_medical)
+
+/datum/outfit/job/bridgeofficer
+	name = "Bridge Officer"
+	jobtype = /datum/job/bridgeofficer
+
+	head = /obj/item/clothing/head/beret
+	l_ear = /obj/item/device/radio/headset/heads/captain
+	uniform = /obj/item/clothing/under/color/lightbrown
+	shoes = /obj/item/clothing/shoes/jackboots
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
+	backpack_contents = list(/obj/item/clothing/head/collectable/rabbitears)
+	backpack = /obj/item/weapon/storage/backpack/security
+	satchel = /obj/item/weapon/storage/backpack/satchel_sec
+	l_hand = /obj/item/weapon/clipboard
