@@ -1307,7 +1307,7 @@
 	prices = list(/obj/item/clothing/accessory/petcollar = 50, /obj/item/weapon/storage/firstaid/aquatic_kit/full = 60, /obj/item/fish_eggs/goldfish = 10,
 					/obj/item/fish_eggs/clownfish = 10, /obj/item/fish_eggs/shark = 10, /obj/item/fish_eggs/feederfish = 5,
 					/obj/item/fish_eggs/salmon = 10, /obj/item/fish_eggs/catfish = 10, /obj/item/fish_eggs/glofish = 10,
-					/obj/item/fish_eggs/electric_eel = 10, /obj/item/fish_eggs/shrimp = 1000, /obj/item/toy/pet_rock = 100,
+					/obj/item/fish_eggs/electric_eel = 10, /obj/item/fish_eggs/shrimp = 10, /obj/item/toy/pet_rock = 100,
 					/mob/living/simple_animal/pony/twilight = 1000, /mob/living/simple_animal/pony/pinkie = 1000,
 					/mob/living/simple_animal/pony/rainbow = 1000, /mob/living/simple_animal/pony/fluttershy = 1000,
 					/mob/living/simple_animal/pony/applejack = 1000, /mob/living/simple_animal/pony/luna = 1000,
