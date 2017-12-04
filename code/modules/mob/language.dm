@@ -153,7 +153,7 @@
 	exclaim_verb = "roars"
 	colour = "soghun"
 	key = "o"
-	flags = RESTRICTED
+	//flags = RESTRICTED
 	syllables = list("za","az","ze","ez","zi","iz","zo","oz","zu","uz","zs","sz","ha","ah","he","eh","hi","ih", \
 	"ho","oh","hu","uh","hs","sh","la","al","le","el","li","il","lo","ol","lu","ul","ls","sl","ka","ak","ke","ek", \
 	"ki","ik","ko","ok","ku","uk","ks","sk","sa","as","se","es","si","is","so","os","su","us","ss","ss","ra","ar", \
@@ -174,7 +174,7 @@
 	exclaim_verb = "yowls"
 	colour = "tajaran"
 	key = "j"
-	flags = RESTRICTED
+	//flags = RESTRICTED
 	syllables = list("rr","rr","tajr","kir","raj","kii","mir","kra","ahk","nal","vah","khaz","jri","ran","darr", \
 	"mi","jri","dynh","manq","rhe","zar","rrhaz","kal","chur","eech","thaa","dra","jurl","mah","sanu","dra","ii'r", \
 	"ka","aasi","far","wa","baq","ara","qara","zir","sam","mak","hrar","nja","rir","khan","jun","dar","rik","kah", \
@@ -196,7 +196,7 @@
 	exclaim_verb = "barks"
 	colour = "vulpkanin"
 	key = "7"
-	flags = RESTRICTED
+	//flags = RESTRICTED
 	syllables = list("rur","ya","cen","rawr","bar","kuk","tek","qat","uk","wu","vuh","tah","tch","schz","auch", \
 	"ist","ein","entch","zwichs","tut","mir","wo","bis","es","vor","nic","gro","lll","enem","zandt","tzch","noch", \
 	"hel","ischt","far","wa","baram","iereng","tech","lach","sam","mak","lich","gen","or","ag","eck","gec","stag","onn", \
@@ -210,7 +210,7 @@
 	exclaim_verb = "warbles"
 	colour = "skrell"
 	key = "k"
-	flags = RESTRICTED
+	//flags = RESTRICTED
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix","*","!")
 
 /datum/language/vox
@@ -221,7 +221,7 @@
 	exclaim_verb = "SHRIEKS"
 	colour = "vox"
 	key = "v"
-	flags = RESTRICTED | WHITELISTED
+	//flags = RESTRICTED | WHITELISTED
 	syllables = list("ti","ti","ti","hi","hi","ki","ki","ki","ki","ya","ta","ha","ka","ya", "yi", "chi","cha","kah", \
 	"SKRE","AHK","EHK","RAWK","KRA","AAA","EEE","KI","II","KRI","KA")
 
@@ -236,7 +236,7 @@
 	exclaim_verb = "rustles"
 	colour = "diona"
 	key = "q"
-	flags = RESTRICTED
+	//flags = RESTRICTED
 	syllables = list("hs","zt","kr","st","sh")
 
 /datum/language/diona/get_random_name()
@@ -252,7 +252,7 @@
 	exclaim_verb = "exclaims"
 	colour = "trinary"
 	key = "5"
-	flags = RESTRICTED | WHITELISTED
+	//flags = RESTRICTED | WHITELISTED
 	syllables = list("02011","01222","10100","10210","21012","02011","21200","1002","2001","0002","0012","0012","000","120","121","201","220","10","11","0")
 
 /datum/language/trinary/get_random_name()
@@ -271,7 +271,7 @@
 	exclaim_verb = "rubs its antennae together"
 	colour = "kidan"
 	key = "4"
-	flags = RESTRICTED | WHITELISTED
+	//flags = RESTRICTED | WHITELISTED
 	syllables = list("click","clack")
 
 /datum/language/slime
@@ -282,7 +282,7 @@
 	exclaim_verb = "bubbles and pops"
 	colour = "slime"
 	key = "f"
-	flags = RESTRICTED | WHITELISTED
+	//flags = RESTRICTED | WHITELISTED
 	syllables = list("blob","plop","pop","bop","boop")
 
 /datum/language/grey
@@ -332,7 +332,7 @@
 	exclaim_verb = "rumbles"
 	colour = "drask"
 	key = "%"
-	flags = RESTRICTED | WHITELISTED
+	//flags = RESTRICTED | WHITELISTED
 	syllables = list("hoorb","vrrm","ooorm","urrrum","ooum","ee","ffm","hhh","mn","ongg")
 
 /datum/language/drask/get_random_name()
@@ -367,7 +367,7 @@
 	whisper_verb = "whispers"
 	colour = "solcom"
 	key = "1"
-	flags = RESTRICTED
+	//flags = RESTRICTED
 	syllables = list("tao","shi","tzu","yi","com","be","is","i","op","vi","ed","lec","mo","cle","te","dis","e")
 	english_names = 1
 
@@ -719,5 +719,28 @@
 	key = "vu"
 
 
+
+///////////////////////////////
+///A.R.F. Language Additions///
+///////////////////////////////
+
+/datum/language/sign
+	name = "Sign Language"
+	desc = "A galactic common sign language, generally requires two hands and ten fingers.  Kinda like a human, amazing!"
+	signlang_verb = list("wiggles their fingers", "makes a hand gesture", "gestures oddly", "makes a hand sign")
+	flags = SIGNLANG|NO_STUTTER|NONVERBAL
+
+/datum/language/felinesign
+	name = "Feline Body Language"
+	desc = "A body language that is generally used by felines. If you have this without a tail and ears, you're a gigantic nerd."
+	signlang_verb = list("sways their tail", "stands there, tail shivering", "sticks their tail out", "lowers their ears", "twitches an ear", "purrs loudly", "mrowls", "chirps",
+	"mewls", "yowls", "purrs softly", "meows", "trill", "growl", "chatters", "hisses", "wags their tail")
+	flags = SIGNLANG|NO_STUTTER|NONVERBAL
+
+/datum/language/caninesign
+	name = "Canine Body Language"
+	desc = "A body language that is generally used by canines. If you have this without a tail and ears, you're a gigantic nerd."
+	signlang_verb = list("wags their tail", "twitches an ear", "barks softly", "barks loudly", "sticks their tail out", "pants", "growls")
+	flags = SIGNLANG|NO_STUTTER|NONVERBAL
 
 #undef SCRAMBLE_CACHE_LEN
