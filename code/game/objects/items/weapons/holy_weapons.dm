@@ -292,7 +292,6 @@
 	sharp = 1
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut", "honked")
 
-
 /obj/item/weapon/nullrod/whip
 	name = "holy whip"
 	desc = "What a terrible night to be in spess"
@@ -301,7 +300,6 @@
 	slot_flags = SLOT_BELT
 	attack_verb = list("whipped", "lashed")
 	hitsound = 'sound/weapons/slash.ogg'
-
 
 /obj/item/weapon/nullrod/whip/New()
 	..()
@@ -329,7 +327,6 @@
 	throw_range = 7
 	throwforce = 20
 
-
 /obj/item/weapon/nullrod/armblade
 	name = "dark blessing"
 	desc = "Particularly twisted deities grant gifts of dubious value."
@@ -350,7 +347,6 @@
 	attack_verb = list("bitten", "eaten", "fin slapped")
 	hitsound = 'sound/weapons/bite.ogg'
 	var/used_blessing = FALSE
-
 
 /obj/item/weapon/nullrod/carp/attack_self(mob/living/user)
 	if(used_blessing)
