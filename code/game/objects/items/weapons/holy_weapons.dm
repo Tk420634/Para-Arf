@@ -75,6 +75,7 @@
 	hitsound = 'sound/weapons/sear.ogg'
 	damtype = BURN
 	attack_verb = list("punched", "cross countered", "pummeled")
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/staff
 	name = "red holy staff"
@@ -102,6 +103,7 @@
 	sharp = 1
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/claymore/hit_reaction(mob/living/carbon/human/owner, attack_text, final_block_chance, damage, attack_type)
 	if(attack_type == PROJECTILE_ATTACK)
@@ -115,6 +117,7 @@
 	desc = "Spread the glory of the dark gods!"
 	slot_flags = SLOT_BELT
 	hitsound = 'sound/hallucinations/growl1.ogg'
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/claymore/chainsaw_sword
 	name = "sacred chainsaw sword"
@@ -124,6 +127,7 @@
 	slot_flags = SLOT_BELT
 	attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
 	hitsound = 'sound/weapons/chainsaw.ogg'
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/claymore/glowing
 	name = "force weapon"
@@ -131,6 +135,7 @@
 	item_state = "swordon"
 	desc = "The blade glows with the power of faith. Or possibly a battery."
 	slot_flags = SLOT_BELT
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/claymore/katana
 	name = "hanzo steel"
@@ -138,6 +143,7 @@
 	icon_state = "katana"
 	item_state = "katana"
 	slot_flags = SLOT_BELT | SLOT_BACK
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/claymore/multiverse
 	name = "extradimensional blade"
@@ -145,6 +151,7 @@
 	icon_state = "multiverse"
 	item_state = "multiverse"
 	slot_flags = SLOT_BELT
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/claymore/saber
 	name = "light energy sword"
@@ -153,18 +160,21 @@
 	item_state = "swordblue"
 	desc = "If you strike me down, I shall become more robust than you can possibly imagine."
 	slot_flags = SLOT_BELT
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/claymore/saber/red
 	name = "dark energy sword"
 	icon_state = "swordred"
 	item_state = "swordred"
 	desc = "Woefully ineffective when used on steep terrain."
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/claymore/saber/pirate
 	name = "nautical energy sword"
 	icon_state = "cutlass1"
 	item_state = "cutlass1"
 	desc = "Convincing HR that your religion involved piracy was no mean feat."
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/sord
 	name = "\improper UNREAL SORD"
@@ -195,6 +205,7 @@
 	item_state = "hfrequency1"
 	desc = "Bad references are the DNA of the soul."
 	attack_verb = list("chopped", "sliced", "cut", "zandatsu'd")
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/scythe/spellblade
 	icon_state = "spellblade"
@@ -203,6 +214,7 @@
 	name = "dormant spellblade"
 	desc = "The blade grants the wielder nearly limitless power...if they can figure out how to turn it on, that is."
 	hitsound = 'sound/weapons/rapierhit.ogg'
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/scythe/talking
 	name = "possessed blade"
@@ -212,6 +224,7 @@
 	attack_verb = list("chopped", "sliced", "cut")
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	var/possessed = FALSE
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/scythe/talking/attack_self(mob/living/user)
 	if(possessed)
@@ -255,6 +268,7 @@
 	slot_flags = SLOT_BELT
 	w_class = WEIGHT_CLASS_HUGE
 	attack_verb = list("smashed", "bashed", "hammered", "crunched")
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/chainsaw
 	name = "chainsaw hand"
@@ -266,6 +280,7 @@
 	sharp = 1
 	attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
 	hitsound = 'sound/weapons/chainsaw.ogg'
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/clown
 	name = "clown dagger"
@@ -277,6 +292,7 @@
 	sharp = 1
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut", "honked")
 
+
 /obj/item/weapon/nullrod/whip
 	name = "holy whip"
 	desc = "What a terrible night to be in spess"
@@ -285,6 +301,7 @@
 	slot_flags = SLOT_BELT
 	attack_verb = list("whipped", "lashed")
 	hitsound = 'sound/weapons/slash.ogg'
+
 
 /obj/item/weapon/nullrod/whip/New()
 	..()
@@ -312,6 +329,7 @@
 	throw_range = 7
 	throwforce = 20
 
+
 /obj/item/weapon/nullrod/armblade
 	name = "dark blessing"
 	desc = "Particularly twisted deities grant gifts of dubious value."
@@ -320,6 +338,7 @@
 	flags = ABSTRACT | NODROP
 	w_class = WEIGHT_CLASS_HUGE
 	sharp = 1
+	reskin_selectable = FALSE
 
 /obj/item/weapon/nullrod/carp
 	name = "carp-sie plushie"
@@ -331,6 +350,7 @@
 	attack_verb = list("bitten", "eaten", "fin slapped")
 	hitsound = 'sound/weapons/bite.ogg'
 	var/used_blessing = FALSE
+
 
 /obj/item/weapon/nullrod/carp/attack_self(mob/living/user)
 	if(used_blessing)
@@ -507,7 +527,7 @@
 	desc = "It has a mysterious, protective aura."
 	description_antag = "This seemingly standard holy staff is actually a disguised neurotransmitter capable of inducing blind zealotry in its victims. It must be allowed to recharge in the presence of a linked set of missionary robes. Activate the staff while wearing robes to link, then aim the staff at your victim to try and convert them."
 	reskinned = TRUE
-	reskin_selectable = FALSE
+	reskin_selectable = FALSE //woo
 	icon_state = "godstaff-red"
 	item_state = "godstaff-red"
 	w_class = WEIGHT_CLASS_HUGE
