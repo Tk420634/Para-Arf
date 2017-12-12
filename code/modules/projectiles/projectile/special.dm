@@ -240,37 +240,46 @@
 	name = "plasma blast"
 	icon_state = "plasmacutter"
 	damage_type = BRUTE
-	damage = 5
-	range = 3
+	damage = 20
+	range = 4
 	dismemberment = 20
+	var/pressure_decrease_active = FALSE
+	var/pressure_decrease = 0.25
+	var/mine_range = 3 //mines this many additional tiles of rock
 
 /obj/item/projectile/plasma/New()
+	. = ..()
 	var/turf/proj_turf = get_turf(src)
 	if(!istype(proj_turf, /turf))
 		return
 	var/datum/gas_mixture/environment = proj_turf.return_air()
 	if(environment)
 		var/pressure = environment.return_pressure()
-		if(pressure < 30)
-			name = "full strength plasma blast"
-			damage *= 3
-	..()
+		if(pressure > 30)
+			name = "weakened [name]"
+			damage = damage * pressure_decrease
+			pressure_decrease_active = TRUE
 
 /obj/item/projectile/plasma/on_hit(atom/target)
-	. = ..()
-	if(istype(target, /turf/simulated/mineral))
+	if(ismineralturf(target))
 		var/turf/simulated/mineral/M = target
 		M.gets_drilled(firer)
-		Range()
+		if(mine_range)
+			mine_range--
+			range++
 		if(range > 0)
-			return -1
+			return
+	. = ..()
 
 /obj/item/projectile/plasma/adv
-	range = 5
+	damage = 28
+	range = 7
+	mine_range = 5
 
 /obj/item/projectile/plasma/adv/mech
-	damage = 10
-	range = 6
+	damage = 40
+	range = 9
+	mine_range = 6
 
 /obj/item/projectile/energy/teleport
 	name = "teleportation burst"
