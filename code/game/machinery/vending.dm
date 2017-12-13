@@ -1291,11 +1291,35 @@
 					/obj/item/fish_eggs/clownfish = 5, /obj/item/fish_eggs/shark = 5, /obj/item/fish_eggs/feederfish = 10,
 					/obj/item/fish_eggs/salmon = 5, /obj/item/fish_eggs/catfish = 5, /obj/item/fish_eggs/glofish = 5,
 					/obj/item/fish_eggs/electric_eel = 5, /obj/item/fish_eggs/shrimp = 10, /obj/item/toy/pet_rock = 5,
+					/mob/living/simple_animal/pony/twilight = 5, /mob/living/simple_animal/pony/pinkie = 5,
+					/mob/living/simple_animal/pony/rainbow = 5, /mob/living/simple_animal/pony/fluttershy = 5,
+					/mob/living/simple_animal/pony/applejack = 5, /mob/living/simple_animal/pony/luna = 5,
+					/mob/living/simple_animal/pony/clownie = 5, /mob/living/simple_animal/pony/tia = 5,
+					/mob/living/simple_animal/pony/trixie =5, /mob/living/simple_animal/pony/lyra = 5,
+					/mob/living/simple_animal/pony/vinyl =5, /mob/living/simple_animal/pony/rarity = 5,
+					/mob/living/simple_animal/pony/whooves = 5, /mob/living/simple_animal/pony/fleur = 5,
+					/mob/living/simple_animal/pony/mac = 5, /mob/living/simple_animal/parrot = 5,
+					/mob/living/simple_animal/pet/cat = 5, /mob/living/simple_animal/pet/cat/kitten = 5,
+					/mob/living/simple_animal/pet/corgi =5, /mob/living/simple_animal/pet/corgi/puppy = 5,
+					/mob/living/simple_animal/deer =5, /mob/living/simple_animal/pet/fox =5,
+					/mob/living/simple_animal/pet/pug =5
 					)
 	prices = list(/obj/item/clothing/accessory/petcollar = 50, /obj/item/weapon/storage/firstaid/aquatic_kit/full = 60, /obj/item/fish_eggs/goldfish = 10,
 					/obj/item/fish_eggs/clownfish = 10, /obj/item/fish_eggs/shark = 10, /obj/item/fish_eggs/feederfish = 5,
 					/obj/item/fish_eggs/salmon = 10, /obj/item/fish_eggs/catfish = 10, /obj/item/fish_eggs/glofish = 10,
-					/obj/item/fish_eggs/electric_eel = 10, /obj/item/fish_eggs/shrimp = 5, /obj/item/toy/pet_rock = 100,
+					/obj/item/fish_eggs/electric_eel = 10, /obj/item/fish_eggs/shrimp = 10, /obj/item/toy/pet_rock = 100,
+					/mob/living/simple_animal/pony/twilight = 1000, /mob/living/simple_animal/pony/pinkie = 1000,
+					/mob/living/simple_animal/pony/rainbow = 1000, /mob/living/simple_animal/pony/fluttershy = 1000,
+					/mob/living/simple_animal/pony/applejack = 1000, /mob/living/simple_animal/pony/luna = 1000,
+					/mob/living/simple_animal/pony/clownie = 1000, /mob/living/simple_animal/pony/tia = 1000,
+					/mob/living/simple_animal/pony/trixie =1000, /mob/living/simple_animal/pony/lyra = 1000,
+					/mob/living/simple_animal/pony/vinyl =1000, /mob/living/simple_animal/pony/rarity = 1000,
+					/mob/living/simple_animal/pony/whooves = 1000, /mob/living/simple_animal/pony/fleur = 1000,
+					/mob/living/simple_animal/pony/mac = 1000, /mob/living/simple_animal/parrot = 1000,
+					/mob/living/simple_animal/pet/cat = 1000, /mob/living/simple_animal/pet/cat/kitten = 1000,
+					/mob/living/simple_animal/pet/corgi =1000, /mob/living/simple_animal/pet/corgi/puppy = 1000,
+					/mob/living/simple_animal/deer = 1000, /mob/living/simple_animal/pet/fox =1000,
+					/mob/living/simple_animal/pet/pug =1000
 					)
 	contraband = list(/obj/item/fish_eggs/babycarp = 5)
 	premium = list(/obj/item/toy/pet_rock/fred = 1, /obj/item/toy/pet_rock/roxie = 1)

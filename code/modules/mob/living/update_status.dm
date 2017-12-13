@@ -57,7 +57,7 @@
 
 // Whether the mob is capable of actions or not
 /mob/living/incapacitated(ignore_restraints = FALSE, ignore_grab = FALSE, ignore_lying = FALSE)
-	if(stat || paralysis || stunned || weakened || (!ignore_restraints && restrained()) || (!ignore_lying && lying))
+	if(stat || paralysis || stunned || weakened || (!ignore_restraints && restrained()) || (!ignore_lying && lying) || istype(buckled, /obj/structure/stool/bed/nest))
 		return TRUE
 
 // wonderful proc names, I know - used to check whether the blur overlay

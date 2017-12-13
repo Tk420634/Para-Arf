@@ -7,6 +7,7 @@
 	icon_state = "larva0_dead"
 	var/stage = 0
 	var/polling = 0
+	var/chest_broken = FALSE
 
 /obj/item/organ/internal/body_egg/alien_embryo/on_find(mob/living/finder)
 	..()
@@ -46,12 +47,9 @@
 				to_chat(owner, "<span class='danger'>Your stomach hurts.</span>")
 				if(prob(20))
 					owner.adjustToxLoss(1)
-		if(5)
-			to_chat(owner, "<span class='danger'>You feel something tearing its way out of your stomach...</span>")
-			owner.adjustToxLoss(10)
 
 /obj/item/organ/internal/body_egg/alien_embryo/egg_process()
-	if(stage < 5 && prob(3))
+	if(stage < 5 && prob(1))
 		stage++
 		spawn(0)
 			RefreshInfectionImage()
@@ -61,11 +59,11 @@
 			if(S.location == "chest" && istype(S.get_surgery_step(), /datum/surgery_step/internal/manipulate_organs))
 				AttemptGrow(0)
 				return
-		AttemptGrow()
+		AttemptGrow(0)
 
 
 
-/obj/item/organ/internal/body_egg/alien_embryo/proc/AttemptGrow(var/gib_on_success = 1)
+/obj/item/organ/internal/body_egg/alien_embryo/proc/AttemptGrow(var/gib_on_success = 0)
 	if(!owner || polling)
 		return
 	polling = 1
@@ -87,9 +85,13 @@
 			polling = 0
 			return
 
-		var/overlay = image('icons/mob/alien.dmi', loc = owner, icon_state = "burst_lie")
+		to_chat(owner, "<span class='userdanger'>You feel something tearing its way out of your chest!</span>")//Inform them of their condition.
+		owner.adjustBruteLoss(rand(10,30))
+		owner.Weaken(10)
+		var/overlay = image('icons/mob/alien.dmi', loc = owner, icon_state = "burst_stand")
+		var/overlay_bursted = image('icons/mob/alien.dmi', loc = owner, icon_state = "bursted_stand")
 		owner.overlays += overlay
-
+		playsound(get_turf(owner), 'sound/arf/alien/effects/burst.ogg', 100, 0, 7)
 		spawn(6)
 			var/mob/living/carbon/alien/larva/new_xeno = new(owner.loc)
 			new_xeno.key = C.key
@@ -98,13 +100,21 @@
 			new_xeno.mind.name = new_xeno.name
 			new_xeno.mind.assigned_role = "MODE"
 			new_xeno.mind.special_role = SPECIAL_ROLE_XENOMORPH
-			new_xeno << sound('sound/voice/hiss5.ogg',0,0,0,100)//To get the player's attention
-
+			owner.overlays -= overlay
 			if(gib_on_success)
 				owner.gib()
 			else
-				owner.adjustBruteLoss(40)
-				owner.overlays -= overlay
+				if(ishuman(owner))
+					var/mob/living/carbon/human/O = owner
+					O.adjustBruteLossByPart(rand(75, 125), "chest", src)
+					for(var/obj/item/organ/internal/organ in O.internal_organs)
+						if(organ.parent_organ == "chest")
+							organ.damage += rand(20,50)
+				else
+					owner.adjustBruteLoss(rand(100,125))
+				owner.stat = DEAD
+				owner.overlays += overlay_bursted
+			playsound(get_turf(owner), "alien_screech_far", 100, 0, 64)
 			qdel(src)
 
 /*----------------------------------------

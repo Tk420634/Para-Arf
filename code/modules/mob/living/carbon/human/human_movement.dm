@@ -95,6 +95,7 @@
 			return 0 //species is silent
 		if(step_count < 2 || step_count == 3)
 			return 0
+		var/S_played = FALSE//set to TRUE if we played a footstep sound for return values
 		var/S //Sound to play
 		var/range = (world.view - 1)
 		var/volume = 100
@@ -121,6 +122,10 @@
 
 		if(S)
 			playsound(T, S, volume, 1, range)
+			S_played = TRUE
+		if(locate(/obj/structure/alien/weeds) in T)
+			playsound(T, "step_puddle", volume, 1, range)
+		if(S_played)
 			return 1
 		return 0
 	return 0

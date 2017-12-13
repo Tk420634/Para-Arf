@@ -81,6 +81,7 @@
 
 	chest_type = /obj/item/clothing/suit/space/new_rig/light/ninja
 	glove_type = /obj/item/clothing/gloves/rig/light/ninja
+	boot_type =  /obj/item/clothing/shoes/magboots/rig/light/ninja
 
 	req_access = list(access_syndicate)
 
@@ -104,6 +105,9 @@
 /obj/item/clothing/gloves/rig/light/ninja
 	name = "insulated gloves"
 	siemens_coefficient = 0
+
+/obj/item/clothing/shoes/magboots/rig/light/ninja
+	shoe_sound = "step_sock" //SNEAKY
 
 /obj/item/clothing/suit/space/new_rig/light/ninja
 	breach_threshold = 38 //comparable to regular hardsuits

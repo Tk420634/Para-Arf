@@ -505,7 +505,7 @@ var/list/SpookyGhosts = list("ghost","shade","shade2","ghost-narsie","horror","s
 /obj/item/device/videocam
 	name = "video camera"
 	icon = 'icons/obj/items.dmi'
-	desc = "video camera that can send live feed to the entertainment network."
+	desc = "A video camera that can send live feed to the entertainment network."
 	icon_state = "videocam"
 	item_state = "videocam"
 	w_class = WEIGHT_CLASS_SMALL
@@ -516,6 +516,7 @@ var/list/SpookyGhosts = list("ghost","shade","shade2","ghost-narsie","horror","s
 	var/icon_on = "videocam_on"
 	var/icon_off = "videocam"
 	var/canhear_range = 7
+	var/cansee_range = 7
 
 /obj/item/device/videocam/attack_self(mob/user)
 	on = !on
@@ -547,13 +548,20 @@ var/list/SpookyGhosts = list("ghost","shade","shade2","ghost-narsie","horror","s
 			talk_into(M, msg)
 		for(var/obj/machinery/computer/security/telescreen/T in machines)
 			if(T.watchers[M] == camera)
-				T.audible_message("<span class='game radio'><span class='name'>(Newscaster) [M]</span> says, '[msg]'", hearing_distance = 2)
+				T.audible_message("<span class='game radio'><span class='name'>([T]) <b>[M]</b></span> says, '[msg]'", hearing_distance = 2)
 
 /obj/item/device/videocam/hear_message(mob/M as mob, msg)
 	if(camera && on)
 		for(var/obj/machinery/computer/security/telescreen/T in machines)
 			if(T.watchers[M] == camera)
-				T.audible_message("<span class='game radio'><span class='name'>(Newscaster) [M]</span> [msg]", hearing_distance = 2)
+				T.audible_message("<span class='game radio'><span class='name'>([T])</span> [msg]", hearing_distance = 2)
+
+
+/obj/item/device/videocam/see_message(mob/M as mob, text)
+	if(camera && on && text)
+		for(var/obj/machinery/computer/security/telescreen/T in machines)
+			if(T.watchers[M] == camera)
+				T.visible_message(message = "<span class='game radio'><span class='name'>([T])</span> [text]")
 
 
 ///hauntings, like hallucinations but more spooky

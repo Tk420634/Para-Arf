@@ -176,9 +176,11 @@ var/global/nologevent = 0
 			body += {"<br><br>
 				<b>Rudimentary transformation:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>
 				<A href='?_src_=holder;simplemake=observer;mob=\ref[M]'>Observer</A> |
-				\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Drone</A>,
+				\[ Alien: <A href='?_src_=holder;simplemake=alien_admin;mob=\ref[M]'>Snowflake Alien</A>,
+				<A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Drone</A>,
 				<A href='?_src_=holder;simplemake=hunter;mob=\ref[M]'>Hunter</A>,
-				<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>Queen</A>,
+				<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>Large Queen</A>,
+				<A href='?_src_=holder;simplemake=queen_small;mob=\ref[M]'>Small Queen</A>,
 				<A href='?_src_=holder;simplemake=sentinel;mob=\ref[M]'>Sentinel</A>,
 				<A href='?_src_=holder;simplemake=larva;mob=\ref[M]'>Larva</A> \]
 				<A href='?_src_=holder;simplemake=human;mob=\ref[M]'>Human</A>

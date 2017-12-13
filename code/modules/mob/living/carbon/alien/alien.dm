@@ -27,16 +27,23 @@
 	var/heat_protection = 0.5
 	var/leaping = 0
 	ventcrawler = 2
-
+	var/list/default_alien_organs = list(/obj/item/organ/internal/brain/xeno,
+										/obj/item/organ/internal/xenos/hivenode)
 	var/list/alien_organs = list()
 
 /mob/living/carbon/alien/New()
 	verbs += /mob/living/verb/mob_sleep
 	verbs += /mob/living/verb/lay_down
-	alien_organs += new /obj/item/organ/internal/brain/xeno
-	alien_organs += new /obj/item/organ/internal/xenos/hivenode
+	verbs += /mob/living/carbon/alien/verb/set_flavor
+	for(var/O in default_alien_organs)
+		alien_organs += new O
 	for(var/obj/item/organ/internal/I in alien_organs)
 		I.insert(src)
+	if(locate(/mob/living/carbon/alien/humanoid/verb/plant) in verbs)//I don't know why but every alien has the plant verb and I cannot for the life of me find where they're getting it.
+		var/obj/item/organ/internal/xenos/plasmavessel/PV = get_organ_slot("plasmavessel")
+		if(!locate(/mob/living/carbon/alien/humanoid/verb/plant) in PV.alien_powers)
+			verbs -= /mob/living/carbon/alien/humanoid/verb/plant
+	updatePlasmaDisplay()
 	..()
 
 /mob/living/carbon/alien/get_default_language()
@@ -47,14 +54,16 @@
 /mob/living/carbon/alien/say_quote(var/message, var/datum/language/speaking = null)
 	var/verb = "hisses"
 	var/ending = copytext(message, length(message))
-
-	if(speaking && (speaking.name != "Galactic Common")) //this is so adminbooze xenos speaking common have their custom verbs,
-		verb = speaking.get_spoken_verb(ending)          //and use normal verbs for their own languages and non-common languages
-	else
-		if(ending=="!")
-			verb = "roars"
-		else if(ending=="?")
-			verb = "hisses curiously"
+	var/voice_sound = "alien_talk"
+	if(ending=="!")
+		verb = "roars"
+		voice_sound = "alien_screech"
+	else if(ending=="?")
+		verb = "hisses curiously"
+		voice_sound = "alien_growl"
+	if(speaking && (speaking.name == "Hivemind"))
+		voice_sound = null
+	playsound(loc, voice_sound, 100, 0, 7)
 	return verb
 
 
@@ -63,7 +72,9 @@
 
 /mob/living/carbon/alien/adjustFireLoss(amount) // Weak to Fire
 	if(amount > 0)
-		..(amount * 2)
+		..(amount * 1.5)
+		if(amount >= 20 && stat < UNCONSCIOUS)
+			say("*hurt")
 	else
 		..(amount)
 	return
@@ -266,29 +277,29 @@ Des: Removes all infected images from the alien.
 
 /mob/living/carbon/alien/handle_footstep(turf/T)
 	if(..())
-		if(T.footstep_sounds["xeno"])
-			var/S = pick(T.footstep_sounds["xeno"])
-			if(S)
-				if(m_intent == MOVE_INTENT_RUN)
-					if(!(step_count % 2)) //every other turf makes a sound
-						return 0
+		if(!footstep_sound)
+			return 0
+		if(buckled || lying || throwing || leaping)
+			return 0
+		if(!has_gravity(src))
+			return 0
+		if(step_count < 2)
+			return 0
+		var/S//Sound to play
+		var/range = footstep_range
+		var/volume = footstep_volume
+		if(m_intent == MOVE_INTENT_WALK)
+			range -= 9 //Sneaky
+			volume /= 3 //Breeky
 
-				var/range = -(world.view - 2)
-				range -= 0.666 //-(7 - 2) = (-5) = -5 | -5 - (0.666) = -5.666 | (7 + -5.666) = 1.334 | 1.334 * 3 = 4.002 | range(4.002) = range(4)
-				var/volume = 5
-
-				if(m_intent == MOVE_INTENT_WALK)
-					return 0 //silent when walking
-
-				if(buckled || lying || throwing)
-					return 0 //people flying, lying down or sitting do not step
-
-				if(!has_gravity(src))
-					if(step_count % 3) //this basically says, every three moves make a noise
-						return 0       //1st - none, 1%3==1, 2nd - none, 2%3==2, 3rd - noise, 3%3==0
-
-				playsound(T, S, volume, 1, range)
-				return 1
+		//Miiight want to do a pass on this for performance but it works right now so I'm not touching it much.
+		if(step_count >= 2)
+			step_count = 0
+			S = footstep_sound
+		if(S)
+			playsound(T, S, volume, 1, range)
+			return 1
+		return 0
 	return 0
 
 /mob/living/carbon/alien/getTrail()

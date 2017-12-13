@@ -1062,3 +1062,61 @@
 	melee_damage_upper = 25
 
 	minbodytemp = 200
+//Doom mobs
+/mob/living/simple_animal/hostile/baron
+	name = "Baron of Hell"
+	desc = ""
+	icon = 'icons/mob/alienhuge.dmi'
+	icon_dead = "baron_d"
+	icon_living = "baron"
+	icon_state = "baron"
+	speed = 5
+	attacktext = "gores"
+
+	faction = "mining"
+	maxHealth = 500 // Boss
+	health = 500
+
+	melee_damage_lower = 20
+	melee_damage_upper = 25
+
+	//Space dragons aren't affected by atmos.
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	minbodytemp = 0
+	maxbodytemp = 1500
+
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat = 7)
+
+//	old_x = -16
+//	old_y = 0
+	pixel_x = 0
+	pixel_y = 0
+
+/mob/living/simple_animal/hostile/cacodemon
+	name = "Cacodemon"
+	desc = ""
+	icon = 'icons/mob/alienhuge.dmi'
+	icon_dead = "cacodemon_d"
+	icon_living = "cacodemon"
+	icon_state = "cacodemon"
+	speed = 5
+	attacktext = "gores"
+
+	faction = "mining"
+	maxHealth = 500 // Boss
+	health = 500
+
+	melee_damage_lower = 20
+	melee_damage_upper = 25
+
+	//Space dragons aren't affected by atmos.
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	minbodytemp = 0
+	maxbodytemp = 1500
+
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat = 7)
+
+//	old_x = -16
+//	old_y = 0
+	pixel_x = 0
+	pixel_y = 0

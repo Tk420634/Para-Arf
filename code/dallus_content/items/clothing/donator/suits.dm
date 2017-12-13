@@ -34,7 +34,7 @@
 */
 	//Malmarrisa
 /obj/item/clothing/under/hunter
-	name = "Hunting Outfit"
+	name = "hunting outfit"
 	desc = "A Hunting Outfit."
 	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
 	icon_state = "hunters_coat"
@@ -53,7 +53,7 @@
 
 	//Rune
 /obj/item/clothing/under/birthdaysuit
-	name = "Nudity Permit"
+	name = "nudity permit"
 	desc = "This special permit allows staff to go around nude!."
 	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
 	icon_state = "birthdaysuit"
@@ -62,15 +62,15 @@
 
 	//Pickles
 /obj/item/clothing/under/bowlingoutfit
-	name = "Bowling Outfit"
-	desc = "A Bowling Outfit, it says 'Pickles' on the tag"
+	name = "bowling outfit"
+	desc = "A bowling outfit, it says 'Pickles' on the tag"
 	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
 	icon_state = "bowlingoutfit"
 	item_color = "bowlingoutfit"
 	item_state = "bowlingoutfit"
 	//Andy
 /obj/item/clothing/under/middriftturtleneck
-	name = "Mid-Driff Turtleneck"
+	name = "mid-driff turtleneck"
 	desc = "A sweater that seems to be a bit short, showing off the wearers stomach."
 	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
 	icon_state = "middriftturtleneck"

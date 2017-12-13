@@ -185,7 +185,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 	if(A == target)
 		target.Weaken(5)
 		target.visible_message("<span class='danger'>[target] flails around wildly.</span>","<span class ='userdanger'>[name] pounces on you!</span>")
-
+		playsound(loc, "alien_step", 150, 1, 7)
 /obj/effect/hallucination/xeno_attack
 	//Xeno crawls from nearby vent,jumps at you, and goes back in
 	var/obj/machinery/atmospherics/unary/vent_pump/pump = null

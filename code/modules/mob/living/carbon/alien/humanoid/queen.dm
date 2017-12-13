@@ -1,14 +1,20 @@
 /mob/living/carbon/alien/humanoid/queen
 	name = "alien queen"
 	caste = "q"
-	maxHealth = 250
-	health = 250
-	icon_state = "alienq_s"
+	maxHealth = 200
+	health = 200
+	icon_state = "alienq"
 	status_flags = CANPARALYSE
 	heal_rate = 5
 	large = 1
 	ventcrawler = 0
-
+	default_alien_organs = list(/obj/item/organ/internal/brain/xeno,
+								/obj/item/organ/internal/xenos/hivenode,
+								/obj/item/organ/internal/xenos/plasmavessel/queen,
+								/obj/item/organ/internal/xenos/acidgland,
+								/obj/item/organ/internal/xenos/resinspinner,
+								/obj/item/organ/internal/xenos/eggsac,
+								/obj/item/organ/internal/xenos/neurotoxin)
 /mob/living/carbon/alien/humanoid/queen/New()
 	create_reagents(100)
 
@@ -21,72 +27,38 @@
 			break
 
 	real_name = src.name
-	alien_organs += new /obj/item/organ/internal/xenos/plasmavessel/queen
-	alien_organs += new /obj/item/organ/internal/xenos/acidgland
-	alien_organs += new /obj/item/organ/internal/xenos/eggsac
-	alien_organs += new /obj/item/organ/internal/xenos/resinspinner
-	alien_organs += new /obj/item/organ/internal/xenos/neurotoxin
+//	alien_organs += new /obj/item/organ/internal/xenos/plasmavessel/queen
+//	alien_organs += new /obj/item/organ/internal/xenos/acidgland
+//	alien_organs += new /obj/item/organ/internal/xenos/eggsac
+//	alien_organs += new /obj/item/organ/internal/xenos/resinspinner
+//	alien_organs += new /obj/item/organ/internal/xenos/neurotoxin
 	..()
 
 /mob/living/carbon/alien/humanoid/queen/movement_delay()
 	. = ..()
-	. += 3
-
-/mob/living/carbon/alien/humanoid/queen/handle_regular_hud_updates()
-	..() //-Yvarov
-
-	if(healths)
-		if(stat != DEAD)
-			switch(health)
-				if(250 to INFINITY)
-					healths.icon_state = "health0"
-				if(175 to 250)
-					healths.icon_state = "health1"
-				if(100 to 175)
-					healths.icon_state = "health2"
-				if(50 to 100)
-					healths.icon_state = "health3"
-				if(0 to 50)
-					healths.icon_state = "health4"
-				else
-					healths.icon_state = "health5"
-		else
-			healths.icon_state = "health6"
-
+	. += 2
 
 //Queen verbs
 /mob/living/carbon/alien/humanoid/queen/verb/lay_egg()
 
-	set name = "Lay Egg (75)"
-	set desc = "Lay an egg to produce huggers to impregnate prey with."
+	set name = "Lay Egg (150)"
+	set desc = "Lay an egg to produce facehuggers to impregnate prey with."
 	set category = "Alien"
 	if(locate(/obj/structure/alien/egg) in get_turf(src))
 		to_chat(src, "<span class='noticealien'>There's already an egg here.</span>")
 		return
 
-	if(powerc(75,1))//Can't plant eggs on spess tiles. That's silly.
-		adjustPlasma(-75)
+	if(powerc(150,1))//Can't plant eggs on spess tiles. That's silly.
+		adjustPlasma(-150)
 		for(var/mob/O in viewers(src, null))
 			O.show_message(text("<span class='alertalien'>[src] has laid an egg!</span>"), 1)
 		new /obj/structure/alien/egg(loc)
+		playsound(loc, "alien_secrete", 100, 1, 7)
 	return
 
 
 /mob/living/carbon/alien/humanoid/queen/large
 	icon = 'icons/mob/alienlarge.dmi'
-	icon_state = "queen_s"
+	icon_state = "alienq"
 	pixel_x = -16
 	large = 1
-
-/mob/living/carbon/alien/humanoid/queen/large/update_icons()
-	overlays.Cut()
-
-	if(stat == DEAD)
-		icon_state = "queen_dead"
-	else if(stat == UNCONSCIOUS || lying || resting)
-		icon_state = "queen_sleep"
-	else
-		icon_state = "queen_s"
-
-	for(var/image/I in overlays_standing)
-		overlays += I

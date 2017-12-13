@@ -428,7 +428,9 @@ BLIND     // can't see anything
 				volume = T.shoe_running_volume
 			else
 				volume = T.shoe_walking_volume
-			playsound(src, shoe_sound, volume, 1)
+			playsound(src, shoe_sound, volume, 0)
+			if(locate(/obj/structure/alien/weeds) in T)
+				playsound(T, "step_puddle", volume, 0)
 
 	return 1
 

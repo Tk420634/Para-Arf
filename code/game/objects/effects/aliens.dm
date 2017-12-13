@@ -27,7 +27,7 @@
 	opacity = 1
 	anchored = 1
 	canSmoothWith = list(/obj/structure/alien/resin)
-	var/health = 200
+	var/health = 100
 	var/resintype = null
 	smooth = SMOOTH_TRUE
 
@@ -69,7 +69,7 @@
 	icon = 'icons/obj/smooth_structures/alien/resin_membrane.dmi'
 	icon_state = "membrane0"
 	opacity = 0
-	health = 120
+	health = 50
 	resintype = "membrane"
 	canSmoothWith = list(/obj/structure/alien/resin/wall, /obj/structure/alien/resin/membrane)
 
@@ -88,11 +88,11 @@
 /obj/structure/alien/resin/ex_act(severity)
 	switch(severity)
 		if(1)
-			health -= 150
-		if(2)
 			health -= 100
+		if(2)
+			health -= 70
 		if(3)
-			health -= 50
+			health -= 40
 	healthcheck()
 
 
@@ -109,7 +109,7 @@
 	else if(isobj(AM))
 		var/obj/O = AM
 		tforce = O.throwforce
-	playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
+	playsound(loc, "alien_resin_hit", 100, 1, 7)
 	health -= tforce
 	healthcheck()
 
@@ -127,7 +127,7 @@
 	if(islarva(user))
 		return
 	user.visible_message("<span class='danger'>[user] claws at the resin!</span>")
-	playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
+	playsound(loc, "alien_resin_hit", 100, 1, 7)
 	health -= 50
 	if(health <= 0)
 		user.visible_message("<span class='danger'>[user] slices the [name] apart!</span>")
@@ -137,7 +137,7 @@
 /obj/structure/alien/resin/attackby(obj/item/I, mob/living/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)
 	health -= I.force
-	playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
+	playsound(loc, "alien_resin_hit", 100, 1, 7)
 	healthcheck()
 	..()
 
@@ -162,7 +162,7 @@
 	anchored = 1
 	density = 0
 	layer = 2
-	var/health = 15
+	var/health = 5
 	var/obj/structure/alien/weeds/node/linked_node = null
 	var/static/list/weedImageCache
 
@@ -175,17 +175,18 @@
 		return
 	if(icon_state == "weeds")
 		icon_state = pick("weeds", "weeds1", "weeds2")
+		playsound(loc, "alien_weed", 100, 1, 7)
 	fullUpdateWeedOverlays()
 	spawn(rand(150, 200))
 		if(src)
 			Life()
 
 /obj/structure/alien/weeds/Destroy()
+	linked_node = null
 	var/turf/T = loc
+	..()//Remove it before we update the overlays.
 	for(var/obj/structure/alien/weeds/W in range(1,T))
 		W.updateWeedOverlays()
-	linked_node = null
-	return ..()
 
 /obj/structure/alien/weeds/proc/Life()
 	set background = BACKGROUND_ENABLED
@@ -217,14 +218,16 @@
 	else
 		visible_message("<span class='danger'>[user] has attacked [src] with [I]!</span>")
 
-	var/damage = I.force / 4
+	var/damage = I.force
 	if(istype(I, /obj/item/weapon/weldingtool))
 		var/obj/item/weapon/weldingtool/WT = I
 		if(WT.remove_fuel(0, user))
-			damage = 15
-			playsound(loc, WT.usesound, 100, 1)
-
-	health -= damage
+			playsound(loc, WT.usesound, 100, 1, 7)
+	if(I.damtype == "fire")
+		damage *= 2
+	if(damage)
+		health -= damage
+		playsound(loc, "alien_resin_hit", 100, 1, 7)
 	healthcheck()
 
 
@@ -278,7 +281,10 @@
 	name = "glowing resin"
 	desc = "Blue bioluminescence shines from beneath the surface."
 	icon_state = "weednode"
-	light_range = 1
+	light_color = "#59bfff"
+	light_power = 0.2
+	light_range = 4
+	health = 15
 	var/node_range = NODERANGE
 
 
@@ -306,7 +312,7 @@
 	icon_state = "egg_growing"
 	density = 0
 	anchored = 1
-	var/health = 100
+	var/health = 50
 	var/status = GROWING	//can be GROWING, GROWN or BURST; all mutually exclusive
 	layer = MOB_LAYER
 
@@ -322,7 +328,7 @@
 		switch(status)
 			if(BURST)
 				to_chat(user, "<span class='notice'>You clear the hatched egg.</span>")
-				playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
+				playsound(loc, "alien_resin_hit", 100, 1, 7)
 				qdel(src)
 				return
 			if(GROWING)
@@ -343,12 +349,16 @@
 /obj/structure/alien/egg/proc/Grow()
 	icon_state = "egg"
 	status = GROWN
-
+	for(var/mob/M in view(1,src))
+		if(CanHug(M))
+			Burst(0)
+			break
 /obj/structure/alien/egg/proc/Burst(kill = 1)	//drops and kills the hugger if any is remaining
 	if(status == GROWN || status == GROWING)
 		icon_state = "egg_hatched"
 		flick("egg_opening", src)
 		status = BURSTING
+		playsound(loc, "alien_egg_hatch", 100, 1, 7)
 		spawn(15)
 			status = BURST
 			var/obj/item/clothing/mask/facehugger/child = GetFacehugger()
@@ -357,14 +367,16 @@
 				if(kill && istype(child))
 					child.Die()
 				else
-					for(var/mob/M in range(1,src))
+					for(var/mob/M in view(1,src))
 						if(CanHug(M))
 							child.Attach(M)
 							break
 
 /obj/structure/alien/egg/bullet_act(obj/item/projectile/Proj)
-	if((Proj.damage_type == BRUTE || Proj.damage_type == BURN))
+	if(Proj.damage_type == BRUTE)
 		health -= Proj.damage
+	else if(Proj.damage_type == BURN)
+		health -= round(Proj.damage * 1.5)
 	..()
 	healthcheck()
 
@@ -375,15 +387,16 @@
 	else
 		visible_message("<span class='danger'>[user] has attacked [src] with [I]!</span>")
 
-	var/damage = I.force / 4
+	var/damage = I.force
 	if(istype(I, /obj/item/weapon/weldingtool))
 		var/obj/item/weapon/weldingtool/WT = I
-
 		if(WT.remove_fuel(0, user))
-			damage = 15
 			playsound(loc, WT.usesound, 100, 1)
-
-	health -= damage
+	if(I.damtype == "fire")
+		damage *= 2
+	if(damage)
+		health -= damage
+		playsound(loc, "alien_resin_hit", 100, 1, 7)
 	user.changeNext_move(CLICK_CD_MELEE)
 	healthcheck()
 
@@ -408,9 +421,12 @@
 			return
 
 		var/mob/living/carbon/C = AM
-		if(C.stat == CONSCIOUS && C.get_int_organ(/obj/item/organ/internal/body_egg/alien_embryo))
+		if(C.get_int_organ(/obj/item/organ/internal/body_egg/alien_embryo))
 			return
-
+		if(istype(C.wear_mask, /obj/item/clothing/mask/facehugger))
+			var/obj/item/clothing/mask/facehugger/FH = C.wear_mask
+			if(FH.real)
+				return
 		Burst(0)
 
 #undef BURST

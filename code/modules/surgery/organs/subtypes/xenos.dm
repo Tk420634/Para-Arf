@@ -30,13 +30,14 @@
 	origin_tech = "biotech=5;plasmatech=4"
 	parent_organ = "chest"
 	slot = "plasmavessel"
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/plant, /mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/transfer_plasma)
 
 
 	var/stored_plasma = 0
 	var/max_plasma = 500
-	var/heal_rate = 5
+	var/heal_rate = 2
 	var/plasma_rate = 10
+	var/emergency_generation = FALSE//Will generate plasma very slowly to 50 if TRUE. For drones/queens/etc who are seperated from weeds/plasma and need to restart.
 
 /obj/item/organ/internal/xenos/plasmavessel/prepare_eat()
 	var/obj/S = ..()
@@ -50,28 +51,34 @@
 	stored_plasma = 200
 	max_plasma = 500
 	plasma_rate = 25
+	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/plant, /mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	emergency_generation = TRUE
 
 /obj/item/organ/internal/xenos/plasmavessel/drone
 	name = "large xeno plasma vessel"
 	icon_state = "plasma_large"
 	stored_plasma = 200
 	max_plasma = 500
+	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/plant, /mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	emergency_generation = TRUE
 
 /obj/item/organ/internal/xenos/plasmavessel/sentinel
 	stored_plasma = 100
 	max_plasma = 250
+	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/transfer_plasma)
 
 /obj/item/organ/internal/xenos/plasmavessel/hunter
 	name = "small xeno plasma vessel"
 	icon_state = "plasma_tiny"
-	stored_plasma = 100
-	max_plasma = 150
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/plant)
+	stored_plasma = 50
+	max_plasma = 100
+	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/transfer_plasma)
 
 /obj/item/organ/internal/xenos/plasmavessel/larva
 	name = "tiny xeno plasma vessel"
 	icon_state = "plasma_tiny"
 	max_plasma = 100
+	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/transfer_plasma)
 
 
 /obj/item/organ/internal/xenos/plasmavessel/on_life()
@@ -88,6 +95,10 @@
 			owner.adjustFireLoss(-heal_amt)
 			owner.adjustOxyLoss(-heal_amt)
 			owner.adjustCloneLoss(-heal_amt)
+	else if(emergency_generation && stored_plasma < 50 && prob(25))//Just enough to plant some weeds.
+		owner.adjustPlasma(round(max(1,plasma_rate/10)))// 1/10 plasma rate or 1, whichever is more; Rounded.
+		if(stored_plasma > 50)//round off neatly at 50 because it looks better.
+			stored_plasma = 50
 
 /obj/item/organ/internal/xenos/plasmavessel/insert(mob/living/carbon/M, special = 0)
 	..()

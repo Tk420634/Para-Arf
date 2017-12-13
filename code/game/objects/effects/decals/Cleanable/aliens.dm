@@ -2,7 +2,7 @@
 	name = "xeno blood"
 	desc = "It's green and acidic. It looks like... <i>blood?</i>"
 	icon = 'icons/effects/blood.dmi'
-	basecolor = "#05EE05"
+	basecolor = "#96BB00"
 	bloodiness = MAX_SHOE_BLOODINESS
 	blood_state = BLOOD_STATE_XENO
 
@@ -11,7 +11,7 @@
 	desc = "Gnarly..."
 	icon_state = "xgib1"
 	random_icon_states = list("xgib1", "xgib2", "xgib3", "xgib4", "xgib5", "xgib6")
-	basecolor = "#05EE05"
+	basecolor = "#96BB00"
 
 /obj/effect/decal/cleanable/blood/gibs/xeno/update_icon()
 	color = "#FFFFFF"
@@ -32,4 +32,4 @@
 	random_icon_states = list("xgibmid1", "xgibmid2", "xgibmid3")
 
 /obj/effect/decal/cleanable/blood/xtracks
-	basecolor = "#05EE05"
+	basecolor = "#96BB00"
