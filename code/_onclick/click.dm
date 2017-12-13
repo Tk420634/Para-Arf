@@ -213,8 +213,7 @@
 	Only used for swapping hands
 */
 /mob/proc/MiddleClickOn(var/atom/A)
-	pointed(A)
-	return
+	swap_hand()
 
 // See click_override.dm
 /mob/living/MiddleClickOn(var/atom/A)
