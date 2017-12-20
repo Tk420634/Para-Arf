@@ -743,4 +743,13 @@
 	signlang_verb = list("wags their tail", "twitches an ear", "barks softly", "barks loudly", "sticks their tail out", "pants", "growls")
 	flags = SIGNLANG|NO_STUTTER|NONVERBAL
 
+/datum/language/swedish
+	name = "Swedish"
+	desc = "The common tongue of Sweden."
+	speech_verb = "says"
+	whisper_verb = "whispers"
+	syllables = list("för","med","de","en","är","detta","jag","inte","vi","oss","om","vår","upp","han","hans","så","när","som","är","från","och","på","ha","först","dess","kaffe","över","topp","var","skulle","är","namn","son","und", "sala")
+	key = "sv"
+	english_names = 1
+
 #undef SCRAMBLE_CACHE_LEN
