@@ -195,15 +195,26 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	allowed_species = list("Vulpkanin, Human")
 
 
+////////////////////
+//ARF TAILS YEE BOI/
+////////////////////
 
-//ARF TAILS YEE BOI
+//Alright.  So, TK here.  I'm turning most of these off.  We'll turn the on slowly, over the next few weeks.  For now, I'm only going to turn on 5.
+//Think of it kinda like a test run, lol. ~TK
+//Fox
+//Kitty Up
+//Kitty Down
+//Wolf
+//Lizard
+
 
 /datum/body_accessory/tail/liztail
 	name = "Reptile Tail"
 	icon_state = "sogtail"
 	animated_icon_state = "sogtailw_a"
-	allowed_species = list()
+	allowed_species = list("Human")
 
+/*
 /datum/body_accessory/tail/tajytail  //:3c
 	name = "Taj Tail"
 	icon_state = "tajtail"
@@ -309,12 +320,14 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	name = "Flareon Tail"
 	icon_state = "flareontail"
 	allowed_species = list()
+*/
 
-/datum/body_accessory/tail/foxtail
+datum/body_accessory/tail/foxtail
 	name = "Fox Tail"
 	icon_state = "foxtail"
-	allowed_species = list()
+	allowed_species = list("Human")
 
+/*
 /datum/body_accessory/tail/glaceontail
 	name = "Glaceon Tail"
 	icon_state = "glaceontail"
@@ -345,17 +358,19 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	name = "Kitsune Tail"
 	icon_state = "kitsunetail"
 	allowed_species = list()
+*/
 
 /datum/body_accessory/tail/kittydowntail
 	name = "Kitty Down Tail"
-	icon_state = "kittydowntail"
-	allowed_species = list()
+	icon_state = "kittydown"
+	allowed_species = list("Human")
 
 /datum/body_accessory/tail/kittyuptail
 	name = "Kitty Up Tail"
-	icon_state = "kittyuptail"
-	allowed_species = list()
+	icon_state = "kittyup"
+	allowed_species = list("Human")
 
+/*
 /datum/body_accessory/tail/labtail
 	name = "Lab Tail"
 	icon_state = "labtail"
@@ -485,12 +500,14 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	name = "Turtle Tail"
 	icon_state = "turtletail"
 	allowed_species = list()
+*/
 
 /datum/body_accessory/tail/wolftail
 	name = "Wolf Tail"
 	icon_state = "wolftail"
 	allowed_species = list()
 
+/*
 /datum/body_accessory/tail/zebratail
 	name = "Zebra Tail"
 	icon_state = "zebratail"
@@ -641,3 +658,4 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	name = "Monarch Butterfly Colorable Wings"
 	icon_state = "monarch"  //Supposed to be colored, lol
 	allowed_species = list()
+*/
