@@ -334,3 +334,281 @@
 						qdel(src)
 	else
 		return ..()
+
+/obj/item/weapon/twohanded/required/kirbyplants/xmas
+	name = "Christmas Tree"
+	icon = 'icons/obj/flora/plants.dmi'
+	icon_state = "plant-xmas"
+	anchored = 0
+	layer = 5
+	w_class = WEIGHT_CLASS_HUGE
+	force = 10
+	throwforce = 13
+	throw_speed = 2
+	throw_range = 4
+
+/obj/structure/flora/largetree/jungletree/one
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletrees.dmi'
+	icon_state = "tree1"
+
+/obj/structure/flora/largetree/jungletree/two
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletrees.dmi'
+	icon_state = "tree2"
+
+/obj/structure/flora/largetree/jungletree/three
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletrees.dmi'
+	icon_state = "tree3"
+
+/obj/structure/flora/largetree/jungletree/four
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletrees.dmi'
+	icon_state = "tree4"
+
+/obj/structure/flora/largetree/jungletree/five
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletrees.dmi'
+	icon_state = "tree5"
+
+/obj/structure/flora/largetree/jungletree/six
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletrees.dmi'
+	icon_state = "tree6"
+
+/obj/structure/flora/largetree/jungletree
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletrees.dmi'
+	icon_state = "tree"
+
+/obj/structure/flora/largebush/jungle/one
+	name = "jungle bush"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	icon_state = "bush1"
+
+/obj/structure/flora/largebush/jungle/two
+	name = "jungle bush"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	icon_state = "bush2"
+
+/obj/structure/flora/largebush/jungle/three
+	name = "jungle bush"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	icon_state = "bush3"
+
+/obj/structure/flora/largebush/jungle
+	name = "jungle bush"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	icon_state = "bush"
+
+/obj/structure/flora/largerock/jungle/one
+	name = "large jungle rock"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	icon_state = "rocks1"
+
+/obj/structure/flora/largerock/jungle/two
+	name = "large jungle rock"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	icon_state = "rocks2"
+
+/obj/structure/flora/largerock/jungle/three
+	name = "large jungle rock"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	icon_state = "rocks3"
+
+/obj/structure/flora/largerock/jungle
+	name = "large jungle rock"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	icon_state = "rocks"
+
+/obj/structure/flora/rock/jungle/one
+	name = "jungle rock"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "rock1"
+
+/obj/structure/flora/rock/jungle/two
+	name = "jungle rock"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "rock2"
+
+/obj/structure/flora/rock/jungle/three
+	name = "jungle rock"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "rock3"
+
+/obj/structure/flora/rock/jungle/four
+	name = "jungle rock"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "rock4"
+
+/obj/structure/flora/rock/jungle/five
+	name = "jungle rock"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "rock5"
+
+/obj/structure/flora/rock/jungle
+	name = "jungle rock"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "rock"
+
+/obj/structure/flora/bush/jungle/oneA
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "busha1"
+
+/obj/structure/flora/bush/jungle/twoA
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "busha2"
+
+/obj/structure/flora/bush/jungle/threeA
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "busha3"
+
+/obj/structure/flora/bush/jungle/oneB
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "bushb1"
+
+/obj/structure/flora/bush/jungle/twoB
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "bushb2"
+
+/obj/structure/flora/bush/jungle/threeB
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "bushb3"
+
+/obj/structure/flora/bush/jungle/oneC
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "bushc1"
+
+/obj/structure/flora/bush/jungle/twoC
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "bushc2"
+
+/obj/structure/flora/bush/jungle/threeC
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "bushc3"
+
+/obj/structure/flora/grass/jungle/oneA
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassa1"
+
+/obj/structure/flora/grass/jungle/twoA
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassa2"
+
+/obj/structure/flora/grass/jungle/threeA
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassa3"
+
+/obj/structure/flora/grass/jungle/fourA
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassa5"
+
+/obj/structure/flora/grass/jungle/fiveA
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassa5"
+
+/obj/structure/flora/grass/jungle/oneB
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassb1"
+
+/obj/structure/flora/grass/jungle/twoB
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassb2"
+
+/obj/structure/flora/grass/jungle/threeB
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassb3"
+
+/obj/structure/flora/grass/jungle/fourB
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassb5"
+
+/obj/structure/flora/grass/jungle/fiveB
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassb5"
+
+/obj/structure/flora/bush/jungle/busha
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "busha"
+
+/obj/structure/flora/bush/jungle/bushb
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "bushb"
+
+/obj/structure/flora/bush/jungle/bushc
+	name = "jungle bush"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "bushc"
+
+/obj/structure/flora/grass/jungle/grassa
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassa"
+
+/obj/structure/flora/grass/jungle/grassb
+	name = "jungle grass"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassb"
+
+/obj/structure/flora/tree/jungle/tree
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletreesmall.dmi'
+	icon_state = "tree"
+
+
+/obj/structure/flora/tree/jungle/tree/one
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletreesmall.dmi'
+	icon_state = "tree1"
+
+/obj/structure/flora/tree/jungle/tree/two
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletreesmall.dmi'
+	icon_state = "tree2"
+
+/obj/structure/flora/tree/jungle/tree/three
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletreesmall.dmi'
+	icon_state = "tree3"
+
+/obj/structure/flora/tree/jungle/tree/four
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletreesmall.dmi'
+	icon_state = "tree4"
+
+/obj/structure/flora/tree/jungle/tree/five
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletreesmall.dmi'
+	icon_state = "tree5"
+
+/obj/structure/flora/tree/jungle/tree/six
+	name = "jungle tree"
+	icon = 'icons/obj/flora/jungletreesmall.dmi'
+	icon_state = "tree6"
+
+
+
+
+
