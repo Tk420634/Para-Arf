@@ -2,7 +2,7 @@
 	name = "alien"
 	icon_state = "alienh"
 
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/xenomeat = 5, /obj/item/stack/sheet/animalhide/xeno = 1)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/xenomeat = 10, /obj/item/stack/sheet/animalhide/xeno = 1)
 	var/obj/item/weapon/r_store = null
 	var/obj/item/weapon/l_store = null
 	var/caste = ""
@@ -27,6 +27,9 @@
 
 /mob/living/carbon/alien/humanoid/movement_delay()
 	. = ..()
+	if(legcuffed && istype(legcuffed, /obj/item/weapon/restraints/legcuffs))
+		var/obj/item/weapon/restraints/legcuffs/LC = legcuffed
+		. += (LC.slowdown / 2)//legcuffs add 7 slowdown which is like, ultra good.
 	. += move_delay_add + config.alien_delay //move_delay_add is used to slow aliens with stuns
 
 /mob/living/carbon/alien/humanoid/Process_Spacemove(var/check_drift = 0)
@@ -231,6 +234,11 @@
 
 	dat += "<tr><td><B>Exosuit:</B></td><td><A href='?src=[UID()];item=[slot_wear_suit]'>[(wear_suit && !(wear_suit.flags&ABSTRACT)) ? wear_suit : "<font color=grey>Empty</font>"]</A></td></tr>"
 	dat += "<tr><td><B>Pouches:</B></td><td><A href='?src=[UID()];item=pockets'>[((l_store && !(l_store.flags&ABSTRACT)) || (r_store && !(r_store.flags&ABSTRACT))) ? "Full" : "<font color=grey>Empty</font>"]</A>"
+
+	if(handcuffed)
+		dat += "<tr><td><B>Handcuffed:</B> <A href='?src=[UID()];item=[slot_handcuffed]'>Remove</A></td></tr>"
+	if(legcuffed)
+		dat += "<tr><td><A href='?src=[UID()];item=[slot_legcuffed]'>Legcuffed</A></td></tr>"
 
 	dat += {"</table>
 	<A href='?src=[user.UID()];mach_close=mob\ref[src]'>Close</A>

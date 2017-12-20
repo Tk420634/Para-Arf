@@ -195,6 +195,14 @@
 			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] restrained with cable!</span>\n"
 		else
 			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] handcuffed!</span>\n"
+	//leg cuffed?
+	if(legcuffed)
+		if(istype(legcuffed, /obj/item/weapon/restraints/handcuffs/cable/zipties))
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] restrained with zipties!</span>\n"
+		else if(istype(legcuffed, /obj/item/weapon/restraints/handcuffs/cable))
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] restrained with cable!</span>\n"
+		else
+			msg += "<span class='warning'>[t_He] [t_is] [bicon(handcuffed)] restrained with [legcuffed]!</span>\n"
 	//Basic health information.
 	if(stat != DEAD)
 		var/health_percent = round((health/maxHealth)*100)
@@ -231,16 +239,17 @@
 
 
 /mob/living/carbon/alien/say(var/message, var/datum/language/speaking = null, var/verb = "says", var/alt_name = "", var/sanitize = TRUE, var/ignore_speech_problems = FALSE, var/ignore_atmospherics = FALSE)
-	var/ending = copytext(message, length(message))
-	var/voice_sound = "alien_talk"
-	if(ending=="!")
-		voice_sound = "alien_screech"
-	else if(ending=="?")
-		voice_sound = "alien_growl"
-	if(speaking && (speaking.name == "Hivemind"))
-		voice_sound = null
-	if(voice_sound)
-		playsound(loc, voice_sound, 100, 0, 7)
+	if(copytext(message, 1, 2) != "*")//Not an emote
+		var/ending = copytext(message, length(message))
+		var/voice_sound = "alien_talk"
+		if(ending=="!")
+			voice_sound = "alien_screech"
+		else if(ending=="?")
+			voice_sound = "alien_growl"
+		if(speaking && (speaking.name == "Hivemind"))
+			voice_sound = null
+		if(voice_sound)
+			playsound(loc, voice_sound, 100, 0, 7)
 	..()
 
-/mob/living/carbon/alien/humanoid/proc/update_abilities()//
+/mob/living/carbon/alien/humanoid/proc/update_abilities()//I will probably use this soon.

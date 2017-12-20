@@ -121,7 +121,7 @@
 			if(sig && isturf(src.loc))
 				sig.signal()
 
-			if(ishuman(AM))
+			if(ishuman(AM) || isalienadult(AM))
 				var/mob/living/carbon/H = AM
 				if(H.lying)
 					H.apply_damage(trap_damage, BRUTE,"chest")

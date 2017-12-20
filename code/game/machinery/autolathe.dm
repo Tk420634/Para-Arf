@@ -66,6 +66,12 @@
 	component_parts += new /obj/item/weapon/stock_parts/console_screen(null)
 	RefreshParts()
 
+/obj/machinery/autolathe/upgraded/hacked
+	hacked = 1
+
+/obj/machinery/autolathe/hacked
+	hacked = 1
+
 /obj/machinery/autolathe/Destroy()
 	QDEL_NULL(wires)
 	QDEL_NULL(materials)

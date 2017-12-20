@@ -13,6 +13,8 @@
 /obj/screen/alien/nightvision
 	name = "toggle night-vision"
 	icon_state = "nightvision1"
+	screen_loc = ui_pda
+	//screen_loc = ui_alien_nightvision
 
 /obj/screen/alien/nightvision/Click()
 	var/mob/living/carbon/alien/humanoid/A = usr
@@ -79,14 +81,14 @@
 	using = new /obj/screen/swap_hand()
 	using.name = "hand"
 	using.icon = 'icons/mob/screen_alien.dmi'
-	using.icon_state = "hand1"
+	using.icon_state = "swap_1"
 	using.screen_loc = ui_swaphand1
 	static_inventory += using
 
 	using = new /obj/screen/swap_hand()
 	using.name = "hand"
 	using.icon = 'icons/mob/screen_alien.dmi'
-	using.icon_state = "hand2"
+	using.icon_state = "swap_2"
 	using.screen_loc = ui_swaphand2
 	static_inventory += using
 
