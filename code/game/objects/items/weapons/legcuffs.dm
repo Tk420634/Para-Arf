@@ -39,7 +39,7 @@
 
 /obj/item/weapon/restraints/legcuffs/beartrap/attack_self(mob/user)
 	..()
-	if(ishuman(user) && !user.stat && !user.restrained())
+	if(iscarbon(user) && !user.stat && !user.restrained())
 		armed = !armed
 		icon_state = "[initial(icon_state)][armed]"
 		to_chat(user, "<span class='notice'>[src] is now [armed ? "armed" : "disarmed"]</span>")

@@ -91,6 +91,9 @@
 /mob/living/carbon/alien/humanoid/admin/New()
 	..()
 	add_language("Galactic Common")
+	if(!back)//Let them store some items
+		var/obj/item/weapon/storage/backpack/alien_resin/BP = new
+		equip_to_slot_if_possible(BP, slot_back, disable_warning = 1)
 
 /mob/living/carbon/alien/humanoid/admin/lusty
 	caste = "lusty"
@@ -102,7 +105,9 @@
 /mob/living/carbon/alien/humanoid/admin/sally
 	name = "Sally"
 	caste = "lusty"
-
+/mob/living/carbon/alien/humanoid/admin/roxy
+	name = "Roxy"
+	caste = "lusty"
 //END ADMIN ALIENS//
 
 
@@ -151,7 +156,6 @@
 
 /mob/living/carbon/alien/examine(mob/user)
 	..()
-	// crappy hacks because you can't do \his[src] etc. I'm sorry this proc is so unreadable, blame the text macros :<
 	var/t_He = "It" //capitalised for use at the start of each line.
 	var/t_his = "its"
 //Commented for now because they're not in use and warnings aren't fun to look at :(
@@ -251,5 +255,16 @@
 		if(voice_sound)
 			playsound(loc, voice_sound, 100, 0, 7)
 	..()
+
+
+/obj/item/weapon/storage/backpack/alien_resin
+	name = "resin pouch"
+	desc = "It's a strange storage device loosely constructed of slimy, malleable resin."
+	icon_state = "resin_pack"
+	item_state = "resin_pack"
+	icon = 'code/dallus_content/icons/backpacks.dmi'
+	icon_override = 'code/dallus_content/icons/mob/arfs_back.dmi'
+	max_combined_w_class = 30
+	species_fit = list()
 
 /mob/living/carbon/alien/humanoid/proc/update_abilities()//I will probably use this soon.

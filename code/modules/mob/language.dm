@@ -718,8 +718,6 @@
 	desc = "Bark bark bark."
 	key = "vu"
 
-
-
 ///////////////////////////////
 ///A.R.F. Language Additions///
 ///////////////////////////////
@@ -746,10 +744,11 @@
 /datum/language/swedish
 	name = "Swedish"
 	desc = "The common tongue of Sweden."
-	speech_verb = "says"
-	whisper_verb = "whispers"
-	syllables = list("för","med","de","en","är","detta","jag","inte","vi","oss","om","vår","upp","han","hans","så","när","som","är","från","och","på","ha","först","dess","kaffe","över","topp","var","skulle","är","namn","son","und", "sala")
+	//syllables = list("för","med","de","en","är","detta","jag","inte","vi","oss","om","vår","upp","han","hans","så","när","som","är","från","och","på","ha","först","dess","kaffe","över","topp","var","skulle","är","namn","son","und","sala")
+	syllables = list("for","med","de","en","ar","detta","jag","inte","vi","oss","om","var","upp","han","hans","sa","nar","som","ar","fran","och","pa","ha","först","dess","kaffe","over","topp","var","skulle","ar","namn","son","und","sala")
+	syllables = list("med","de","en","ar","detta","jag","vi","om","var","upp","han","hans","sa","som","ar","pa","ha","först","dess","kaffe","over","topp","var","ar","namn","son","und","sala")
 	key = "sv"
 	english_names = 1
+	colour = "solcom"
 
 #undef SCRAMBLE_CACHE_LEN
