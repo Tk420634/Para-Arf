@@ -33,7 +33,7 @@
 			if(prob(2))
 				to_chat(owner, "<span class='danger'>Your throat feels sore.</span>")
 			if(prob(2))
-				to_chat(owner, "<span class='danger'>Mucous runs down the back of your throat.</span>")
+				to_chat(owner, "<span class='danger'>Mucus runs down the back of your throat.</span>")
 		if(4)
 			if(prob(2))
 				owner.emote("sneeze")
