@@ -39,11 +39,14 @@
 		alien_organs += new O
 	for(var/obj/item/organ/internal/I in alien_organs)
 		I.insert(src)
+	/*
 	if(locate(/mob/living/carbon/alien/humanoid/verb/plant) in verbs)//I don't know why but every alien has the plant verb and I cannot for the life of me find where they're getting it.
 		var/obj/item/organ/internal/xenos/plasmavessel/PV = get_organ_slot("plasmavessel")
 		if(!locate(/mob/living/carbon/alien/humanoid/verb/plant) in PV.alien_powers)
 			verbs -= /mob/living/carbon/alien/humanoid/verb/plant
-	updatePlasmaDisplay()
+	*/
+	spawn(10)
+		updatePlasmaDisplay()
 	..()
 
 /mob/living/carbon/alien/get_default_language()
@@ -52,6 +55,7 @@
 	return all_languages["Xenomorph"]
 
 /mob/living/carbon/alien/say_quote(var/message, var/datum/language/speaking = null)
+	OnSay(message, speaking)
 	var/verb = "hisses"
 	var/ending = copytext(message, length(message))
 	if(ending=="!")

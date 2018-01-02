@@ -743,10 +743,16 @@
 
 /datum/language/swedish
 	name = "Swedish"
-	desc = "The common tongue of Sweden."
-	//syllables = list("för","med","de","en","är","detta","jag","inte","vi","oss","om","vår","upp","han","hans","så","när","som","är","från","och","på","ha","först","dess","kaffe","över","topp","var","skulle","är","namn","son","und","sala")
-	syllables = list("for","med","de","en","ar","detta","jag","inte","vi","oss","om","var","upp","han","hans","sa","nar","som","ar","fran","och","pa","ha","först","dess","kaffe","over","topp","var","skulle","ar","namn","son","und","sala")
-	syllables = list("med","de","en","ar","detta","jag","vi","om","var","upp","han","hans","sa","som","ar","pa","ha","först","dess","kaffe","over","topp","var","ar","namn","son","und","sala")
+	desc = "The common tongue of Sweden and its outer space territories. A mixed germanic language of primarily old Swedish, Finnish, Icelandic, and Danish; One of the few largely spoken languages from Earth."
+	syllables = list("fÃ¶r","med","de","ja",
+		"en","Ã¤r","detta","jag","inte","vi",
+		"oss","om","vÃ¥r","upp","han","hans",
+		"sÃ¥","nÃ¤r","som","Ã¤r","frÃ¥n","och",
+		"pÃ¥","ha","fÃ¶rst","dess","kaffe",
+		"Ã¶ver","topp","var","skulle","Ã¤r",
+		"namn","son","und","sala", "fika",
+		"gar","ten","ande","li", "kva","ska",
+		"dig","okt","luft","andra","varm")//UTF characters are fun to read. :happy: :gun:
 	key = "sv"
 	english_names = 1
 	colour = "solcom"

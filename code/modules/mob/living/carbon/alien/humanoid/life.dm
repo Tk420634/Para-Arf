@@ -8,9 +8,6 @@
 /mob/living/carbon/alien/humanoid/Life()
 	. = ..()
 	update_icons()
-	update_abilities()
-
-
 
 /mob/living/carbon/alien/humanoid/handle_disabilities()
 	if(disabilities & EPILEPSY)

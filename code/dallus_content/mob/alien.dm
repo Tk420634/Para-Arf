@@ -16,11 +16,14 @@
 	var/can_leap = FALSE
 
 /mob/living/carbon/alien/humanoid/hunter
-	strength = 2
+	strength = 3
 	can_leap = TRUE
 
+/mob/living/carbon/alien/humanoid/sentinel
+	strength = 2
+
 /mob/living/carbon/alien/humanoid/queen
-	strength = 3
+	strength = 4
 
 
 //Movement related stuff.
@@ -82,6 +85,7 @@
 	icon_state = "alienh"
 	can_leap = TRUE
 	has_fine_manipulation = TRUE
+	strength = 2
 	default_alien_organs = list(/obj/item/organ/internal/brain/xeno,
 	 					/obj/item/organ/internal/xenos/hivenode,
 	 					/obj/item/organ/internal/xenos/plasmavessel/drone,
@@ -91,14 +95,20 @@
 /mob/living/carbon/alien/humanoid/admin/New()
 	..()
 	add_language("Galactic Common")
+	voice_name = name //Cheap hack for now. I may figure out what causes the voice_name thing even when they're speaking a normal language but who knows.
 	if(!back)//Let them store some items
 		var/obj/item/weapon/storage/backpack/alien_resin/BP = new
 		equip_to_slot_if_possible(BP, slot_back, disable_warning = 1)
+
+/mob/living/carbon/alien/humanoid/admin/Life()
+	..()
+	voice_name = name
 
 /mob/living/carbon/alien/humanoid/admin/lusty
 	caste = "lusty"
 /mob/living/carbon/alien/humanoid/admin/roly
 	name = "Roly"
+	caste = "pred"
 /mob/living/carbon/alien/humanoid/admin/molly
 	name = "Molly"
 	caste = "lusty"
@@ -241,20 +251,20 @@
 
 	update_flavor_text()
 
+/mob/living/proc/OnSay(var/msg, var/datum/language/lang)
 
-/mob/living/carbon/alien/say(var/message, var/datum/language/speaking = null, var/verb = "says", var/alt_name = "", var/sanitize = TRUE, var/ignore_speech_problems = FALSE, var/ignore_atmospherics = FALSE)
-	if(copytext(message, 1, 2) != "*")//Not an emote
-		var/ending = copytext(message, length(message))
+/mob/living/carbon/alien/OnSay(var/msg, var/datum/language/lang)
+	to_chat(src, "OnSay() called")
+	if((istext(msg)) && (copytext(msg, 1, 2) != "*") && (lang && !(lang.flags & HIVEMIND) && !(lang.flags & NONVERBAL) ))//Not an emote and not a telepathic/nonverbal language
+		to_chat(src, "First check passed")
+		var/ending = copytext(msg, length(msg))
 		var/voice_sound = "alien_talk"
-		if(ending=="!")
-			voice_sound = "alien_screech"
-		else if(ending=="?")
-			voice_sound = "alien_growl"
-		if(speaking && (speaking.name == "Hivemind"))
-			voice_sound = null
-		if(voice_sound)
-			playsound(loc, voice_sound, 100, 0, 7)
-	..()
+		switch(ending)
+			if("!")
+				voice_sound = "alien_screech"
+			if("?")
+				voice_sound = "alien_growl"
+		playsound(get_turf(src), voice_sound, 100, 0, 4)
 
 
 /obj/item/weapon/storage/backpack/alien_resin
@@ -266,5 +276,3 @@
 	icon_override = 'code/dallus_content/icons/mob/arfs_back.dmi'
 	max_combined_w_class = 30
 	species_fit = list()
-
-/mob/living/carbon/alien/humanoid/proc/update_abilities()//I will probably use this soon.
