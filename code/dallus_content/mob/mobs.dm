@@ -185,14 +185,20 @@
 	set category = "IC"
 
 	resting = !resting
-	src << "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>"
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
 	update_canmove()
 
-///mob/living/simple_animal/pokemon/proc/update_icon()
-//	if(lying || resting || sleeping)
-//		icon_state = "[icon_state]_rest"
-//	else
-//		icon_state = "[icon_living]"
+/mob/living/simple_animal/pokemon/proc/update_icon()
+	if(stat == DEAD)
+		if(icon_dead)
+			icon_state = icon_dead
+		else
+			icon_state = "[initial(icon_state)]_d"
+	else if(lying || resting || sleeping)
+		icon_state = "[icon_state]_rest"
+	else
+		icon_state = "[icon_living]"
+	pixel_x = initial(pixel_x)
 
 /mob/living/simple_animal/pokemon/New()
 	..()
@@ -324,39 +330,65 @@
 
 /mob/living/simple_animal/pokemon/eevee/jolteon
 	name = "jolteon"
-	desc = "Its cells generate weak power that is amplified by its fur's static electricity to drop thunderbolts. The bristling fur is made of electrically charged needles."
+	desc = "Its cells generate weak electrical power that is amplified by its fur's static electricity to drop thunderbolts. \
+			Its bristling fur is made of electrically charged needles which shock anything that touch it!"
 	icon_state = "jolteon"
 	icon_living = "jolteon"
 	icon_dead = "jolteon_d"
 	speak = list("Jolt!", "Jolteon!")
-//	var/charge_cooldown_time = 50
-//	var/charge_cooldown = 0
-/*
+	var/charge_cooldown_time = 30 //in deciseconds
+	var/charge_cooldown = FALSE
+	var/charge_to_give_max = 250
+	var/charge_to_give_min = 50
+
 /mob/living/simple_animal/pokemon/eevee/jolteon/attack_hand(mob/user)
 	..()
-	if(!stat)
-		electrocute_mob(user, get_area(src), src, 1)
+	if(!charge_cooldown && !stat && isliving(user))
+		ShockMob(user, 100, 25)
+
+/mob/living/simple_animal/pokemon/eevee/jolteon/attack_alien(mob/user)
+	..()
+	if(!charge_cooldown && !stat && isliving(user))
+		ShockMob(user, 100, 25)
 
 /mob/living/simple_animal/pokemon/eevee/jolteon/attackby(obj/item/weapon/W, mob/user, params)
-	electrocute_mob(user, get_area(src), src, W.siemens_coefficient)
-	if(!stat && istype(W, /obj/item/weapon/stock_parts/cell))
+	if(!charge_cooldown && !stat && isliving(user))
+		ShockMob(user, 100, 25)
+	if(istype(W, /obj/item/weapon/stock_parts/cell))
+		user.changeNext_move(CLICK_CD_MELEE)
+		if(stat == DEAD )
+			to_chat(user, "<span class='warning'>[src] is dead!</span>")
+			return
 		var/obj/item/weapon/stock_parts/cell/C = W
 		if(charge_cooldown)
-			user << "<span class='red'>[src] is recharging!</span>"
+			to_chat(user, "<span class='red'>[src] is recharging!</span>")
 			return
-		if(C.charge == C.maxcharge)
-			user << "<span class='red'>[C] is already fully charged!</span>"
+		if(C.charge >= C.maxcharge)
+			to_chat(user, "<span class='red'>[C] is already fully charged!</span>")
 			return
-		electrocute_mob(user, get_area(src), src, W.siemens_coefficient)
-		user << "<span class='green'>You charge [C] using [src].</span>"
-		C.give(100)
+		user.visible_message(
+			"<span class='notice'>[user] charges [C] using [src]'s static charge!</span>",
+			"<span class='green'>You charge [C] using [src]'s static charge!</span>")
+		C.give(rand(charge_to_give_min, charge_to_give_max))
 		C.updateicon()
-		charge_cooldown = 1
+		charge_cooldown = TRUE
 		spawn(charge_cooldown_time)
-			charge_cooldown = 0
-		return
+			charge_cooldown = FALSE
+		return //So we don't attack it with the power cell
 	..()
-*/
+
+/mob/living/simple_animal/pokemon/eevee/jolteon/proc/ShockMob(mob/living/user, prb, dam)
+	if(!prob(prb))
+		return 0
+	if((TK in user.mutations) && !Adjacent(user))
+		return 0
+	var/datum/effect/system/spark_spread/s = new /datum/effect/system/spark_spread
+	s.set_up(5, 1, src)
+	s.start()
+	if(dam > 0)
+		user.electrocute_act(dam, src, 0.7)
+	return 1
+
 /mob/living/simple_animal/pokemon/larvitar
 	name = "larvitar"
 	desc = "It is born deep underground. It can't emerge until it has entirely consumed the soil around it."
