@@ -7,18 +7,18 @@
 	if(I == r_store)
 		r_store = null
 		update_inv_pockets()
-
 	else if(I == l_store)
 		l_store = null
 		update_inv_pockets()
+	else if(I == back)
+		back = null
+		update_inv_back()
 
 /mob/living/carbon/alien/humanoid/attack_ui(slot_id)
 	var/obj/item/W = get_active_hand()
 	if(W)
 		if(!istype(W))	return
 		switch(slot_id)
-//			if("o_clothing")
-//			if("head")
 			if(slot_l_store)
 				if(l_store)
 					return
@@ -35,6 +35,9 @@
 				unEquip(W)
 				r_store = W
 				update_inv_pockets()
+			if(slot_back)
+				back = W
+				update_inv_back()
 	else
 		switch(slot_id)
 			if(slot_wear_suit)
@@ -45,3 +48,5 @@
 				if(l_store)		l_store.attack_alien(src)
 			if(slot_r_store)
 				if(r_store)		r_store.attack_alien(src)
+			if(slot_back)
+				if(back)		back.attack_alien(src)

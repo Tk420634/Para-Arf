@@ -141,6 +141,9 @@ var/global/list/datum/stack_recipe/plasteel_recipes = list(
 	origin_tech = "materials=2"
 	merge_type = /obj/item/stack/sheet/plasteel
 
+/obj/item/stack/sheet/plasteel/fifty
+	amount = 50
+
 /obj/item/stack/sheet/plasteel/New(var/loc, var/amount=null)
 	recipes = plasteel_recipes
 	return ..()

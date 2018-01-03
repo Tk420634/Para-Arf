@@ -67,7 +67,7 @@
 	name = "resin membrane"
 	desc = "Resin just thin enough to let light pass through."
 	icon = 'icons/obj/smooth_structures/alien/resin_membrane.dmi'
-	icon_state = "membrane0"
+	icon_state = "membrane"
 	opacity = 0
 	health = 50
 	resintype = "membrane"

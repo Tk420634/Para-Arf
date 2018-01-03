@@ -13,6 +13,8 @@
 /obj/screen/alien/nightvision
 	name = "toggle night-vision"
 	icon_state = "nightvision1"
+	screen_loc = ui_pda
+	//screen_loc = ui_alien_nightvision
 
 /obj/screen/alien/nightvision/Click()
 	var/mob/living/carbon/alien/humanoid/A = usr
@@ -79,16 +81,25 @@
 	using = new /obj/screen/swap_hand()
 	using.name = "hand"
 	using.icon = 'icons/mob/screen_alien.dmi'
-	using.icon_state = "hand1"
+	using.icon_state = "swap_1"
 	using.screen_loc = ui_swaphand1
 	static_inventory += using
 
 	using = new /obj/screen/swap_hand()
 	using.name = "hand"
 	using.icon = 'icons/mob/screen_alien.dmi'
-	using.icon_state = "hand2"
+	using.icon_state = "swap_2"
 	using.screen_loc = ui_swaphand2
 	static_inventory += using
+
+	if(isalienadmin(owner))
+		inv_box = new /obj/screen/inventory()
+		inv_box.name = "back"
+		inv_box.icon = 'icons/mob/screen_alien.dmi'
+		inv_box.icon_state = "back"
+		inv_box.screen_loc = ui_back
+		inv_box.slot_id = slot_back
+		static_inventory += inv_box
 
 //end of equippable shit
 
@@ -147,8 +158,13 @@
 		if(H.l_hand)
 			H.l_hand.screen_loc = ui_lhand
 			H.client.screen += H.l_hand
+		if(H.back)
+			H.back.screen_loc = ui_back
+			H.client.screen += H.back
 	else
 		if(H.r_hand)
 			H.r_hand.screen_loc = null
 		if(H.l_hand)
 			H.l_hand.screen_loc = null
+		if(H.back)
+			H.back.screen_loc = null

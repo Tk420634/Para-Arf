@@ -252,6 +252,7 @@ Pipelines + Other Objects -> Pipe network
 			user.remove_ventcrawl()
 			user.forceMove(target_move.loc) //handles entering and so on
 			user.visible_message("You hear something squeezing through the ducts.", "You climb out the ventilation system.")
+			user.sight = initial(user.sight)
 		else if(target_move.can_crawl_through())
 			if(returnPipenet() != target_move.returnPipenet())
 				user.update_pipe_vision(target_move)
@@ -265,6 +266,7 @@ Pipelines + Other Objects -> Pipe network
 			user.remove_ventcrawl()
 			user.forceMove(src.loc)
 			user.visible_message("You hear something squeezing through the pipes.", "You climb out the ventilation system.")
+			user.sight = initial(user.sight)
 	user.canmove = 0
 	spawn(1)
 		user.canmove = 1

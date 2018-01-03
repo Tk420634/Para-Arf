@@ -5,6 +5,32 @@
 	var/panel = "Debug"//What panel the proc holder needs to go on.
 	var/active = FALSE //Used by toggle based abilities.
 	var/ranged_mousepointer
+	var/mob/living/ranged_ability_user
+	var/ranged_clickcd_override = -1
+	var/has_action = TRUE
+	var/datum/action/spell_action/action = null
+	var/action_icon = 'icons/mob/actions/actions_spells.dmi'
+	var/action_icon_state = "spell_default"
+	var/action_background_icon_state = "bg_spell"
+
+/obj/effect/proc_holder/New()
+	. = ..()
+	if(has_action)
+		action = new(src)
+
+/obj/effect/proc_holder/proc/on_gain(mob/living/user)
+	return
+
+/obj/effect/proc_holder/proc/on_lose(mob/living/user)
+	return
+
+/obj/effect/proc_holder/proc/fire(mob/living/user)
+	return TRUE
+
+/obj/effect/proc_holder/proc/get_panel_text()
+	return ""
+
+
 
 var/list/spells = typesof(/obj/effect/proc_holder/spell) //needed for the badmin verb for now
 
@@ -27,6 +53,7 @@ var/list/spells = typesof(/obj/effect/proc_holder/spell) //needed for the badmin
 	user.client.click_intercept = user.ranged_ability
 	add_mousepointer(user.client)
 	active = TRUE
+	ranged_ability_user = user
 	if(msg)
 		to_chat(user, msg)
 	update_icon()
@@ -96,10 +123,10 @@ var/list/spells = typesof(/obj/effect/proc_holder/spell) //needed for the badmin
 	var/critfailchance = 0
 	var/centcom_cancast = 1 //Whether or not the spell should be allowed on z2
 
-	var/datum/action/spell_action/action = null
-	var/action_icon = 'icons/mob/actions.dmi'
-	var/action_icon_state = "spell_default"
-	var/action_background_icon_state = "bg_spell"
+	datum/action/spell_action/action = null
+	action_icon = 'icons/mob/actions.dmi'
+	action_icon_state = "spell_default"
+	action_background_icon_state = "bg_spell"
 
 	var/sound = null //The sound the spell makes when it is cast
 

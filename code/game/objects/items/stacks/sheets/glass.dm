@@ -161,6 +161,9 @@
 /obj/item/stack/sheet/rglass/cyborg
 	materials = list()
 
+/obj/item/stack/sheet/rglass/fifty
+	amount = 50
+
 /obj/item/stack/sheet/rglass/attack_self(mob/user as mob)
 	construct_window(user)
 

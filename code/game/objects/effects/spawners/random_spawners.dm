@@ -108,3 +108,24 @@
 	result = list(
 	/turf/simulated/wall = 1,
 	/obj/effect/decal/cleanable/fungus = 7)
+
+/obj/effect/spawner/random_spawners/egg_probably
+	name = "egg often"
+	result = list(
+	/obj/effect/decal/remains/xeno = 1,
+	/obj/structure/alien/weeds/node = 1,
+	/obj/structure/alien/egg = 8)
+
+/obj/effect/spawner/random_spawners/egg_maybe
+	name = "egg maybe"
+	result = list(
+	/obj/effect/decal/remains/xeno = 5,
+	/obj/structure/alien/weeds/node = 1,
+	/obj/structure/alien/egg = 4)
+
+/obj/effect/spawner/random_spawners/egg_rare
+	name = "egg rare"
+	result = list(
+	/obj/effect/decal/remains/xeno = 8,
+	/obj/structure/alien/weeds/node = 1,
+	/obj/structure/alien/egg = 1)

@@ -295,28 +295,31 @@
 ////FIELD GEN START //shameless copypasta from fieldgen, powersink, and grille
 #define maxstoredpower 500
 /obj/machinery/shieldwallgen
-		name = "Shield Generator"
-		desc = "A shield generator."
-		icon = 'icons/obj/stationobjs.dmi'
-		icon_state = "Shield_Gen"
-		anchored = 0
-		density = 1
-		req_access = list(access_teleporter)
-		var/active = 0
-		var/power = 0
-		var/state = 0
-		var/steps = 0
-		var/last_check = 0
-		var/check_delay = 10
-		var/recalc = 0
-		var/locked = 1
-		var/destroyed = 0
-		var/directwired = 1
-//		var/maxshieldload = 200
-		var/obj/structure/cable/attached		// the attached cable
-		var/storedpower = 0
-		flags = CONDUCT
-		use_power = 0
+	name = "shield generator"
+	desc = "A shield generator."
+	icon = 'icons/obj/stationobjs.dmi'
+	icon_state = "Shield_Gen"
+	anchored = 0
+	density = 1
+	var/active = 0
+	var/power = 0
+	var/state = 0
+	var/steps = 0
+	var/last_check = 0
+	var/check_delay = 10
+	var/recalc = 0
+	var/locked = 1
+	var/destroyed = 0
+	var/directwired = 1
+//	var/maxshieldload = 200
+	var/obj/structure/cable/attached		// the attached cable
+	var/storedpower = 0
+	flags = CONDUCT
+	use_power = 0
+	req_access = list(access_teleporter)
+
+/obj/machinery/shieldwallgen/xenobio
+	req_access = list(access_xenobiology)
 
 /obj/machinery/shieldwallgen/proc/power()
 	if(!anchored)

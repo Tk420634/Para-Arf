@@ -439,10 +439,15 @@
 /datum/action/spell_action/IsAvailable()
 	if(!target)
 		return 0
-	var/obj/effect/proc_holder/spell/spell = target
-
-	if(owner)
-		return spell.can_cast(owner)
+	if(istype(target, /obj/effect/proc_holder/alien))
+		var/obj/effect/proc_holder/alien/ab = target
+		if(owner)
+			//return ab.AlienCostCheck(ab.cost, 0, 0)
+			return ab.cost_check(ab.check_turf, owner, 1)
+	else
+		var/obj/effect/proc_holder/spell/spell = target
+		if(owner)
+			return spell.can_cast(owner)
 	return 0
 
 /*
@@ -454,6 +459,7 @@
 	var/obj/effect/proc_holder/alien/ab = target
 
 	if(owner)
+//		return ab.AlienCostCheck(ab.cost, 0, 0)
 		return ab.cost_check(ab.check_turf, owner, 1)
 	return 0
 */

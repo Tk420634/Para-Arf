@@ -775,7 +775,6 @@
 /mob/living/carbon/human/handle_regular_status_updates()
 	if(status_flags & GODMODE)
 		return 0
-
 	. = ..()
 
 	if(.) //alive

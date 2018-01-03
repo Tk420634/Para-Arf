@@ -127,6 +127,7 @@
 #define isbrain(A)		(istype((A), /mob/living/carbon/brain))
 #define isalien(A)		(istype((A), /mob/living/carbon/alien))
 #define isalienadult(A)	(istype((A), /mob/living/carbon/alien/humanoid))
+#define isalienadmin(A)	(istype((A), /mob/living/carbon/alien/humanoid/admin))
 #define islarva(A)		(istype((A), /mob/living/carbon/alien/larva))
 #define isslime(A)		(istype((A), /mob/living/carbon/slime))
 

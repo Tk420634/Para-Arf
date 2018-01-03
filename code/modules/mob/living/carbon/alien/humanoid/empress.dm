@@ -47,7 +47,7 @@
 	alien_organs += new /obj/item/organ/internal/xenos/resinspinner
 	alien_organs += new /obj/item/organ/internal/xenos/neurotoxin
 	..()
-
+/*
 /mob/living/carbon/alien/humanoid/empress/verb/lay_egg()
 	set name = "Lay Egg (250)"
 	set desc = "Lay an egg to produce huggers to impregnate prey with."
@@ -63,3 +63,4 @@
 			O.show_message(text("<span class=notice'><B>[src] has laid an egg!</B></span>"), 1)
 		new /obj/structure/alien/egg(loc)
 	return
+*/

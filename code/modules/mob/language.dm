@@ -718,8 +718,6 @@
 	desc = "Bark bark bark."
 	key = "vu"
 
-
-
 ///////////////////////////////
 ///A.R.F. Language Additions///
 ///////////////////////////////
@@ -742,5 +740,21 @@
 	desc = "A body language that is generally used by canines. If you have this without a tail and ears, you're a gigantic nerd."
 	signlang_verb = list("wags their tail", "twitches an ear", "barks softly", "barks loudly", "sticks their tail out", "pants", "growls")
 	flags = SIGNLANG|NO_STUTTER|NONVERBAL
+
+/datum/language/swedish
+	name = "Swedish"
+	desc = "The common tongue of Sweden and its outer space territories. A mixed germanic language of primarily old Swedish, Finnish, Icelandic, and Danish; One of the few largely spoken languages from Earth."
+	syllables = list("för","med","de","ja",
+		"en","är","detta","jag","inte","vi",
+		"oss","om","vår","upp","han","hans",
+		"så","när","som","är","från","och",
+		"på","ha","först","dess","kaffe",
+		"över","topp","var","skulle","är",
+		"namn","son","und","sala", "fika",
+		"gar","ten","ande","li", "kva","ska",
+		"dig","okt","luft","andra","varm")//UTF characters are fun to read. :happy: :gun:
+	key = "sv"
+	english_names = 1
+	colour = "solcom"
 
 #undef SCRAMBLE_CACHE_LEN
