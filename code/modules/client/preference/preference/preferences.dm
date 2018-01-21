@@ -2198,8 +2198,8 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	if(disabilities & DISABILITY_FLAG_DIZZY)
 		character.dna.SetSEState(DIZZYBLOCK,1,1)
 
-	if(disabilities & DISABILITY_FLAG_SCRAMBLED)
-		character.dna.SetSEState(SCRAMBLEBLOCK,1,1)
+	if(disabilities & DISABILITY_FLAG_CHAV)
+		character.dna.SetSEState(CHAVBLOCK,1,1)
 
 	S.handle_dna(character)
 
