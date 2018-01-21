@@ -36,8 +36,8 @@
 	if(stat == DEAD)
 		grant_death_vision()
 		return
-
-	sight = SEE_MOBS
+//	Balance test, commenting this out for now. They still retain night vision; but don't have thermals anymore.
+//	sight = SEE_MOBS
 	if(nightvision)
 		see_in_dark = 8
 		see_invisible = SEE_INVISIBLE_MINIMUM

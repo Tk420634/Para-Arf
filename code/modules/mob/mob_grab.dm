@@ -390,7 +390,7 @@
 						return*///This is an example of something being done with an agressive grab + disarm intent.
 					return
 
-
+	/*
 	if(M == assailant && state >= GRAB_AGGRESSIVE) //no eatin unless you have an agressive grab
 		if(checkvalid(user, affecting)) //wut
 			var/mob/living/carbon/attacker = user
@@ -407,7 +407,7 @@
 			affecting.loc = user
 			attacker.stomach_contents.Add(affecting)
 			qdel(src)
-
+	*/
 /obj/item/weapon/grab/proc/checkvalid(var/mob/attacker, var/mob/prey) //does all the checking for the attack proc to see if a mob can eat another with the grab
 	if(ishuman(attacker) && (/datum/dna/gene/basic/grant_spell/mattereater in attacker.active_genes)) // MATTER EATER CARES NOT OF YOUR FORM
 		return 1

@@ -38,9 +38,39 @@
 		else
 			buckled_mob.visible_message(\
 				"<span class='warning'>[buckled_mob.name] struggles to break free of the gelatinous resin...</span>",\
-				"<span class='warning'>You struggle to break free from the gelatinous resin... (This will take around 2 minutes and you need to stay still)</span>",\
+				"<span class='warning'>You struggle to break free from the gelatinous resin... (This will take 2 minutes and you need to stay still)</span>",\
 				"<span class='notice'>You hear squelching...</span>")
-			if(!do_after(M, 1200, target = src))
+			if(!do_after(M, 300, target = src))
+				if(M && M.buckled)
+					to_chat(M, "<span class='warning'>You fail to escape \the [src]!</span>")
+				return
+			playsound(loc, "alien_resin_hit", 100, -4)
+			buckled_mob.visible_message(\
+				"<span class='warning'>[buckled_mob.name] breaks through some of their resin bindings!</span>",\
+				"<span class='warning'>You manage to break some of your resin bindings... (This will take 1.5 more minutes)</span>",\
+				"<span class='notice'>You hear squelching and breaking...</span>")
+
+			if(!do_after(M, 300, target = src))
+				if(M && M.buckled)
+					to_chat(M, "<span class='warning'>You fail to escape \the [src]!</span>")
+				return
+			playsound(loc, "alien_resin_hit", 100, -4)
+			buckled_mob.visible_message(\
+				"<span class='warning'>[buckled_mob.name] breaks through some of their resin bindings!</span>",\
+				"<span class='warning'>You manage to break some of your resin bindings... (This will take 1 more minute)</span>",\
+				"<span class='notice'>You hear squelching and breaking...</span>")
+
+			if(!do_after(M, 300, target = src))
+				if(M && M.buckled)
+					to_chat(M, "<span class='warning'>You fail to escape \the [src]!</span>")
+				return
+			playsound(loc, "alien_resin_hit", 100, -4)
+			buckled_mob.visible_message(\
+				"<span class='warning'>[buckled_mob.name] breaks through some of their resin bindings!</span>",\
+				"<span class='warning'>You manage to break some of your resin bindings... (This will take 30 more seconds)</span>",\
+				"<span class='notice'>You hear squelching and breaking...</span>")
+
+			if(!do_after(M, 300, target = src))
 				if(M && M.buckled)
 					to_chat(M, "<span class='warning'>You fail to escape \the [src]!</span>")
 				return
@@ -49,7 +79,7 @@
 			M.visible_message(\
 			"<span class='warning'>[M.name] breaks free from the gelatinous resin!</span>",\
 			"<span class='notice'>You break free from the gelatinous resin!</span>",\
-			"<span class='italics'>You hear squelching...</span>")
+			"<span class='italics'>You hear squelching and breaking...</span>")
 		unbuckle_mob()
 		playsound(loc, "alien_resin_hit", 100, 5)
 		add_fingerprint(user)

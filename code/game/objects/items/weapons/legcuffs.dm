@@ -39,7 +39,7 @@
 
 /obj/item/weapon/restraints/legcuffs/beartrap/attack_self(mob/user)
 	..()
-	if(ishuman(user) && !user.stat && !user.restrained())
+	if(iscarbon(user) && !user.stat && !user.restrained())
 		armed = !armed
 		icon_state = "[initial(icon_state)][armed]"
 		to_chat(user, "<span class='notice'>[src] is now [armed ? "armed" : "disarmed"]</span>")
@@ -121,7 +121,7 @@
 			if(sig && isturf(src.loc))
 				sig.signal()
 
-			if(ishuman(AM))
+			if(ishuman(AM) || isalienadult(AM))
 				var/mob/living/carbon/H = AM
 				if(H.lying)
 					H.apply_damage(trap_damage, BRUTE,"chest")

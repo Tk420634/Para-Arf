@@ -25,6 +25,8 @@
 			pullin.update_icon(src)
 		if(ismob(AM))
 			var/mob/M = AM
+			if(zone_sel.selecting == "l_hand" || zone_sel.selecting == "r_hand")
+				visible_message("<span class='green'>[src] has taken [M] by their hand!</span>")
 			if(!iscarbon(src))
 				M.LAssailant = null
 			else

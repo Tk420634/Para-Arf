@@ -51,6 +51,16 @@
 	build_path = /obj/item/weapon/storage/bag/ore/holding
 	category = list("Bluespace")
 
+/datum/design/plantbag_holding
+	name = "Plant Bag of Holding"
+	desc = "A plant bag that can hold an infinite amount of plants."
+	id = "minerbag_holding"
+	req_tech = list("bluespace" = 4, "materials" = 3, "engineering" = 4)
+	build_type = PROTOLATHE
+	materials = list(MAT_GOLD = 250, MAT_URANIUM = 500) //quite cheap, for more convenience
+	build_path = /obj/item/weapon/storage/bag/ore/holding
+	category = list("Bluespace")
+
 /datum/design/telepad_beacon
 	name = "Telepad Beacon"
 	desc = "Use to warp in a cargo telepad."

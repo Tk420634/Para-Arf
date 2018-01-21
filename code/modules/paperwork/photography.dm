@@ -558,10 +558,10 @@ var/list/SpookyGhosts = list("ghost","shade","shade2","ghost-narsie","horror","s
 
 
 /obj/item/device/videocam/see_message(mob/M as mob, text)
-	if(camera && on && text)
+	if(camera && on)
 		for(var/obj/machinery/computer/security/telescreen/T in machines)
 			if(T.watchers[M] == camera)
-				T.visible_message(message = "<span class='game radio'><span class='name'>([T])</span> [text]")
+				T.visible_message("<span class='game radio'><span class='name'>([T])</span> [text]", null, 2)
 
 
 ///hauntings, like hallucinations but more spooky

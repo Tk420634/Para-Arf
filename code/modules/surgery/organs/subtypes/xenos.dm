@@ -4,7 +4,7 @@
 	var/list/alien_powers = list()
 	tough = TRUE
 	sterile = TRUE
-
+/*
 ///can be changed if xenos get an update..
 /obj/item/organ/internal/xenos/insert(mob/living/carbon/M, special = 0)
 	..()
@@ -20,17 +20,38 @@
 	var/obj/S = ..()
 	S.reagents.add_reagent("sacid", 10)
 	return S
+*/
+
+/obj/item/organ/internal/xenos/New()
+	. = ..()
+	for(var/A in alien_powers)
+		if(ispath(A))
+			alien_powers -= A
+			alien_powers += new A(src)
+
+/obj/item/organ/internal/xenos/insert(mob/living/carbon/M, special = 0)
+	..()
+	for(var/obj/effect/proc_holder/alien/P in alien_powers)
+		M.AddAbility(P)
+
+
+/obj/item/organ/internal/xenos/remove(mob/living/carbon/M, special = 0)
+	for(var/obj/effect/proc_holder/alien/P in alien_powers)
+		M.RemoveAbility(P)
+	..()
+
+
 
 //XENOMORPH ORGANS
 
 /obj/item/organ/internal/xenos/plasmavessel
-	name = "xeno plasma vessel"
+	name = "plasma vessel"
 	icon_state = "plasma"
 	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = "biotech=5;plasmatech=4"
 	parent_organ = "chest"
 	slot = "plasmavessel"
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	alien_powers = list(/obj/effect/proc_holder/alien/transfer)
 
 
 	var/stored_plasma = 0
@@ -45,40 +66,40 @@
 	return S
 
 /obj/item/organ/internal/xenos/plasmavessel/queen
-	name = "bloated xeno plasma vessel"
+	name = "bloated plasma vessel"
 	icon_state = "plasma_large"
 	origin_tech = "biotech=6;plasmatech=4"
 	stored_plasma = 200
 	max_plasma = 500
 	plasma_rate = 25
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/plant, /mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	alien_powers = list(/obj/effect/proc_holder/alien/plant, /obj/effect/proc_holder/alien/transfer)
 	emergency_generation = TRUE
 
 /obj/item/organ/internal/xenos/plasmavessel/drone
-	name = "large xeno plasma vessel"
+	name = "large plasma vessel"
 	icon_state = "plasma_large"
 	stored_plasma = 200
 	max_plasma = 500
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/plant, /mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	alien_powers = list(/obj/effect/proc_holder/alien/plant, /obj/effect/proc_holder/alien/transfer)
 	emergency_generation = TRUE
 
 /obj/item/organ/internal/xenos/plasmavessel/sentinel
 	stored_plasma = 100
 	max_plasma = 250
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	alien_powers = list(/obj/effect/proc_holder/alien/transfer)
 
 /obj/item/organ/internal/xenos/plasmavessel/hunter
-	name = "small xeno plasma vessel"
+	name = "small plasma vessel"
 	icon_state = "plasma_tiny"
 	stored_plasma = 50
 	max_plasma = 100
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	alien_powers = list(/obj/effect/proc_holder/alien/transfer)
 
 /obj/item/organ/internal/xenos/plasmavessel/larva
-	name = "tiny xeno plasma vessel"
+	name = "tiny plasma vessel"
 	icon_state = "plasma_tiny"
 	max_plasma = 100
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/transfer_plasma)
+	alien_powers = list(/obj/effect/proc_holder/alien/transfer)
 
 
 /obj/item/organ/internal/xenos/plasmavessel/on_life()
@@ -114,22 +135,22 @@
 
 
 /obj/item/organ/internal/xenos/acidgland
-	name = "xeno acid gland"
+	name = "acid gland"
 	icon_state = "acid"
 	parent_organ = "head"
 	slot = "acid"
 	origin_tech = "biotech=5;materials=2;combat=2"
-	alien_powers = list(/mob/living/carbon/alien/humanoid/proc/corrosive_acid)
+	alien_powers = list(/obj/effect/proc_holder/alien/acid)
 
 
 /obj/item/organ/internal/xenos/hivenode
-	name = "xeno hive node"
+	name = "hive node"
 	icon_state = "hivenode"
 	parent_organ = "head"
 	slot = "hivenode"
 	origin_tech = "biotech=5;magnets=4;bluespace=3"
 	w_class = WEIGHT_CLASS_TINY
-	alien_powers = list(/mob/living/carbon/alien/humanoid/verb/whisp)
+	alien_powers = list(/obj/effect/proc_holder/alien/whisper)
 
 /obj/item/organ/internal/xenos/hivenode/insert(mob/living/carbon/M, special = 0)
 	..()
@@ -144,26 +165,26 @@
 	. = ..()
 
 /obj/item/organ/internal/xenos/neurotoxin
-	name = "xeno neurotoxin gland"
+	name = "neurotoxin gland"
 	icon_state = "neurotox"
 	parent_organ = "head"
 	slot = "neurotox"
 	origin_tech = "biotech=5;combat=5"
-	alien_powers = list(/mob/living/carbon/alien/humanoid/proc/neurotoxin)
+	alien_powers = list(/obj/effect/proc_holder/alien/neurotoxin)
 
 /obj/item/organ/internal/xenos/resinspinner
-	name = "xeno resin organ"//...there tiger....
+	name = "resin spinner"//...there tiger....
 	parent_organ = "mouth"
 	icon_state = "liver-x"
 	slot = "spinner"
 	origin_tech = "biotech=5;materials=4"
-	alien_powers = list(/mob/living/carbon/alien/humanoid/proc/resin)
+	alien_powers = list(/obj/effect/proc_holder/alien/resin)
 
 /obj/item/organ/internal/xenos/eggsac
-	name = "xeno egg sac"
+	name = "egg sac"
 	icon_state = "eggsac"
 	parent_organ = "groin"
 	slot = "eggsac"
 	w_class = WEIGHT_CLASS_BULKY
 	origin_tech = "biotech=6"
-	alien_powers = list(/mob/living/carbon/alien/humanoid/queen/verb/lay_egg)
+	alien_powers = list(/obj/effect/proc_holder/alien/lay_egg)

@@ -39,22 +39,25 @@
 	. += 2
 
 //Queen verbs
-/mob/living/carbon/alien/humanoid/queen/verb/lay_egg()
+/obj/effect/proc_holder/alien/lay_egg
+	name = "Lay Egg (150)"
+	desc = "Lay an egg to produce huggers to impregnate prey with."
+	plasma_cost = 150
+	check_turf = TRUE
+	action_icon_state = "alien_egg"
 
-	set name = "Lay Egg (150)"
-	set desc = "Lay an egg to produce facehuggers to impregnate prey with."
-	set category = "Alien"
-	if(locate(/obj/structure/alien/egg) in get_turf(src))
-		to_chat(src, "<span class='noticealien'>There's already an egg here.</span>")
-		return
+/obj/effect/proc_holder/alien/lay_egg/fire(mob/living/carbon/user)
+	if(locate(/obj/structure/alien/egg) in get_turf(user))
+		to_chat(user, "<span class='alertalien'>There's already an egg here.</span>")
+		return FALSE
 
-	if(powerc(150,1))//Can't plant eggs on spess tiles. That's silly.
-		adjustPlasma(-150)
-		for(var/mob/O in viewers(src, null))
-			O.show_message(text("<span class='alertalien'>[src] has laid an egg!</span>"), 1)
-		new /obj/structure/alien/egg(loc)
-		playsound(loc, "alien_secrete", 100, 1, 7)
-	return
+	if(!check_vent_block(user))
+		return FALSE
+
+	user.visible_message("<span class='alertalien'>[user] has laid an egg!</span>")
+	new /obj/structure/alien/egg(user.loc)
+	playsound(get_turf(src), "alien_secrete", 100, 1, 2)
+	return TRUE
 
 
 /mob/living/carbon/alien/humanoid/queen/large

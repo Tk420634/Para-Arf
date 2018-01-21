@@ -82,7 +82,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	return 0
 
 /obj/item/clothing/mask/facehugger/HasProximity(atom/movable/AM as mob|obj)
-	if(CanHug(AM) && Adjacent(AM) && locate(src) in view(1,AM))//will only run the locate in view thing if they can hug so it's not that expensive
+	if(CanHug(AM) && Adjacent(AM) && locate(src) in oview(1,AM))//will only run the locate in view thing if they can hug so it's not that expensive
 		return Attach(AM)
 	return 0
 
@@ -238,7 +238,7 @@ var/const/MAX_ACTIVE_TIME = 400
 		return 0
 	if(M.stat == DEAD)
 		return 0
-	if(M.get_int_organ(/obj/item/organ/internal/xenos/hivenode))
+	if(M.get_int_organ(/obj/item/organ/internal/xenos/hivenode) || M.get_int_organ(/obj/item/organ/internal/body_egg/alien_embryo))//"alien" or already infected
 		return 0
 
 	if(iscorgi(M))
