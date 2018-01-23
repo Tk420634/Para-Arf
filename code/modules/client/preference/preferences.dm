@@ -1577,16 +1577,13 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 
 				if("body_accessory")
 					var/list/possible_body_accessories = list()
-					if(check_rights(R_ADMIN, 1, user))
-						possible_body_accessories = body_accessory_by_name.Copy()
-					else
-						for(var/B in body_accessory_by_name)
-							var/datum/body_accessory/accessory = body_accessory_by_name[B]
-							if(!istype(accessory))
-								possible_body_accessories += "None" //the only null entry should be the "None" option
-								continue
-							if(species in accessory.allowed_species)
-								possible_body_accessories += B
+					for(var/B in body_accessory_by_name)
+						var/datum/body_accessory/accessory = body_accessory_by_name[B]
+						if(!istype(accessory))
+							possible_body_accessories += "None" //the only null entry should be the "None" option
+							continue
+						if(species in accessory.allowed_species)
+							possible_body_accessories += B
 
 					var/new_body_accessory = input(user, "Choose your body accessory:", "Character Preference") as null|anything in possible_body_accessories
 					if(new_body_accessory)

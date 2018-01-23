@@ -207,7 +207,6 @@
 #include "code\dallus_content\items\clothing\shoes.dm"
 #include "code\dallus_content\items\clothing\suits.dm"
 #include "code\dallus_content\items\clothing\ties.dm"
-#include "code\dallus_content\items\clothing\uniforms.dm"#include "code\dallus_content\items\clothing\capes.dm"#include "code\dallus_content\items\clothing\donator\hats.dm"
 #include "code\dallus_content\items\clothing\donator\masks.dm"
 #include "code\dallus_content\items\clothing\donator\suits.dm"
 #include "code\dallus_content\items\clothing\donator\ties.dm"
