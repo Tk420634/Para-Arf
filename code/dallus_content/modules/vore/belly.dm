@@ -1,25 +1,131 @@
-//Belly datums here with a lot of handy procs.
+/*
+VVVVVVVV           VVVVVVVV     OOOOOOOOO     RRRRRRRRRRRRRRRRR   EEEEEEEEEEEEEEEEEEEEEE
+V::::::V           V::::::V   OO:::::::::OO   R::::::::::::::::R  E::::::::::::::::::::E
+V::::::V           V::::::V OO:::::::::::::OO R::::::RRRRRR:::::R E::::::::::::::::::::E
+V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEEEEE::::E
+ V:::::V           V:::::V O::::::O   O::::::O  R::::R     R:::::R  E:::::E       EEEEEE
+  V:::::V         V:::::V  O:::::O     O:::::O  R::::R     R:::::R  E:::::E
+   V:::::V       V:::::V   O:::::O     O:::::O  R::::RRRRRR:::::R   E::::::EEEEEEEEEE
+    V:::::V     V:::::V    O:::::O     O:::::O  R:::::::::::::RR    E:::::::::::::::E
+     V:::::V   V:::::V     O:::::O     O:::::O  R::::RRRRRR:::::R   E:::::::::::::::E
+      V:::::V V:::::V      O:::::O     O:::::O  R::::R     R:::::R  E::::::EEEEEEEEEE
+       V:::::V:::::V       O:::::O     O:::::O  R::::R     R:::::R  E:::::E
+        V:::::::::V        O::::::O   O::::::O  R::::R     R:::::R  E:::::E       EEEEEE
+         V:::::::V         O:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEEEE:::::E
+          V:::::V           OO:::::::::::::OO R::::::R     R:::::RE::::::::::::::::::::E
+           V:::V              OO:::::::::OO   R::::::R     R:::::RE::::::::::::::::::::E
+            VVV                 OOOOOOOOO     RRRRRRRR     RRRRRRREEEEEEEEEEEEEEEEEEEEEE
 
-// -----------------------
-// BASICALLY, WHAT THIS IS ROIGHT DOWN HERE, IS AN ATTEMPT TO IMPORT 10% OF VIRGO'S VORECODE, WHICH IS PRETTY DARN GOOD.
-// Why make something completely new when there's something better out there when you can actually import it in your work?
+-Aro <3 */
+
 //
+// Overrides/additions to stock defines go here, as well as hooks. Sort them by
+// the object they are overriding. So all /mob/living together, etc.
 //
-// Basically, all credit goes to virgo and their amazing devs, with the brains. I'll be here, just trying to catch up.
+/datum/configuration
+	var/items_survive_digestion = 1		//For configuring if the important_items survive digestion
+
 //
-// -----------------------
+// The datum type bolted onto normal preferences datums for storing Virgo stuff
+//
+/client
+	var/datum/vore_preferences/prefs_vr
 
+/hook/client_new/proc/add_prefs_vr(client/C)
+	C.prefs_vr = new/datum/vore_preferences(C)
+	if(C.prefs_vr)
+		return 1
 
+	return 0
 
-/datum/belly
-	var/name								// Name of this location
-	var/human_prey_swallow_time = 100		// Time in deciseconds to swallow /mob/living/carbon/human
-	var/nonhuman_prey_swallow_time = 30		// Time in deciseconds to swallow anything else
-	var/escapable = 1						// Belly can be resisted out of at any time
-	var/escapetime = 60 SECONDS				// Deciseconds, how long to escape this belly
-	var/can_taste = 0						// If this belly prints the flavor of prey when it eats someone.
+/datum/vore_preferences
+	//Actual preferences
+	var/digestable = 1
+	var/list/belly_prefs = list()
+	var/vore_taste
+	var/conceal_nif
+	var/nif_examine
 
-	var/tmp/digest_mode = DM_HOLD				// Whether or not to digest. Default to not digest.
-	var/tmp/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_HEAL,DM_ABSORB,DM_DRAIN,DM_UNABSORB)	// Possible digest modes
-	var/tmp/mob/living/owner					// The mob whose belly this is.
-	var/tmp/list/internal_contents = list()		// People/Things you've eaten into this belly!
+	//Mechanically required
+	var/path
+	var/slot
+	var/client/client
+	var/client_ckey
+
+/datum/vore_preferences/New(client/C)
+	if(istype(C))
+		client = C
+		client_ckey = C.ckey
+// TEMP-vore
+//		load_vore(C)
+
+//
+//	Check if an object is capable of eating things, based on vore_organs
+//
+/proc/is_vore_predator(var/mob/living/O)
+	if(istype(O,/mob/living))
+		if(O.vore_organs.len > 0)
+			return 1
+
+	return 0
+
+//
+//	Belly searching for simplifying other procs
+//
+/proc/check_belly(atom/movable/A)
+	if(istype(A.loc,/mob/living))
+		var/mob/living/M = A.loc
+		for(var/I in M.vore_organs)
+			var/datum/belly/B = M.vore_organs[I]
+			if(A in B.internal_contents)
+				return(B)
+
+	return 0
+/* TEMP-vore
+//
+// Save/Load Vore Preferences
+//
+/datum/vore_preferences/proc/load_vore()
+	if(!client || !client_ckey) return 0 //No client, how can we save?
+
+	slot = client.prefs.default_slot
+
+	path = client.prefs.path
+
+	if(!path) return 0 //Path couldn't be set?
+	if(!fexists(path)) //Never saved before
+		save_vore() //Make the file first
+		return 1
+
+	var/savefile/S = new /savefile(path)
+	if(!S) return 0 //Savefile object couldn't be created?
+
+	S.cd = "/character[slot]"
+
+	S["digestable"] >> digestable
+	S["belly_prefs"] >> belly_prefs
+	S["vore_taste"] >> vore_taste
+	S["conceal_nif"] >> conceal_nif
+	S["nif_examine"] >> nif_examine
+
+	if(isnull(digestable))
+		digestable = 1
+	if(isnull(belly_prefs))
+		belly_prefs = list()
+
+	return 1
+
+/datum/vore_preferences/proc/save_vore()
+	if(!path)				return 0
+	if(!slot)				return 0
+	var/savefile/S = new /savefile(path)
+	if(!S)					return 0
+	S.cd = "/character[slot]"
+
+	S["digestable"] << digestable
+	S["belly_prefs"] << belly_prefs
+	S["vore_taste"] << vore_taste
+	S["conceal_nif"] << conceal_nif
+	S["nif_examine"] << nif_examine
+
+	return 1*/
