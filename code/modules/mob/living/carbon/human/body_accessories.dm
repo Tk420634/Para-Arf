@@ -77,7 +77,27 @@ var/global/list/body_accessory_by_species = list("None" = null)
 //Bodies
 /datum/body_accessory/body
 	blend_mode = ICON_MULTIPLY
-
+	allowed_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vulpkanin",
+		"Alien", "Anubis", "Apex", "Avali",
+		"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
+		"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
+		"Dalmation", "Deer", "Drake",
+		"Elephant", "Elf",
+		"Fennec", "Fox", "Fung",
+		"Glaceon", "Glowfen", "Goat", "Gremlin", "Gria", "Guilmon",
+		"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
+		"Jackalope", "Jelly",
+		"Kangaroo", "Kitsune",
+		"Lab", "Lugia", "Lynx",
+		"Mouse",
+		"Orc", "Orca", "Otie", "Otter",
+		"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
+		"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
+		"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch", "Subterranean Slime",
+		"Turtle",
+		"Vulpix", "Vulture",
+		"Wolf",
+		"Zebra", "Zigzagoon")
 /datum/body_accessory/body/snake
 	name = "Snake"
 
