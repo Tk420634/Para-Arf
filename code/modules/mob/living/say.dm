@@ -215,7 +215,11 @@ proc/get_radio_key_from_channel(var/channel)
 
 	//handle nonverbal and sign languages here
 	if(speaking)
-		if(speaking.flags & SIGNLANG || NONVERBAL)
+		if(speaking.flags & NONVERBAL)
+			if(prob(30))
+				custom_emote(1, "[pick(speaking.signlang_verb)].")
+
+		if(speaking.flags & SIGNLANG)
 			return say_signlang(message, pick(speaking.signlang_verb), speaking)
 
 	var/list/listening = list()
