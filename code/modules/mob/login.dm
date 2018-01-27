@@ -5,6 +5,9 @@
 	computer_id	= client.computer_id
 	log_access("Login: [key_name(src)] from [lastKnownIP ? lastKnownIP : "localhost"]-[computer_id] || BYOND v[client.byond_version]")
 	if(config.log_access)
+		if(client.player_age<1)
+			message_admins("Notice: New player [client.ckey] has joined.")
+			send2adminirc("Notice: New player [client.ckey] has joined.")
 		for(var/mob/M in player_list)
 			if(M == src)	continue
 			if( M.key && (M.key != key) )
