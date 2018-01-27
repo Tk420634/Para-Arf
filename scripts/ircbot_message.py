@@ -7,7 +7,7 @@ import sys
 import socket
 
 def pack():
-
+        
     try:
         data = sys.argv[4:]
         print(data)
@@ -25,11 +25,5 @@ def nudge(data):
     s.send(data)
     s.close()
 
-"""
 if __name__ == "__main__" and len(sys.argv) > 1:  # If not imported and more than one argument
-    pack()
-"""
-
-
-if __name__ == '__main__':
     pack()
