@@ -236,6 +236,76 @@ var/world_topic_spam_protect_time = world.timeofday
 
 		return show_player_info_irc(input["notes"])
 
+	else if("age" in input)
+		if(!key_valid)
+			return keySpamProtect(addr)
+
+		var/client/C
+
+		for(var/client/K in clients)
+			if(K.ckey == input["age"]) //Age = Ckey
+				C = K
+				break
+
+		var/reply = "[C.player_age]"
+
+		return reply
+
+	else if("info" in input)
+		if(!key_valid)
+			return keySpamProtect(addr)
+
+		var/client/C
+
+		for(var/client/K in clients)
+			if(K.ckey == input["adminmsg"])
+				C = K
+				break
+		if(!C)
+			return "No client with that name on server"
+
+
+		var/mob/M = C.mob //cheatsy way to get the mob of client ;P
+		var/info = list()
+		info["key"] = "[M.key]"
+		info["name"] = "[M.name == M.real_name ? M.name : "[M.name] ([M.real_name])"]"
+		info["role"] = "[M.mind ? (M.mind.assigned_role ? M.mind.assigned_role : "No role") : "No mind"]"
+		info["loc"] = "[M.loc ? "[M.loc]" : "null"]"
+		info["antag"] = "[M.mind ? (M.mind.special_role ? M.mind.special_role : "Not antag") : "No mind"]"
+		info["hasbeenrev"] = "[M.mind ? M.mind.has_been_rev : "No mind"]"
+		info["stat"] = "[M.stat]"
+		info["type"] = "[M.type]"
+		if(!M.stat == 2) //Really weird get around? Can't just call isliving(), 2 = dead, 1 = sleeping, 0 = awake.
+			var/mob/living/L = M
+			info["damage"] = list2params(list(
+						oxy = "[L.getOxyLoss()]",
+						tox = "[L.getToxLoss()]",
+						fire = "[L.getFireLoss()]",
+						brute = "[L.getBruteLoss()]",
+						clone = "[L.getCloneLoss()]",
+						brain = "[L.getBrainLoss()]"
+					))
+		else
+			info["damage"] = "non-living"
+		info["gender"] = M.gender
+		return list2params(info)
+
+
+	else if("ip" in input)
+		if(!key_valid)
+			return keySpamProtect(addr)
+
+		var/client/C
+
+		for(var/client/K in clients)
+			if(K.ckey == input["ip"]) //IP = Ckey
+				C = K
+				break
+
+		var/reply = "[C.address]"
+
+		return reply
+
 	else if("announce" in input)
 		if(config.comms_password)
 			if(input["key"] != config.comms_password)

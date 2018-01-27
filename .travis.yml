@@ -34,16 +34,16 @@ script:
   - source $HOME/BYOND-${BYOND_MAJOR}.${BYOND_MINOR}/byond/bin/byondsetup
   - bash dm.sh -M${DM_MAPFILE} paradise.dme
 
-matrix:
-  include:
-    - env: FILE_CHECKS=1
-      addons:
-      install:
-        - pip install --user PyYaml -q
-        - pip install --user beautifulsoup4 -q
-      before_script:
-      script:
-        - shopt -s globstar
-        - (! grep 'step_[xy]' _maps/map_files/**/*.dmm)
-        - md5sum -c - <<< "6dc1b6bf583f3bd4176b6df494caa5f1 *html/changelogs/example.yml"
-        - python tools/ss13_genchangelog.py html/changelog.html html/changelogs
+#matrix:
+#  include:
+#    - env: FILE_CHECKS=1
+#      addons:
+#      install:
+#        - pip install --user PyYaml -q
+#        - pip install --user beautifulsoup4 -q
+#      before_script:
+#      script:
+#        - shopt -s globstar
+#        - (! grep 'step_[xy]' _maps/map_files/**/*.dmm)
+#        - md5sum -c - <<< "6dc1b6bf583f3bd4176b6df494caa5f1 *html/changelogs/example.yml"
+#        - python tools/ss13_genchangelog.py html/changelog.html html/changelogs

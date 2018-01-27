@@ -129,14 +129,14 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 	log_admin("[selected_type]: [key_name(src)]: [original_msg] - heard by [admin_number_present] non-AFK admins.")
 	if(admin_number_present <= 0)
 		if(!admin_number_afk)
-			to_chat(world, "failed admin_number_afk send2adminirc")
+			//to_chat(world, "failed admin_number_afk send2adminirc")
 			send2adminirc("[selected_type] from [key_name(src)]: [original_msg] - !!No admins online!!")
 		else
 			send2adminirc("[selected_type] from [key_name(src)]: [original_msg] - !!All admins AFK ([admin_number_afk])!!")
-			to_chat(world, "else if not admin_number_afk send2adminirc")
+			//to_chat(world, "else if not admin_number_afk send2adminirc")
 	else
 		send2adminirc("[selected_type] from [key_name(src)]: [original_msg]")
-		to_chat(world, "admin present, send2adminirc")
+		//to_chat(world, "admin present, send2adminirc")
 	feedback_add_details("admin_verb","AH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
@@ -145,6 +145,9 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 	var/admin_number_afk = 0		//Holds the number of admins who are afk
 	var/admin_number_ignored = 0	//Holds the number of admins without +BAN (so admins who are not really admins)
 	var/admin_number_decrease = 0	//Holds the number of admins with are afk, ignored or both
+
+	sanitize(msg)
+
 	for(var/client/X in admins)
 		admin_number_total++;
 		var/invalid = 0
@@ -162,7 +165,7 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 	var/admin_number_present = admin_number_total - admin_number_decrease	//Number of admins who are neither afk nor invalid
 	if(admin_number_present <= 0)
 		if(!admin_number_afk && !admin_number_ignored)
-			send2irc(source, "[msg] - No admins online")
+			send2adminirc("[msg] - No admins online")
 		else
-			send2irc(source, "[msg] - All admins AFK ([admin_number_afk]/[admin_number_total]) or skipped ([admin_number_ignored]/[admin_number_total])")
+			send2adminirc("[msg] - All admins AFK ([admin_number_afk]/[admin_number_total]) or skipped ([admin_number_ignored]/[admin_number_total])")
 	return admin_number_present
