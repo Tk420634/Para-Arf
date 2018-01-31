@@ -998,9 +998,13 @@ var/list/ai_verbs_default = list(
 			var/icon_list[] = list(
 			"default",
 			"floating face",
-			"xeno queen",
 			"eldritch",
-			"ancient machine"
+			"ancient machine",
+			"alien queen",
+			"alien drone",
+			"alien hunter",
+			"alien sentinel",
+			"alien maid"
 			)
 			if(custom_hologram) //insert custom hologram
 				icon_list.Add("custom")
@@ -1013,12 +1017,20 @@ var/list/ai_verbs_default = list(
 						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo1"))
 					if("floating face")
 						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo2"))
-					if("xeno queen")
-						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo3"))
 					if("eldritch")
 						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo4"))
 					if("ancient machine")
 						holo_icon = getHologramIcon(icon('icons/mob/ancient_machine.dmi', "ancient_machine"))
+					if("alien queen")
+						holo_icon = getHologramIcon(icon('icons/mob/alien.dmi', "alienq"))
+					if("alien drone")
+						holo_icon = getHologramIcon(icon('icons/mob/alien.dmi', "aliend"))
+					if("alien hunter")
+						holo_icon = getHologramIcon(icon('icons/mob/alien.dmi', "alienh"))
+					if("alien sentinel")
+						holo_icon = getHologramIcon(icon('icons/mob/alien.dmi', "aliens"))
+					if("alien maid")
+						holo_icon = getHologramIcon(icon('icons/mob/alien.dmi', "alienlusty"))
 					if("custom")
 						if("[ckey]-ai-holo" in icon_states('icons/mob/custom_synthetic/custom-synthetic.dmi'))
 							holo_icon = getHologramIcon(icon('icons/mob/custom_synthetic/custom-synthetic.dmi', "[ckey]-ai-holo"))
