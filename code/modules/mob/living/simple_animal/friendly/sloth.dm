@@ -22,6 +22,7 @@
 	health = 50
 	maxHealth = 50
 	speed = 2
+	density = 0
 
 
 //Cargo Sloth

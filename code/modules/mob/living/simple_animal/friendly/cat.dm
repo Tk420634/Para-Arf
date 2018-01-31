@@ -22,6 +22,7 @@
 	response_disarm = "gently pushes aside"
 	response_harm   = "kicks"
 	gold_core_spawnable = CHEM_MOB_SPAWN_FRIENDLY
+	density = 0
 
 	var/turns_since_scan = 0
 	var/mob/living/simple_animal/mouse/movement_target
