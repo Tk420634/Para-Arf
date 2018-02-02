@@ -107,7 +107,7 @@
 
 /obj/item/weapon/storage/backpack/captain
 	name = "captain's backpack"
-	desc = "It's a special backpack made exclusively for Nanotrasen officers."
+	desc = "It's a special backpack made exclusively for Alliance of Racial Federation officers."
 	icon_state = "captainpack"
 	item_state = "captainpack"
 	burn_state = FIRE_PROOF
@@ -219,7 +219,7 @@
 
 /obj/item/weapon/storage/backpack/satchel_cap
 	name = "captain's satchel"
-	desc = "An exclusive satchel for Nanotrasen officers."
+	desc = "An exclusive satchel for Alliance of Racial Federation officers."
 	icon_state = "satchel-cap"
 	burn_state = FIRE_PROOF
 
@@ -407,35 +407,36 @@
 //ERT backpacks.
 /obj/item/weapon/storage/backpack/ert
 	name = "emergency response team backpack"
-	desc = "A spacious backpack with lots of pockets, used by members of the Nanotrasen Emergency Response Team."
+	desc = "A spacious backpack with lots of pockets, used by members of the Alliance of Racial Federation Emergency Response Team."
 	icon_state = "ert_commander"
 	item_state = "backpack"
 
 //Commander
 /obj/item/weapon/storage/backpack/ert/commander
 	name = "emergency response team commander backpack"
-	desc = "A spacious backpack with lots of pockets, worn by the commander of a Nanotrasen Emergency Response Team."
+	desc = "A spacious backpack with lots of pockets, worn by the commander of a Alliance of Racial Federation Emergency Response Team."
 
 //Security
 /obj/item/weapon/storage/backpack/ert/security
 	name = "emergency response team security backpack"
-	desc = "A spacious backpack with lots of pockets, worn by security members of a Nanotrasen Emergency Response Team."
+	desc = "A spacious backpack with lots of pockets, worn by security members of a Alliance of Racial Federation Emergency Response Team."
 	icon_state = "ert_security"
 
 //Engineering
 /obj/item/weapon/storage/backpack/ert/engineer
 	name = "emergency response team engineer backpack"
-	desc = "A spacious backpack with lots of pockets, worn by engineering members of a Nanotrasen Emergency Response Team."
+	desc = "A spacious backpack with lots of pockets, worn by engineering members of a Alliance of Racial Federation Emergency Response Team."
 	icon_state = "ert_engineering"
 
 //Medical
 /obj/item/weapon/storage/backpack/ert/medical
 	name = "emergency response team medical backpack"
-	desc = "A spacious backpack with lots of pockets, worn by medical members of a Nanotrasen Emergency Response Team."
+	desc = "A spacious backpack with lots of pockets, worn by medical members of a Alliance of Racial Federation Emergency Response Team."
+	icon_state = "ert_engineering"
 	icon_state = "ert_medical"
 
 //Janitorial
 /obj/item/weapon/storage/backpack/ert/janitor
 	name = "emergency response team janitor backpack"
-	desc = "A spacious backpack with lots of pockets, worn by janitorial members of a Nanotrasen Emergency Response Team."
+	desc = "A spacious backpack with lots of pockets, worn by janitorial members of a Alliance of Racial Federation Emergency Response Team."
 	icon_state = "ert_janitor"
