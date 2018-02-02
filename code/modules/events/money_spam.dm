@@ -57,11 +57,11 @@
 					"You have (1) new message!",\
 					"You have (2) new profile views!")
 				if(3)
-					sender = pick("Galactic Payments Association","Better Business Bureau","Nyx E-Payments","NAnoTransen Finance Deparmtent","Luxury Replicas")
+					sender = pick("Galactic Payments Association","Better Business Bureau","Nyx E-Payments","Alliance of Racial Federation Finance Deparmtent","Luxury Replicas")
 					message = pick("Luxury watches for Blowout sale prices!",\
 					"Watches, Jewelry & Accessories, Bags & Wallets !",\
 					"Deposit 100$ and get 300$ totally free!",\
-					" 100K NT.|WOWGOLD ?nly $89            <HOT>",\
+					" 100K A.R.F..|WOWGOLD ?nly $89            <HOT>",\
 					"We have been filed with a complaint from one of your customers in respect of their business relations with you.",\
 					"We kindly ask you to open the COMPLAINT REPORT (attached) to reply on this complaint..")
 				if(4)
@@ -80,11 +80,11 @@
 					"Due to my lack of agents I require an off-world financial account to immediately deposit the sum of 1 POINT FIVE MILLION credits.",\
 					"Greetings sir, I regretfully to inform you that as I lay dying here due to my lack ofheirs I have chosen you to recieve the full sum of my lifetime savings of 1.5 billion credits")
 				if(6)
-					sender = pick("Nanotrasen Morale Divison","Feeling Lonely?","Bored?","www.wetskrell.nt")
-					message = pick("The Nanotrasen Morale Division wishes to provide you with quality entertainment sites.",\
-					"WetSkrell.nt is a xenophillic website endorsed by NT for the use of male crewmembers among it's many stations and outposts.",\
-					"Wetskrell.nt only provides the higest quality of male entertaiment to Nanotrasen Employees.",\
-					"Simply enter your Nanotrasen Bank account system number and pin. With three easy steps this service could be yours!")
+					sender = pick("Alliance of Racial Federation Morale Divison","Feeling Lonely?","Bored?","www.wetskrell.nt")
+					message = pick("The Alliance of Racial Federation Morale Division wishes to provide you with quality entertainment sites.",\
+					"WetSkrell.nt is a xenophillic website endorsed by A.R.F. for the use of male crewmembers among it's many stations and outposts.",\
+					"Wetskrell.nt only provides the higest quality of male entertaiment to Alliance of Racial Federation Employees.",\
+					"Simply enter your Alliance of Racial Federation Bank account system number and pin. With three easy steps this service could be yours!")
 				if(7)
 					sender = pick("You have won free tickets!","Click here to claim your prize!","You are the 1000th vistor!","You are our lucky grand prize winner!")
 					message = pick("You have won tickets to the newest ACTION JAXSON MOVIE!",\
