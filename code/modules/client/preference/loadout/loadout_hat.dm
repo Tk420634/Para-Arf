@@ -180,30 +180,6 @@
 	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
 	cost = 5
 
-/datum/gear/hat/justiceblue
-	display_name = "justice, blue"
-	path = /obj/item/clothing/head/justice/blue
-	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
-	cost = 5
-
-/datum/gear/hat/justiceyellow
-	display_name = "justice, yellow"
-	path = /obj/item/clothing/head/justice/yellow
-	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
-	cost = 5
-
-/datum/gear/hat/justicegreen
-	display_name = "justice, green"
-	path = /obj/item/clothing/head/justice/green
-	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
-	cost = 5
-
-/datum/gear/hat/justicepink
-	display_name = "justice,  pink"
-	path = /obj/item/clothing/head/justice/pink
-	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
-	cost = 5
-
 /datum/gear/hat/bowlerhat
 	display_name = "bowler hat"
 	path = /obj/item/clothing/head/bowlerhat
