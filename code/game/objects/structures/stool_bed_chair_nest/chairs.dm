@@ -7,6 +7,7 @@
 	buildstackamount = 1
 	buckle_offset = 0
 	var/propelled = 0 // Check for fire-extinguisher-driven chairs
+	item_chair = /obj/item/weapon/stool
 
 /obj/structure/stool/bed/chair/New()
 	..()

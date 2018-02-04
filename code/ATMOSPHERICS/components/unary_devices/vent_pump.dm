@@ -50,14 +50,14 @@
 
 /obj/machinery/atmospherics/unary/vent_pump/on
 	on = 1
-	icon_state = "map_vent_out"
+	icon_state = "map_vent_on"
 
 /obj/machinery/atmospherics/unary/vent_pump/siphon
 	pump_direction = 0
 
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on
 	on = 1
-	icon_state = "map_vent_in"
+	icon_state = "map_vent_siphon_on"
 
 /obj/machinery/atmospherics/unary/vent_pump/New()
 	..()
