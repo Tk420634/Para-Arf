@@ -16,7 +16,8 @@
 					lastchangelog,
 					windowflashing,
 					ghost_anonsay,
-					exp
+					exp,
+					clientfps
 					FROM [format_table_name("player")]
 					WHERE ckey='[C.ckey]'"}
 					)
@@ -46,6 +47,7 @@
 		windowflashing = text2num(query.item[14])
 		ghost_anonsay = text2num(query.item[15])
 		exp = query.item[16]
+		clientfps = query.item[17]
 
 	//Sanitize
 	ooccolor		= sanitize_hexcolor(ooccolor, initial(ooccolor))
@@ -63,10 +65,10 @@
 	windowflashing = sanitize_integer(windowflashing, 0, 1, initial(windowflashing))
 	ghost_anonsay = sanitize_integer(ghost_anonsay, 0, 1, initial(ghost_anonsay))
 	exp	= sanitize_text(exp, initial(exp))
+	clientfps = sanitize_integer(clientfps, 0, 1000, initial(clientfps))
 	return 1
 
 /datum/preferences/proc/save_preferences(client/C)
-
 	// Might as well scrub out any malformed be_special list entries while we're here
 	for(var/role in be_special)
 		if(!(role in special_roles))
@@ -89,7 +91,8 @@
 					show_ghostitem_attack='[show_ghostitem_attack]',
 					lastchangelog='[lastchangelog]',
 					windowflashing='[windowflashing]',
-					ghost_anonsay='[ghost_anonsay]'
+					ghost_anonsay='[ghost_anonsay]',
+					clientfps='[clientfps]'
 					WHERE ckey='[C.ckey]'"}
 					)
 
@@ -98,6 +101,7 @@
 		log_game("SQL ERROR during saving player preferences. Error : \[[err]\]\n")
 		message_admins("SQL ERROR during saving player preferences. Error : \[[err]\]\n")
 		return
+	C.SyncFPS()
 	return 1
 
 /datum/preferences/proc/load_character(client/C,slot)
