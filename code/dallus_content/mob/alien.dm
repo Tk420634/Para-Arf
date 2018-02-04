@@ -254,9 +254,7 @@
 /mob/living/proc/OnSay(var/msg, var/datum/language/lang)
 
 /mob/living/carbon/alien/OnSay(var/msg, var/datum/language/lang)
-	to_chat(src, "OnSay() called")
 	if((istext(msg)) && (copytext(msg, 1, 2) != "*") && (lang && !(lang.flags & HIVEMIND) && !(lang.flags & NONVERBAL) ))//Not an emote and not a telepathic/nonverbal language
-		to_chat(src, "First check passed")
 		var/ending = copytext(msg, length(msg))
 		var/voice_sound = "alien_talk"
 		switch(ending)

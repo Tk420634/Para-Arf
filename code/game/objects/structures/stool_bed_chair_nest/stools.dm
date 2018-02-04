@@ -6,6 +6,7 @@
 	anchored = 1.0
 	var/buildstackamount = 1
 	var/buildstacktype = /obj/item/stack/sheet/metal
+	var/item_chair = /obj/item/weapon/stool
 
 /obj/structure/stool/ex_act(severity)
 	switch(severity)
@@ -41,7 +42,7 @@
 	if(istype(over_object, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = over_object
 		if(H==usr && !H.restrained() && !H.stat && in_range(src, over_object))
-			var/obj/item/weapon/stool/S = new/obj/item/weapon/stool()
+			var/obj/item/weapon/stool/S = new item_chair()
 			S.origin = src
 			loc = S
 			H.put_in_hands(S)
@@ -51,7 +52,7 @@
 	name = "stool"
 	desc = "Uh-hoh, bar is heating up."
 	icon = 'icons/obj/objects.dmi'
-	icon_state = "stool"
+	icon_state = "stool_toppled"
 	force = 10
 	throwforce = 10
 	w_class = WEIGHT_CLASS_HUGE
@@ -75,3 +76,13 @@
 		T.Weaken(5)
 		return
 	..()
+
+/obj/structure/stool/bar
+	name = "bar stool"
+	desc = "It has some unsavory stains on it..."
+	icon_state = "bar"
+	item_chair = /obj/item/weapon/stool/bar
+
+/obj/item/weapon/stool/bar
+	name = "bar stool"
+	icon_state = "bar_toppled"
