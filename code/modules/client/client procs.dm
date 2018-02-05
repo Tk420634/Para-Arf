@@ -758,3 +758,7 @@
 	if(world.byond_version >= 511 && byond_version >= 511 && prefs)
 		if(prefs.clientfps != fps)
 			fps = prefs.clientfps
+
+/mob/proc/SyncFPS()
+	if(client)
+		client.SyncFPS()
