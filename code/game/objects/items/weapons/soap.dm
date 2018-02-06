@@ -55,7 +55,7 @@
 	..()
 
 /obj/item/weapon/soap/nanotrasen
-	desc = "A Nanotrasen brand bar of soap. Smells of plasma."
+	desc = "An Alliance of Racial Federation brand bar of soap. Smells of fur."
 	icon_state = "soapnt"
 
 /obj/item/weapon/soap/homemade

@@ -418,6 +418,8 @@
 		preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
+	if(world.byond_version >= 511 && byond_version >= 511 && prefs.clientfps)
+		fps = prefs.clientfps
 
 	spawn() // Goonchat does some non-instant checks in start()
 		chatOutput.start()
@@ -748,3 +750,11 @@
 
 /client/proc/on_varedit()
 	var_edited = TRUE
+
+
+//Client FPS Related stuff
+
+/client/proc/SyncFPS()
+	if(world.byond_version >= 511 && byond_version >= 511 && prefs)
+		if(prefs.clientfps != fps)
+			fps = prefs.clientfps

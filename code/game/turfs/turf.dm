@@ -211,6 +211,10 @@
 		for(var/obj/structure/cable/C in contents)
 			qdel(C)
 
+	for(var/obj/machinery/atmospherics/AM in contents)
+		AM.update_icon()
+		AM.update_underlays()
+
 /turf/simulated/AfterChange(ignore_air, keep_cabling = FALSE)
 	..()
 	RemoveLattice()

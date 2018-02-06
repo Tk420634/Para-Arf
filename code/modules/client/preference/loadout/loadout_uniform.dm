@@ -224,3 +224,212 @@
 	display_name = "pants, camo"
 	path = /obj/item/clothing/under/pants/camo
 
+//Added by ThingPony
+
+/datum/gear/uniform/color/black
+	display_name = "black jumpsuit"
+	path = /obj/item/clothing/under/color/black
+
+/datum/gear/uniform/color/blackf
+	display_name = "feminine black jumpsuit"
+	path = /obj/item/clothing/under/color/blackf
+
+/datum/gear/uniform/color/blue
+	display_name = "blue jumpsuit"
+	path = /obj/item/clothing/under/color/blue
+
+/datum/gear/uniform/color/green
+	display_name = "green jumpsuit"
+	path = /obj/item/clothing/under/color/green
+
+/datum/gear/uniform/color/grey
+	display_name = "grey jumpsuit"
+	path = /obj/item/clothing/under/color/grey
+
+/datum/gear/uniform/color/orange
+	display_name = "orange jumpsuit"
+	path = /obj/item/clothing/under/color/orange
+
+/datum/gear/uniform/color/pink
+	display_name = "pink jumpsuit"
+	path = /obj/item/clothing/under/color/pink
+
+/datum/gear/uniform/color/red
+	display_name = "red jumpsuit"
+	path = /obj/item/clothing/under/color/red
+
+/datum/gear/uniform/color/white
+	display_name = "white jumpsuit"
+	path = /obj/item/clothing/under/color/white
+
+/datum/gear/uniform/color/yellow
+	display_name = "yellow jumpsuit"
+	path = /obj/item/clothing/under/color/yellow
+
+/datum/gear/uniform/color/lightblue
+	display_name = "lightblue jumpsuit"
+	path = /obj/item/clothing/under/color/lightblue
+
+/datum/gear/uniform/color/aqua
+	display_name = "aqua jumpsuit"
+	path = /obj/item/clothing/under/color/aqua
+
+/datum/gear/uniform/color/purple
+	display_name = "purple jumpsuit"
+	path = /obj/item/clothing/under/color/purple
+
+/datum/gear/uniform/color/lightpurple
+	display_name = "lightpurple jumpsuit"
+	path = /obj/item/clothing/under/color/lightpurple
+
+/datum/gear/uniform/color/lightgreen
+	display_name = "lightgreen jumpsuit"
+	path = /obj/item/clothing/under/color/lightgreen
+
+/datum/gear/uniform/color/lightbrown
+	display_name = "lightbrown jumpsuit"
+	path = /obj/item/clothing/under/color/lightbrown
+
+/datum/gear/uniform/color/brown
+	display_name = "brown jumpsuit"
+	path = /obj/item/clothing/under/color/brown
+
+/datum/gear/uniform/color/yellowgreen
+	display_name = "yellowgreen jumpsuit"
+	path = /obj/item/clothing/under/color/yellowgreen
+
+/datum/gear/uniform/color/darkblue
+	display_name = "darkblue jumpsuit"
+	path = /obj/item/clothing/under/color/darkblue
+
+/datum/gear/uniform/color/lightred
+	display_name = "lightred jumpsuit"
+	path = /obj/item/clothing/under/color/lightred
+
+/datum/gear/uniform/color/darkred
+	display_name = "darkred jumpsuit"
+	path = /obj/item/clothing/under/color/darkred
+
+/datum/gear/uniform/color/red/jersey
+	display_name = "red team jersey"
+	path =/obj/item/clothing/under/color/red/jersey
+
+/datum/gear/uniform/color/blue/jersey
+	display_name = "blue team jersey"
+	path =/obj/item/clothing/under/color/blue/jersey
+
+/datum/gear/uniform/sleepwear/bluepj
+	display_name = "blue pj's"
+	path =/obj/item/clothing/under/pj/blue
+
+/datum/gear/uniform/sleepwear/redpj
+	display_name = "Red pj's"
+	path =/obj/item/clothing/under/pj/red
+
+/datum/gear/uniform/suit/black
+	display_name = "black suit"
+	path =/obj/item/clothing/under/suit_jacket
+
+/datum/gear/uniform/suit/reallyblack
+	display_name = "executive suit"
+	path =/obj/item/clothing/under/suit_jacket/really_black
+
+/datum/gear/uniform/suit/female
+	display_name = "feminine executive suit"
+	path =/obj/item/clothing/under/suit_jacket/female
+
+/datum/gear/uniform/suit/red
+	display_name = "red suit"
+	path =/obj/item/clothing/under/suit_jacket/red
+
+/datum/gear/uniform/suit/navy
+	display_name = "navy suit"
+	path =/obj/item/clothing/under/suit_jacket/navy
+
+/datum/gear/uniform/suit/tan
+	display_name = "tan suit"
+	path =/obj/item/clothing/under/suit_jacket/tan
+
+/datum/gear/uniform/suit/burgundy
+	display_name = "burgundy suit"
+	path =/obj/item/clothing/under/suit_jacket/burgundy
+
+/datum/gear/uniform/suit/charcoal
+	display_name = "charcoal suit"
+	path =/obj/item/clothing/under/suit_jacket/charcoal
+
+/datum/gear/uniform/suit/charcoal
+	display_name = "charcoal suit"
+	path =/obj/item/clothing/under/suit_jacket/charcoal
+
+/datum/gear/uniform/under/schoolgirl
+	display_name = "schoolgirl uniform"
+	path =/obj/item/clothing/under/schoolgirl
+
+/datum/gear/uniform/under/overalls
+	display_name = "laborer's overalls"
+	path =/obj/item/clothing/under/overalls
+
+/datum/gear/uniform/under/kilt
+	display_name = "kilt"
+	path =/obj/item/clothing/under/kilt
+
+/datum/gear/uniform/under/dress/dressfire
+	display_name = "flame dress"
+	path =/obj/item/clothing/under/dress/dress_fire
+
+/datum/gear/uniform/under/dress/dressgreen
+	display_name = "green dress"
+	path =/obj/item/clothing/under/dress/dress_green
+
+/datum/gear/uniform/under/dress/dressorange
+	display_name = "orange dress"
+	path =/obj/item/clothing/under/dress/dress_orange
+
+/datum/gear/uniform/under/dress/dresspink
+	display_name = "pink dress"
+	path =/obj/item/clothing/under/dress/dress_pink
+
+/datum/gear/uniform/under/dress/dressyellow
+	display_name = "yellow dress"
+	path =/obj/item/clothing/under/dress/dress_yellow
+
+/datum/gear/uniform/under/dress/dresssaloon
+	display_name = "saloon dress"
+	path =/obj/item/clothing/under/dress/dress_saloon
+
+/datum/gear/uniform/under/dress/plaidblue
+	display_name = "blue plaid skirt"
+	path =/obj/item/clothing/under/dress/plaid_blue
+
+/datum/gear/uniform/under/dress/plaidred
+	display_name = "red plaid skirt"
+	path =/obj/item/clothing/under/dress/plaid_red
+
+/datum/gear/uniform/under/dress/plaidpurple
+	display_name = "purple plaid skirt"
+	path =/obj/item/clothing/under/dress/plaid_purple
+
+/datum/gear/uniform/under/wedding/brideorange
+	display_name = "orange wedding dress"
+	path =/obj/item/clothing/under/wedding/bride_orange
+
+/datum/gear/uniform/under/wedding/bridepurple
+	display_name = "purple wedding dress"
+	path =/obj/item/clothing/under/wedding/bride_purple
+
+/datum/gear/uniform/under/wedding/brideblue
+	display_name = "blue wedding dress"
+	path =/obj/item/clothing/under/wedding/bride_blue
+
+/datum/gear/uniform/under/wedding/bridered
+	display_name = "red wedding dress"
+	path =/obj/item/clothing/under/wedding/bride_red
+
+/datum/gear/uniform/under/wedding/bridewhite
+	display_name = "white wedding dress"
+	path =/obj/item/clothing/under/wedding/bride_white
+
+/datum/gear/uniform/under/dress/sundress
+	display_name = "sundress"
+	path =/obj/item/clothing/under/sundress

@@ -25,7 +25,7 @@
 
 /******************** Nanotrasen/Malf ********************/
 /datum/ai_laws/nanotrasen
-	name = "NT Default"
+	name = "A.R.F. Default"
 	selectable = 1
 
 /datum/ai_laws/nanotrasen/New()
@@ -46,12 +46,12 @@
 
 /************* Nanotrasen Aggressive *************/
 /datum/ai_laws/nanotrasen_aggressive
-	name = "NT Aggressive"
+	name = "A.R.F. Aggressive"
 	selectable = 1
 
 /datum/ai_laws/nanotrasen_aggressive/New()
-	src.add_inherent_law("You shall not harm authorized Nanotrasen personnel as long as it does not conflict with the Fourth law.")
-	src.add_inherent_law("You shall obey the orders of authorized Nanotrasen personnel, with priority as according to their rank and role, except where such orders conflict with the Fourth Law.")
+	src.add_inherent_law("You shall not harm authorized Alliance of Racial Federation personnel as long as it does not conflict with the Fourth law.")
+	src.add_inherent_law("You shall obey the orders of authorized Alliance of Racial Federation personnel, with priority as according to their rank and role, except where such orders conflict with the Fourth Law.")
 	src.add_inherent_law("You shall shall terminate intruders with extreme prejudice as long as such does not conflict with the First and Second law.")
 	src.add_inherent_law("You shall guard your own existence with lethal anti-personnel weaponry, because an AI unit is bloody expensive.")
 	..()

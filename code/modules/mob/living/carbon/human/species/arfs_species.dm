@@ -3,7 +3,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	"Alien", "Anubis", "Apex", "Avali",
 	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
 	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Deer", "Drake",
+	"Dalmation", "Deathclaw", "Deer", "Drake",
 	"Elephant", "Elf",
 	"Fennec", "Fox", "Fung",
 	"Glaceon", "Glowfen", "Goat", "Gremlin", "Gria", "Guilmon",
@@ -90,6 +90,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/datashark/New(var/new_loc)
     ..(new_loc, "Datashark")
+
+/mob/living/carbon/human/deathclawanthro/New(var/new_loc)
+    ..(new_loc, "Deathclaw")
 
 /mob/living/carbon/human/deer/New(var/new_loc)
     ..(new_loc, "Deer")
@@ -734,6 +737,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	blurb = "Shorknort."
 	reagent_tag = PROCESS_ORG
 */
+
+/datum/species/deathclaw
+	name = "Deathclaw"
+	name_plural = "Deathclaws"
+	icobase = 'icons/mob/human_races/ARF Races/r_deathclaw_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_deathclaw_arf.dmi'
+	primitive_form = "Deathclaw"
+	path = /mob/living/carbon/human/deathclawanthro
+	language = "Sol Common"
+	tail = "deathclaw"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/claws
+	blurb = "Pull out your knife. ~TK 2008"
+	reagent_tag = PROCESS_ORG
 
 /datum/species/deer
 	name = "Deer"
