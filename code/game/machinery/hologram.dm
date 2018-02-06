@@ -135,8 +135,8 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 /obj/machinery/hologram/holopad/proc/create_holo(mob/living/silicon/ai/A, turf/T = loc)
 	hologram = new(T)//Spawn a blank effect at the location.
 	hologram.icon = A.holo_icon
-	if(hologram.icon.Width() > 32)
-		var/icon_width = hologram.icon.Width()
+	if(A.holo_width > 32)
+		var/icon_width = A.holo_width
 		var/slide_x_amount = round((icon_width / 4)*-1)
 		hologram.pixel_x = slide_x_amount
 	hologram.mouse_opacity = 0//So you can't click on it.
