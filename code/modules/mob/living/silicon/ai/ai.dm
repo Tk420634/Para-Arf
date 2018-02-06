@@ -1023,7 +1023,8 @@ var/list/ai_verbs_default = list(
 			"miltank",
 			"ampharos",
 			"mewtwo",
-			"ninetails"
+			"ninetails",
+			"mightyena"
 
 			)
 			if(custom_hologram) //insert custom hologram
@@ -1099,6 +1100,9 @@ var/list/ai_verbs_default = list(
 						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
 						holo_width = 64
 					if("dragonite")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("mightyena")
 						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
 						holo_width = 64
 
