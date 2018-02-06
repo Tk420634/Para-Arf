@@ -47,7 +47,7 @@
 		windowflashing = text2num(query.item[14])
 		ghost_anonsay = text2num(query.item[15])
 		exp = query.item[16]
-		clientfps = query.item[17]
+		clientfps = text2num(query.item[17])
 
 	//Sanitize
 	ooccolor		= sanitize_hexcolor(ooccolor, initial(ooccolor))
@@ -65,7 +65,7 @@
 	windowflashing = sanitize_integer(windowflashing, 0, 1, initial(windowflashing))
 	ghost_anonsay = sanitize_integer(ghost_anonsay, 0, 1, initial(ghost_anonsay))
 	exp	= sanitize_text(exp, initial(exp))
-	clientfps = sanitize_integer(clientfps, 0, 1000, initial(clientfps))
+	clientfps = sanitize_integer(clientfps, 0, 144, initial(clientfps))
 	return 1
 
 /datum/preferences/proc/save_preferences(client/C)

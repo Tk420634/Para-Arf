@@ -58,6 +58,7 @@ var/list/ai_verbs_default = list(
 	var/obj/item/device/multitool/aiMulti = null
 	var/custom_sprite = 0 //For our custom sprites
 	var/custom_hologram = 0 //For our custom holograms
+	var/holo_width = 32	//Width of the hologram icon in pixels for offsetting
 
 	var/obj/item/device/radio/headset/heads/ai_integrated/aiRadio = null
 
@@ -927,6 +928,7 @@ var/list/ai_verbs_default = list(
 				var/icon/character_icon = personnel_list[input]
 				if(character_icon)
 					qdel(holo_icon)//Clear old icon so we're not storing it in memory.
+					holo_width = 32
 					holo_icon = getHologramIcon(icon(character_icon))
 			else
 				alert("No suitable records found. Aborting.")
@@ -956,6 +958,7 @@ var/list/ai_verbs_default = list(
 			input = input("Please select a hologram:") as null|anything in icon_list
 			if(input)
 				qdel(holo_icon)
+				holo_width = 32
 				switch(input)
 					if("Bear")
 						holo_icon = getHologramIcon(icon('icons/mob/animal.dmi',"bear"))
@@ -1004,7 +1007,25 @@ var/list/ai_verbs_default = list(
 			"alien drone",
 			"alien hunter",
 			"alien sentinel",
-			"alien maid"
+			"alien maid",
+			"eevee",
+			"glaceon",
+			"jolteon",
+			"glaceon",
+			"espeon",
+			"flareon",
+			"umbreon",
+			"absol",
+			"dragonite",
+			"dragonair",
+			"dratini",
+			"vulpix",
+			"miltank",
+			"ampharos",
+			"mewtwo",
+			"ninetails",
+			"mightyena"
+
 			)
 			if(custom_hologram) //insert custom hologram
 				icon_list.Add("custom")
@@ -1012,6 +1033,7 @@ var/list/ai_verbs_default = list(
 			input = input("Please select a hologram:") as null|anything in icon_list
 			if(input)
 				qdel(holo_icon)
+				holo_width = 32
 				switch(input)
 					if("default")
 						holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo1"))
@@ -1031,6 +1053,59 @@ var/list/ai_verbs_default = list(
 						holo_icon = getHologramIcon(icon('icons/mob/alien.dmi', "aliens"))
 					if("alien maid")
 						holo_icon = getHologramIcon(icon('icons/mob/alien.dmi', "alienlusty"))
+					if("eevee")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("glaceon")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+
+						holo_width = 64
+					if("jolteon")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("glaceon")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("espeon")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("flareon")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("umbreon")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("absol")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("dragonair")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("dratini")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("vulpix")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("miltank")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("ampharos")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("mewtwo")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("ninetails")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("dragonite")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+					if("mightyena")
+						holo_icon = getHologramIcon(icon('icons/mob/pokemon.dmi', "[input]"))
+						holo_width = 64
+
 					if("custom")
 						if("[ckey]-ai-holo" in icon_states('icons/mob/custom_synthetic/custom-synthetic.dmi'))
 							holo_icon = getHologramIcon(icon('icons/mob/custom_synthetic/custom-synthetic.dmi', "[ckey]-ai-holo"))
