@@ -98,6 +98,8 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_ext
 	doorOpen = 'sound/machines/airlock_ext_open.ogg'
 	doorClose = 'sound/machines/airlock_ext_close.ogg'
+	opacity = 0
+	glass = 1
 
 /obj/machinery/door/airlock/welded
 	welded = 1
