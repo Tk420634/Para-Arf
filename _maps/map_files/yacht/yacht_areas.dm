@@ -14,3 +14,7 @@
 	name = "\improper Starboard Apartment 2"
 /area/crew_quarters/apartment/sb_3
 	name = "\improper Starboard Apartment 3"
+
+/area/room_service
+	name = "\improper Room Service"
+	icon_state = "red"

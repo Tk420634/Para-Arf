@@ -292,16 +292,37 @@
 "fF" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/space)
 "fG" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
 "fH" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/space)
-"fI" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner"; icon_state = "orangecorner"; dir = 2},/area/space)
-"fJ" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (WEST)"; icon_state = "orangecorner"; dir = 8},/area/space)
-"fK" = (/turf/simulated/floor/plasteel{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/space)
-"fL" = (/turf/simulated/floor/plasteel{tag = "icon-orangefull (WEST)"; icon_state = "orangefull"; dir = 8},/area/space)
-"fM" = (/turf/simulated/floor/plasteel{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
-"fN" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (EAST)"; icon_state = "orangecorner"; dir = 4},/area/space)
-"fO" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (NORTH)"; icon_state = "orangecorner"; dir = 1},/area/space)
-"fP" = (/turf/simulated/floor/plasteel{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/space)
-"fQ" = (/turf/simulated/floor/plasteel{tag = "icon-orange"; icon_state = "orange"; dir = 2},/area/space)
-"fR" = (/turf/simulated/floor/plasteel{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/space)
+"fI" = (/turf/simulated/floor/plasteel{tag = "icon-escape (NORTHWEST)"; icon_state = "escape"; dir = 9},/area/space)
+"fJ" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "escape"},/area/space)
+"fK" = (/turf/simulated/floor/plasteel{icon_state = "escape"; dir = 5},/area/space)
+"fL" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner"; icon_state = "orangecorner"; dir = 2},/area/space)
+"fM" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (WEST)"; icon_state = "orangecorner"; dir = 8},/area/space)
+"fN" = (/turf/simulated/floor/plasteel{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/space)
+"fO" = (/turf/simulated/floor/plasteel{tag = "icon-orangefull (WEST)"; icon_state = "orangefull"; dir = 8},/area/space)
+"fP" = (/turf/simulated/floor/plasteel{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
+"fQ" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "escapecorner"},/area/space)
+"fR" = (/turf/simulated/floor/plasteel{tag = "icon-escapecorner (WEST)"; icon_state = "escapecorner"; dir = 8},/area/space)
+"fS" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "escape"},/area/space)
+"fT" = (/turf/simulated/floor/plasteel,/area/space)
+"fU" = (/turf/simulated/floor/plasteel{icon_state = "escape"; dir = 4},/area/space)
+"fV" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (EAST)"; icon_state = "orangecorner"; dir = 4},/area/space)
+"fW" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (NORTH)"; icon_state = "orangecorner"; dir = 1},/area/space)
+"fX" = (/turf/simulated/floor/plasteel{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/space)
+"fY" = (/turf/simulated/floor/plasteel{tag = "icon-orange"; icon_state = "orange"; dir = 2},/area/space)
+"fZ" = (/turf/simulated/floor/plasteel{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/space)
+"ga" = (/turf/simulated/floor/plasteel{tag = "icon-escapecorner (EAST)"; icon_state = "escapecorner"; dir = 4},/area/space)
+"gb" = (/turf/simulated/floor/plasteel{tag = "icon-escapecorner (NORTH)"; icon_state = "escapecorner"; dir = 1},/area/space)
+"gc" = (/turf/simulated/floor/plasteel{tag = "icon-escape (SOUTHWEST)"; icon_state = "escape"; dir = 10},/area/space)
+"gd" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "escape"},/area/space)
+"ge" = (/turf/simulated/floor/plasteel{icon_state = "escape"; dir = 6},/area/space)
+"gf" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding9"; icon_state = "siding9"; dir = 2},/area/space)
+"gg" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding1"; icon_state = "siding1"; dir = 2},/area/space)
+"gh" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding5"; icon_state = "siding5"; dir = 2},/area/space)
+"gi" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding8"; icon_state = "siding8"; dir = 2},/area/space)
+"gj" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding4"; icon_state = "siding4"; dir = 2},/area/space)
+"gk" = (/turf/space,/turf/simulated/floor/plasteel{dir = 1; icon_state = "siding10"; tag = "icon-siding2 (NORTH)"},/area/space)
+"gl" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding2"; icon_state = "siding2"; dir = 2},/area/space)
+"gm" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding6"; icon_state = "siding6"; dir = 2},/area/space)
 
 (1,1,1) = {"
 aaabacadaeababafagahabaiajakabalamanabababababababababaoababababapababababaoababababapababababababab
@@ -325,15 +346,15 @@ ePeQeReSeTeUeVeWeXeYabeZfafbabababababababababababababababababababababababababab
 ababfcfdfeababfffgfhabfifjfkabababababababababababababababababababababababababababababababababababab
 flfmfnfofpfqfrfsftfuabababababababababababababababababababababababababababababababababababababababab
 fvfwfxfyfzfAfBfCfDfEabababababababababababababababababababababababababababababababababababababababab
-ababfFfGfHababababababababababababababababababababababababababababababababababababababababababababab
-fIfJfKfLfMababababababababababababababababababababababababababababababababababababababababababababab
-fNfOfPfQfRababababababababababababababababababababababababababababababababababababababababababababab
-abababababababababababababababababababababababababababababababababababababababababababababababababab
-abababababababababababababababababababababababababababababababababababababababababababababababababab
-abababababababababababababababababababababababababababababababababababababababababababababababababab
-abababababababababababababababababababababababababababababababababababababababababababababababababab
-abababababababababababababababababababababababababababababababababababababababababababababababababab
-abababababababababababababababababababababababababababababababababababababababababababababababababab
+ababfFfGfHababfIfJfKabababababababababababababababababababababababababababababababababababababababab
+fLfMfNfOfPfQfRfSfTfUabababababababababababababababababababababababababababababababababababababababab
+fVfWfXfYfZgagbgcgdgeabababababababababababababababababababababababababababababababababababababababab
+ababcFcGcHababababababababababababababababababababababababababababababababababababababababababababab
+ababcScTcUababababababababababababababababababababababababababababababababababababababababababababab
+ababdidjdkababababababababababababababababababababababababababababababababababababababababababababab
+ababgfggghababababababababababababababababababababababababababababababababababababababababababababab
+ababgiabgjababababababababababababababababababababababababababababababababababababababababababababab
+ababgkglgmababababababababababababababababababababababababababababababababababababababababababababab
 abababababababababababababababababababababababababababababababababababababababababababababababababab
 abababababababababababababababababababababababababababababababababababababababababababababababababab
 abababababababababababababababababababababababababababababababababababababababababababababababababab

@@ -10,6 +10,7 @@ DECLARE_LEVEL(MAIN_STATION, SELFLOOPING, list(STATION_LEVEL,STATION_CONTACT,REAC
 DECLARE_LEVEL(CENTCOMM, SELFLOOPING, list(ADMIN_LEVEL, BLOCK_TELEPORT, IMPEDES_MAGIC)))
 
 		#include "map_files\yacht\yacht_areas.dm"
+		#include "map_files\yacht\yacht_jobs.dm"
 
 #elif !defined(MAP_OVERRIDE)
 
