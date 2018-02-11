@@ -171,8 +171,6 @@
 
 /obj/proc/hear_message(mob/M as mob, text)
 
-/obj/proc/see_message(mob/M as mob, text)
-
 /obj/proc/multitool_menu(var/mob/user,var/obj/item/device/multitool/P)
 	return "<b>NO MULTITOOL_MENU!</b>"
 

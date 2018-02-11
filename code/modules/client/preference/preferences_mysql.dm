@@ -228,6 +228,8 @@
 		// Apparently, the preceding vars weren't always encoded properly...
 		if(findtext(flavor_text, "<")) // ... so let's clumsily check for tags!
 			flavor_text = html_encode(flavor_text)
+		if(findtext(metadata, "<"))
+			metadata = html_encode(metadata)
 		if(findtext(med_record, "<"))
 			med_record = html_encode(med_record)
 		if(findtext(sec_record, "<"))

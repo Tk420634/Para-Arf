@@ -41,6 +41,7 @@
 	var/hand = null
 	var/real_name = null
 	var/flavor_text = ""
+	var/ooc_prefs = ""
 	var/med_record = ""
 	var/sec_record = ""
 	var/gen_record = ""

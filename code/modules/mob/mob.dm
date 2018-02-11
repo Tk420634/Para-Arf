@@ -100,21 +100,6 @@
 		if(self_message && M == src)
 			msg = self_message
 		M.show_message(msg, 1, blind_message, 2)
-	//DO THE THING
-
-	//Here we'll handle videocameras and holopads and what not seeing emotes that aren't audible.
-	if(message)
-		var/list/listening_obj = new
-		for(var/atom/movable/A in view(7, src))
-			if(istype(A, /mob))
-				var/mob/M = A
-				for(var/obj/O in M.contents)//Looks 1 layer into the mobs for objects so you can have them in your pocket and such and they still work.
-					listening_obj |= O
-			else if(istype(A, /obj))
-				var/obj/O = A
-				listening_obj |= O
-		for(var/obj/O in listening_obj)
-			O.see_message(src, message)
 
 // Show a message to all mobs in sight of this atom
 // Use for objects performing visible actions
@@ -715,6 +700,10 @@ var/list/slot_equipment_priority = list( \
 		else
 			return "<span class='notice'>[copytext_preserve_html(msg, 1, 37)]... <a href='byond://?src=[UID()];flavor_more=1'>More...</a></span>"
 
+/mob/proc/print_ooc_prefs()
+	if(ooc_prefs && ooc_prefs != "")
+		return "<span class='notice'><a href='byond://?src=[UID()];ooc_prefs_show=1'>\[OOC Preferences\]</a></span>"
+
 /mob/proc/is_dead()
 	return stat == DEAD
 
@@ -869,6 +858,9 @@ var/list/slot_equipment_priority = list( \
 		onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()
+	if(href_list["ooc_prefs_show"])
+		usr << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", "[name]'s OOC preferences", replacetext(ooc_prefs, "\n", "<BR>")), text("window=[];size=500x200", "[name]'s OOC preferences"))
+
 
 	return
 
