@@ -717,7 +717,7 @@ var/list/slot_equipment_priority = list( \
 
 /mob/proc/print_ooc_prefs()
 	if(ooc_prefs && ooc_prefs != "")
-		return "<span class='notice'>OOC Preferences<a href='byond://?src=[UID()];ooc_prefs_show=1'>More...</a></span>"
+		return "<span class='notice'><a href='byond://?src=[UID()];ooc_prefs_show=1'>\[OOC Preferences\]</a></span>"
 
 /mob/proc/is_dead()
 	return stat == DEAD
@@ -874,7 +874,7 @@ var/list/slot_equipment_priority = list( \
 	if(href_list["flavor_change"])
 		update_flavor_text()
 	if(href_list["ooc_prefs_show"])
-		usr << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", name, replacetext(ooc_prefs, "\n", "<BR>")), text("window=[];size=500x200", name))
+		usr << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", "[name]'s OOC preferences", replacetext(ooc_prefs, "\n", "<BR>")), text("window=[];size=500x200", "[name]'s OOC preferences"))
 
 
 	return

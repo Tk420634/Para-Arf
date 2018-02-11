@@ -294,6 +294,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				dat += "<b>Skin Tone:</b> <a href='?_src_=prefs;preference=s_tone;task=input'>[S.bodyflags & HAS_ICON_SKIN_TONE ? "[s_tone]" : "[-s_tone + 35]/220"]</a><br>"
 			dat += "<b>Disabilities:</b> <a href='?_src_=prefs;preference=disabilities'>\[Set\]</a><br>"
 			dat += "<b>Nanotrasen Relation:</b> <a href ='?_src_=prefs;preference=nt_relation;task=input'>[nanotrasen_relation]</a><br>"
+			dat += "<b>OOC Preferences:</b> <a href='?_src_=prefs;preference=metadata;task=input'><b>Edit</b></a><br>"
 			dat += "<a href='byond://?_src_=prefs;preference=flavor_text;task=input'>Set Flavor Text</a><br>"
 			if(lentext(flavor_text) <= 40)
 				if(!lentext(flavor_text))	dat += "\[...\]<br>"
@@ -443,8 +444,6 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 
 			if(check_rights(R_ADMIN,0))
 				dat += "<b>OOC:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : normal_ooc_colour];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=ooccolor;task=input'><b>Change</b></a><br>"
-			if(config.allow_Metadata)
-				dat += "<b>OOC notes:</b> <a href='?_src_=prefs;preference=metadata;task=input'><b>Edit</b></a><br>"
 			if(unlock_content)
 				dat += "<b>BYOND Membership Publicity:</b> <a href='?_src_=prefs;preference=publicity'><b>[(toggles & MEMBER_PUBLIC) ? "Public" : "Hidden"]</b></a><br>"
 			if(user.client.donator_level >= DONATOR_LEVEL_ONE)
@@ -1383,12 +1382,12 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						var/list/autohiss_choice = list("Off" = AUTOHISS_OFF, "Basic" = AUTOHISS_BASIC, "Full" = AUTOHISS_FULL)
 						var/new_autohiss_pref = input(user, "Choose your character's auto-accent level:", "Character Preference") as null|anything in autohiss_choice
 						autohiss_mode = autohiss_choice[new_autohiss_pref]
-
 				if("metadata")
-					var/new_metadata = input(user, "Enter any information you'd like others to see, such as Roleplay-preferences:", "Game Preference" , metadata)  as message|null
-					if(new_metadata)
-						metadata = sanitize(copytext(new_metadata,1,MAX_MESSAGE_LEN))
-
+					var/msg = input(usr,"Enter any information you'd like others to see when they examine your character, such as Roleplay-preferences:","OOC Preferences",html_decode(metadata)) as message|null
+					if(msg != null)
+						msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+						msg = html_encode(msg)
+						metadata = msg
 				if("b_type")
 					var/new_b_type = input(user, "Choose your character's blood-type:", "Character Preference") as null|anything in list( "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" )
 					if(new_b_type)
@@ -1740,7 +1739,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						nanotrasen_relation = new_relation
 
 				if("flavor_text")
-					var/msg = input(usr,"Set the flavor text in your 'examine' verb. This can also be used for OOC notes and preferences!","Flavor Text",html_decode(flavor_text)) as message
+					var/msg = input(usr,"Set an extended description for your character to be shown when you're examined! For OOC preferences, use the dedicated setting.","Flavor Text",html_decode(flavor_text)) as message
 
 					if(msg != null)
 						msg = copytext(msg, 1, MAX_MESSAGE_LEN)
