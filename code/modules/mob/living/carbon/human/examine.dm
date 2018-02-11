@@ -424,6 +424,8 @@
 
 	if(print_flavor_text() && !skipface)
 		msg += "[print_flavor_text()]\n"
+	if(print_ooc_prefs())	//How to ruin everyone's disguise with one simple line.
+		msg += "[print_ooc_prefs()]\n"
 
 	msg += "*---------*</span>"
 	if(pose)

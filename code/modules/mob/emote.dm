@@ -52,29 +52,21 @@
  // Maybe some people are okay with that.
 
 		for(var/mob/M in player_list)
-			if(!M.client)
-				continue //skip monkeys and leavers
-			if(istype(M, /mob/new_player))
-				continue
+			if(!M.client || M.stat != DEAD || istype(M, /mob/new_player))//Do this here to prevent potentially expensive checks from running for no reason.
+				continue //skip monkeys, leavers, not dead mobs, and players in the lobby
 			if(findtext(message," snores.")) //Because we have so many sleeping people.
 				break
-			if(M.stat == DEAD && M.get_preference(CHAT_GHOSTSIGHT) && !(M in viewers(src,null)) && client)//Stop spamming my chatlogs, pets.
+			if(istype(src, /mob/living/simple_animal/pet) && isnull(client))//Pets with no clients will no longer spam ghosts.
+				break
+			if(istype(src, /mob/living/carbon/human/monkey) && isnull(client))//Clientless monkeys will no longer spam ghosts.
+				break
+			if(M.get_preference(CHAT_GHOSTSIGHT) && !(M in viewers(src,null)))
 				M.show_message(message)
 
 
 		// Type 1 (Visual) emotes are sent to anyone in view of the item
-		var/list/can_see = list()
-		var/list/can_see_obj = list()
-		for(var/atom/movable/A in view(7, src))
-			if(istype(A, /mob))
-				var/mob/M = A
-				can_see |= M
-				for(var/obj/O in M.contents)//Looks 1 layer into the mobs for objects so you can have them in your pocket and such and they still work.
-					can_see_obj |= O
-			else if(istype(A, /obj))
-				var/obj/O = A
-				can_see_obj |= O
 		if(m_type & 1)
+			var/list/can_see = get_mobs_in_view(1,src)  //Allows silicon & mmi mobs carried around to see the emotes of the person carrying them around.
 			can_see |= viewers(src,null)
 			for(var/mob/O in can_see)
 
@@ -102,10 +94,6 @@
 						M.show_message(message, m_type)
 
 				O.show_message(message, m_type)
-		//Let videocameras and holopads see emotes.
-		for(var/obj/O in can_see_obj)
-			O.see_message(src, message)
-
 
 /mob/proc/emote_dead(var/message)
 
