@@ -775,3 +775,10 @@
 	if(!isnull(desiredfps))
 		sanitize_integer(desiredfps, 0, 144, 0)
 		client.fps = desiredfps
+
+/client/proc/get_preference(toggleflag)
+	if(!prefs)
+		log_runtime(EXCEPTION("Mob '[src]', ckey '[ckey]' is missing a prefs datum on the client!"))
+		return FALSE
+	// Cast to 1/0
+	return !!(prefs.toggles & toggleflag)
