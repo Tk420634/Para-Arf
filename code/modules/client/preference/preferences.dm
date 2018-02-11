@@ -2092,6 +2092,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	character.name = character.real_name
 
 	character.flavor_text = flavor_text
+	character.ooc_prefs = metadata
 	character.med_record = med_record
 	character.sec_record = sec_record
 	character.gen_record = gen_record
