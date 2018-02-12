@@ -288,17 +288,14 @@
 	if(vore_taste && (vore_taste != ""))
 		taste_message += "[vore_taste]"
 	else
-		if(ishuman(src))
-			var/mob/living/carbon/human/H = src
-
-		else
-			taste_message += "a plain old normal [src]"
-
+		taste_message += "a plain old normal [src]"
+	// TO DO: Tasting other reagents on a heman - Jonathan
+	/*
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 		if(H.touching.reagent_list.len) //Just the first one otherwise I'll go insane.
 			var/datum/reagent/R = H.touching.reagent_list[1]
-			taste_message += " You also get the flavor of [R.taste_message] from something on them"
+			taste_message += " You also get the flavor of [R.taste_message] from something on them" */
 	return taste_message
 
 //

@@ -26,15 +26,21 @@ var/image/gurgled_overlay = image('icons/effects/sludgeoverlay_vr.dmi')
 		return FALSE
 	else
 		return TRUE
-
-/obj/item/decontaminate() //Decontaminate the sogginess as well.
-	..()
+/*
+// Originally from Phoron.dm on vorestation's git.
+/obj/item/proc/decontaminate()
+	contaminated = 0
+	overlays -= contamination_overlay
+*/
+/obj/item/proc/decontaminate() //Decontaminate the sogginess as well.
+	return
+/*	..()
 	gurgled = FALSE
 	overlays -= gurgled_overlay
 	if(cleanname)
 		name = cleanname
 	if(cleandesc)
-		desc = cleandesc
+		desc = cleandesc*/
 
 
 /obj/item/device/pda/can_use() //Get your rice bowl ready.
