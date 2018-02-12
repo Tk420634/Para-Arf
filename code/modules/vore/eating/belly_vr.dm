@@ -147,21 +147,20 @@
 
 	if(istype(M,/mob/living))
 		var/mob/living/ML = M
-		var/mob/living/OW = owner
+//		var/mob/living/OW = owner
 		if(ML.absorbed)
 			ML.absorbed = 0
+			/*
 			if(ishuman(M) && ishuman(OW))
-				/*
 				var/mob/living/carbon/human/Prey = M
 				var/mob/living/carbon/human/Pred = OW
-				*/
 				// TODO - If we ever find a way to share reagent containers, un-share them here
 				var/absorbed_count = 2 //Prey that we were, plus the pred gets a portion
 				for(var/mob/living/P in internal_contents)
 					if(P.absorbed)
 						absorbed_count++
-//				Pred.bloodstr.trans_to(Prey, Pred.reagents.total_volume / absorbed_count)
-
+				Pred.bloodstr.trans_to(Prey, Pred.reagents.total_volume / absorbed_count)
+				*/
 	var/datum/belly/B = check_belly(owner)
 	if(B)
 		B.internal_contents += M
