@@ -699,9 +699,9 @@
 
 	if(href_list["saveprefs"])
 		if(!user.save_vore_prefs())
-			alert("ERROR: Virgo-specific preferences failed to save!","Error")
+			alert("ERROR: Vore preferences failed to save!","Error")
 		else
-			user << "<span class='notice'>Virgo-specific preferences saved!</span>"
+			user << "<span class='notice'>Vore preferences saved!</span>"
 
 	if(href_list["setflavor"])
 		var/new_flavor = html_encode(input(usr,"What your character tastes like (40ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",user.vore_taste) as text|null)
