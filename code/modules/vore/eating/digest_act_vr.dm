@@ -66,7 +66,7 @@
 	icon_state = "digested"
 	access = list() // No access
 	return FALSE
-
+/*
 /obj/item/weapon/reagent_containers/food/digest_act(var/list/internal_contents = null, var/atom/movable/item_storage = null)
 	if(ishuman(item_storage))
 		var/mob/living/carbon/human/H = item_storage
@@ -77,7 +77,7 @@
 		R.cell.charge += 150
 
 	. = ..()
-
+*/
 /obj/item/weapon/holder/digest_act(var/list/internal_contents = null, var/atom/movable/item_storage = null)
 	for(var/mob/living/M in contents)
 		if(internal_contents)
