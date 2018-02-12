@@ -433,3 +433,115 @@
 /datum/gear/uniform/under/dress/sundress
 	display_name = "sundress"
 	path =/obj/item/clothing/under/sundress
+
+/datum/gear/uniform/under/purpleskirt
+	display_name = "purple skirt"
+	path =/obj/item/clothing/under/purpleskirt
+
+/datum/gear/uniform/under/croptop
+	display_name = "crop top"
+	path =/obj/item/clothing/under/croptop
+
+/datum/gear/uniform/under/sakurakimono
+	display_name = "pink sakura kimono"
+	path =/obj/item/clothing/under/sakurakimono
+
+/datum/gear/uniform/under/jesteralt
+	display_name = "jester outfit"
+	path =/obj/item/clothing/under/jesteralternative
+
+/datum/gear/uniform/under/roll
+	display_name = "roll costume"
+	path =/obj/item/clothing/under/roll
+
+/datum/gear/uniform/under/towel
+	display_name = "towel"
+	path =/obj/item/clothing/under/towel
+
+/datum/gear/uniform/under/miku
+	display_name = "miku"
+	path =/obj/item/clothing/under/miku
+
+/datum/gear/uniform/under/princess
+	display_name = "princess dress"
+	path =/obj/item/clothing/under/princess
+
+/datum/gear/uniform/under/anthy
+	display_name = "swiss dress"
+	path =/obj/item/clothing/under/anthy
+
+/datum/gear/uniform/under/pinkdress
+	display_name = "pink princess dress"
+	path =/obj/item/clothing/under/pinkdress
+
+/datum/gear/uniform/under/blueskirt
+	display_name = "blue skirt"
+	path =/obj/item/clothing/under/blueskirt
+
+/datum/gear/uniform/under/blueskirt/redskirt
+	display_name = "red skirt"
+	path =/obj/item/clothing/under/blueskirt/redskirt
+
+/datum/gear/uniform/under/schoolgirl/red
+	display_name = "red schoolgirl uniform"
+	path =/obj/item/clothing/under/schoolgirl/red
+
+/datum/gear/uniform/under/schoolgirl/green
+	display_name = "green schoolgirl uniform"
+	path =/obj/item/clothing/under/schoolgirl/green
+
+/datum/gear/uniform/under/schoolgirl/orange
+	display_name = "orange schoolgirl uniform"
+	path =/obj/item/clothing/under/schoolgirl/orange
+
+/datum/gear/uniform/under/solaradress
+	display_name = "solara dress"
+	path =/obj/item/clothing/under/solaradress
+
+/datum/gear/uniform/under/darkreddress
+	display_name = "dark red dress"
+	path =/obj/item/clothing/under/darkreddress
+
+/datum/gear/uniform/under/whitesundress
+	display_name = "white sundress"
+	path =/obj/item/clothing/under/whitesundress
+
+/datum/gear/uniform/under/geisha
+	display_name = "geisha"
+	path =/obj/item/clothing/under/geisha
+
+/datum/gear/uniform/under/keyholesweater
+	display_name = "keyhole sweater"
+	path =/obj/item/clothing/under/keyholesweater
+
+/datum/gear/uniform/under/maiyang
+	display_name = "mai yang dress"
+	path =/obj/item/clothing/under/maiyang
+
+/datum/gear/uniform/under/schoolgirl/purple
+	display_name = "purple schoolgirl uniform"
+	path =/obj/item/clothing/under/schoolgirlpurple
+
+/datum/gear/uniform/under/schoolgirl/yellow
+	display_name = "yellow schoolgirl uniform"
+	path =/obj/item/clothing/under/schoolgirlyellow
+
+/datum/gear/uniform/under/cheongsamblue
+	display_name = "blue cheongsam"
+	path =/obj/item/clothing/under/cheongsamblue
+
+/datum/gear/uniform/under/cheongsamred
+	display_name = "red cheongsam"
+	path =/obj/item/clothing/under/cheongsamred
+
+/datum/gear/uniform/under/whitedress1
+	display_name = "poofy white dress"
+	path =/obj/item/clothing/under/whitedress1
+
+/datum/gear/uniform/under/schoolgirl/black
+	display_name = "black schoolgirl uniform"
+	path =/obj/item/clothing/under/schoolgirlblack
+
+/datum/gear/uniform/under/cuttopred
+	display_name = "red cut top"
+	path =/obj/item/clothing/under/cuttop_red
