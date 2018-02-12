@@ -434,7 +434,6 @@
 	display_name = "sundress"
 	path =/obj/item/clothing/under/sundress
 
-
 /datum/gear/uniform/under/purpleskirt
 	display_name = "purple skirt"
 	path =/obj/item/clothing/under/purpleskirt
