@@ -47,7 +47,7 @@
 /datum/vore_look/Destroy()
 	loop = null
 	selected = null
-	return QDEL_HINT_HARDDEL // TODO - Until I can better analyze how this weird thing works, lets be safe
+	return QDEL_HINT_HARDDEL_NOW // TODO - Until I can better analyze how this weird thing works, lets be safe
 
 /datum/vore_look/Topic(href,href_list[])
 	if (vp_interact(href, href_list))

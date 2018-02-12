@@ -56,12 +56,12 @@
 				digestion_death(M)
 				owner.update_icons()
 				continue
-
+			/*
 			if(digest_mode == DM_DIGEST_NUMB && ishuman(M))
 				var/mob/living/carbon/human/H = M
 				if(H.bloodstr.get_reagent_amount("numbenzyme") < 5)
 					H.bloodstr.add_reagent("numbenzyme",10)
-
+			*/
 			// Deal digestion damage (and feed the pred)
 			if(!(M.status_flags & GODMODE))
 				M.adjustBruteLoss(digest_brute)

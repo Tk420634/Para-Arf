@@ -158,7 +158,7 @@
 				for(var/mob/living/P in internal_contents)
 					if(P.absorbed)
 						absorbed_count++
-				Pred.bloodstr.trans_to(Prey, Pred.reagents.total_volume / absorbed_count)
+//				Pred.bloodstr.trans_to(Prey, Pred.reagents.total_volume / absorbed_count)
 
 	var/datum/belly/B = check_belly(owner)
 	if(B)
@@ -307,6 +307,7 @@
 					M.unEquip(slot,force = TRUE)
 
 	//Reagent transfer
+	/*
 	if(ishuman(owner))
 		var/mob/living/carbon/human/Pred = owner
 		if(ishuman(M))
@@ -317,7 +318,7 @@
 			Prey.touching.trans_to_holder(Pred.bloodstr, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
 		else if(M.reagents)
 			M.reagents.trans_to_holder(Pred.bloodstr, M.reagents.total_volume, 0.5, TRUE)
-
+	*/
 	// Delete the digested mob
 	qdel(M)
 
@@ -331,9 +332,11 @@
 		var/mob/living/carbon/human/Prey = M
 		var/mob/living/carbon/human/Pred = owner
 		//Reagent sharing for absorbed with pred - Copy so both pred and prey have these reagents.
+		/*
 		Prey.bloodstr.trans_to_holder(Pred.bloodstr, Prey.bloodstr.total_volume, copy = TRUE)
 		Prey.ingested.trans_to_holder(Pred.bloodstr, Prey.ingested.total_volume, copy = TRUE)
 		Prey.touching.trans_to_holder(Pred.bloodstr, Prey.touching.total_volume, copy = TRUE)
+		*/
 		// TODO - Find a way to make the absorbed prey share the effects with the pred.
 		// Currently this is infeasible because reagent containers are designed to have a single my_atom, and we get
 		// problems when A absorbs B, and then C absorbs A,  resulting in B holding onto an invalid reagent container.
