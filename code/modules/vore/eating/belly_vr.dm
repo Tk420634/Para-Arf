@@ -151,8 +151,10 @@
 		if(ML.absorbed)
 			ML.absorbed = 0
 			if(ishuman(M) && ishuman(OW))
+				/*
 				var/mob/living/carbon/human/Prey = M
 				var/mob/living/carbon/human/Pred = OW
+				*/
 				// TODO - If we ever find a way to share reagent containers, un-share them here
 				var/absorbed_count = 2 //Prey that we were, plus the pred gets a portion
 				for(var/mob/living/P in internal_contents)
@@ -327,12 +329,12 @@
 	M.absorbed = 1
 	M << "<span class='notice'>[owner]'s [name] absorbs your body, making you part of them.</span>"
 	owner << "<span class='notice'>Your [name] absorbs [M]'s body, making them part of you.</span>"
-
+	/*
 	if(ishuman(M) && ishuman(owner))
 		var/mob/living/carbon/human/Prey = M
 		var/mob/living/carbon/human/Pred = owner
 		//Reagent sharing for absorbed with pred - Copy so both pred and prey have these reagents.
-		/*
+
 		Prey.bloodstr.trans_to_holder(Pred.bloodstr, Prey.bloodstr.total_volume, copy = TRUE)
 		Prey.ingested.trans_to_holder(Pred.bloodstr, Prey.ingested.total_volume, copy = TRUE)
 		Prey.touching.trans_to_holder(Pred.bloodstr, Prey.touching.total_volume, copy = TRUE)
@@ -379,18 +381,17 @@
 	R.setClickCooldown(50)
 
 	if(owner.stat) //If owner is stat (dead, KO) we can actually escape
-		R << "<span class='warning'>You attempt to climb out of \the [name]. (This will take around [escapetime/10] seconds.)</span>"
-		owner << "<span class='warning'>Someone is attempting to climb out of your [name]!</span>"
-
-		if(do_after(R, escapetime, owner, incapacitation_flags = INCAPACITATION_DEFAULT & ~INCAPACITATION_RESTRAINED))
+		to_chat(R, "<span class='warning'>You attempt to climb out of \the [name]. (This will take around [escapetime/10] seconds.)</span>")
+		to_chat(owner, "<span class='warning'>Someone is attempting to climb out of your [name]!</span>")
+		if(do_after(R, escapetime, needhand = 0, target = owner))
 			if((owner.stat || escapable) && (R in internal_contents)) //Can still escape?
 				release_specific_contents(R)
 				return
 			else if(!(R in internal_contents)) //Aren't even in the belly. Quietly fail.
 				return
 			else //Belly became inescapable or mob revived
-				R << "<span class='warning'>Your attempt to escape [name] has failed!</span>"
-				owner << "<span class='notice'>The attempt to escape from your [name] has failed!</span>"
+				to_chat(R, "<span class='warning'>Your attempt to escape [name] has failed!</span>")
+				to_chat(owner, "<span class='notice'>The attempt to escape from your [name] has failed!</span>")
 				return
 			return
 	var/struggle_outer_message = pick(struggle_messages_outside)
@@ -409,10 +410,7 @@
 
 	for(var/mob/M in hearers(4, owner))
 		M.show_message(struggle_outer_message, 2) // hearable
-	R << struggle_user_message
-
-
-
+	to_chat(R, struggle_user_message)
 
 
 	if(escapable) //If the stomach has escapable enabled.

@@ -102,7 +102,7 @@
 					log_debug("[attacker] attempted to feed [G.affecting] to [user] ([user.type]) but it failed.")
 
 			///// If grab clicked on grabbed
-			else if((src == G.affecting) && (attacker.a_intent == I_GRAB) && (attacker.zone_sel.selecting == BP_TORSO) && (is_vore_predator(G.affecting)))
+			else if((src == G.affecting) && (attacker.a_intent == I_GRAB) && (attacker.zone_sel.selecting == "chest") && (is_vore_predator(G.affecting)))
 				if (attacker.feed_self_to_grabbed(attacker, G.affecting))
 					qdel(G)
 					return 1
@@ -417,6 +417,10 @@
 // Magical pred-air breathing for inside preds
 // overrides a proc defined on atom called by breathe.dm
 //
+
+/atom/proc/return_air_for_internal_lifeform(var/mob/living/lifeform)
+	return return_air()
+
 /mob/living/return_air()
 	return return_air_for_internal_lifeform()
 
