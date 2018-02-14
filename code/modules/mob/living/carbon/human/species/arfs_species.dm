@@ -1,25 +1,5 @@
 // Playable species
-var/playable_species = list("Human", "Slime People", "Tajaran", "Unathi",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw", "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flaffy", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Goodra", "Gremlin", "Gria", "Grovyle", "Guilmon",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Pikachu", "Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Raichu", "Rattata", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark","Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpkanin", "Vulpix", "Vulture",
-	"Wolf",
-	"Zangoose", "Zebra", "Zigzagoon")
+//Moved to global_lists.dm
 
 //	----------------------
 //		MOB DEFINITION

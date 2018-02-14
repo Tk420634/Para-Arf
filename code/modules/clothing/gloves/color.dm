@@ -69,7 +69,13 @@
 	item_color = "hosred"		//Exists for washing machines. Is not different from black gloves in any way.
 
 /obj/item/clothing/gloves/color/black/ce
-	item_color = "chief"			//Exists for washing machines. Is not different from black gloves in any way.
+	name = "insulated rubber gloves"
+	desc = "These gloves are fire-resistant and will insulate you from electrical shock."
+	item_color = "chief"
+	siemens_coefficient = 0
+	permeability_coefficient = 0.05
+	icon_state = "ce"
+	item_state = "cegloves"
 
 /obj/item/clothing/gloves/color/black/thief
 	pickpocket = 1

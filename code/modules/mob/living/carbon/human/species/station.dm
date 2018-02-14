@@ -282,7 +282,7 @@
 	breath_type = "nitrogen"
 	poison_type = "oxygen"
 
-	species_traits = list(NO_SCAN, IS_WHITELISTED, NOTRANSSTING)
+	species_traits = list(NO_SCAN, IS_WHITELISTED, NOTRANSSTING, NOT_CREW)
 	clothing_flags = HAS_SOCKS
 	dietflags = DIET_OMNI
 	bodyflags = HAS_ICON_SKIN_TONE | HAS_TAIL | TAIL_WAGGING | TAIL_OVERLAPPED | HAS_BODY_MARKINGS | HAS_TAIL_MARKINGS
@@ -880,7 +880,7 @@
 	oxy_mod = 0
 	death_message = "gives one shrill beep before falling limp, their monitor flashing blue before completely shutting off..."
 
-	species_traits = list(IS_WHITELISTED, NO_BREATHE, NO_SCAN, NO_BLOOD, NO_PAIN, NO_DNA, RADIMMUNE, VIRUSIMMUNE, NOTRANSSTING)
+	species_traits = list(NO_BREATHE, NO_SCAN, NO_BLOOD, NO_PAIN, NO_DNA, RADIMMUNE, VIRUSIMMUNE, NOTRANSSTING)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags = HAS_SKIN_COLOR | HAS_HEAD_MARKINGS | HAS_HEAD_ACCESSORY | ALL_RPARTS
 	dietflags = 0		//IPCs can't eat, so no diet

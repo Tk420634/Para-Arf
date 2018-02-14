@@ -25,7 +25,8 @@
 
 	for(var/path in subtypesof(prototype))
 		var/datum/sprite_accessory/D = new path()
-
+		if(D.species_allowed == "all")//If allowed_species is "all"
+			D.species_allowed = all_species//Then let all species use it.
 		if(D.name)
 			if(D.fluff)
 				full_list[D.name] = D
@@ -48,27 +49,7 @@
 	var/gender = NEUTER	//Determines if the accessory will be skipped or included in random hair generations
 
 	// Restrict some styles to specific species
-	var/list/species_allowed = list("Human", "Slime People", "Tajaran", "Unathi",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw", "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flaffy", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Goodra", "Gremlin", "Gria", "Grovyle", "Guilmon",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Pikachu", "Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Raichu", "Rattata", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark","Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpkanin", "Vulpix", "Vulture",
-	"Wolf",
-	"Zangoose", "Zebra", "Zigzagoon")
+	var/list/species_allowed = "all"
 
 
 	var/list/models_allowed = list() //Specifies which, if any, hairstyles or markings can be accessed by which prosthetics. Should equal the manufacturing company name in robolimbs.dm.
@@ -97,27 +78,6 @@
 /datum/sprite_accessory/hair/bald
 	name = "Bald"
 	icon_state = "bald"
-	species_allowed = list("Human", "Slime People", "Tajaran", "Unathi",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw", "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flaffy", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Goodra", "Gremlin", "Gria", "Grovyle", "Guilmon",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Pikachu", "Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Raichu", "Rattata", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark","Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpkanin", "Vulpix", "Vulture",
-	"Wolf",
-	"Zangoose", "Zebra", "Zigzagoon")
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/short

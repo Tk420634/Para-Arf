@@ -280,7 +280,7 @@
 		var/tail_shift_y
 		var/blend_mode = ICON_ADD
 
-		if(body_accessory)
+		if(body_accessory && body_accessory_by_name[body_accessory])
 			var/datum/body_accessory/accessory = body_accessory_by_name[body_accessory]
 			tail_icon = accessory.icon
 			tail_icon_state = accessory.icon_state

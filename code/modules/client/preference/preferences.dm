@@ -293,7 +293,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 			if(S.bodyflags & (HAS_SKIN_TONE|HAS_ICON_SKIN_TONE))
 				dat += "<b>Skin Tone:</b> <a href='?_src_=prefs;preference=s_tone;task=input'>[S.bodyflags & HAS_ICON_SKIN_TONE ? "[s_tone]" : "[-s_tone + 35]/220"]</a><br>"
 			dat += "<b>Disabilities:</b> <a href='?_src_=prefs;preference=disabilities'>\[Set\]</a><br>"
-			dat += "<b>Nanotrasen Relation:</b> <a href ='?_src_=prefs;preference=nt_relation;task=input'>[nanotrasen_relation]</a><br>"
+			dat += "<b>ARF Relation:</b> <a href ='?_src_=prefs;preference=nt_relation;task=input'>[nanotrasen_relation]</a><br>"
 			dat += "<b>OOC Preferences:</b> <a href='?_src_=prefs;preference=metadata;task=input'><b>Edit</b></a><br>"
 			dat += "<a href='byond://?_src_=prefs;preference=flavor_text;task=input'>Set Flavor Text</a><br>"
 			if(lentext(flavor_text) <= 40)
@@ -832,7 +832,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_BLIND,"Blind")
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_COLOURBLIND,"Colourblind")
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_MUTE,"Mute")
-	HTML += ShowDisabilityState(user,DISABILITY_FLAG_TOURETTES,"Tourettes syndrome") // this will / can not be abused. It also SEVERELY stuns. It's just for fun.
+//	HTML += ShowDisabilityState(user,DISABILITY_FLAG_TOURETTES,"Tourettes syndrome") // this will / can not be abused. It also SEVERELY stuns. It's just for fun. (HI I'M FROM THE FUTURE AND THIS IS NOTHING BUT ANNOYING FOR EVERYONE ELSE)
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_NERVOUS,"Stutter")
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_SWEDISH,"Swedish accent")
 	HTML += ShowDisabilityState(user,DISABILITY_FLAG_CHAV,"Chav accent")
@@ -1734,7 +1734,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 
 
 				if("nt_relation")
-					var/new_relation = input(user, "Choose your relation to NT. Note that this represents what others can find out about your character by researching your background, not what your character actually thinks.", "Character Preference")  as null|anything in list("Loyal", "Supportive", "Neutral", "Skeptical", "Opposed")
+					var/new_relation = input(user, "Choose your relation to the ARF. Note that this represents what others can find out about your character by researching your background, not what your character actually thinks.", "Character Preference")  as null|anything in list("Loyal", "Supportive", "Neutral", "Skeptical", "Opposed")
 					if(new_relation)
 						nanotrasen_relation = new_relation
 

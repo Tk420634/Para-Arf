@@ -6,7 +6,7 @@
 	deform = 'icons/mob/human_races/r_golem.dmi'
 
 	default_language = "Galactic Common"
-	species_traits = list(NO_BREATHE, NO_BLOOD, RADIMMUNE, VIRUSIMMUNE, NOGUNS)
+	species_traits = list(NO_BREATHE, NO_BLOOD, RADIMMUNE, VIRUSIMMUNE, NOGUNS, NOT_CREW)
 
 	oxy_mod = 0
 

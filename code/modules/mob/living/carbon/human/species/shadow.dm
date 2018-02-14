@@ -17,7 +17,7 @@
 		"eyes" = /obj/item/organ/internal/eyes/shadow //8 darksight.
 		)
 
-	species_traits = list(NO_BREATHE, NO_BLOOD, RADIMMUNE, VIRUSIMMUNE)
+	species_traits = list(NO_BREATHE, NO_BLOOD, RADIMMUNE, VIRUSIMMUNE, NOT_CREW)
 
 	oxy_mod = 0
 

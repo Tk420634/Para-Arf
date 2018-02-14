@@ -100,6 +100,27 @@
 		if(ticker.current_state != GAME_STATE_PREGAME)
 			stat(null, "Station Time: [worldtime2text()]")
 
+//Returns 1 if their character has everything to join. 0 otherwise.
+/mob/new_player/proc/HasRequiredInformation()
+	var/warning_message = "Your character is lacking these required details: "
+	var/missingOOC = FALSE
+	var/missingFlavorText = FALSE
+	if(isnull(client.prefs.metadata) || client.prefs.metadata == "")
+		missingOOC = TRUE
+	if(isnull(client.prefs.flavor_text) || client.prefs.flavor_text == "")
+		missingFlavorText = TRUE
+	if(missingOOC && missingFlavorText)
+		warning_message += "OOC Preferences and Flavor Text"
+	else
+		if(missingOOC)
+			warning_message += "OOC Preferences"
+		if(missingFlavorText)
+			warning_message += "Flavor Text"
+	if(missingOOC || missingFlavorText)
+		if(alert(src, warning_message, "Character Info Missing", "I Understand") == "I Understand")
+			return 0
+		return 0
+	return 1
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
@@ -109,6 +130,8 @@
 		return 1
 
 	if(href_list["ready"])
+		if(!ready && !HasRequiredInformation())
+			return 0
 		ready = !ready
 		new_player_panel_proc()
 
@@ -148,16 +171,8 @@
 			return 1
 
 	if(href_list["late_join"])
-		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-			to_chat(usr, "<span class='warning'>The round is either not ready, or has already finished...</span>")
-			return
-
-		if(client.prefs.species in whitelisted_species)
-
-			if(!is_alien_whitelisted(src, client.prefs.species) && config.usealienwhitelist)
-				to_chat(src, alert("You are currently not whitelisted to play [client.prefs.species]."))
-				return 0
-
+		if(!HasRequiredInformation())
+			return 0
 		LateChoices()
 
 	if(href_list["manifest"])

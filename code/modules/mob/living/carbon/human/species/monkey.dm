@@ -35,6 +35,8 @@
 	brute_mod = 1.5
 	burn_mod = 1.5
 
+	species_traits = list(NOT_CREW)
+
 /datum/species/monkey/handle_npc(var/mob/living/carbon/human/H)
 	if(H.stat != CONSCIOUS)
 		return

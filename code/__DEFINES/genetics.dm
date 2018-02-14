@@ -141,3 +141,4 @@
 #define NOGUNS			12
 #define NOTRANSSTING	13
 #define VIRUSIMMUNE		14
+#define NOT_CREW		15 //For thing like abductors and other antag-only species which shouldn't be join as a crew member.
