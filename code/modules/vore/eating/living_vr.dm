@@ -24,13 +24,13 @@
 //
 // Hook for generic creation of stuff on new creatures
 //
-/hook/living_new/proc/vore_setup(mob/living/M)
+/mob/living/proc/vore_setup(mob/living/M)
 	M.verbs += /mob/living/proc/escapeOOC
 //	M.verbs += /mob/living/proc/lick
 	if(M.no_vore) //If the mob isn's supposed to have a stomach, let's not give it an insidepanel so it can make one for itself, or a stomach.
 		M << "<span class='warning'>The creature that you are can not eat others.</span>"
 		return 1
-	M.verbs += /mob/living/proc/insidePanel
+	M.verbs += /mob/living/verb/insidePanel
 
 	//M.appearance_flags |= PIXEL_SCALE // Moved to 02_size.dm
 

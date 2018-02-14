@@ -8,7 +8,7 @@
 #define BELLIES_DESC_MAX 1024
 #define FLAVOR_MAX 40
 
-/mob/living/proc/insidePanel()
+/mob/living/verb/insidePanel()
 	set name = "Vore Panel"
 	set category = "IC"
 
@@ -34,6 +34,22 @@
 		picker_holder.popup = new(src, "insidePanel","Inside!", 400, 600, picker_holder)
 		picker_holder.popup.set_content(dat)
 		picker_holder.popup.open()
+/*
+/mob/living/verb/insidePanel()
+	set name = "Vore Panel"
+	set category = "IC"
+
+	var/datum/vore_look/picker_holder = new()
+	picker_holder.loop = picker_holder
+	picker_holder.selected = vore_organs[vore_selected]
+
+	var/dat = picker_holder.gen_ui(src)
+
+	picker_holder.popup = new(src, "insidePanel","Inside!", 400, 600, picker_holder)
+	picker_holder.popup.set_content(dat)
+	picker_holder.popup.open()
+	src.openpanel = 1
+*/
 
 //
 // Callback Handler for the Inside form
@@ -127,30 +143,6 @@
 			if(DM_GROW)
 				spanstyle = "color:purple;"
 			if(DM_SIZE_STEAL)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_MALE)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_HAIR_AND_EYES)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_FEMALE)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_KEEP_GENDER)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR_EGG)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_REPLICA)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_REPLICA_EGG)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_KEEP_GENDER_EGG)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_MALE_EGG)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_FEMALE_EGG)
-				spanstyle = "color:purple;"
-			if(DM_EGG)
 				spanstyle = "color:purple;"
 
 		dat += "<span style='[spanstyle]'> ([B.internal_contents.len])</span></a></li>"
