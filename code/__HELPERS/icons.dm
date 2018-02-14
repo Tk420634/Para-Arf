@@ -818,8 +818,10 @@ The _flatIcons list is a cache for generated icon files.
 	var/icon/alpha_mask
 	flat_icon.ColorTone(rgb(125,180,225))//Let's make it bluish.
 	flat_icon.ChangeOpacity(0.5)//Make it half transparent.
-	if(A.Height() == 64)
+	if(A.Height() == 64 && A.Width() == 32)
 		alpha_mask = new('icons/mob/ancient_machine.dmi', "scanline2")//Scaline for tall icons.
+	else if(A.Height() == 64 && A.Width() == 64)
+		alpha_mask = new('icons/mob/pokemon.dmi', "scanline64x64")
 	else
 		alpha_mask = new('icons/effects/effects.dmi', "scanline")//Scanline effect.
 	flat_icon.AddAlphaMask(alpha_mask)//Finally, let's mix in a distortion effect.

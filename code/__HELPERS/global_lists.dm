@@ -44,9 +44,14 @@
 		var/datum/species/S = new T
 		S.race_key = ++rkey //Used in mob icon caching.
 		all_species[S.name] = S
-
+		if(NOT_CREW in S.species_traits)
+			continue
 		if(IS_WHITELISTED in S.species_traits)
 			whitelisted_species += S.name
+		else
+			free_species += S.name
+
+	playable_species = (free_species |= whitelisted_species)
 
 	init_subtypes(/datum/crafting_recipe, crafting_recipes)
 

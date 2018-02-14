@@ -758,3 +758,27 @@
 	if(world.byond_version >= 511 && byond_version >= 511 && prefs)
 		if(prefs.clientfps != fps)
 			fps = prefs.clientfps
+
+/mob/proc/SyncFPS()
+	if(client)
+		client.SyncFPS()
+
+/mob/verb/SetFPS()
+	set name = "Set Framerate"
+	set desc = "Set a custom framerate independent from your preferences-saved setting. Temporary, will not save."
+	set category = "Preferences"
+	if(!client)
+		return
+	if(world.byond_version < 511)
+		return
+	var/desiredfps = input(src, "Choose your desired fps.(0 = synced with server tick rate (currently:[world.fps]) Recommended: 40) Requires BYOND 511+ to utilize.", "Character Preference", client.fps)  as null|num
+	if(!isnull(desiredfps))
+		sanitize_integer(desiredfps, 0, 144, 0)
+		client.fps = desiredfps
+
+/client/proc/get_preference(toggleflag)
+	if(!prefs)
+		log_runtime(EXCEPTION("Mob '[src]', ckey '[ckey]' is missing a prefs datum on the client!"))
+		return FALSE
+	// Cast to 1/0
+	return !!(prefs.toggles & toggleflag)

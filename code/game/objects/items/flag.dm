@@ -58,6 +58,10 @@
 	desc = "The banner of Ian, because SQUEEEEE."
 	icon_state = "ianflag"
 
+/obj/item/flag/arf
+	name = "Alliance of Racial Federations flag"
+	desc = "The banner of the A.R.F."
+	icon_state = "arfflag"
 
 //Species flags
 
