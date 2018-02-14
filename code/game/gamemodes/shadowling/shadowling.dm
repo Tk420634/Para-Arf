@@ -305,7 +305,7 @@ Made by Xhuis
 	blood_color = "#555555"
 	flesh_color = "#222222"
 
-	species_traits = list(NO_BLOOD, NO_BREATHE, RADIMMUNE, NOGUNS) //Can't use guns due to muzzle flash
+	species_traits = list(NO_BLOOD, NO_BREATHE, RADIMMUNE, NOGUNS, NOT_CREW, IS_WHITELISTED) //Can't use guns due to muzzle flash
 	burn_mod = 1.5 //1.5x burn damage, 2x is excessive
 	oxy_mod = 0
 	hot_env_multiplier = 1.5
@@ -352,7 +352,7 @@ Made by Xhuis
 	blood_color = "#CCCCCC"
 	flesh_color = "#AAAAAA"
 
-	species_traits = list(NO_BLOOD, NO_BREATHE, RADIMMUNE)
+	species_traits = list(NO_BLOOD, NO_BREATHE, RADIMMUNE, NOT_CREW, IS_WHITELISTED)
 	burn_mod = 1.1
 	oxy_mod = 0
 	hot_env_multiplier = 1.1
