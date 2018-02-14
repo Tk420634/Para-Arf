@@ -57,8 +57,10 @@
 
 	var/track = null
 	if(isobserver(src))
-		if(italics && client.prefs.toggles & CHAT_GHOSTRADIO)
+		/*
+		if(italics && client.prefs.toggles & CHAT_GHOSTRADIO)//??????????
 			return
+		*/
 		if(speaker_name != speaker.real_name && speaker.real_name)
 			speaker_name = "[speaker.real_name] ([speaker_name])"
 		track = "([ghost_follow_link(speaker, ghost=src)]) "
