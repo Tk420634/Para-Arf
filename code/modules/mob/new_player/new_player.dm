@@ -171,6 +171,15 @@
 			return 1
 
 	if(href_list["late_join"])
+		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
+			to_chat(usr, "<span class='warning'>The round is either not ready, or has already finished...</span>")
+			return
+
+		if(client.prefs.species in whitelisted_species)
+
+			if(!is_alien_whitelisted(src, client.prefs.species) && config.usealienwhitelist)
+				to_chat(src, alert("You are currently not whitelisted to play [client.prefs.species]."))
+				return 0
 		if(!HasRequiredInformation())
 			return 0
 		LateChoices()
