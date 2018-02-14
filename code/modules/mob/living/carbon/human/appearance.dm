@@ -296,7 +296,7 @@
 
 
 /mob/living/carbon/human/proc/change_skin_color(var/colour = "#000000")
-	if(colour == skin_colour || !(species.bodyflags & HAS_SKIN_COLOR))
+	if(colour == skin_colour || !(species.bodyflags & HAS_SKIN_COLOR) || (species.bodyflags & HAS_SKIN_TONE))//skin tone overrides skin color
 		return
 
 	skin_colour = colour
