@@ -32,6 +32,7 @@ var/round_start_time = 0
 
 	var/triai = 0//Global holder for Triumvirate
 	var/initialtpass = 0 //holder for inital autotransfer vote timer
+	var/transfervotes = 0 //A cached amount of autotransfer votes that've happened already.
 
 	var/obj/screen/cinematic = null			//used for station explosion cinematic
 
@@ -59,16 +60,16 @@ var/round_start_time = 0
 
 /datum/controller/gameticker/proc/votetimer()
 	var/timerbuffer = 0
-	if(initialtpass == 0)
+	if(transfervotes == 0)//start of the shift, do a 3 hour spawn() (default)
 		timerbuffer = config.vote_autotransfer_initial
-	else
+	else//after that do 1 hour intervals (default)
 		timerbuffer = config.vote_autotransfer_interval
-	spawn(timerbuffer)
-		if(config.vote_for_autotransfer)
+	spawn(timerbuffer)//actually start the spawn
+		if(config.vote_for_autotransfer && transfervotes <= config.vote_autotransfer_max_votes)//With default configs, on the 6th vote(at 8 hours) it will auto-transfer without a vote.
 			vote.autotransfer()
 		else
 			init_shift_change(null, 1)
-		initialtpass = 1
+		transfervotes++
 		votetimer()
 
 /datum/controller/gameticker/proc/setup()

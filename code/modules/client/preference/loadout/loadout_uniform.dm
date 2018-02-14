@@ -24,6 +24,10 @@
 	display_name = "skirt, black"
 	path = /obj/item/clothing/under/blackskirt
 
+/datum/gear/uniform/under/nuditypermit
+	display_name = "nudity permit"
+	path =/obj/item/clothing/under/nuditypermit
+
 /datum/gear/uniform/skirt/job
 	subtype_path = /datum/gear/uniform/skirt/job
 	subtype_cost_overlap = FALSE

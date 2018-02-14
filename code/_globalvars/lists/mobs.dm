@@ -5,6 +5,8 @@ var/global/list/language_keys[0]					// Table of say codes for all languages
 var/global/list/all_superheroes[0]
 var/global/list/all_nations[0]
 var/global/list/whitelisted_species = list()
+var/global/list/free_species = list()
+var/global/list/playable_species = list() //Lists above, combined.
 
 var/list/clients = list()							//list of all clients
 var/list/admins = list()							//list of all clients whom are admins
@@ -31,3 +33,100 @@ var/global/list/sec_hud_users = list()
 var/global/list/antag_hud_users = list()
 var/global/list/surgeries_list = list()
 var/global/list/hear_radio_list = list()			//Mobs that hear the radio even if there's no client
+
+
+
+//These aren't used anywhere currently so I'm going to comment them out for now. You can just use all_species for 99% of things anyway.
+/*
+#define ALL_SPECIES_BY_NAME all_species_by_name
+var/global/list/all_species_by_name = list(
+	"Human",
+	"Tajaran",
+	"Skrell",
+	"Unathi",
+	"Diona",
+	"Vulpkanin",
+	"Alien",
+	"Anubis",
+	"Apex",
+	"Avali",
+	"Bat",
+	"Bear",
+	"Beaver",
+	"Bee",
+	"Beholder",
+	"Butterfly",
+	"Carno",
+	"Ceratosaur",
+	"Chicken",
+	"Corgi",
+	"Cow",
+	"Coyote",
+	"Croc",
+	"Crow",
+	"Cutebold",
+	"Dalmation",
+	"Deer",
+	"Drake",
+	"Elephant",
+	"Elf",
+	"Fennec",
+	"Fox",
+	"Fung",
+	"Glaceon",
+	"Glowfen",
+	"Goat",
+	"Gremlin",
+	"Gria",
+	"Guilmon",
+	"Hawk",
+	"Hippo",
+	"Husky",
+	"Hyena",
+	"Hylotl",
+	"Jackalope",
+	"Jelly",
+	"Kangaroo",
+	"Kitsune",
+	"Lab",
+	"Lugia",
+	"Lynx",
+	"Mouse",
+	"Orc",
+	"Orca",
+	"Otie",
+	"Otter",
+	"Panda",
+	"Panther",
+	"Penguin",
+	"Pig",
+	"Pony",
+	"Porcupine",
+	"Possum",
+	"Pudding",
+	"Pug",
+	"Rabbit",
+	"Raccoon",
+	"Red Panda",
+	"Renamon",
+	"Roorat",
+	"Sergal",
+	"Shark",
+	"Shepherd",
+	"Shih Tzu",
+	"Siamese",
+	"Skunk",
+	"Smilodon",
+	"Snail",
+	"Snarby",
+	"Squirrel",
+	"Stego",
+	"Stitch",
+	"Subterranean Slime",
+	"Turtle",
+	"Vulpix",
+	"Vulture",
+	"Wolf",
+	"Zebra",
+	"Zigzagoon")
+*/

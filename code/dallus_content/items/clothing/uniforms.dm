@@ -200,6 +200,21 @@
 	item_color = "purpleskirt"
 	item_state = "purpleskirt"
 
+/obj/item/clothing/under/nuditypermit
+	name = "nudity permit"
+	desc = "This special permit voids most public indecency laws to a point. Often used by species who don't fit into most clothing or for those looking to \
+		show off more than a little skin. This special card has a special adhesive backing which allows it to cling to the skin, fur, or scales of the wearer \
+		without any residue, matting, or clamps."
+	description_fluff = "This is worn in your jumpsuit slot and provides no bodily coverage what-so-ever while still letting you equip your PDA/ID. \
+						While this is a nudity permit, it's not a free card to fight security or admins if you're using this liberty to break the server rules."
+	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
+	icon_state = "permit"
+	item_color = "nudepermit"
+	item_state = "nudepermit"
+	body_parts_covered = 0
+	has_sensor = 0
+	species_fit = list()
+
 // BARE BUTT PYJAMA AND SWEATERS
 /*
 /obj/item/clothing/under/bb
@@ -533,7 +548,7 @@
 
 /obj/item/clothing/under/birthdaysuit
 	name = "birthday jumpsuit"
-	desc = "A jumpsuit you can wear to be nude and still wear  your PDA, and a collar. However, if security sees you 'nude' they can still arrest you for public nudiity."
+	desc = "A jumpsuit you can wear to be nude and still wear  your PDA, and a collar. However, if security sees you 'nude' they can still arrest you for public nudity."
 	icon_state = "birthdaysuit"
 	icon_override = 'code/dallus_content/icons/uniforms1.dmi' //the on-mob icon file since they fill up fast
 
