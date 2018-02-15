@@ -303,7 +303,7 @@
 	char_size	= sanitize_inlist(char_size, valid_scales, initial(char_size))
 
 	socks			= sanitize_text(socks, initial(socks))
-	body_accessory	= sanitize_text(body_accessory, initial(body_accessory))
+	body_accessory	= sanitize_inlist(sanitize_text(body_accessory, initial(body_accessory)), body_accessory_by_name, "None")
 
 //	if(isnull(disabilities)) disabilities = 0
 	if(!player_alt_titles) player_alt_titles = new()

@@ -25,7 +25,8 @@
 
 	for(var/path in subtypesof(prototype))
 		var/datum/sprite_accessory/D = new path()
-
+		if(D.species_allowed == "all")//If allowed_species is "all"
+			D.species_allowed = all_species//Then let all species use it.
 		if(D.name)
 			if(D.fluff)
 				full_list[D.name] = D
@@ -48,27 +49,7 @@
 	var/gender = NEUTER	//Determines if the accessory will be skipped or included in random hair generations
 
 	// Restrict some styles to specific species
-	var/list/species_allowed = list("Human", "Slime People", "Tajaran", "Unathi",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw", "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark","Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
+	var/list/species_allowed = "all"
 
 
 	var/list/models_allowed = list() //Specifies which, if any, hairstyles or markings can be accessed by which prosthetics. Should equal the manufacturing company name in robolimbs.dm.
@@ -97,27 +78,6 @@
 /datum/sprite_accessory/hair/bald
 	name = "Bald"
 	icon_state = "bald"
-	species_allowed = list("Human", "Unathi", "Vox", "Diona", "Kidan", "Grey", "Plasmaman", "Skeleton", "Vulpkanin", "Tajaran",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw",  "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
 	glasses_over = 1
 
 /datum/sprite_accessory/hair/short
@@ -1323,7 +1283,6 @@
 	name = "Shaved"
 	icon_state = "bald"
 	gender = NEUTER
-	species_allowed = list("Human", "Unathi", "Tajaran", "Skrell", "Vox", "Diona", "Kidan", "Greys", "Vulpkanin", "Slime People")
 
 /datum/sprite_accessory/facial_hair/watson
 	name = "Watson Mustache"
@@ -1636,54 +1595,11 @@
 ///////////////////////////
 /datum/sprite_accessory/underwear
 	icon = 'icons/mob/underwear.dmi'
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw",  "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
 	gender = NEUTER
 
 /datum/sprite_accessory/underwear/nude
 	name = "Nude"
 	icon_state = null
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw",  "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle", "Guilmon",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
-
 
 /datum/sprite_accessory/underwear/male
 	gender = MALE
@@ -1803,55 +1719,12 @@
 ////////////////////////////
 /datum/sprite_accessory/undershirt
 	icon = 'icons/mob/underwear.dmi'
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw",  "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
-
+	species_allowed = "all"
 	gender = NEUTER
 
 /datum/sprite_accessory/undershirt/nude
 	name = "Nude"
 	icon_state = null
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw",  "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
-
 
 //plain color shirts
 /datum/sprite_accessory/undershirt/shirt_white
@@ -2082,53 +1955,11 @@
 ///////////////////////
 /datum/sprite_accessory/socks
 	icon = 'icons/mob/underwear.dmi'
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw",  "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
-
 	gender = NEUTER
 
 /datum/sprite_accessory/socks/nude
 	name = "Nude"
 	icon_state = null
-	species_allowed = list("Human", "Unathi", "Diona", "Vulpkanin", "Tajaran", "Kidan", "Grey", "Plasmaman", "Machine", "Skrell", "Slime People", "Skeleton", "Drask", "Vox",
-	"Absol", "Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Datashark", "Deathclaw",  "Deer", "Drake",
-	"Eevee", "Elephant", "Elf",
-	"Fennec", "Flareon", "Fox", "Fung",
-	"Glaceon", "GlaceonS", "Glowfen", "Goat", "Gremlin", "Gria", "Grovyle",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lopunny", "Lucky", "Lugia", "Lynx",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
 
 /datum/sprite_accessory/socks/white_norm
 	name = "Normal White"
@@ -2248,13 +2079,11 @@
 
 /datum/sprite_accessory/head_accessory
 	icon = 'icons/mob/body_accessory.dmi'
-	species_allowed = list("Unathi", "Vulpkanin", "Tajaran", "Machine")
 	icon_state = "accessory_none"
 	var/over_hair
 
 /datum/sprite_accessory/head_accessory/none
 	name = "None"
-	species_allowed = list("Human", "Unathi", "Diona", "Grey", "Kidan", "Machine", "Tajaran", "Vulpkanin", "Skrell", "Slime People", "Skeleton", "Vox")
 	icon_state = "accessory_none"
 
 /datum/sprite_accessory/head_accessory/unathi
@@ -2490,18 +2319,15 @@
 
 /datum/sprite_accessory/body_markings
 	icon = 'icons/mob/body_accessory.dmi'
-	species_allowed = list("Unathi", "Tajaran", "Vulpkanin", "Machine", "Vox", "Kidan")
 	icon_state = "accessory_none"
 	marking_location = "body"
 
 /datum/sprite_accessory/body_markings/none
 	name = "None"
-	species_allowed = list("Human", "Unathi", "Diona", "Grey", "Machine", "Tajaran", "Vulpkanin", "Skrell", "Slime People", "Skeleton", "Vox", "Kidan")
 	icon_state = "accessory_none"
 
 /datum/sprite_accessory/body_markings/tiger
 	name = "Tiger Body"
-	species_allowed = list("Unathi", "Tajaran", "Vulpkanin")
 	icon_state = "markings_tiger"
 
 /datum/sprite_accessory/body_markings/kidan
@@ -2554,7 +2380,7 @@
 	icon_state = "markings_patch_taj"
 
 /datum/sprite_accessory/body_markings/vulpkanin
-	species_allowed = list("Vulpkanin")
+	species_allowed = "all"
 
 /datum/sprite_accessory/body_markings/vulpkanin/belly_fox_vulp
 	name = "Vulpkanin Belly"
@@ -2589,7 +2415,7 @@
 	icon_state = "markings_points_crest_vulp"
 
 /datum/sprite_accessory/body_markings/drask
-	species_allowed = list("Drask")
+	species_allowed = list("Drask")//Drask look a bit weird, can't give all of these to everyone just yet
 
 /datum/sprite_accessory/body_markings/drask/arm_spines_drask
 	name = "Drask Arm Spines"
@@ -2607,7 +2433,7 @@
 	icon_state = "markings_head_outline_kid"
 
 /datum/sprite_accessory/body_markings/head/tajara
-	species_allowed = list("Tajaran")
+	species_allowed = "all"
 
 /datum/sprite_accessory/body_markings/head/tajara/tiger_head_taj
 	name = "Tajaran Tiger Head"
@@ -2650,7 +2476,7 @@
 	icon_state = "markings_face_patch_taj"
 
 /datum/sprite_accessory/body_markings/head/vulpkanin
-	species_allowed = list("Vulpkanin")
+	species_allowed = "all"
 
 /datum/sprite_accessory/body_markings/head/vulpkanin/tiger_head_vulp
 	name = "Vulpkanin Tiger Head"
@@ -2685,7 +2511,7 @@
 	icon_state = "markings_face_points_sharp_vulp"
 
 /datum/sprite_accessory/body_markings/head/unathi
-	species_allowed = list("Unathi")
+	species_allowed = "all"
 
 /datum/sprite_accessory/body_markings/head/unathi/tiger_head_una
 	name = "Unathi Tiger Head"
@@ -2849,7 +2675,7 @@
 	icon_state = "markings_voxtail_stripe"
 
 /datum/sprite_accessory/body_markings/tail/vulpkanin
-	species_allowed = list("Vulpkanin")
+	species_allowed = "all"
 
 /datum/sprite_accessory/body_markings/tail/vulpkanin/vulp_default_tip
 	name = "Vulpkanin Default Tail Tip"

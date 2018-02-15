@@ -90,9 +90,9 @@
 	var/datum/announcement/priority/emergency_shuttle_docked = new(0, new_sound = sound('sound/AI/shuttledock.ogg'))
 	var/datum/announcement/priority/emergency_shuttle_called = new(0, new_sound = sound('sound/AI/shuttlecalled.ogg'))
 	var/datum/announcement/priority/emergency_shuttle_recalled = new(0, new_sound = sound('sound/AI/shuttlerecalled.ogg'))
+	var/datum/announcement/priority/crew_transfer_started = new(0, new_sound = sound('sound/misc/notice2.ogg'))
 
 	var/canRecall = TRUE //no bad condom, do not recall the crew transfer shuttle!
-
 
 /obj/docking_port/mobile/emergency/register()
 	if(!..())
@@ -128,7 +128,7 @@
 			dtime = max(shuttle_master.emergencyCallTime - dtime, 0)
 	return round(dtime/divisor, 1)
 
-/obj/docking_port/mobile/emergency/request(obj/docking_port/stationary/S, coefficient=1, area/signalOrigin, reason, redAlert)
+/obj/docking_port/mobile/emergency/request(obj/docking_port/stationary/S, coefficient=1, area/signalOrigin, reason, redAlert, crewTransfer = FALSE)
 	shuttle_master.emergencyCallTime = initial(shuttle_master.emergencyCallTime) * coefficient
 	switch(mode)
 		if(SHUTTLE_RECALL)
@@ -148,7 +148,10 @@
 	else
 		shuttle_master.emergencyLastCallLoc = null
 
-	emergency_shuttle_called.Announce("The emergency shuttle has been called. [redAlert ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]It will arrive in [timeLeft(600)] minutes.[reason][shuttle_master.emergencyLastCallLoc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ]")
+	if(crewTransfer)
+		crew_transfer_started.Announce("The current shift is coming to a close and a long-range transfer shuttle has been dispatched to [station_name()]. [redAlert ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]It will arrive in [timeLeft(600)] minutes. Employees who are leaving should finish what they are working on and secure their workplace before making their way to the departure lounge.")
+	else
+		emergency_shuttle_called.Announce("The emergency shuttle has been called. [redAlert ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]It will arrive in [timeLeft(600)] minutes.[reason][shuttle_master.emergencyLastCallLoc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ]")
 
 /obj/docking_port/mobile/emergency/cancel(area/signalOrigin)
 	if(!canRecall)

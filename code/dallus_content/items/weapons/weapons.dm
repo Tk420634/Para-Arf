@@ -53,7 +53,7 @@
 	icon_state = "dildopsych"
 
 
-obj/item/weapon/sextoy/dildo/fleshlight
+/obj/item/weapon/sextoy/dildo/fleshlight
 	name = "fleshlight"
 	desc = "Somehow, it seems to be the perfect fit for any length. Very cool."
 	icon_state = "fleshlight"
@@ -118,3 +118,48 @@ obj/item/weapon/sextoy/dildo/fleshlight
 	item_state = "killbow_staff"
 	attack_verb = list("mesmerizes")
 */
+
+/obj/item/toy/plushie/debug
+	name = "debug plushi"
+	icon_state = "debug"
+	icon = 'icons/obj/toy.dmi'
+
+/obj/item/toy/plushie/orange_fox
+	name = "orange fox plushie"
+	icon_state = "orangefox"
+	icon = 'icons/obj/toy.dmi'
+
+/obj/item/toy/plushie/bubblegum
+	name = "bubblegum plush"
+	icon_state = "bubblegum"
+	icon = 'icons/obj/toy.dmi'
+
+/obj/item/toy/plushie/plushvar
+	name = "var plush"
+	icon_state = "plushvar"
+	icon = 'icons/obj/toy.dmi'
+
+/obj/item/toy/plushie/narplush
+	name = "narsie plushie"
+	icon_state = "narplush"
+	icon = 'icons/obj/toy.dmi'
+
+/obj/item/toy/plushie/snakeplush
+	name = "snake plushie"
+	icon_state = "plushie_snake"
+	icon = 'icons/obj/toy.dmi'
+
+/obj/item/toy/plushie/lizardplush
+	name = "lizard plushie"
+	icon_state = "plushie_lizard"
+	icon = 'icons/obj/toy.dmi'
+
+/obj/item/toy/plushie/slimeplush
+	name = "slime plushie"
+	icon_state = "plushie_slime"
+	icon = 'icons/obj/toy.dmi'
+
+/obj/item/toy/plushie/nukeplush
+	name = "nuke op plush"
+	icon_state = "plushie_nuke"
+	icon = 'icons/obj/toy.dmi'

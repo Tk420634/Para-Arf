@@ -1152,3 +1152,36 @@
 //	old_y = 0
 	pixel_x = 0
 	pixel_y = 0
+
+
+/mob/living/simple_animal/parrot/clockwork_hawk
+	name = "Clockwork Hawk"
+	desc = "A bird made of brass"
+	icon = 'icons/mob/pets.dmi'
+	icon_state = "clock_hawk_fly"
+	icon_living = "clock_hawk_fly"
+	icon_dead = "clock_hawk_dead"
+	clean_speak = list(
+		"I wanna metal!",
+		"Check the singlo, you chucklefucks!",
+		"Check the tesla, you shits!",
+		"STOP HOT-WIRING THE ENGINE, FUCKING CHRIST!",
+		"Wire the solars, you lazy bums!",
+		"WHO TOOK THE DAMN HARDSUITS?",
+		"POLISH ME, YOU FUCK",
+		"OH GOD ITS FREE CALL THE SHUTTLE")
+
+		//Ticktock
+
+/mob/living/simple_animal/parrot/clockwork_hawk/ticktock
+	name = "Tick-Tock"
+	desc = "The CE's trusted brass bird! Sometimes bits and pieces fall of it."
+	clean_speak = list(
+		"Ticky wanna metal!",
+		"Check the singlo, you chucklefucks!",
+		"Check the tesla, you shits!",
+		"STOP HOT-WIRING THE ENGINE, FUCKING CHRIST!",
+		"Wire the solars, you lazy bums!",
+		"WHO TOOK THE DAMN HARDSUITS?",
+		"POLISH ME, YOU FUCK",
+		"OH GOD ITS FREE CALL THE SHUTTLE")

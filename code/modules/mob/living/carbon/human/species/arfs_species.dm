@@ -1,25 +1,5 @@
 // Playable species
-var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vulpkanin",
-	"Alien", "Anubis", "Apex", "Avali",
-	"Bat", "Bear", "Beaver", "Bee", "Beholder", "Butterfly",
-	"Carno", "Ceratosaur", "Chicken", "Corgi", "Cow", "Coyote", "Croc", "Crow", "Cutebold",
-	"Dalmation", "Deathclaw", "Deer", "Drake",
-	"Elephant", "Elf",
-	"Fennec", "Fox", "Fung",
-	"Glaceon", "Glowfen", "Goat", "Gremlin", "Gria", "Guilmon",
-	"Hawk", "Hippo", "Husky", "Hyena", "Hylotl",
-	"Jackalope", "Jelly",
-	"Kangaroo", "Kitsune",
-	"Lab", "Lugia", "Lynx",
-	"Mouse",
-	"Orc", "Orca", "Otie", "Otter",
-	"Panda", "Panther", "Penguin", "Pig", "Pony", "Porcupine", "Possum", "Pudding", "Pug",
-	"Rabbit", "Raccoon", "Red Panda","Renamon", "Roorat",
-	"Sergal", "Shark", "Shepherd", "Shih Tzu", "Siamese", "Skunk", "Smilodon","Snail", "Snarby", "Squirrel", "Stego", "Stitch", "Subterranean Slime",
-	"Turtle",
-	"Vulpix", "Vulture",
-	"Wolf",
-	"Zebra", "Zigzagoon")
+//Moved to global_lists.dm
 
 //	----------------------
 //		MOB DEFINITION
@@ -109,6 +89,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 /mob/living/carbon/human/elf/New(var/new_loc)
     ..(new_loc, "Elf")
 
+/mob/living/carbon/human/flaffy/New(var/new_loc)
+    ..(new_loc, "Flaffy")
+
 /mob/living/carbon/human/fennec/New(var/new_loc)
     ..(new_loc, "Fennec")
 
@@ -135,6 +118,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/goat/New(var/new_loc)
     ..(new_loc, "Goat")
+
+/mob/living/carbon/human/goodra/New(var/new_loc)
+    ..(new_loc, "Goodra")
 
 /mob/living/carbon/human/gremlin/New(var/new_loc)
     ..(new_loc, "Gremlin")
@@ -214,6 +200,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 /mob/living/carbon/human/pig/New(var/new_loc)
     ..(new_loc, "Pig")
 
+/mob/living/carbon/human/pikachu/New(var/new_loc)
+    ..(new_loc, "Pikachu")
+
 /mob/living/carbon/human/pony/New(var/new_loc)
     ..(new_loc, "Pony")
 
@@ -234,6 +223,12 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/raccoon/New(var/new_loc)
     ..(new_loc, "Raccoon")
+
+/mob/living/carbon/human/raichu/New(var/new_loc)
+    ..(new_loc, "Raichu")
+
+/mob/living/carbon/human/rattata/New(var/new_loc)
+    ..(new_loc, "Rattata")
 
 /mob/living/carbon/human/redpanda/New(var/new_loc)
     ..(new_loc, "Red Panda")
@@ -294,6 +289,9 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 
 /mob/living/carbon/human/wolf/New(var/new_loc)
     ..(new_loc, "Wolf")
+
+/mob/living/carbon/human/zangoose/New(var/new_loc)
+    ..(new_loc, "Zangoose")
 
 /mob/living/carbon/human/zebra/New(var/new_loc)
     ..(new_loc, "Zebra")
@@ -877,6 +875,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	female_scream_sound = 'sound/misc/arf_race_sounds/fennec1.ogg'
 	reagent_tag = PROCESS_ORG
 
+/datum/species/flaffy
+	name = "Flaffy"
+	name_plural = "Flaffies"
+	icobase = 'icons/mob/human_races/ARF Races/r_flaffy_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_flaffy_arf.dmi'
+	primitive_form = "flaaffy"
+	path = /mob/living/carbon/human/flaffy
+	language = "Sol Common"
+	tail = "flaffytail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
 /datum/species/flareon
 	name = "Flareon"
 	name_plural = "Flareons"
@@ -886,7 +901,7 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	path = /mob/living/carbon/human/flareon
 	language = "Sol Common"
 	tail = "flareontail"
-	species_traits = list(IS_WHITELISTED, LIPS)
+	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
@@ -1030,6 +1045,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	speech_chance = 20
 	male_scream_sound = 'sound/misc/arf_race_sounds/glaceon1.ogg'
 	female_scream_sound = 'sound/misc/arf_race_sounds/glaceon1.ogg'
+	reagent_tag = PROCESS_ORG
+
+/datum/species/goodra
+	name = "Goodra"
+	name_plural = "Goodra"
+	icobase = 'icons/mob/human_races/ARF Races/r_goodra_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_goodra_arf.dmi'
+	primitive_form = "monkey"
+	path = /mob/living/carbon/human/goodra
+	language = "Sol Common"
+	tail = "goodratail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
 	reagent_tag = PROCESS_ORG
 
 /datum/species/gremlin
@@ -1541,6 +1573,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	female_scream_sound = 'sound/misc/arf_race_sounds/pig1.ogg'
 	reagent_tag = PROCESS_ORG
 
+/datum/species/pikachu
+	name = "Pikachu"
+	name_plural = "Pikachus"
+	icobase = 'icons/mob/human_races/ARF Races/r_pikachu_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_goodra_arf.dmi'
+	primitive_form = "mouse"
+	path = /mob/living/carbon/human/pikachu
+	language = "Sol Common"
+	tail = "pikachutail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
 /datum/species/pony
 	name = "Pony"
 	name_plural = "Ponies"
@@ -1676,6 +1725,40 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	speech_chance = 20
 	male_scream_sound = 'sound/misc/arf_race_sounds/raccoon1.ogg'
 	female_scream_sound = 'sound/misc/arf_race_sounds/raccoon1.ogg'
+	reagent_tag = PROCESS_ORG
+
+/datum/species/raichu
+	name = "Raichu"
+	name_plural = "Raichus"
+	icobase = 'icons/mob/human_races/ARF Races/r_raichu_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_raichu_arf.dmi'
+	primitive_form = "mouse"
+	path = /mob/living/carbon/human/raichu
+	language = "Sol Common"
+	tail = "raichutail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
+/datum/species/rattata
+	name = "Rattata"
+	name_plural = "Rattatas"
+	icobase = 'icons/mob/human_races/ARF Races/r_rattata_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_rattata_arf.dmi'
+	primitive_form = "mouse"
+	path = /mob/living/carbon/human/rattata
+	language = "Sol Common"
+	tail = "rattatatail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
 	reagent_tag = PROCESS_ORG
 
 /datum/species/redpanda
@@ -2047,6 +2130,23 @@ var/playable_species = list("Human", "Tajaran", "Skrell", "Unathi", "Diona", "Vu
 	speech_chance = 20
 	male_scream_sound = 'sound/misc/arf_race_sounds/wolf1.ogg'
 	female_scream_sound = 'sound/misc/arf_race_sounds/wolf1.ogg'
+	reagent_tag = PROCESS_ORG
+
+/datum/species/zangoose
+	name = "Zangoose"
+	name_plural = "Zangeese" //:^)~TK
+	icobase = 'icons/mob/human_races/ARF Races/r_zangoose_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_zangoose_arf.dmi'
+	primitive_form = "mouse"
+	path = /mob/living/carbon/human/zangoose
+	language = "Sol Common"
+	tail = "zangoosetail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
 	reagent_tag = PROCESS_ORG
 
 /datum/species/zebra

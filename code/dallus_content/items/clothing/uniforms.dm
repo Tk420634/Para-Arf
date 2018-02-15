@@ -3,97 +3,220 @@
 	name = "Sakura Kimono"
 	desc = "A pink kimono."
 	icon_state = "sakura_hokkaido_kimono"
+	item_color = "sakura_hokkaido_kimono"
+	item_state = "sakura_hokkaido_kimono"
 
-//dresses
-/obj/item/clothing/under/firereddress
-	name = "Fire Red Dress"
-	desc = "A firey red dress"
-	icon_state = "dress_fire_red"
 
 /obj/item/clothing/under/jesteralternative
 	name = "Jesters outfit"
 	desc = "A silly jesters outfit."
 	icon_state = "jester2"
+	item_color = "jester2"
+	item_state = "jester2"
 
 /obj/item/clothing/under/roll
 	name = "Roll costume"
 	desc = "The goggles do nothing."
 	icon_state = "roll"
+	item_color = "roll"
+	item_state = "roll"
 
 /obj/item/clothing/under/towel
 	name = "Towel"
 	desc = "Only a stavag would lose this."
 	icon_state = "towel"
+	item_color = "towel"
+	item_state = "towel"
 
 /obj/item/clothing/under/miku
 	name = "Miku Outfit"
 	desc = "You get hungry just looking at it."
 	icon_state = "miku"
-
+	item_color = "miku"
+	item_state = "miku"
 
 /obj/item/clothing/under/princess
 	name = "Princess dress"
 	desc = "It looks pretty fancy. But you better not be late getting home."
 	icon_state = "princess"
+	item_color = "princess"
+	item_state = "princess"
 
 /obj/item/clothing/under/anthy
 	name = "Swiss Dress"
 	desc = "It looks like something."
 	icon_state = "anthy"
+	item_color = "anthy"
+	item_state = "anthy"
 
 /obj/item/clothing/under/pinkdress
 	name = "Pink Princess Dress"
 	desc = "It reminds you of the girls toy aisle."
 	icon_state = "pinkdress"
-
-/obj/item/clothing/under/roman
-	name = "roman armor"
-	desc = "Ancient Roman armor. Made of metallic and leather straps."
-	icon_state = "roman"
-
-/obj/item/clothing/under/griffin
-	name = "griffon uniform"
-	desc = "A soft brown jumpsuit with a white feather collar made of synthetic feathers and a lust for mayhem."
-	icon_state = "griffin"
+	item_color = "pinkdress"
+	item_state = "pinkdress"
 
 /obj/item/clothing/under/blueskirt
 	name = "blue skirt"
 	desc = "A blue, casual skirt."
 	icon_state = "blueskirt"
+	item_color = "blueskirt"
+	item_state = "blueskirt"
 
 /obj/item/clothing/under/blueskirt/redskirt
 	name = "red skirt"
 	desc = "A red, casual skirt."
 	icon_state = "redskirt"
+	item_color = "redskirt"
+	item_state = "redskirt"
 
 /obj/item/clothing/under/schoolgirl/red
 	name = "red schoolgirl uniform"
 	icon_state = "schoolgirlred"
+	item_color = "schoolgirlred"
+	item_state = "schoolgirlred"
 
 /obj/item/clothing/under/schoolgirl/green
 	name = "green schoolgirl uniform"
 	icon_state = "schoolgirlgreen"
+	item_color = "schoolgirlgreen"
+	item_state = "schoolgirlgreen"
 
 /obj/item/clothing/under/schoolgirl/orange
 	name = "orange schoolgirl uniform"
 	icon_state = "schoolgirlorange"
-
-/obj/item/clothing/under/jester
-	name = "jester suit"
-	desc = "A jolly dress, well suited to entertain your master, nuncle."
-	icon_state = "jester"
-
-/obj/item/clothing/under/nursealt
-	name = "nurse outfit"
-	desc = "a short, rather revealing nurse dress"
-	icon_state = "nurse"
+	item_color = "schoolgirlorange"
+	item_state = "schoolgirlorange"
 
 /obj/item/clothing/under/solaradress
 	name = "solara dress"
 	desc = "a solara dress"
 	icon_state = "solara_dress"
+	item_color = "solara_dress"
+	item_state = "solara_dress"
+
+/obj/item/clothing/under/darkreddress
+	name = "Dark red dress"
+	desc = "A pretty dark red dress with a black belt."
+	icon_state = "darkreddress"
+	item_color = "darkreddress"
+	item_state = "darkreddress"
+
+/obj/item/clothing/under/whitesundress
+	name = "white sundress"
+	desc = "A white sundress with little flowers"
+	icon_state = "sundress_white"
+	item_color = "sundress_white"
+	item_state = "sundress_white"
+
+/obj/item/clothing/under/geisha
+	name = "geisha"
+	desc = "a geisha outfit"
+	icon_state = "geisha"
+	item_color = "geisha"
+	item_state = "geisha"
+
+/obj/item/clothing/under/keyholesweater
+	name = "keyhole sweater"
+	desc = "a sweater with a hole in it"
+	icon_state = "keyholesweater"
+	item_color = "keyholesweater"
+	item_state = "keyholesweater"
+
+/obj/item/clothing/under/maiyang
+	name = "mai yang dress"
+	desc = "Just a chinese dress."
+	icon_state = "mai_yang"
+	item_color = "mai_yang"
+	item_state = "mai_yang"
+
+/obj/item/clothing/under/whitesundress
+	name = "white sundress"
+	desc = "A white sundress with little flowers"
+	icon_state = "sundress_white"
+	item_color = "sundress_white"
+	item_state = "sundress_white"
+
+/obj/item/clothing/under/schoolgirlpurple
+	name = "purple schoolgirl outfit"
+	desc = "A purple school girl outfit."
+	icon_state = "schoolgirlpurple"
+	item_color = "schoolgirlpurple"
+	item_state = "schoolgirlpurple"
+
+/obj/item/clothing/under/schoolgirlyellow
+	name = "yellow schoolgirl outfit"
+	desc = "A yellow school girl outfit."
+	icon_state = "schoolgirlyellow"
+	item_color = "schoolgirlyellow"
+	item_state = "schoolgirlyellow"
+
+/obj/item/clothing/under/cheongsamblue
+	name = "blue cheongsam"
+	desc = "a blue chinese type outfit"
+	icon_state = "cheongsam-blue"
+	item_color = "cheongsam-blue"
+	item_state = "cheongsam-blue"
+
+/obj/item/clothing/under/cheongsamred
+	name = "red cheongsam"
+	desc = "a red chinese type outfit"
+	icon_state = "cheongsam-red"
+	item_color = "cheongsam-red"
+	item_state = "cheongsam-red"
+
+/obj/item/clothing/under/whitedress1
+	name = "poofy white dress"
+	desc = "a very poofy white dress"
+	icon_state = "whitedress1"
+	item_color = "whitedress1"
+	item_state = "whitedress1"
+
+/obj/item/clothing/under/schoolgirlblack
+	name = "black schoolgirl outfit"
+	desc = "a black school girl outfit"
+	icon_state = "schoolgirl_black"
+	item_color = "schoolgirl_black"
+	item_state = "schoolgirl_black"
+
+/obj/item/clothing/under/cuttop_red
+	name = "red cut top"
+	desc = "a cut top in the color red"
+	icon_state = "cuttop_red"
+	item_color = "cuttop_red"
+	item_state = "cuttop_red"
+
+/obj/item/clothing/under/croptop
+	name = "crop top"
+	desc = "just a crop top"
+	icon_state = "croptop"
+	item_color = "croptop"
+	item_state = "croptop"
+
+/obj/item/clothing/under/purpleskirt
+	name = "purple skirt"
+	desc = "a warm looking purple skirt"
+	icon_state = "purpleskirt"
+	item_color = "purpleskirt"
+	item_state = "purpleskirt"
+
+/obj/item/clothing/under/nuditypermit
+	name = "nudity permit"
+	desc = "This special permit voids most public indecency laws to a point. Often used by species who don't fit into most clothing or for those looking to \
+		show off more than a little skin. This special card has a special adhesive backing which allows it to cling to the skin, fur, or scales of the wearer \
+		without any residue, matting, or clamps."
+	description_fluff = "This is worn in your jumpsuit slot and provides no bodily coverage what-so-ever while still letting you equip your PDA/ID. \
+						While this is a nudity permit, it's not a free card to fight security or admins if you're using this liberty to break the server rules."
+	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
+	icon_state = "permit"
+	item_color = "nudepermit"
+	item_state = "nudepermit"
+	body_parts_covered = 0
+	has_sensor = 0
+	species_fit = list()
 
 // BARE BUTT PYJAMA AND SWEATERS
+/*
 /obj/item/clothing/under/bb
 	name = "bare butt pajamas"
 	desc = "Why trade style for comfort? Now you can go commando down south and still be cozy up north."
@@ -408,11 +531,6 @@
 	desc = "a skimpy white dress. Gimme an F!"
 	icon_state = "white_cheer"
 
-/obj/item/clothing/under/schoolgirlblack
-	name = "black schoolgirl dress"
-	desc = "a dark coloured dress, just like in those Japanese Animes"
-	icon_state = "schoolgirl_black"
-
 /obj/item/clothing/under/maximusarmor
 	name = "maximus armor"
 	desc = "Are you not entertained?"
@@ -423,16 +541,6 @@
 	desc = "a blue dress"
 	icon_state = "sasha"
 
-/obj/item/clothing/under/cuttopred
-	name = "red cuttop"
-	desc = "a short red shirt with short black shorts"
-	icon_state = "cuttop_red"
-
-/obj/item/clothing/under/croptop
-	name = "croptop"
-	desc = "a stylish black crop top displaying NanoTrasen pride. Wait a minute...."
-	icon_state = "croptop"
-
 /obj/item/clothing/under/hoodieskirt
 	name = "hoodie with skirt"
 	desc = "a soft blue hoodie with a tan skirt"
@@ -440,7 +548,7 @@
 
 /obj/item/clothing/under/birthdaysuit
 	name = "birthday jumpsuit"
-	desc = "A jumpsuit you can wear to be nude and still wear  your PDA, and a collar. However, if security sees you 'nude' they can still arrest you for public nudiity."
+	desc = "A jumpsuit you can wear to be nude and still wear  your PDA, and a collar. However, if security sees you 'nude' they can still arrest you for public nudity."
 	icon_state = "birthdaysuit"
 	icon_override = 'code/dallus_content/icons/uniforms1.dmi' //the on-mob icon file since they fill up fast
 
@@ -472,3 +580,4 @@
 	icon_state = "lifeguard"
 	icon_override = 'code/dallus_content/icons/uniforms1.dmi' //the on-mob icon file since they fill up fast
 	item_state = "lifeguard"
+*/
