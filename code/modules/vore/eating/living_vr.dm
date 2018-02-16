@@ -25,15 +25,16 @@
 // Hook for generic creation of stuff on new creatures
 //
 /mob/living/proc/vore_setup(mob/living/M)
+	if(!ishuman(M))	return 1
 	M.verbs += /mob/living/proc/escapeOOC
 //	M.verbs += /mob/living/proc/lick
 	if(M.no_vore) //If the mob isn's supposed to have a stomach, let's not give it an insidepanel so it can make one for itself, or a stomach.
-		M << "<span class='warning'>The creature that you are can not eat others.</span>"
+		to_chat(M,"<span class='warning'>The creature that you are can not eat others.</span>")
 		return 1
 	M.verbs += /mob/living/verb/insidePanel
 
 	//M.appearance_flags |= PIXEL_SCALE // Moved to 02_size.dm
-
+	to_chat(M,"<span class='warning'>WARNING: Checking if there no organs.</span>")
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	if(!M.vore_organs || !M.vore_organs.len)
 		spawn(20) //Wait a couple of seconds to make sure copy_to or whatever has gone
@@ -41,7 +42,7 @@
 
 			if(M.client && M.client.prefs_vr)
 				if(!M.copy_from_prefs_vr())
-					M << "<span class='warning'>ERROR: You seem to have saved VOREStation prefs, but they couldn't be loaded.</span>"
+					to_chat(M,"<span class='warning'>ERROR: You seem to have saved VOREStation prefs, but they couldn't be loaded.</span>")
 					return 0
 				if(M.vore_organs && M.vore_organs.len)
 					M.vore_selected = M.vore_organs[1]
