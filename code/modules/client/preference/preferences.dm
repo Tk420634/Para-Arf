@@ -301,7 +301,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 				dat += "<b>Skin Tone:</b> <a href='?_src_=prefs;preference=s_tone;task=input'>[S.bodyflags & HAS_ICON_SKIN_TONE ? "[s_tone]" : "[-s_tone + 35]/220"]</a><br>"
 			dat += "<b>Disabilities:</b> <a href='?_src_=prefs;preference=disabilities'>\[Set\]</a><br>"
 			dat += "<b>ARF Relation:</b> <a href ='?_src_=prefs;preference=nt_relation;task=input'>[nanotrasen_relation]</a><br>"
-			dat += "<b>OOC Preferences:</b> <a href='?_src_=prefs;preference=metadata;task=input'><b>Edit</b></a><br>"
+			dat += "<b>OOC/ERP Preferences:</b> <a href='?_src_=prefs;preference=metadata;task=input'><b>Edit</b></a><br>"
 			dat += "<a href='byond://?_src_=prefs;preference=flavor_text;task=input'>Set Flavor Text</a><br>"
 			if(lentext(flavor_text) <= 40)
 				if(!lentext(flavor_text))	dat += "\[...\]<br>"
@@ -1390,7 +1390,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 						var/new_autohiss_pref = input(user, "Choose your character's auto-accent level:", "Character Preference") as null|anything in autohiss_choice
 						autohiss_mode = autohiss_choice[new_autohiss_pref]
 				if("metadata")
-					var/msg = input(usr,"Enter any information you'd like others to see when they examine your character, such as Roleplay-preferences:","OOC Preferences",html_decode(metadata)) as message|null
+					var/msg = input(usr,"Enter any information you'd like others to see when they examine your character, such as Erotic Roleplay-preferences:","OOC Preferences",html_decode(metadata)) as message|null
 					if(msg != null)
 						msg = copytext(msg, 1, MAX_MESSAGE_LEN)
 						msg = html_encode(msg)
