@@ -669,7 +669,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	usr.visible_message("<span class='deadsay'><b>[src]</b> points to [A].</span>")
 	return 1
 
-/mob/dead/observer/proc/incarnate_ghost()
+/mob/dead/observer/proc/incarnate_ghost(var/sleep_time = 0, var/weaken_time = 0, var/message = null)
 	if(!client)
 		return
 	var/mob/living/carbon/human/new_char = new(get_turf(src))
@@ -679,3 +679,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		mind.transfer_to(new_char)
 	else
 		new_char.key = key
+	if(sleep_time > 0)
+		new_char.sleeping = sleep_time
+	if(weaken_time > 0)
+		new_char.Weaken(weaken_time)
+	if(istext(message))
+		to_chat(new_char, message)

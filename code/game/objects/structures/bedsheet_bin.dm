@@ -154,7 +154,34 @@ LINEN BINS
 	icon_state = "sheetwiz"
 	item_color = "wiz"
 
+/obj/item/weapon/bedsheet/random_color
+	name = "random bedsheet"
+	icon_state = "sheetrainbow"
+	item_color = "rainbow"
+	var/list/color_choices = list(
+							"white",
+							"blue",
+							"green",
+							"orange",
+							"purple",
+							"red",
+							"yellow",
+							"rainbow"
+							)
 
+/obj/item/weapon/bedsheet/random_color/New()
+	..()
+	name = "bedsheet"
+	PickNewColor()
+
+/obj/item/weapon/bedsheet/random_color/proc/PickNewColor()
+	if(color_choices.len > 0)
+		var/new_color = pick(color_choices)
+		if(new_color == "white")
+			icon_state = "sheet"
+		else
+			icon_state = "sheet[new_color]"
+		item_color = new_color
 
 /obj/structure/bedsheetbin
 	name = "linen bin"

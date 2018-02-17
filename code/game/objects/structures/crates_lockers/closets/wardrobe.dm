@@ -1,6 +1,6 @@
 /obj/structure/closet/wardrobe
 	name = "wardrobe"
-	desc = "It's a storage unit for standard-issue Nanotrasen attire."
+	desc = "It's a storage unit for standard-issue ARF attire."
 	icon_state = "blue"
 	icon_closed = "blue"
 
@@ -140,7 +140,7 @@
 
 /obj/structure/closet/wardrobe/orange
 	name = "prison wardrobe"
-	desc = "It's a storage unit for Nanotrasen-regulation prisoner attire."
+	desc = "It's a storage unit for ARF-regulation prisoner attire."
 	icon_state = "orange"
 	icon_closed = "orange"
 
@@ -477,3 +477,50 @@
 	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/clothing/under/rank/medical/mortician(src)
 	new /obj/item/clothing/head/surgery/black(src)
+
+/obj/structure/closet/wardrobe/medic_white_allinone
+	name = "medical wardrobe"
+	icon_state = "white"
+	icon_closed = "white"
+
+/obj/structure/closet/wardrobe/medic_white_allinone/New()
+	..()
+	new /obj/item/clothing/under/rank/medical(src)
+	new /obj/item/clothing/under/rank/medical(src)
+	new /obj/item/clothing/under/rank/medical/skirt(src)
+	new /obj/item/clothing/under/rank/medical/skirt(src)
+	new /obj/item/clothing/under/rank/medical/blue(src)
+	new /obj/item/clothing/under/rank/medical/green(src)
+	new /obj/item/clothing/under/rank/medical/purple(src)
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/suit/storage/labcoat(src)
+	new /obj/item/clothing/suit/storage/labcoat(src)
+	new /obj/item/clothing/mask/surgical(src)
+	new /obj/item/clothing/mask/surgical(src)
+	new /obj/item/clothing/under/medigown(src)
+	new /obj/item/clothing/under/medigown(src)
+	new /obj/item/clothing/under/medigown(src)
+	new /obj/item/clothing/under/medigown(src)
+	new /obj/item/clothing/under/rank/nursesuit (src)
+	new /obj/item/clothing/head/nursehat (src)
+	new /obj/item/clothing/under/rank/nurse(src)
+	new /obj/item/clothing/under/rank/orderly(src)
+	new /obj/item/clothing/suit/storage/fr_jacket(src)
+	new /obj/item/clothing/suit/storage/fr_jacket(src)
+	new /obj/item/clothing/suit/storage/fr_jacket(src)
+	new /obj/item/clothing/under/rank/medical/blue(src)
+	new /obj/item/clothing/head/surgery/blue(src)
+	new /obj/item/clothing/under/rank/medical/green(src)
+	new /obj/item/clothing/head/surgery/green(src)
+	new /obj/item/clothing/under/rank/medical/purple(src)
+	new /obj/item/clothing/under/rank/medical/skirt(src)
+	new /obj/item/clothing/under/rank/medical/skirt(src)
+	new /obj/item/clothing/head/surgery/purple(src)
+	new /obj/item/clothing/under/medigown(src)
+	new /obj/item/clothing/under/medigown(src)
+	new /obj/item/clothing/under/medigown(src)
+	new /obj/item/clothing/under/medigown(src)
+	new /obj/item/clothing/shoes/black(src)
+	new /obj/item/clothing/shoes/black(src)
+	new /obj/item/clothing/shoes/black(src)
