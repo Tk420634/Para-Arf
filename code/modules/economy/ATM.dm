@@ -14,7 +14,7 @@ log transactions
 #define PRINT_DELAY 100
 
 /obj/machinery/atm
-	name = "Alliance of Racial Federations automatic teller machine"
+	name = "automatic teller machine"
 	desc = "For all your monetary needs!"
 	icon = 'icons/obj/terminals.dmi'
 	icon_state = "atm"
@@ -115,7 +115,7 @@ log transactions
 	if(..())
 		return 1
 	if(issilicon(user))
-		to_chat(user, "<span class='warning'>Artificial unit recognized. Artificial units do not currently receive monetary compensation, as per Alliance of Racial Federations regulation #1005.</span>")
+		to_chat(user, "<span class='warning'>Artificial unit recognized. Artificial units do not currently receive monetary compensation, as per ARF regulation #1005.</span>")
 		return
 	ui_interact(user)
 

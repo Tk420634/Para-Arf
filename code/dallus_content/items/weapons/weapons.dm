@@ -53,7 +53,7 @@
 	icon_state = "dildopsych"
 
 
-/obj/item/weapon/sextoy/dildo/fleshlight
+obj/item/weapon/sextoy/dildo/fleshlight
 	name = "fleshlight"
 	desc = "Somehow, it seems to be the perfect fit for any length. Very cool."
 	icon_state = "fleshlight"
@@ -119,47 +119,42 @@
 	attack_verb = list("mesmerizes")
 */
 
-/obj/item/toy/plushie/debug
-	name = "debug plushi"
-	icon_state = "debug"
-	icon = 'icons/obj/toy.dmi'
+/obj/item/weapon/featherduster
+	name = "feather duster"
+	desc = "Thanks to recent advances in absorbent materials research, this feather duster can dust, scrub, and mop up all sorts of dirt, dust, or stains without ever needing to be cleaned off or dried (or your money back)!"
+	icon = 'icons/obj/items.dmi'
+	icon_state = "soap"
+	w_class = WEIGHT_CLASS_SMALL
+	throwforce = 0
+	throw_speed = 4
+	throw_range = 4
+	force = 0
+	var/cleanspeed = 50 //slower than mop
 
-/obj/item/toy/plushie/orange_fox
-	name = "orange fox plushie"
-	icon_state = "orangefox"
-	icon = 'icons/obj/toy.dmi'
 
-/obj/item/toy/plushie/bubblegum
-	name = "bubblegum plush"
-	icon_state = "bubblegum"
-	icon = 'icons/obj/toy.dmi'
 
-/obj/item/toy/plushie/plushvar
-	name = "var plush"
-	icon_state = "plushvar"
-	icon = 'icons/obj/toy.dmi'
+/obj/item/weapon/featherduster/afterattack(atom/target, mob/user, proximity)
+	if(!proximity) return
+	if(user.client && (target in user.client.screen))
+		to_chat(user, "<span class='notice'>You need to take that [target.name] off before cleaning it.</span>")
+	else if(istype(target,/obj/effect/decal/cleanable))
+		user.visible_message("<span class='warning'>[user] begins to dust \the [target.name] with [src].</span>")
+		if(do_after(user, src.cleanspeed, target = target) && target)
+			to_chat(user, "<span class='notice'>You clean up \the [target.name].</span>")
+			qdel(target)
+	else
+		user.visible_message("<span class='warning'>[user] begins to dust \the [target.name] with [src].</span>")
+		if(do_after(user, src.cleanspeed, target = target))
+			to_chat(user, "<span class='notice'>You dust \the [target.name].</span>")
+			var/obj/effect/decal/cleanable/C = locate() in target
+			qdel(C)
+			target.clean_blood()
+			if(istype(target, /turf/simulated))
+				var/turf/simulated/T = target
+				T.dirt = 0
 
-/obj/item/toy/plushie/narplush
-	name = "narsie plushie"
-	icon_state = "narplush"
-	icon = 'icons/obj/toy.dmi'
-
-/obj/item/toy/plushie/snakeplush
-	name = "snake plushie"
-	icon_state = "plushie_snake"
-	icon = 'icons/obj/toy.dmi'
-
-/obj/item/toy/plushie/lizardplush
-	name = "lizard plushie"
-	icon_state = "plushie_lizard"
-	icon = 'icons/obj/toy.dmi'
-
-/obj/item/toy/plushie/slimeplush
-	name = "slime plushie"
-	icon_state = "plushie_slime"
-	icon = 'icons/obj/toy.dmi'
-
-/obj/item/toy/plushie/nukeplush
-	name = "nuke op plush"
-	icon_state = "plushie_nuke"
-	icon = 'icons/obj/toy.dmi'
+/obj/item/weapon/featherduster/attack(mob/target as mob, mob/user as mob)
+	if(target && user && ishuman(target) && ishuman(user) && !target.stat && !user.stat && user.zone_sel &&user.zone_sel.selecting == "mouth" )
+		user.visible_message("<span class='warning'>\the [user] dusts off \the [target] with \the [src.name]!</span>")
+		return
+	..()

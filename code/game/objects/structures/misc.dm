@@ -60,19 +60,21 @@
 
 /obj/structure/respawner
 	name = "\improper Long-Distance Cloning Machine"
-	desc = "Top-of-the-line Nanotrasen technology allows for cloning of crew members from off-station upon bluespace request."
+	desc = "Top-of-the-line alliance technology allows for cloning of crew members from off-site backups."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "borgcharger1(old)"
 	anchored = 1
 	density = 1
 
 /obj/structure/respawner/attack_ghost(mob/dead/observer/user as mob)
-	var/response = alert(user, "Are you sure you want to spawn like this?\n(If you do this, you won't be able to be cloned!)","Respawn?","Yes","No")
+	var/response = alert(user, "Are you sure you want to spawn like this?\n(If you do this while dead, you won't be able to be cloned!)","Respawn?","Yes","No")
 	if(response == "Yes")
 		user.forceMove(get_turf(src))
 		log_admin("[key_name(user)] was incarnated by a respawner machine.")
 		message_admins("[key_name_admin(user)] was incarnated by a respawner machine.")
-		user.incarnate_ghost()
+		user.incarnate_ghost(sleep_time = 10, weaken_time = 15, message = "<span class='danger'>You have been cloned from an off-site backup. Your last memories are going through a routine scan on another Alliance-owned facility. \
+		Remember that you are a new person and to not exact revenge on your killer or return to your body's location without first learning that you were ever dead and where you died. \
+		If you were never dead, you are without identification, equipment, or reason to be on board. You are not guaranteed a position on the crew. For more rules on respawning, use the Rules button above this chat box.</span>")
 
 /obj/structure/ghost_beacon
 	name = "ethereal beacon"

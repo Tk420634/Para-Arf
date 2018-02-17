@@ -1145,6 +1145,11 @@ var/list/ghostteleportlocs = list()
 	icon_state = "Sleep"
 	valid_territory = FALSE
 
+/area/crew_quarters/cryo_storage
+	name = "\improper Cryogenic Storage"
+	icon_state = "Sleep"
+	valid_territory = FALSE
+
 /area/crew_quarters/sleep_male
 	name = "\improper Male Dorm"
 	icon_state = "Sleep"
