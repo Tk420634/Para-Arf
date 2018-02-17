@@ -102,12 +102,12 @@
 	return
 
 //EXTRA LIGHTERS
-/obj/item/weapon/lighter/zippo/nt_rep
+/obj/item/weapon/lighter/zippo/arf_rep
 	name = "gold engraved zippo"
-	desc = "An engraved golden Zippo lighter with the letters NT on it."
-	icon_state = "zippo_nt_off"
-	icon_on = "zippo_nt_on"
-	icon_off = "zippo_nt_off"
+	desc = "An engraved golden Zippo lighter with the letters ARF on it."
+	icon_state = "zippo_arf_off"
+	icon_on = "zippo_arf_on"
+	icon_off = "zippo_arf_off"
 
 /obj/item/weapon/lighter/zippo/blue
 	name = "blue zippo lighter"
