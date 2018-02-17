@@ -144,7 +144,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	shoes = /obj/item/clothing/shoes/centcom
 	l_ear = /obj/item/device/radio/headset/heads/ntrep
 	id = /obj/item/weapon/card/id/nanotrasen
-	l_pocket = /obj/item/weapon/lighter/zippo/nt_rep
+	l_pocket = /obj/item/weapon/lighter/zippo/arf_rep
 	pda = /obj/item/device/pda/heads/ntrep
 	backpack_contents = list(
 		/obj/item/weapon/melee/classic_baton/ntcane = 1

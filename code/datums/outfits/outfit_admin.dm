@@ -329,7 +329,7 @@
 	L.implant(H)
 
 /datum/outfit/admin/nt_diplomat
-	name = "NT Diplomat"
+	name = "A.R.F. Diplomat"
 
 	uniform = /obj/item/clothing/under/rank/centcom/diplomatic
 	back = /obj/item/weapon/storage/backpack/satchel
@@ -337,7 +337,7 @@
 	shoes = /obj/item/clothing/shoes/centcom
 	l_ear = /obj/item/device/radio/headset/centcom
 	id = /obj/item/weapon/card/id/centcom
-	r_pocket = /obj/item/weapon/lighter/zippo/nt_rep
+	r_pocket = /obj/item/weapon/lighter/zippo/arf_rep
 	l_pocket = /obj/item/weapon/storage/fancy/cigarettes/dromedaryco
 	pda = /obj/item/device/pda/centcom
 	backpack_contents = list(
