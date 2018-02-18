@@ -1084,6 +1084,133 @@ obj/item/toy/cards/deck/syndicate/black
 	name = "tuxedo cat plushie"
 	icon_state = "tuxedocat"
 
+// Dakis after this point ~TK
+
+/obj/item/toy/plushie/dakibase
+	name = "Hugable Pillow"
+	icon_state = "daki_base"
+
+/obj/item/toy/plushie/dakicallie
+	name = "Callie Pillow"
+	icon_state = "daki_Callie"
+
+/obj/item/toy/plushie/dakicasca
+	name = "Casca Pillow"
+	icon_state = "daki_Casca"
+
+/obj/item/toy/plushie/dakichaika
+	name = "Chaika Pillow"
+	icon_state = "daki_Chaika"
+
+/obj/item/toy/plushie/dakichaika2
+	name = "I-153 Pillow"
+	icon_state = "daki_chaika2"
+
+/obj/item/toy/plushie/dakielisabeth
+	name = "Elisabeth Pillow"
+	icon_state = "daki_Elisabeth"
+
+/obj/item/toy/plushie/dakifoxygrandpa
+	name = "Foxy Grandpa Pillow"
+	icon_state = "daki_FoxyGrandpa"
+
+/obj/item/toy/plushie/haruko
+	name = "Haruko Pillow"
+	icon_state = "daki_Haruko"
+
+/obj/item/toy/plushie/holo
+	name = "Holo Pillow"
+	icon_state = "daki_Holo"
+
+/obj/item/toy/plushie/hotwheels
+	name = "Hotwheels Pillow"
+	icon_state = "daki_Hotwheels"
+
+/obj/item/toy/plushie/ian
+	name = "Ian Pillow"
+	icon_state = "daki_Ian"
+
+/obj/item/toy/plushie/jolyne
+	name = "Jolyne Pillow"
+	icon_state = "daki_Jolyne"
+
+/obj/item/toy/plushie/kurisu
+	name = "Kurisu Pillow"
+	icon_state = "daki_Kurisu"
+
+/obj/item/toy/plushie/marie
+	name = "Marie Pillow"
+	icon_state = "daki_Marie"
+
+/obj/item/toy/plushie/mugi
+	name = "Mugi Pillow"
+	icon_state = "daki_Mugi"
+
+/obj/item/toy/plushie/narnar
+	name = "Nar-Nar Pillow"
+	icon_state = "daki_Nar`Sie"
+
+/obj/item/toy/plushie/patchouli
+	name = "Patchouli Pillow"
+	icon_state = "daki_Patchouli"
+
+/obj/item/toy/plushie/plutia
+	name = "Plutia Pillow"
+	icon_state = "daki_Plutia"
+
+/obj/item/toy/plushie/rei
+	name = "Rei Pillow"
+	icon_state = "daki_Rei"
+
+/obj/item/toy/plushie/reisen
+	name = "Reisen Pillow"
+	icon_state = "daki_Reisen"
+
+/obj/item/toy/plushie/naga
+	name = "Naga Pillow"
+	icon_state = "daki_Naga"
+
+/obj/item/toy/plushie/squid
+	name = "Squid Pillow"
+	icon_state = "daki_Squid"
+
+/obj/item/toy/plushie/squiggly
+	name = "Squiggly Pillow"
+	icon_state = "daki_squiggly"
+
+/obj/item/toy/plushie/sue
+	name = "Sue Pillow"
+	icon_state = "daki_SueBowchief"
+
+/obj/item/toy/plushie/rei
+	name = "Rei Pillow"
+	icon_state = "daki_Rei"
+
+/obj/item/toy/plushie/tomoko
+	name = "Tomoko Pillow"
+	icon_state = "daki_Tomoko"
+
+/obj/item/toy/plushie/toriel
+	name = "Toriel Pillow"
+	icon_state = "daki_Toriel"
+
+/obj/item/toy/plushie/umaru
+	name = "Umaru Pillow"
+	icon_state = "daki_Umaru"
+
+/obj/item/toy/plushie/yaranaika
+	name = "Yaranaika Pillow"
+	icon_state = "daki_Yaranaika"
+
+/obj/item/toy/plushie/yoko
+	name = "Yoko Pillow"
+	icon_state = "daki_Yoko"
+
+/obj/item/toy/plushie/camille
+	name = "Camille Pillow"
+	icon_state = "daki_Camille"
+
+
 /*
  * Foam Armblade
  */
