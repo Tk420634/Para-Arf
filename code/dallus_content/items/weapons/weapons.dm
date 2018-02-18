@@ -76,7 +76,7 @@
 	icon_state = "canine"
 	item_state = "canine"
 	icon = 'icons/obj/kinky.dmi'
-	attack_verb = list("fucked", "probed", "violated", "teased", "prodded")
+	attack_verb = list("fucked", "probed", "violated", "teased", "prodded", "knotted")
 
 /obj/item/weapon/sextoy/dildo/purpledong
 	name = "purple dildo"
@@ -109,6 +109,24 @@
 	item_state = "anal_beads"
 	icon = 'icons/obj/kinky.dmi'
 	attack_verb = list("beadwhips", "beads")
+
+/obj/item/weapon/sextoy/dildo/seadragon
+	name = "seadragon dildo"
+	desc = "A blue curved dildo of some sort.  Not a scimitar."
+	icon_state = "seadragon"
+	item_state = "seadragon"
+	icon = 'icons/obj/kinky.dmi'
+	attack_verb = list("fucked", "probed", "violated", "teased", "prodded",)
+
+/obj/item/weapon/sextoy/dildo/equine
+	name = "equine dildo"
+	desc = "A. Big.  Black. Horse. Cock."
+	icon_state = "equine"
+	item_state = "equine"
+	icon = 'icons/obj/kinky.dmi'
+	attack_verb = list("fucked", "probed", "violated", "teased", "prodded",)
+
+
 /*
 /obj/item/weapon/killbowstaff
 	name = "staff of arroganaza"
