@@ -1175,7 +1175,9 @@
 
 /mob/living/simple_animal/parrot/clockwork_hawk/ticktock
 	name = "Tick-Tock"
-	desc = "The CE's trusted brass bird! Sometimes bits and pieces fall of it."
+	icon = 'icons/mob/pets.dmi
+	icon_state = "clock_hawk_fly"
+	desc = "The CE's trusted brass bird! Sometimes bits and pieces fall off of it."
 	clean_speak = list(
 		"Ticky wanna metal!",
 		"Check the singlo, you chucklefucks!",
@@ -1184,7 +1186,10 @@
 		"Wire the solars, you lazy bums!",
 		"WHO TOOK THE DAMN HARDSUITS?",
 		"POLISH ME, YOU FUCK",
-		"OH GOD ITS FREE CALL THE SHUTTLE")
+		"OH GOD ITS FREE CALL THE SHUTTLE",
+		"Ticky wanna dicky! KAW!",
+		"Korin did nothing wrong, 2556!"
+		)
 
 
 /mob/living/simple_animal/chicken/rabbit
