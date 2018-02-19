@@ -277,7 +277,7 @@
 
 /mob/living/simple_animal/pokemon/dratini/dragonair/dragonite
 	name = "dragonite"
-	desc = "It can circle the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land."
+	desc = "It can circle the globe in just 16 hours. It is a kindhearted PokÃ©mon that leads lost and foundering ships in a storm to the safety of land."
 	icon_state = "dragonite"
 	icon_living = "dragonite"
 	icon_dead = "dragonite_d"
@@ -291,7 +291,7 @@
 
 /mob/living/simple_animal/pokemon/eevee
 	name = "eevee"
-	desc = "Eevee has an unstable genetic makeup that suddenly mutates due to its environment. Radiation from various stones causes this Pokémon to evolve."
+	desc = "Eevee has an unstable genetic makeup that suddenly mutates due to its environment. Radiation from various stones causes this PokÃ©mon to evolve."
 	icon_state = "eevee"
 	icon_living = "eevee"
 	icon_dead = "eevee_d"
@@ -446,7 +446,7 @@
 
 /mob/living/simple_animal/pokemon/eevee/sylveon
 	name = "Sylveon"
-	desc = "Sylveon, the Intertwining Pokémon. Sylveon affectionately wraps its ribbon-like feelers around its Trainer's arm as they walk together."
+	desc = "Sylveon, the Intertwining PokÃ©mon. Sylveon affectionately wraps its ribbon-like feelers around its Trainer's arm as they walk together."
 	icon_state = "sylveon"
 	icon_living = "sylveon"
 	icon_dead = "sylveon_d"
@@ -1175,7 +1175,7 @@
 
 /mob/living/simple_animal/parrot/clockwork_hawk/ticktock
 	name = "Tick-Tock"
-	icon = 'icons/mob/pets.dmi
+	icon = 'icons/mob/pets.dmi'
 	icon_state = "clock_hawk_fly"
 	desc = "The CE's trusted brass bird! Sometimes bits and pieces fall off of it."
 	clean_speak = list(
