@@ -1,3 +1,4 @@
+//Crew Quarters/Civilian Areas
 /area/crew_quarters/apartment
 	icon_state = "Sleep"
 	name = "\improper Apartment Complex"
@@ -15,6 +16,10 @@
 /area/crew_quarters/apartment/sb_3
 	name = "\improper Starboard Apartment 3"
 
+//Service Areas
 /area/room_service
 	name = "\improper Room Service"
 	icon_state = "red"
+
+
+//Command/Security Areas
