@@ -1,7 +1,7 @@
 //ARF CODE
 /mob/living/New()
 	..()
-	vore_setup()
+	vore_setup(src)
 //END ARF CODE
 
 /mob/living/Destroy()
