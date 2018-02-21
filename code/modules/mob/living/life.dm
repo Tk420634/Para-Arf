@@ -44,8 +44,6 @@
 
 	update_pulling()
 
-	vore_setup() // TEMPORARY, ONLY HERE FOR TESTING - JON
-
 	for(var/obj/item/weapon/grab/G in src)
 		G.process()
 

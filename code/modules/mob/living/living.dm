@@ -1,3 +1,8 @@
+//ARF CODE
+/mob/living/New()
+	..()
+	vore_setup()
+//END ARF CODE
 
 /mob/living/Destroy()
 	if(ranged_ability)

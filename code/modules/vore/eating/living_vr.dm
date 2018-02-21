@@ -1,7 +1,7 @@
 ///////////////////// Mob Living /////////////////////
 /mob/living
-	var/digestable = 1					// Can the mob be digested inside a belly?
-	var/allowmobvore = 1				// Will simplemobs attempt to eat the mob?
+	var/digestable = TRUE					// Can the mob be digested inside a belly?
+	var/allowmobvore = TRUE				// Will simplemobs attempt to eat the mob?
 	var/vore_selected					// Default to no vore capability.
 	var/list/vore_organs = list()		// List of vore containers inside a mob
 	var/absorbed = 0					// If a mob is absorbed into another
