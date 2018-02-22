@@ -187,11 +187,11 @@
 		var/err = query_get_notes.ErrorMsg()
 		log_game("SQL ERROR obtaining timestamp, notetext, adminckey, server from notes table. Error : \[[err]\]\n")
 		return
-	var/output = " Info on [key]: |"
+	var/output = " Info on [key]: ||"
 	while(query_get_notes.NextRow())
 		var/timestamp = query_get_notes.item[1]
 		var/notetext = query_get_notes.item[2]
 		var/adminckey = query_get_notes.item[3]
 		var/server = query_get_notes.item[4]
-		output += "[notetext] | by [adminckey] on [timestamp] (Server: [server]) ||"
+		output += "[notetext] | by [adminckey] on [timestamp] (Server: [server]) |||"
 	return output

@@ -69,6 +69,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 
 /datum/preferences
 	var/client/parent
+	var/path			//exclusively used for vore preferences currently
 	//doohickeys for savefiles
 //	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
@@ -229,6 +230,12 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	if(!loaded_preferences_successfully)
 		save_preferences(C)
 	save_character(C)		//let's save this new random character so it doesn't keep generating new ones.
+	if(parent)
+		load_path(parent.ckey)
+
+/datum/preferences/proc/load_path(ckey,filename="preferences.sav")
+	if(!ckey)	return
+	path = "data/player_saves/[copytext(ckey,1,2)]/[ckey]/[filename]"
 
 /datum/preferences/proc/color_square(colour)
 	return "<span style='font-face: fixedsys; background-color: [colour]; color: [colour]'>___</span>"
