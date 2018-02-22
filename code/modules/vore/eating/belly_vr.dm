@@ -183,7 +183,7 @@
 		M.updateVRPanel()
 
 	if(inside_flavor)
-		prey << "<span class='notice'><B>[inside_flavor]</B></span>"
+		to_chat(prey,"<span class='notice'><B>[inside_flavor]</B></span>")
 
 // Get the line that should show up in Examine message if the owner of this belly
 // is examined.   By making this a proc, we not only take advantage of polymorphism,
@@ -285,7 +285,7 @@
 			for (var/mob/subprey in belly.internal_contents)
 				subprey.loc = owner
 				internal_contents += subprey
-				subprey << "As [M] melts away around you, you find yourself in [owner]'s [name]"
+				to_chat(subprey,"As [M] melts away around you, you find yourself in [owner]'s [name]")
 
 	//Drop all items into the belly.
 	if(config.items_survive_digestion)
@@ -326,8 +326,8 @@
 // Handle a mob being absorbed
 /datum/belly/proc/absorb_living(var/mob/living/M)
 	M.absorbed = 1
-	M << "<span class='notice'>[owner]'s [name] absorbs your body, making you part of them.</span>"
-	owner << "<span class='notice'>Your [name] absorbs [M]'s body, making them part of you.</span>"
+	to_chat(M,"<span class='notice'>[owner]'s [name] absorbs your body, making you part of them.</span>")
+	to_chat(owner,"<span class='notice'>Your [name] absorbs [M]'s body, making them part of you.</span>")
 	/*
 	if(ishuman(M) && ishuman(owner))
 		var/mob/living/carbon/human/Prey = M
@@ -414,21 +414,21 @@
 
 	if(escapable) //If the stomach has escapable enabled.
 		if(prob(escapechance)) //Let's have it check to see if the prey escapes first.
-			R << "<span class='warning'>You start to climb out of \the [name].</span>"
-			owner << "<span class='warning'>Someone is attempting to climb out of your [name]!</span>"
+			to_chat(R,"<span class='warning'>You start to climb out of \the [name].</span>")
+			to_chat(owner,"<span class='warning'>Someone is attempting to climb out of your [name]!</span>")
 			if(do_after(R, escapetime))
 				if((escapable) && (R in internal_contents) && !R.absorbed) //Does the owner still have escapable enabled?
 					release_specific_contents(R)
-					R << "<span class='warning'>You climb out of \the [name].</span>"
-					owner << "<span class='warning'>[R] climbs out of your [name]!</span>"
+					to_chat(R,"<span class='warning'>You climb out of \the [name].</span>")
+					to_chat(owner,"<span class='warning'>[R] climbs out of your [name]!</span>")
 					for(var/mob/M in hearers(4, owner))
 						M.show_message("<span class='warning'>[R] climbs out of [owner]'s [name]!</span>", 2)
 					return
 				else if(!(R in internal_contents)) //Aren't even in the belly. Quietly fail.
 					return
 				else //Belly became inescapable.
-					R << "<span class='warning'>Your attempt to escape [name] has failed!</span>"
-					owner << "<span class='notice'>The attempt to escape from your [name] has failed!</span>"
+					to_chat(R,"<span class='warning'>Your attempt to escape [name] has failed!</span>")
+					to_chat(owner,"<span class='notice'>The attempt to escape from your [name] has failed!</span>")
 					return
 
 		else if(prob(transferchance) && istype(transferlocation)) //Next, let's have it see if they end up getting into an even bigger mess then when they started.
@@ -453,31 +453,31 @@
 				transferlocation = null
 				return
 
-			R << "<span class='warning'>Your attempt to escape [name] has failed and your struggles only results in you sliding into [owner]'s [transferlocation]!</span>"
-			owner << "<span class='warning'>Someone slid into your [transferlocation] due to their struggling inside your [name]!</span>"
+			to_chat(R,"<span class='warning'>Your attempt to escape [name] has failed and your struggles only results in you sliding into [owner]'s [transferlocation]!</span>")
+			to_chat(owner,"<span class='warning'>Someone slid into your [transferlocation] due to their struggling inside your [name]!</span>")
 			transfer_contents(R, transferlocation)
 			return
 
 		else if(prob(absorbchance) && digest_mode != DM_ABSORB) //After that, let's have it run the absorb chance.
-			R << "<span class='warning'>In response to your struggling, \the [name] begins to cling more tightly...</span>"
-			owner << "<span class='warning'>You feel your [name] start to cling onto its contents...</span>"
+			to_chat(R,"<span class='warning'>In response to your struggling, \the [name] begins to cling more tightly...</span>")
+			to_chat(owner,"<span class='warning'>You feel your [name] start to cling onto its contents...</span>")
 			digest_mode = DM_ABSORB
 			return
 
 		else if(prob(digestchance) && digest_mode != DM_ITEMWEAK && digest_mode != DM_DIGEST) //Finally, let's see if it should run the digest chance.
-			R << "<span class='warning'>In response to your struggling, \the [name] begins to get more active...</span>"
-			owner << "<span class='warning'>You feel your [name] beginning to become active!</span>"
+			to_chat(R,"<span class='warning'>In response to your struggling, \the [name] begins to get more active...</span>")
+			to_chat(owner,"<span class='warning'>You feel your [name] beginning to become active!</span>")
 			digest_mode = DM_ITEMWEAK
 			return
 
 		else if(prob(digestchance) && digest_mode == DM_ITEMWEAK) //Oh god it gets even worse if you fail twice!
-			R << "<span class='warning'>In response to your struggling, \the [name] begins to get even more active!</span>"
-			owner << "<span class='warning'>You feel your [name] beginning to become even more active!</span>"
+			to_chat(R,"<span class='warning'>In response to your struggling, \the [name] begins to get even more active!</span>")
+			to_chat(owner,"<span class='warning'>You feel your [name] beginning to become even more active!</span>")
 			digest_mode = DM_DIGEST
 			return
 		else //Nothing interesting happened.
-			R << "<span class='warning'>You make no progress in escaping [owner]'s [name].</span>"
-			owner << "<span class='warning'>Your prey appears to be unable to make any progress in escaping your [name].</span>"
+			to_chat(R,"<span class='warning'>You make no progress in escaping [owner]'s [name].</span>")
+			to_chat(owner,"<span class='warning'>Your prey appears to be unable to make any progress in escaping your [name].</span>")
 			return
 
 //Transfers contents from one belly to another

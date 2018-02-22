@@ -409,19 +409,20 @@
 			qdel(src)
 	*/
 /obj/item/weapon/grab/proc/checkvalid(var/mob/attacker, var/mob/prey) //does all the checking for the attack proc to see if a mob can eat another with the grab
+/*
 	if(ishuman(attacker) && (/datum/dna/gene/basic/grant_spell/mattereater in attacker.active_genes)) // MATTER EATER CARES NOT OF YOUR FORM
 		return 1
 
 	if(ishuman(attacker) && (FAT in attacker.mutations) && iscarbon(prey) && !isalien(prey)) //Fat people eating carbon mobs but not xenos
 		return 1
-
+*/
 	if(isalien(attacker) && iscarbon(prey)) //Xenomorphs eating carbon mobs
 		return 1
-
+/*
 	var/mob/living/carbon/human/H = attacker
 	if(ishuman(H) && is_type_in_list(prey,  H.species.allowed_consumed_mobs)) //species eating of other mobs
 		return 1
-
+*/
 	return 0
 
 /obj/item/weapon/grab/proc/checktime(var/mob/attacker, var/mob/prey) //Returns the time the attacker has to wait before they eat the prey

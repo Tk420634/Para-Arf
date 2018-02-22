@@ -9,7 +9,7 @@
 		spawn(emoteTime)
 			var/list/EL = emote_lists[digest_mode]
 			for(var/mob/living/M in internal_contents)
-				M << "<span class='notice'>[pick(EL)]</span>"
+				to_chat(M,"<span class='notice'>[pick(EL)]</span>")
 			src.emotePend = FALSE
 
 //////////////////////// Absorbed Handling ////////////////////////
@@ -47,8 +47,8 @@
 				digest_alert_prey = replacetext(digest_alert_prey,"%belly",lowertext(name))
 
 				//Send messages
-				owner << "<span class='notice'>" + digest_alert_owner + "</span>"
-				M << "<span class='notice'>" + digest_alert_prey + "</span>"
+				to_chat(owner,"<span class='notice'>" + digest_alert_owner + "</span>")
+				to_chat(M,"<span class='notice'>" + digest_alert_prey + "</span>")
 
 
 				for(var/mob/hearer in range(1,owner))
@@ -143,8 +143,8 @@
 		for (var/mob/living/M in internal_contents)
 			if(M.absorbed && owner.nutrition >= 100)
 				M.absorbed = 0
-				M << "<span class='notice'>You suddenly feel solid again </span>"
-				owner << "<span class='notice'>You feel like a part of you is missing.</span>"
+				to_chat(M,"<span class='notice'>You suddenly feel solid again </span>")
+				to_chat(owner,"<span class='notice'>You feel like a part of you is missing.</span>")
 				owner.nutrition -= 100
 		return
 

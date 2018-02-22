@@ -689,6 +689,9 @@
 		else if(last_special <= world.time)
 			resist_restraints() //trying to remove cuffs.
 
+	else if(attempt_vr(src,"vore_process_resist",args)) return TRUE //VOREStation Code
+
+
 /*////////////////////
 	RESIST SUBPROCS
 */////////////////////

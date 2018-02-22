@@ -79,7 +79,7 @@ var/image/gurgled_overlay = image('icons/effects/sludgeoverlay_vr.dmi')
 //////////////
 /obj/item/weapon/storage/box/open(mob/user as mob)
 	if(gurgled)
-		usr << "The soggy box falls apart in your hands."
+		to_chat(usr,"The soggy box falls apart in your hands.")
 		var/turf/T = get_turf(src)
 		for(var/obj/item/I in contents)
 			remove_from_storage(I, T)

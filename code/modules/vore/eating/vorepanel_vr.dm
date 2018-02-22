@@ -319,42 +319,42 @@
 
 				if("Help Out") //Help the inside-mob out
 					if(user.stat || user.absorbed || M.absorbed)
-						user << "<span class='warning'>You can't do that in your state!</span>"
+						to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
 						return 1
 
-					user << "<font color='green'>You begin to push [M] to freedom!</font>"
-					M << "[usr] begins to push you to freedom!"
-					M.loc << "<span class='warning'>Someone is trying to escape from inside you!</span>"
+					to_chat(user,"<font color='green'>You begin to push [M] to freedom!</font>")
+					to_chat(M,"[usr] begins to push you to freedom!")
+					to_chat(M.loc,"<span class='warning'>Someone is trying to escape from inside you!</span>")
 					sleep(50)
 					if(prob(33))
 						OB.release_specific_contents(M)
-						usr << "<font color='green'>You manage to help [M] to safety!</font>"
-						M << "<font color='green'>[user] pushes you free!</font>"
-						M.loc << "<span class='alert'>[M] forces free of the confines of your body!</span>"
+						to_chat(usr,"<font color='green'>You manage to help [M] to safety!</font>")
+						to_chat(M,"<font color='green'>[user] pushes you free!</font>")
+						to_chat(M.loc,"<span class='alert'>[M] forces free of the confines of your body!</span>")
 					else
-						user << "<span class='alert'>[M] slips back down inside despite your efforts.</span>"
-						M << "<span class='alert'> Even with [user]'s help, you slip back inside again.</span>"
-						M.loc << "<font color='green'>Your body efficiently shoves [M] back where they belong.</font>"
+						to_chat(user,"<span class='alert'>[M] slips back down inside despite your efforts.</span>")
+						to_chat(M,"<span class='alert'> Even with [user]'s help, you slip back inside again.</span>")
+						to_chat(M.loc,"<font color='green'>Your body efficiently shoves [M] back where they belong.</font>")
 
 				if("Devour") //Eat the inside mob
 					if(user.absorbed || user.stat)
-						user << "<span class='warning'>You can't do that in your state!</span>"
+						to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
 						return 1
 
 					if(!user.vore_selected)
-						user << "<span class='warning'>Pick a belly on yourself first!</span>"
+						to_chat(user,"<span class='warning'>Pick a belly on yourself first!</span>")
 						return 1
 
 					var/datum/belly/TB = user.vore_organs[user.vore_selected]
-					user << "<span class='warning'>You begin to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>"
-					M << "<span class='warning'>[user] begins to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>"
-					M.loc << "<span class='warning'>Someone inside you is eating someone else!</span>"
+					to_chat(user,"<span class='warning'>You begin to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>")
+					to_chat(M,"<span class='warning'>[user] begins to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>")
+					to_chat(M.loc,"<span class='warning'>Someone inside you is eating someone else!</span>")
 
 					sleep(TB.nonhuman_prey_swallow_time)
 					if((user in OB.internal_contents) && (M in OB.internal_contents))
-						user << "<span class='warning'>You manage to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>"
-						M << "<span class='warning'>[user] manages to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>"
-						M.loc << "<span class='warning'>Someone inside you has eaten someone else!</span>"
+						to_chat(user,"<span class='warning'>You manage to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>")
+						to_chat(M,"<span class='warning'>[user] manages to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>")
+						to_chat(M.loc,"<span class='warning'>Someone inside you has eaten someone else!</span>")
 						M.loc = user
 						TB.nom_mob(M)
 						OB.internal_contents -= M
@@ -371,7 +371,7 @@
 
 				if("Use Hand")
 					if(user.stat)
-						user << "<span class='warning'>You can't do that in your state!</span>"
+						to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
 						return 1
 
 					user.ClickOn(T)
@@ -389,7 +389,7 @@
 
 				if("Eject all")
 					if(user.stat)
-						user << "<span class='warning'>You can't do that in your state!</span>"
+						to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
 						return 0
 
 					selected.release_all_contents()
@@ -397,7 +397,7 @@
 
 				if("Move all")
 					if(user.stat)
-						user << "<span class='warning'>You can't do that in your state!</span>"
+						to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
 						return 0
 
 					var/choice = input("Move all where?","Select Belly") in user.vore_organs + "Cancel - Don't Move"
@@ -407,7 +407,7 @@
 					else
 						var/datum/belly/B = user.vore_organs[choice]
 						for(var/atom/movable/tgt in selected.internal_contents)
-							tgt << "<span class='warning'>You're squished from [user]'s [selected] to their [B]!</span>"
+							to_chat(tgt,"<span class='warning'>You're squished from [user]'s [selected] to their [B]!</span>")
 							selected.transfer_contents(tgt, B, 1)
 
 
@@ -422,7 +422,7 @@
 
 			if("Eject")
 				if(user.stat)
-					user << "<span class='warning'>You can't do that in your state!</span>"
+					to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
 					return 0
 
 				selected.release_specific_contents(tgt)
@@ -430,7 +430,7 @@
 
 			if("Move")
 				if(user.stat)
-					user << "<span class='warning'>You can't do that in your state!</span>"
+					to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
 					return 0
 
 				var/choice = input("Move [tgt] where?","Select Belly") in user.vore_organs + "Cancel - Don't Move"
@@ -441,7 +441,7 @@
 					var/datum/belly/B = user.vore_organs[choice]
 					if (!(tgt in selected.internal_contents))
 						return 0
-					tgt << "<span class='warning'>You're squished from [user]'s [lowertext(selected.name)] to their [lowertext(B.name)]!</span>"
+					to_chat(tgt,"<span class='warning'>You're squished from [user]'s [lowertext(selected.name)] to their [lowertext(B.name)]!</span>")
 					selected.transfer_contents(tgt, B)
 
 
@@ -582,10 +582,10 @@
 			return
 		if(new_bulge == 0) //Disable.
 			selected.bulge_size = 0
-			user << "<span class='notice'>Your stomach will not be seen on examine.</span>"
+			to_chat(user,"<span class='notice'>Your stomach will not be seen on examine.</span>")
 		else if (!IsInRange(new_bulge,25,200))
 			selected.bulge_size = 0.25 //Set it to the default.
-			user << "<span class='notice'>Invalid size.</span>"
+			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_bulge)
 			selected.bulge_size = (new_bulge/100)
 	if(href_list["b_grow_shrink"])
@@ -594,7 +594,7 @@
 			return
 		if (!IsInRange(new_grow,25,200))
 			selected.shrink_grow_size = 1 //Set it to the default
-			user << "<span class='notice'>Invalid size.</span>"
+			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_grow)
 			selected.shrink_grow_size = (new_grow/100)
 
@@ -615,10 +615,10 @@
 	if(href_list["b_escapable"])
 		if(selected.escapable == 0) //Possibly escapable and special interactions.
 			selected.escapable = 1
-			usr << "<span class='warning'>Prey now have special interactions with your [selected.name] depending on your settings.</span>"
+			to_chat(usr,"<span class='warning'>Prey now have special interactions with your [selected.name] depending on your settings.</span>")
 		else if(selected.escapable == 1) //Never escapable.
 			selected.escapable = 0
-			usr << "<span class='warning'>Prey will not be able to have special interactions with your [selected.name].</span>"
+			to_chat(usr,"<span class='warning'>Prey will not be able to have special interactions with your [selected.name].</span>")
 			show_interacts = 0 //Force the hiding of the panel
 		else
 			alert("Something went wrong. Your stomach will now not have special interactions. Press the button enable them again and tell a dev.","Error") //If they somehow have a varable that's not 0 or 1
@@ -687,13 +687,13 @@
 				user.vore_organs.Remove(selected)
 				selected = user.vore_organs[1]
 				user.vore_selected = user.vore_organs[1]
-				usr << "<span class='warning'>Note: If you had this organ selected as a transfer location, please remove the transfer location by selecting Cancel - None - Remove on this stomach.</span>" //If anyone finds a fix to this bug, please tell me. I, for the life of me, can't find any way to fix it.
+				to_chat(usr,"<span class='warning'>Note: If you had this organ selected as a transfer location, please remove the transfer location by selecting Cancel - None - Remove on this stomach.</span>") //If anyone finds a fix to this bug, please tell me. I, for the life of me, can't find any way to fix it.
 
 	if(href_list["saveprefs"])
 		if(!user.save_vore_prefs())
 			alert("ERROR: Vore preferences failed to save!","Error")
 		else
-			user << "<span class='notice'>Vore preferences saved!</span>"
+			to_chat(user,"<span class='notice'>Vore preferences saved!</span>")
 
 	if(href_list["setflavor"])
 		var/new_flavor = html_encode(input(usr,"What your character tastes like (40ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",user.vore_taste) as text|null)

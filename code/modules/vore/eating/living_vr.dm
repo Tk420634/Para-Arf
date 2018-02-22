@@ -218,7 +218,7 @@
 
 /mob/living/proc/copy_to_prefs_vr()
 	if(!client || !client.prefs_vr)
-		src << "<span class='warning'>You attempted to save your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>"
+		to_chat(src,"<span class='warning'>You attempted to save your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>")
 		return 0
 
 	var/datum/vore_preferences/P = client.prefs_vr
@@ -239,7 +239,7 @@
 //
 /mob/living/proc/copy_from_prefs_vr()
 	if(!client || !client.prefs_vr)
-		src << "<span class='warning'>You attempted to apply your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>"
+		to_chat(src,"<span class='warning'>You attempted to apply your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>")
 		return 0
 
 	var/datum/vore_preferences/P = client.prefs_vr
@@ -329,7 +329,7 @@
 			src.forceMove(get_turf(loc))
 			message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(pred)] (PC) ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
 	else
-		src << "<span class='alert'>You aren't inside anyone, you clod.</span>"
+		to_chat(src,"<span class='alert'>You aren't inside anyone, you clod.</span>")
 
 //
 // Eating procs depending on who clicked what
@@ -440,48 +440,48 @@
 	if(ishuman(C.loc)) //In a /mob/living/carbon/human
 		var/mob/living/carbon/human/H = C.loc
 		if(H.shoes == C) //Being worn
-			src << "<font color='blue'> You start to climb around the larger creature's feet and ankles!</font>"
-			H << "<font color='red'>Something is trying to climb out of your [C]!</font>"
+			to_chat(src,"<font color='blue'> You start to climb around the larger creature's feet and ankles!</font>")
+			to_chat(H,"<font color='red'>Something is trying to climb out of your [C]!</font>")
 			var/original_loc = H.loc
 			for(var/escape_time = 100,escape_time > 0,escape_time--)
 				if(H.loc != original_loc)
-					src << "<font color='red'>You're pinned back underfoot!</font>"
-					H << "<font color='blue'>You pin the escapee back underfoot!</font>"
+					to_chat(src,"<font color='red'>You're pinned back underfoot!</font>")
+					to_chat(H,"<font color='blue'>You pin the escapee back underfoot!</font>")
 					return
 				if(src.loc != C)
 					return
 				sleep(1)
 
-			src << "<font color='blue'>You manage to escape \the [C]!</font>"
-			H << "<font color='red'>Somone has climbed out of your [C]!</font>"
+			to_chat(src,"<font color='blue'>You manage to escape \the [C]!</font>")
+			to_chat(H,"<font color='red'>Somone has climbed out of your [C]!</font>")
 			src.loc = H.loc
 			var/datum/belly/B = check_belly(H)
 			if(B)
 				B.internal_contents |= src
 			return
 		else //Being held by a human
-			src << "<font color='blue'>You start to climb out of \the [C]!</font>"
-			H << "<font color='red'>Something is trying to climb out of your [C]!</font>"
+			to_chat(src,"<font color='blue'>You start to climb out of \the [C]!</font>")
+			to_chat(H,"<font color='red'>Something is trying to climb out of your [C]!</font>")
 			for(var/escape_time = 60,escape_time > 0,escape_time--)
 				if(H.shoes == C)
-					src << "<font color='red'>You're pinned underfoot!</font>"
-					H << "<font color='blue'>You pin the escapee underfoot!</font>"
+					to_chat(src,"<font color='red'>You're pinned underfoot!</font>")
+					to_chat(H,"<font color='blue'>You pin the escapee underfoot!</font>")
 					return
 				if(src.loc != C)
 					return
 				sleep(1)
-			src << "<font color='blue'>You manage to escape \the [C]!</font>"
-			H << "<font color='red'>Somone has climbed out of your [C]!</font>"
+			to_chat(src,"<font color='blue'>You manage to escape \the [C]!</font>")
+			to_chat(H,"<font color='red'>Somone has climbed out of your [C]!</font>")
 			src.loc = H.loc
 			var/datum/belly/B = check_belly(H)
 			if(B)
 				B.internal_contents |= src
 			return
 
-	src << "<font color='blue'>You start to climb out of \the [C]!</font>"
+	to_chat(src,"<font color='blue'>You start to climb out of \the [C]!</font>")
 	sleep(50)
 	if(src.loc == C)
-		src << "<font color='blue'>You climb out of \the [C]!</font>"
+		to_chat(src,"<font color='blue'>You climb out of \the [C]!</font>")
 		src.loc = C.loc
 		var/datum/belly/B
 		if(check_belly(C)) B = check_belly(C)
