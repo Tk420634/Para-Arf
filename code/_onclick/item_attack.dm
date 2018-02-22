@@ -15,6 +15,7 @@
 
 /mob/living/attackby(obj/item/I, mob/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)
+	if(attempt_vr(user,"vore_attackby",args)) return //VOREStation Code
 	if(attempt_harvest(I, user))
 		return
 	I.attack(src, user)
