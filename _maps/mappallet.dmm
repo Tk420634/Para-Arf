@@ -315,14 +315,40 @@
 "gc" = (/turf/simulated/floor/plasteel{tag = "icon-escape (SOUTHWEST)"; icon_state = "escape"; dir = 10},/area/space)
 "gd" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "escape"},/area/space)
 "ge" = (/turf/simulated/floor/plasteel{icon_state = "escape"; dir = 6},/area/space)
-"gf" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding9"; icon_state = "siding9"; dir = 2},/area/space)
-"gg" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding1"; icon_state = "siding1"; dir = 2},/area/space)
-"gh" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding5"; icon_state = "siding5"; dir = 2},/area/space)
-"gi" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding8"; icon_state = "siding8"; dir = 2},/area/space)
-"gj" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding4"; icon_state = "siding4"; dir = 2},/area/space)
-"gk" = (/turf/space,/turf/simulated/floor/plasteel{dir = 1; icon_state = "siding10"; tag = "icon-siding2 (NORTH)"},/area/space)
-"gl" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding2"; icon_state = "siding2"; dir = 2},/area/space)
-"gm" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding6"; icon_state = "siding6"; dir = 2},/area/space)
+"gf" = (/turf/simulated/floor/plasteel{tag = "icon-green (NORTHWEST)"; icon_state = "green"; dir = 9},/area/space)
+"gg" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "green"; tag = "null"},/area/space)
+"gh" = (/turf/simulated/floor/plasteel{dir = 5; icon_state = "green"},/area/space)
+"gi" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "greencorner"; tag = "icon-green"},/area/space)
+"gj" = (/turf/simulated/floor/plasteel{tag = "icon-greencorner (WEST)"; icon_state = "greencorner"; dir = 8},/area/space)
+"gk" = (/turf/simulated/floor/plasteel{tag = "icon-green (WEST)"; icon_state = "green"; dir = 8},/area/space)
+"gl" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "greenfull"},/area/space)
+"gm" = (/turf/simulated/floor/plasteel{icon_state = "green"; dir = 4},/area/space)
+"gn" = (/turf/simulated/floor/plasteel{tag = "icon-greencorner (EAST)"; icon_state = "greencorner"; dir = 4},/area/space)
+"go" = (/turf/simulated/floor/plasteel{tag = "icon-greencorner (NORTH)"; icon_state = "greencorner"; dir = 1},/area/space)
+"gp" = (/turf/simulated/floor/plasteel{tag = "icon-green (SOUTHWEST)"; icon_state = "green"; dir = 10},/area/space)
+"gq" = (/turf/simulated/floor/plasteel{tag = "icon-green"; icon_state = "green"; dir = 2},/area/space)
+"gr" = (/turf/simulated/floor/plasteel{icon_state = "green"; dir = 6},/area/space)
+"gs" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding9"; icon_state = "siding9"; dir = 2},/area/space)
+"gt" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding1"; icon_state = "siding1"; dir = 2},/area/space)
+"gu" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding5"; icon_state = "siding5"; dir = 2},/area/space)
+"gv" = (/turf/simulated/floor/plasteel{dir = 9; icon_state = "yellow"},/area/space)
+"gw" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "yellow"},/area/space)
+"gx" = (/turf/simulated/floor/plasteel{dir = 5; icon_state = "yellow"},/area/space)
+"gy" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding8"; icon_state = "siding8"; dir = 2},/area/space)
+"gz" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding4"; icon_state = "siding4"; dir = 2},/area/space)
+"gA" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "yellowcorner"},/area/space)
+"gB" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "yellowcorner"},/area/space)
+"gC" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "yellow"},/area/space)
+"gD" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "yellowfull"},/area/space)
+"gE" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "yellow"},/area/space)
+"gF" = (/turf/space,/turf/simulated/floor/plasteel{dir = 1; icon_state = "siding10"; tag = "icon-siding2 (NORTH)"},/area/space)
+"gG" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding2"; icon_state = "siding2"; dir = 2},/area/space)
+"gH" = (/turf/space,/turf/simulated/floor/plasteel{tag = "icon-siding6"; icon_state = "siding6"; dir = 2},/area/space)
+"gI" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "yellowcorner"},/area/space)
+"gJ" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "yellowcorner"},/area/space)
+"gK" = (/turf/simulated/floor/plasteel{dir = 10; icon_state = "yellow"},/area/space)
+"gL" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "yellow"},/area/space)
+"gM" = (/turf/simulated/floor/plasteel{dir = 6; icon_state = "yellow"},/area/space)
 
 (1,1,1) = {"
 aaabacadaeababafagahabaiajakabalamanabababababababababaoababababapababababaoababababapababababababab
@@ -349,12 +375,12 @@ fvfwfxfyfzfAfBfCfDfEabababababababababababababababababababababababababababababab
 ababfFfGfHababfIfJfKabababababababababababababababababababababababababababababababababababababababab
 fLfMfNfOfPfQfRfSfTfUabababababababababababababababababababababababababababababababababababababababab
 fVfWfXfYfZgagbgcgdgeabababababababababababababababababababababababababababababababababababababababab
-ababcFcGcHababababababababababababababababababababababababababababababababababababababababababababab
-ababcScTcUababababababababababababababababababababababababababababababababababababababababababababab
-ababdidjdkababababababababababababababababababababababababababababababababababababababababababababab
-ababgfggghababababababababababababababababababababababababababababababababababababababababababababab
-ababgiabgjababababababababababababababababababababababababababababababababababababababababababababab
-ababgkglgmababababababababababababababababababababababababababababababababababababababababababababab
+ababcFcGcHababgfggghabababababababababababababababababababababababababababababababababababababababab
+ababcScTcUgigjgkglgmabababababababababababababababababababababababababababababababababababababababab
+ababdidjdkgngogpgqgrabababababababababababababababababababababababababababababababababababababababab
+ababgsgtguababgvgwgxabababababababababababababababababababababababababababababababababababababababab
+ababgyabgzgAgBgCgDgEabababababababababababababababababababababababababababababababababababababababab
+ababgFgGgHgIgJgKgLgMabababababababababababababababababababababababababababababababababababababababab
 abababababababababababababababababababababababababababababababababababababababababababababababababab
 abababababababababababababababababababababababababababababababababababababababababababababababababab
 abababababababababababababababababababababababababababababababababababababababababababababababababab
