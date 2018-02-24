@@ -478,6 +478,8 @@
 	if(!tooltips)
 		tooltips = new /datum/tooltip(src)
 
+	prefs_vr = new /datum/vore_preferences(src)
+
 //////////////
 //DISCONNECT//
 //////////////

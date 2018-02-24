@@ -424,7 +424,7 @@
 
 /mob/living/return_air_for_internal_lifeform()
 	//Free air until someone wants to code processing it for reals from predbreaths
-	var/datum/gas_mixture/belly_air/air = new(1000)
+	var/datum/gas_mixture/belly_air/air = new/datum/gas_mixture/belly_air
 	return air
 
 // This is about 0.896m^3 of atmosphere

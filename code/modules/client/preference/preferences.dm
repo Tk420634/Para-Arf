@@ -71,7 +71,6 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	var/client/parent
 	var/path			//exclusively used for vore preferences currently
 	//doohickeys for savefiles
-//	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
 //	var/savefile_version = 0
 	var/max_save_slots = MAX_SAVE_SLOTS

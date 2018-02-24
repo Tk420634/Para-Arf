@@ -108,6 +108,8 @@
 
 	if(!slot)	slot = default_slot
 	slot = sanitize_integer(slot, 1, max_save_slots, initial(default_slot))
+	if(parent)//Update the path for vore preferences when you load a new character slot.
+		load_path(parent.ckey)
 	if(slot != default_slot)
 		default_slot = slot
 		var/DBQuery/firstquery = dbcon.NewQuery("UPDATE [format_table_name("player")] SET default_slot=[slot] WHERE ckey='[C.ckey]'")

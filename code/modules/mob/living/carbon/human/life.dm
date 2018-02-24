@@ -232,7 +232,9 @@
 		return
 
 	var/datum/gas_mixture/environment
-	if(loc)
+	if(isliving(loc))//temporary, for testing
+		environment = new/datum/gas_mixture/belly_air
+	else if(loc)
 		environment = loc.return_air()
 
 	var/datum/gas_mixture/breath
