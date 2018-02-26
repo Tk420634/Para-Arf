@@ -684,3 +684,40 @@
 	icon_state = "civuni3"
 	item_state = "civuni3"
 	item_color = "civuni3"
+
+// Ported from /tg/
+/obj/item/clothing/under/flowerdress
+	name = "Flower Dress"
+	desc = "A lovely flower dress."
+	icon_state = "flower_dress"
+	item_state = "flower_dress"
+	item_color = "flower_dress"
+
+/obj/item/clothing/under/redsweptdress
+	name = "red swept dress"
+	desc = "A pretty red dress. Its swept at the bottom. Comes with a black belt."
+	icon_state = "red_swept_dress"
+	item_state = "red_swept_dress"
+	item_color = "red_swept_dress"
+
+
+/obj/item/clothing/under/sexymaid
+	name = "Sexy maid"
+	desc = "A sexy maid outfit."
+	icon_state = "sexymaid"
+	item_state = "sexymaid"
+	item_color = "sexymaid"
+
+/obj/item/clothing/under/bathrobe
+	name = "bathrobe"
+	desc = "A bathrobe. It looks soft. Now if only you can find some tea."
+	icon_state = "bathrobe"
+	item_state = "bathrobe"
+	item_color = "bathrobe"
+
+/obj/item/clothing/under/explorer
+	name = "explorer"
+	desc = "Explorer outfit."
+	icon_state = "explorer"
+	item_state = "explorer"
+	item_color = "explorer"
