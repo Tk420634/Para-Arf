@@ -27,6 +27,9 @@
 		//Random events (vomiting etc)
 		handle_random_events()
 
+		// Handle vore stuff, e.g: digestion
+		attempt_vr(src,"handle_internal_contents",args) //VOREStation Code
+
 		. = 1
 
 	handle_diseases()

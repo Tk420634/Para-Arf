@@ -68,8 +68,12 @@
 			if(isobj(loc)) //Breathe from loc as object
 				var/obj/loc_as_obj = loc
 				breath = loc_as_obj.handle_internal_lifeform(src, BREATH_MOLES)
-
-			else if(isturf(loc)) //Breathe from loc as turf
+			else if(isliving(loc))
+				var/breath_moles = 0
+				if(environment)
+					breath_moles = environment.total_moles()*BREATH_PERCENTAGE
+				breath = environment.remove(breath_moles)
+			else if(isturf(loc) || isliving(loc)) //Breathe from loc as turf
 				var/breath_moles = 0
 				if(environment)
 					breath_moles = environment.total_moles()*BREATH_PERCENTAGE

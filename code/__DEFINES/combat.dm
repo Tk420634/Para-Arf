@@ -51,6 +51,12 @@
 #define GRAB_KILL    5
 
 
+//Intents
+#define I_HELP		"help"
+#define I_DISARM	"disarm"
+#define I_GRAB		"grab"
+#define I_HARM		"harm"
+
 //Hostile Mob AI Status
 #define AI_ON		1
 #define AI_IDLE		2

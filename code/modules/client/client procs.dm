@@ -28,7 +28,7 @@
 /client/Topic(href, href_list, hsrc)
 	if(!usr || usr != mob)	//stops us calling Topic for somebody else's client. Also helps prevent usr=null
 		return
-
+	/*
 	// src should always be a UID; if it isn't, warn instead of failing entirely
 	if(href_list["src"])
 		hsrc = locateUID(href_list["src"])
@@ -38,7 +38,7 @@
 			if(hsrc)
 				var/hsrc_info = datum_info_line(hsrc) || "[hsrc]"
 				log_runtime(EXCEPTION("Got \\ref-based src in topic from [src] for [hsrc_info], should be UID: [href]"))
-
+	*/
 	#if defined(TOPIC_DEBUGGING)
 	to_chat(world, "[src]'s Topic: [href] destined for [hsrc].")
 	#endif
@@ -477,6 +477,8 @@
 	//This is down here because of the browse() calls in tooltip/New()
 	if(!tooltips)
 		tooltips = new /datum/tooltip(src)
+
+	prefs_vr = new /datum/vore_preferences(src)
 
 //////////////
 //DISCONNECT//

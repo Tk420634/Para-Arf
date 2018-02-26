@@ -19,6 +19,11 @@
 	//Active emote/pose
 	var/pose = null
 
+	var/list/chem_effects = list()
+	var/datum/reagents/metabolism/bloodstr = null
+	var/datum/reagents/metabolism/ingested = null
+	var/datum/reagents/metabolism/touching = null
+
 	var/pulse = PULSE_NORM	//current pulse level
 
 	var/wetlevel = 0 //how wet the mob is

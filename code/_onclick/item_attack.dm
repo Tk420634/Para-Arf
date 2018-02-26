@@ -15,6 +15,10 @@
 
 /mob/living/attackby(obj/item/I, mob/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)
+
+	if(attempt_vr(user,"vore_attackby",args))
+		return //VOREStation Code
+
 	if(attempt_harvest(I, user))
 		return
 	I.attack(src, user)
@@ -27,10 +31,15 @@
 
 
 /obj/item/proc/attack(mob/living/M as mob, mob/living/user as mob, def_zone)
+	if(user.loc == M) // Don't want people to attack eachother from inside!
+		return 0
 
 	if(!istype(M)) // not sure if this is the right thing...
 		return 0
 	var/messagesource = M
+
+	if(attempt_vr(user,"vore_attackby",args))
+		return //VOREStation Code
 
 	if(can_operate(M))  //Checks if mob is lying down on table for surgery
 		if(istype(src,/obj/item/robot_parts))//popup override for direct attach

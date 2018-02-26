@@ -376,3 +376,7 @@
 		var/turf/T = screen_loc2turf(modifiers["screen-loc"], get_turf(usr))
 		T.Click(location, control, params)
 	return 1
+
+
+/mob/proc/setClickCooldown(var/timeout)
+	next_move = max(world.time + timeout, next_move)
