@@ -45,10 +45,7 @@
 
 	var/datum/gas_mixture/environment
 	if(loc)
-		if(isliving(loc))
-			environment = new/datum/gas_mixture/belly_air
-		else
-			environment = loc.return_air()
+		environment = loc.return_air()
 
 	var/datum/gas_mixture/breath
 
@@ -71,6 +68,11 @@
 			if(isobj(loc)) //Breathe from loc as object
 				var/obj/loc_as_obj = loc
 				breath = loc_as_obj.handle_internal_lifeform(src, BREATH_MOLES)
+			else if(isliving(loc))
+				var/breath_moles = 0
+				if(environment)
+					breath_moles = environment.total_moles()*BREATH_PERCENTAGE
+				breath = environment.remove(breath_moles)
 			else if(isturf(loc) || isliving(loc)) //Breathe from loc as turf
 				var/breath_moles = 0
 				if(environment)

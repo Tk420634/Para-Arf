@@ -232,9 +232,7 @@
 		return
 
 	var/datum/gas_mixture/environment
-	if(isliving(loc))//temporary, for testing
-		environment = new/datum/gas_mixture/belly_air
-	else if(loc)
+	if(loc)
 		environment = loc.return_air()
 
 	var/datum/gas_mixture/breath
@@ -256,7 +254,11 @@
 			if(isobj(loc)) //Breathe from loc as object
 				var/obj/loc_as_obj = loc
 				breath = loc_as_obj.handle_internal_lifeform(src, BREATH_MOLES)
-
+			else if(isliving(loc))
+				var/breath_moles = 0
+				if(environment)
+					breath_moles = environment.total_moles()*BREATH_PERCENTAGE
+				breath = environment.remove(breath_moles)
 			else if(isturf(loc)) //Breathe from loc as turf
 				var/breath_moles = 0
 				if(environment)
@@ -264,10 +266,10 @@
 
 				breath = loc.remove_air(breath_moles)
 
-				if(!is_lung_ruptured())																					// THIS FUCKING EXCERPT, THIS LITTLE FUCKING EXCERPT, SNOWFLAKED
-					if(!breath || breath.total_moles() < BREATH_MOLES / 5 || breath.total_moles() > BREATH_MOLES * 5)	// RIGHT IN THE CENTER OF THE FUCKING BREATHE PROC
-						if(prob(5))																						// IT IS THE ONLY FUCKING REASONS HUMAN OVERRIDE breathe()
-							rupture_lung()																				// GOD FUCKING DAMNIT
+			if(!is_lung_ruptured())																					// THIS FUCKING EXCERPT, THIS LITTLE FUCKING EXCERPT, SNOWFLAKED
+				if(!breath || breath.total_moles() < BREATH_MOLES / 5 || breath.total_moles() > BREATH_MOLES * 5)	// RIGHT IN THE CENTER OF THE FUCKING BREATHE PROC
+					if(prob(5))																						// IT IS THE ONLY FUCKING REASONS HUMAN OVERRIDE breathe()
+						rupture_lung()																				// GOD FUCKING DAMNIT
 
 		else //Breathe from loc as obj again
 			if(istype(loc, /obj/))

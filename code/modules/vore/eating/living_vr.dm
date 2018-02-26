@@ -420,12 +420,11 @@
 	return return_air()
 
 /mob/living/return_air()
-	return return_air_for_internal_lifeform()
+	var/datum/gas_mixture/belly_air/air = new
+	return air
 
 /mob/living/return_air_for_internal_lifeform()
-	//Free air until someone wants to code processing it for reals from predbreaths
-	var/datum/gas_mixture/belly_air/air = new/datum/gas_mixture/belly_air
-	return air
+	return return_air()
 
 // This is about 0.896m^3 of atmosphere
 /datum/gas_mixture/belly_air
