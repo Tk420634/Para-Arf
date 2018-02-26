@@ -3,8 +3,13 @@
 	title = "Chaplain"
 	flag = CHAPLAIN
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_service = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")

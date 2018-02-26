@@ -1,3 +1,4 @@
+#if MAP_ID == 999
 //Security
 /datum/job/hos
 	total_positions = 0
@@ -107,3 +108,4 @@
 /datum/job/lawyer
 	total_positions = 0
 	spawn_positions = 0
+#endif

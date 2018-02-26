@@ -20,7 +20,7 @@
 	var/image/floorbed_sprite = image(icon = 'icons/turf/outdoors.dmi', icon_state = under_state)
 	underlays.Add(floorbed_sprite)
 //	update_icon_edge()
-
+/*
 /turf/simulated/floor/water/return_air_for_internal_lifeform(var/mob/living/L)
 	if(L && L.lying)
 		if(L.can_breathe_water()) // For squid.
@@ -42,22 +42,21 @@
 			water_breath.temperature = above_air.temperature
 			return water_breath
 	return return_air() // Otherwise their head is above the water, so get the air from the atmosphere instead.
-
+*/
 /turf/simulated/floor/water/Entered(atom/movable/AM, atom/oldloc)
 	if(istype(AM, /mob/living))
 		var/mob/living/L = AM
-		L.update_water()
+		L.water_act(100, temperature, src)
 		if(L.check_submerged() <= 0)
 			return
 		if(!istype(oldloc, /turf/simulated/floor/water))
 			to_chat(L, "<span class='warning'>You get drenched in water from entering \the [src]!</span>")
-	AM.water_act(5)
+	AM.water_act(100, temperature, src)
 	..()
 
 /turf/simulated/floor/water/Exited(atom/movable/AM, atom/newloc)
 	if(istype(AM, /mob/living))
 		var/mob/living/L = AM
-		L.update_water()
 		if(L.check_submerged() <= 0)
 			return
 		if(!istype(newloc, /turf/simulated/floor/water))
@@ -69,29 +68,26 @@
 	desc = "A body of water.  It seems quite deep."
 	icon_state = "seadeep" // So it shows up in the map editor as water.
 	under_state = "abyss"
-	edge_blending_priority = -2
-	movement_cost = 8
+	slowdown = 6
 	depth = 2
 
 /turf/simulated/floor/water/pool
 	name = "pool"
 	desc = "Don't worry, it's not closed."
 	under_state = "pool"
-	outdoors = FALSE
 
 /turf/simulated/floor/water/deep/pool
 	name = "deep pool"
 	desc = "Don't worry, it's not closed."
-	outdoors = FALSE
 
 /mob/living/proc/can_breathe_water()
 	return FALSE
-
+/*
 /mob/living/carbon/human/can_breathe_water()
 	if(species)
 		return species.can_breathe_water()
 	return ..()
-
+*/
 /mob/living/proc/check_submerged()
 	if(buckled)
 		return 0

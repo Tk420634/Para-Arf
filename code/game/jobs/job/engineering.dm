@@ -2,8 +2,13 @@
 	title = "Chief Engineer"
 	flag = CHIEF
 	department_flag = ENGSEC
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_engineering = 1
 	supervisors = "the captain"
 	department_head = list("Captain")
@@ -49,11 +54,18 @@
 	title = "Station Engineer"
 	flag = ENGINEER
 	department_flag = ENGSEC
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the captain"
+	department_head = list("Captain")
+	#else
 	total_positions = 5
 	spawn_positions = 5
-	is_engineering = 1
 	supervisors = "the chief engineer"
 	department_head = list("Chief Engineer")
+	#endif
+	is_engineering = 1
 	selection_color = "#fff5cc"
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_mineral_storeroom)
 	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_mineral_storeroom)
@@ -87,8 +99,13 @@
 	title = "Life Support Specialist"
 	flag = ATMOSTECH
 	department_flag = ENGSEC
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 3
 	spawn_positions = 2
+	#endif
 	is_engineering = 1
 	supervisors = "the chief engineer"
 	department_head = list("Chief Engineer")
@@ -121,8 +138,13 @@
 	title = "Mechanic"
 	flag = MECHANIC
 	department_flag = KARMA
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_engineering = 1
 	supervisors = "the chief engineer"
 	department_head = list("Chief Engineer")

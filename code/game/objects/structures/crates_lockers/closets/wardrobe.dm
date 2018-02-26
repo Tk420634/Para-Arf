@@ -280,7 +280,7 @@
 
 
 /obj/structure/closet/wardrobe/toxins_white
-	name = "toxins wardrobe"
+	name = "scientist wardrobe"
 	icon_state = "white"
 	icon_closed = "white"
 

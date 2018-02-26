@@ -41,3 +41,8 @@
 	#define DECLARE_LEVEL(NAME,LINKS,TRAITS) list("name" = NAME, "linkage" = LINKS, "attributes" = TRAITS)
 
 	#define AWAY_MISSION_LIST list(DECLARE_LEVEL(AWAY_MISSION,UNAFFECTED,list(BLOCK_TELEPORT, AWAY_LEVEL)))
+
+	#define IF_MAP_NAME_IS(M)	if(MAP_NAME == M)
+
+//Sets the MAP_ID to 1 by default. Used to compile certain map-specific code
+#define MAP_ID 1

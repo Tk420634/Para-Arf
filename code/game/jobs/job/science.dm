@@ -2,8 +2,13 @@
 	title = "Research Director"
 	flag = RD
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_science = 1
 	supervisors = "the captain"
 	department_head = list("Captain")
@@ -12,11 +17,13 @@
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 					access_tox_storage, access_tech_storage, access_teleporter, access_sec_doors,
 					access_research, access_robotics, access_xenobiology, access_ai_upload,
-					access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_minisat, access_mineral_storeroom, access_network)
+					access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch,
+					access_minisat, access_mineral_storeroom, access_network)
 	minimal_access = list(access_eva, access_rd, access_heads, access_tox, access_genetics, access_morgue,
 					access_tox_storage, access_tech_storage, access_teleporter, access_sec_doors,
 					access_research, access_robotics, access_xenobiology, access_ai_upload,
-					access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_minisat, access_maint_tunnels, access_mineral_storeroom, access_network)
+					access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway,
+					access_xenoarch, access_minisat, access_maint_tunnels, access_mineral_storeroom, access_network)
 	minimal_player_age = 21
 	exp_requirements = 600
 	exp_type = EXP_TYPE_CREW
@@ -52,8 +59,13 @@
 	title = "Scientist"
 	flag = SCIENTIST
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 6
 	spawn_positions = 6
+	#endif
 	is_science = 1
 	supervisors = "the research director"
 	department_head = list("Research Director")
@@ -91,8 +103,13 @@
 	title = "Roboticist"
 	flag = ROBOTICIST
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 2
 	spawn_positions = 2
+	#endif
 	is_science = 1
 	supervisors = "the research director"
 	department_head = list("Research Director")

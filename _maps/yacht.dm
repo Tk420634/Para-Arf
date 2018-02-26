@@ -31,6 +31,7 @@ DECLARE_LEVEL(CENTCOMM, SELFLOOPING, list(ADMIN_LEVEL, BLOCK_TELEPORT, IMPEDES_M
         #include "map_files\generic\z7.dmm"
 
         #define MAP_FILE "yacht.dmm"
+        #define MAP_ID 999
         #define MAP_NAME "ARFS Endeavor"
         #define MAP_TRANSITION_CONFIG list(\
 DECLARE_LEVEL(MAIN_STATION, CROSSLINKED, list(STATION_LEVEL,STATION_CONTACT,REACHABLE,AI_OK)),\
@@ -49,4 +50,3 @@ DECLARE_LEVEL(EMPTY_AREA, CROSSLINKED, list(REACHABLE)))
 	#warn a map has already been included, ignoring ARFS Endeavor.
 
 #endif
-
