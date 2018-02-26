@@ -230,6 +230,9 @@
 
 //Added by ThingPony
 
+/datum/gear/uniform/color
+	subtype_path = /datum/gear/uniform/color
+
 /datum/gear/uniform/color/black
 	display_name = "black jumpsuit"
 	path = /obj/item/clothing/under/color/black
@@ -322,6 +325,9 @@
 	display_name = "blue team jersey"
 	path =/obj/item/clothing/under/color/blue/jersey
 
+/datum/gear/uniform/sleepwear
+	subtype_path = /datum/gear/uniform/sleepwear
+
 /datum/gear/uniform/sleepwear/bluepj
 	display_name = "blue pj's"
 	path =/obj/item/clothing/under/pj/blue
@@ -329,6 +335,9 @@
 /datum/gear/uniform/sleepwear/redpj
 	display_name = "Red pj's"
 	path =/obj/item/clothing/under/pj/red
+
+/datum/gear/uniform/suit
+	subtype_path = /datum/gear/uniform/suit
 
 /datum/gear/uniform/suit/black
 	display_name = "black suit"
@@ -366,6 +375,9 @@
 	display_name = "charcoal suit"
 	path =/obj/item/clothing/under/suit_jacket/charcoal
 
+/datum/gear/uniform/under
+	subtype_path = /datum/gear/uniform/under
+
 /datum/gear/uniform/under/schoolgirl
 	display_name = "schoolgirl uniform"
 	path =/obj/item/clothing/under/schoolgirl
@@ -378,63 +390,63 @@
 	display_name = "kilt"
 	path =/obj/item/clothing/under/kilt
 
-/datum/gear/uniform/under/dress/dressfire
+/datum/gear/uniform/under/dressfire
 	display_name = "flame dress"
 	path =/obj/item/clothing/under/dress/dress_fire
 
-/datum/gear/uniform/under/dress/dressgreen
+/datum/gear/uniform/under/dressgreen
 	display_name = "green dress"
 	path =/obj/item/clothing/under/dress/dress_green
 
-/datum/gear/uniform/under/dress/dressorange
+/datum/gear/uniform/under/dressorange
 	display_name = "orange dress"
 	path =/obj/item/clothing/under/dress/dress_orange
 
-/datum/gear/uniform/under/dress/dresspink
+/datum/gear/uniform/under/dresspink
 	display_name = "pink dress"
 	path =/obj/item/clothing/under/dress/dress_pink
 
-/datum/gear/uniform/under/dress/dressyellow
+/datum/gear/uniform/under/dressyellow
 	display_name = "yellow dress"
 	path =/obj/item/clothing/under/dress/dress_yellow
 
-/datum/gear/uniform/under/dress/dresssaloon
+/datum/gear/uniform/under/dresssaloon
 	display_name = "saloon dress"
 	path =/obj/item/clothing/under/dress/dress_saloon
 
-/datum/gear/uniform/under/dress/plaidblue
+/datum/gear/uniform/under/plaidblue
 	display_name = "blue plaid skirt"
 	path =/obj/item/clothing/under/dress/plaid_blue
 
-/datum/gear/uniform/under/dress/plaidred
+/datum/gear/uniform/under/plaidred
 	display_name = "red plaid skirt"
 	path =/obj/item/clothing/under/dress/plaid_red
 
-/datum/gear/uniform/under/dress/plaidpurple
+/datum/gear/uniform/under/plaidpurple
 	display_name = "purple plaid skirt"
 	path =/obj/item/clothing/under/dress/plaid_purple
 
-/datum/gear/uniform/under/wedding/brideorange
+/datum/gear/uniform/under/brideorange
 	display_name = "orange wedding dress"
 	path =/obj/item/clothing/under/wedding/bride_orange
 
-/datum/gear/uniform/under/wedding/bridepurple
+/datum/gear/uniform/under/bridepurple
 	display_name = "purple wedding dress"
 	path =/obj/item/clothing/under/wedding/bride_purple
 
-/datum/gear/uniform/under/wedding/brideblue
+/datum/gear/uniform/under/brideblue
 	display_name = "blue wedding dress"
 	path =/obj/item/clothing/under/wedding/bride_blue
 
-/datum/gear/uniform/under/wedding/bridered
+/datum/gear/uniform/under/bridered
 	display_name = "red wedding dress"
 	path =/obj/item/clothing/under/wedding/bride_red
 
-/datum/gear/uniform/under/wedding/bridewhite
+/datum/gear/uniform/under/bridewhite
 	display_name = "white wedding dress"
 	path =/obj/item/clothing/under/wedding/bride_white
 
-/datum/gear/uniform/under/dress/sundress
+/datum/gear/uniform/under/sundress
 	display_name = "sundress"
 	path =/obj/item/clothing/under/sundress
 

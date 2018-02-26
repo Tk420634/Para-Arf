@@ -440,3 +440,14 @@
 	name = "emergency response team janitor backpack"
 	desc = "A spacious backpack with lots of pockets, worn by janitorial members of a Alliance of Racial Federation Emergency Response Team."
 	icon_state = "ert_janitor"
+
+
+/obj/item/weapon/storage/backpack/explorer
+	name = "explorer backpack"
+	desc = "A backpack typically used for exploring."
+	icon_state = "explorerpack"
+
+/obj/item/weapon/storage/backpack/explorer/satchel
+	name = "explorer satchel"
+	desc = "A satchel typically used for exploring."
+	icon_state = "satchel-explorer"
