@@ -81,6 +81,10 @@
 	cost = 2
 
 //instruments
+
+/datum/gear/instruments
+	subtype_path = /datum/gear/instruments
+
 /datum/gear/instruments/guitar
 	display_name = "Guitar"
 	path = /obj/item/device/instrument/guitar
@@ -130,3 +134,23 @@
 	display_name = "Violin"
 	path = /obj/item/device/instrument/violin
 	cost = 10
+
+//Extra Backpacks
+
+/datum/gear/bags
+	subtype_path = /datum/gear/bags
+
+/datum/gear/bags/kitty
+	display_name = "catpack"
+	path = "/obj/item/weapon/storage/backpack/fluff/ssscratches_back"
+	cost = 2
+
+/datum/gear/bags/explorerbag
+	display_name = "explorer backpack"
+	path = "/obj/item/weapon/storage/backpack/explorer"
+	cost = 2
+
+/datum/gear/bags/explorersatchel
+	display_name = "explorer satchel"
+	path = "/obj/item/weapon/storage/backpack/explorer/satchel"
+	cost = 2
