@@ -19,7 +19,7 @@
 	var/digest_burn = 3						// Burn damage per tick in digestion mode
 	var/digest_tickrate = 3					// Modulus this of air controller tick number to iterate gurgles on
 	var/immutable = 0						// Prevents this belly from being deleted
-	var/escapable = 0						// Belly can be resisted out of at any time
+	var/escapable = 1						// Belly can be resisted out of at any time
 	var/escapetime = 60 SECONDS				// Deciseconds, how long to escape this belly
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
@@ -378,7 +378,6 @@
 		return  // User is not in this belly, or struggle too soon.
 
 	R.setClickCooldown(50)
-
 	if(owner.stat) //If owner is stat (dead, KO) we can actually escape
 		to_chat(R, "<span class='warning'>You attempt to climb out of \the [name]. (This will take around [escapetime/10] seconds.)</span>")
 		to_chat(owner, "<span class='warning'>Someone is attempting to climb out of your [name]!</span>")
@@ -408,7 +407,7 @@
 	struggle_user_message = "<span class='alert'>" + struggle_user_message + "</span>"
 
 	for(var/mob/M in hearers(4, owner))
-		M.show_message(struggle_outer_message, 2) // hearable
+		to_chat(M,struggle_outer_message) // hearable
 	to_chat(R, struggle_user_message)
 
 
