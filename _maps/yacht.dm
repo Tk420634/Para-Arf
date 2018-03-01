@@ -31,7 +31,7 @@ DECLARE_LEVEL(CENTCOMM, SELFLOOPING, list(ADMIN_LEVEL, BLOCK_TELEPORT, IMPEDES_M
         #include "map_files\generic\z7.dmm"
 
         #define MAP_FILE "yacht.dmm"
-        #define MAP_ID 999
+        #define MAP_ID 999//Map ID is for compiling certain code for specific maps. To find these, ctrl-f for [#if MAP_ID == 999].
         #define MAP_NAME "ARFS Endeavor"
         #define MAP_TRANSITION_CONFIG list(\
 DECLARE_LEVEL(MAIN_STATION, CROSSLINKED, list(STATION_LEVEL,STATION_CONTACT,REACHABLE,AI_OK)),\
@@ -41,10 +41,7 @@ DECLARE_LEVEL(CONSTRUCTION, CROSSLINKED, list(REACHABLE)),\
 DECLARE_LEVEL(MINING, CROSSLINKED, list(REACHABLE, STATION_CONTACT, HAS_WEATHER, ORE_LEVEL, AI_OK)),\
 DECLARE_LEVEL(DERELICT, CROSSLINKED, list(REACHABLE)),\
 DECLARE_LEVEL(EMPTY_AREA, CROSSLINKED, list(REACHABLE)))
-/*
-		#include "map_files\yacht\yacht_areas.dm"
-		#include "map_files\yacht\yacht_jobs.dm"
-*/
+
 #elif !defined(MAP_OVERRIDE)
 
 	#warn a map has already been included, ignoring ARFS Endeavor.
