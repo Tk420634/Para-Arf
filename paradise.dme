@@ -11,7 +11,7 @@
 // END_PREFERENCES
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
-#include "_maps\yacht.dm"
+#include "_maps\cyberiad.dm"
 #include "code\_compile_options.dm"
 #include "code\hub.dm"
 #include "code\world.dm"
@@ -1027,7 +1027,6 @@
 #include "code\game\turfs\simulated\walls_mineral.dm"
 #include "code\game\turfs\simulated\walls_misc.dm"
 #include "code\game\turfs\simulated\walls_reinforced.dm"
-#include "code\game\turfs\simulated\water.dm"
 #include "code\game\turfs\simulated\floor\fancy_floor.dm"
 #include "code\game\turfs\simulated\floor\light_floor.dm"
 #include "code\game\turfs\simulated\floor\mineral.dm"
