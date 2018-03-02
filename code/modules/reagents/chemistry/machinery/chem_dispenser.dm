@@ -284,6 +284,18 @@
 	unhack_message = "You re-enable the 'nanotrasen-are-cheap-bastards' lock, disabling hidden and very expensive boozes."
 	hacked_reagents = list("goldschlager", "patron", "absinthe", "ethanol", "nothing")
 
+/obj/machinery/chem_dispenser/coffee
+	icon_state = "coffee_dispenser"
+	name = "coffee dispenser"
+	desc = "A drink fabricating machine with the ARFBucks brand logo on the front."
+	ui_title = "ARFBucks Dispenser"
+	energy = 100
+	max_energy = 100
+	dispensable_reagents = list("coffee", "icecoffee", "cream", "sugar", "milk", "water", "ice", "soymilk", "tea", "icetea", "hot_coco", "cafe_latte", "pumpkin_latte", "cherryshake")
+	hack_message = "You change the mode from \"ARFBucks\" to \"Dunkin' Dalmations\"."
+	unhack_message = "You change the mode from \"Dunkin' Dalmations\ to \"ARFBucks\"."
+	hacked_reagents = list()
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
