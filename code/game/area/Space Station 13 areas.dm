@@ -2521,6 +2521,9 @@ area/security/podbay
 	name = "\improper Starboard Apartment 2"
 /area/crew_quarters/apartment/sb_3
 	name = "\improper Starboard Apartment 3"
+/area/crew_quarters/coffeeshop
+	name = "\improper Coffee Shop"
+	icon_state = "bar"
 
 //Service Areas
 /area/room_service
