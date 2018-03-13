@@ -324,21 +324,6 @@
 /mob/living/silicon/robot/drone/Bumped(atom/movable/AM)
 	return
 
-/mob/living/silicon/robot/drone/start_pulling(var/atom/movable/AM)
-
-	if(istype(AM,/obj/item/pipe) || istype(AM,/obj/structure/disposalconstruct))
-		..()
-	else if(istype(AM,/obj/item))
-		var/obj/item/O = AM
-		if(O.w_class > WEIGHT_CLASS_SMALL)
-			to_chat(src, "<span class='warning'>You are too small to pull that.</span>")
-			return
-		else
-			..()
-	else
-		to_chat(src, "<span class='warning'>You are too small to pull that.</span>")
-		return
-
 /mob/living/silicon/robot/drone/add_robot_verbs()
 	src.verbs |= silicon_subsystems
 
