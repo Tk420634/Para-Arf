@@ -2590,6 +2590,8 @@
 				log_admin("[key_name(usr)] made all SMESs powered", 1)
 				message_admins("<span class='notice'>[key_name_admin(usr)] made all SMESs powered</span>", 1)
 				power_restore_quick()
+			if("unlimitedpower")
+				unlimited_power()
 			if("prisonwarp")
 				if(!ticker)
 					alert("The game hasn't started yet!", null, null, null, null, null)
