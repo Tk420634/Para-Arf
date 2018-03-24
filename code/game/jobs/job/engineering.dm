@@ -57,7 +57,7 @@
 	selection_color = "#fff5cc"
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_mineral_storeroom)
 	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_mineral_storeroom)
-	alt_titles = list("Maintenance Technician","Engine Technician","Electrician","Singularity Specialist","Tesla Technician")
+	alt_titles = list("Maintenance Technician","Engine Technician","Electrician","Singularity Specialist","Tesla Technician", "Solar Technician", "Builder", "Architect")
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
