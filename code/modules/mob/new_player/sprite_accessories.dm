@@ -2314,6 +2314,10 @@
 	name = "Moth Antennae"
 	icon_state = "kidan_moth"
 
+/datum/sprite_accessory/head_accessory/goo_dragon/short
+	name = "Short"
+	icon_state = "g_horns_short"
+
 
 /* BODY MARKINGS */
 
@@ -2355,6 +2359,10 @@
 /datum/sprite_accessory/body_markings/unathi/points_una
 	name = "Unathi Points"
 	icon_state = "markings_points_una"
+
+/datum/sprite_accessory/body_markings/unathi/dragon_una
+	name = "Dragon Belly"
+	icon_state = "markings_dragon_una"
 
 /datum/sprite_accessory/body_markings/tajara
 	species_allowed = list("Tajaran")
@@ -2709,6 +2717,13 @@
 	name = "Vulpkanin Bushy Straight Tail Black Fade White Tip"
 	tails_allowed = list("Vulpkanin Alt 5 (Straight Bushy)")
 	icon_state = "markings_vulptail6_silverf"
+
+/datum/sprite_accessory/body_markings/goo_dragon
+	species_allowed = list("Goo Dragon")
+
+/datum/sprite_accessory/body_markings/goo_dragon/stripe_una
+	name = "Goo Dragon Belly"
+	icon_state = "g_markings_belly_narrow_una"
 
 /* ALT HEADS */
 
