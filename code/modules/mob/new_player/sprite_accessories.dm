@@ -2362,7 +2362,7 @@
 
 /datum/sprite_accessory/body_markings/unathi/dragon_una
 	name = "Dragon Belly"
-	icon_state = "markings_dragon_una"
+	icon_state = "markings_belly_dragon_una"
 
 /datum/sprite_accessory/body_markings/tajara
 	species_allowed = list("Tajaran")
