@@ -99,6 +99,9 @@
 /mob/living/carbon/human/slime/New(var/new_loc)
 	..(new_loc, "Slime People")
 
+/mob/living/carbon/human/goo_dragon/New(var/new_loc)
+	..(new_loc, "Goo Dragon")
+
 /mob/living/carbon/human/grey/New(var/new_loc)
 	..(new_loc, "Grey")
 

@@ -581,3 +581,143 @@
 	icon_override = 'code/dallus_content/icons/uniforms1.dmi' //the on-mob icon file since they fill up fast
 	item_state = "lifeguard"
 */
+
+
+//stuff from the ww2 server
+
+/obj/item/clothing/under/sovuni/officer
+	name = "soviet officer's uniform"
+	desc = "A fancier, more pressed uniform of the Red Army, given to Soviet officers. It has a feel of pride and authority."
+	icon_state = "sovuniofficer"
+	item_state = "sovuniofficer"
+	item_color = "sovuniofficer"
+
+/obj/item/clothing/under/sovuni/MP
+	name = "soviet MP's uniform"
+	desc = "A fancier, more pressed uniform of the Red Army, given to Soviet military police."
+	icon_state = "sovuni_MP"
+	item_state = "sovuni_MP"
+	item_color = "sovuni_MP"
+
+/obj/item/clothing/under/geruni/gerofficer
+	name = "german officer's uniform"
+	desc = "A fancier, more pressed uniform of the Nazi Army, given to German officers. It has a feel of pride and authority."
+	icon_state = "falluni"
+	item_state = "geruniofficer"
+	item_color = "sovuni_MP"
+
+
+/obj/item/clothing/under/geruni/MP
+	name = "german MP's uniform"
+	desc = "A fancier, more pressed uniform of the Nazi Army, given to German military police."
+	icon_state = "geruni_MP"
+	item_state = "geruni_MP"
+	item_color = "geruni_MP"
+
+/obj/item/clothing/under/geruni/falluni
+	name = "Fallschirmjager uniform"
+	desc = "Standart german uniform for fallschirmjagers. This is quite comfy and sturdy uniform."
+	icon_state = "falluni"
+	item_state = "falluni"
+	item_color = "falluni"
+
+/obj/item/clothing/suit/fallsparka
+	name = "Fallschirmjager Parka"
+	desc = "A warm and comfy parka for fallschirmjagers."
+	icon_state = "fallsparka"
+	item_state = "fallsparka"
+	item_color = "fallsparka"
+
+/obj/item/clothing/suit/sssmock
+	name = "S.S. Smock"
+	desc = "A camo S.S. overcoat that blends in well in the fall."
+	icon_state = "sssmock"
+	item_state = "sssmock"
+	item_color = "sssmock"
+
+
+/obj/item/clothing/under/geruni/ssuni
+	name = "SS uniform"
+	desc = "Camo uniform for ShutzStaffel soldiers. Sturdy, comfy, and makes you less visible in autumn. They gave you this too early by the way."
+	icon_state = "newssuni"
+	item_state = "newssuni"
+	item_color = "newssuni"
+
+/obj/item/clothing/under/geruni/ssformalofc
+	name = "SS Officer's Formal Uniform"
+	desc = "Jet black formal uniform. Swastika armband included."
+	icon_state = "ss_formal_ofc"
+	item_state = "ss_formal_ofc"
+	item_color = "ss_formal_ofc"
+
+/obj/item/clothing/under/geruni/gertankeruni
+	name = "Panzer Crewman Uniform"
+	desc = "Dark gray jumpsuit with a brown belt. It has an insignia declaring the wearer as a tank crewman."
+	icon_state = "gertankeruni"
+	item_state = "gertankeruni"
+	item_color = "gertankeruni"
+
+/obj/item/clothing/under/sovuni/sovtankeruni
+	name = "Soviet Crewman Uniform"
+	desc = "Dark blue jumpsuit with a brown belt and bandolier."
+	icon_state = "sovtankeruni"
+	item_state = "sovtankeruni"
+	item_color = "sovtankeruni"
+
+/obj/item/clothing/under/civ1
+	name = "Civilian Clothing"
+	desc = "A nice set of threads for civilians. Smells of sweat and resentment."
+	icon_state = "civuni1"
+	item_state = "civuni1"
+	item_color = "civuni1"
+
+/obj/item/clothing/under/civ2
+	name = "Civilian Clothing"
+	desc = "A nice set of threads for civilians. Smells of sweat and resentment."
+	icon_state = "civuni2"
+	item_state = "civuni2"
+	item_color = "civuni2"
+
+/obj/item/clothing/under/civ3
+	name = "Civilian Clothing"
+	desc = "A nice set of threads for civilians. Smells of sweat and resentment."
+	icon_state = "civuni3"
+	item_state = "civuni3"
+	item_color = "civuni3"
+
+// Ported from /tg/
+/obj/item/clothing/under/flowerdress
+	name = "Flower Dress"
+	desc = "A lovely flower dress."
+	icon_state = "flower_dress"
+	item_state = "flower_dress"
+	item_color = "flower_dress"
+
+/obj/item/clothing/under/redsweptdress
+	name = "red swept dress"
+	desc = "A pretty red dress. Its swept at the bottom. Comes with a black belt."
+	icon_state = "red_swept_dress"
+	item_state = "red_swept_dress"
+	item_color = "red_swept_dress"
+
+
+/obj/item/clothing/under/sexymaid
+	name = "Sexy maid"
+	desc = "A sexy maid outfit."
+	icon_state = "sexymaid"
+	item_state = "sexymaid"
+	item_color = "sexymaid"
+
+/obj/item/clothing/under/bathrobe
+	name = "bathrobe"
+	desc = "A bathrobe. It looks soft. Now if only you can find some tea."
+	icon_state = "bathrobe"
+	item_state = "bathrobe"
+	item_color = "bathrobe"
+
+/obj/item/clothing/under/explorer
+	name = "explorer"
+	desc = "Explorer outfit."
+	icon_state = "explorer"
+	item_state = "explorer"
+	item_color = "explorer"

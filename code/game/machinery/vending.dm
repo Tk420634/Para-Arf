@@ -691,6 +691,7 @@
 
 /obj/machinery/vending/boozeomat
 	name = "\improper Booze-O-Mat"
+	slogan_delay = 18000
 	desc = "A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one."
 	icon_state = "boozeomat"        //////////////18 drink entities below, plus the glasses, in case someone wants to edit the number of bottles
 	icon_deny = "boozeomat-deny"
@@ -740,6 +741,7 @@
 /obj/machinery/vending/coffee
 	name = "\improper Hot Drinks machine"
 	desc = "A vending machine which dispenses hot drinks."
+	slogan_delay = 18000
 	product_ads = "Have a drink!;Drink up!;It's good for you!;Would you like a hot joe?;I'd kill for some coffee!;The best beans in the galaxy.;Only the finest brew for you.;Mmmm. Nothing like a coffee.;I like coffee, don't you?;Coffee helps you work!;Try some tea.;We hope you like the best!;Try our new chocolate!;Admin conspiracies"
 	icon_state = "coffee"
 	icon_vend = "coffee-vend"
@@ -763,6 +765,7 @@
 
 /obj/machinery/vending/snack
 	name = "\improper Getmore Chocolate Corp"
+	slogan_delay = 18000
 	desc = "A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars."
 	product_slogans = "Try our new nougat bar!;Twice the calories for half the price!"
 	product_ads = "The healthiest!;Award-winning chocolate bars!;Mmm! So good!;Oh my god it's so juicy!;Have a snack.;Snacks are good for you!;Have some more Getmore!;Best quality snacks straight from mars.;We love chocolate!;Try our new jerky!"
@@ -838,6 +841,7 @@
 	name = "\improper PTech"
 	desc = "Cartridges for PDA's."
 	product_slogans = "Carts to go!"
+	slogan_delay = 18000
 	icon_state = "cart"
 	icon_deny = "cart-deny"
 	products = list(/obj/item/device/pda =10,/obj/item/weapon/cartridge/mob_hunt_game = 25,/obj/item/weapon/cartridge/medical = 10,/obj/item/weapon/cartridge/chemistry = 10,
@@ -866,6 +870,7 @@
 
 /obj/machinery/vending/cigarette
 	name = "cigarette machine"
+	slogan_delay = 18000
 	desc = "If you want to get cancer, might as well do it in style."
 	product_slogans = "Space cigs taste good like a cigarette should.;I'd rather toolbox than switch.;Smoke!;Don't believe the reports - smoke today!"
 	product_ads = "Probably not bad for you!;Don't believe the scientists!;It's good for you!;Don't quit, buy more!;Smoke!;Nicotine heaven.;Best cigarettes since 2150.;Award-winning cigs."
@@ -889,6 +894,7 @@
 
 /obj/machinery/vending/medical
 	name = "\improper NanoMed Plus"
+	slogan_delay = 18000
 	desc = "Medical drug dispenser."
 	icon_state = "med"
 	icon_deny = "med-deny"
@@ -913,6 +919,7 @@
 
 /obj/machinery/vending/wallmed1
 	name = "\improper NanoMed"
+	slogan_delay = 18000
 	desc = "Wall-mounted Medical Equipment dispenser."
 	product_ads = "Go save some lives!;The best stuff for your medbay.;Only the finest tools.;Natural chemicals!;This stuff saves lives.;Don't you want some?"
 	icon_state = "wallmed"
@@ -924,6 +931,7 @@
 
 /obj/machinery/vending/wallmed2
 	name = "\improper NanoMed"
+	slogan_delay = 18000
 	desc = "Wall-mounted Medical Equipment dispenser."
 	icon_state = "wallmed"
 	icon_deny = "wallmed-deny"
@@ -945,6 +953,7 @@
 
 /obj/machinery/vending/security
 	name = "\improper SecTech"
+	slogan_delay = 18000
 	desc = "A security equipment vendor."
 	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
 	icon_state = "sec"
@@ -956,6 +965,7 @@
 
 /obj/machinery/vending/hydronutrients
 	name = "\improper NutriMax"
+	slogan_delay = 18000
 	desc = "A plant nutrients vendor"
 	product_slogans = "Aren't you glad you don't have to fertilize the natural way?;Now with 50% less stink!;Plants are people too!"
 	product_ads = "We like plants!;Don't you want some?;The greenest thumbs ever.;We like big plants.;Soft soil..."
@@ -970,6 +980,7 @@
 /obj/machinery/vending/hydroseeds
 	name = "\improper MegaSeed Servitor"
 	desc = "When you need seeds fast!"
+	slogan_delay = 18000
 	product_slogans = "THIS'S WHERE TH' SEEDS LIVE! GIT YOU SOME!;Hands down the best seed selection on the station!;Also certain mushroom varieties available, more for experts! Get certified today!"
 	product_ads = "We like plants!;Grow some crops!;Grow, baby, growww!;Aw h'yeah son!"
 	icon_state = "seeds"
@@ -1014,6 +1025,7 @@
 
 /obj/machinery/vending/magivend
 	name = "\improper MagiVend"
+	slogan_delay = 18000
 	desc = "A magic vending machine."
 	icon_state = "MagiVend"
 	product_slogans = "Sling spells the proper way with MagiVend!;Be your own Houdini! Use MagiVend!"
@@ -1031,6 +1043,7 @@
 /obj/machinery/vending/autodrobe
 	name = "\improper AutoDrobe"
 	desc = "A vending machine for costumes."
+	slogan_delay = 18000
 	icon_state = "theater"
 	icon_deny = "theater-deny"
 	product_slogans = "Dress for success!;Suited and booted!;It's show time!;Why leave style up to fate? Use AutoDrobe!"
@@ -1083,6 +1096,7 @@
 
 /obj/machinery/vending/dinnerware
 	name = "\improper Dinnerware"
+	slogan_delay = 18000
 	desc = "A kitchen and restaurant equipment vendor."
 	product_ads = "Mm, food stuffs!;Food and food accessories.;Get your plates!;You like forks?;I like forks.;Woo, utensils.;You don't really need these..."
 	icon_state = "dinnerware"
@@ -1110,6 +1124,7 @@
 
 /obj/machinery/vending/tool
 	name = "\improper YouTool"
+	slogan_delay = 18000
 	desc = "Tools for tools."
 	icon_state = "tool"
 	icon_deny = "tool-deny"
@@ -1121,6 +1136,7 @@
 
 /obj/machinery/vending/engivend
 	name = "\improper Engi-Vend"
+	slogan_delay = 18000
 	desc = "Spare tool vending. What? Did you expect some witty description?"
 	icon_state = "engivend"
 	icon_deny = "engivend-deny"
@@ -1132,6 +1148,7 @@
 //This one's from bay12
 /obj/machinery/vending/engineering
 	name = "\improper Robco Tool Maker"
+	slogan_delay = 18000
 	desc = "Everything you need for do-it-yourself station repair."
 	icon_state = "engi"
 	icon_deny = "engi-deny"
@@ -1149,6 +1166,7 @@
 //This one's from bay12
 /obj/machinery/vending/robotics
 	name = "\improper Robotech Deluxe"
+	slogan_delay = 18000
 	desc = "All the tools you need to create your own robot army."
 	icon_state = "robotics"
 	icon_deny = "robotics-deny"
@@ -1161,6 +1179,7 @@
 
 /obj/machinery/vending/sustenance
 	name = "\improper Sustenance Vendor"
+	slogan_delay = 18000
 	desc = "A vending machine which vends food, as required by section 47-C of the NT's Prisoner Ethical Treatment Agreement."
 	product_slogans = "Enjoy your meal.;Enough calories to support strenuous labor."
 	product_ads = "The healthiest!;Award-winning chocolate bars!;Mmm! So good!;Oh my god it's so juicy!;Have a snack.;Snacks are good for you!;Have some more Getmore!;Best quality snacks straight from mars.;We love chocolate!;Try our new jerky!"
@@ -1172,6 +1191,7 @@
 
 /obj/machinery/vending/hatdispenser
 	name = "\improper Hatlord 9000"
+	slogan_delay = 18000
 	desc = "It doesn't seem the slightest bit unusual. This frustrates you immensely."
 	icon_state = "hats"
 	product_ads = "Warning, not all hats are dog/monkey compatible. Apply forcefully with care.;Apply directly to the forehead.;Who doesn't love spending cash on hats?!;From the people that brought you collectable hat crates, Hatlord!"
@@ -1195,6 +1215,7 @@
 
 /obj/machinery/vending/suitdispenser
 	name = "\improper Suitlord 9000"
+	slogan_delay = 18000
 	desc = "You wonder for a moment why all of your shirts and pants come conjoined. This hurts your head and you stop thinking about it."
 	icon_state = "suits"
 	product_ads = "Pre-Ironed, Pre-Washed, Pre-Wor-*BZZT*;Blood of your enemies washes right out!;Who are YOU wearing?;Look dapper! Look like an idiot!;Dont carry your size? How about you shave off some pounds you fat lazy- *BZZT*"
@@ -1224,6 +1245,7 @@
 
 /obj/machinery/vending/shoedispenser
 	name = "\improper Shoelord 9000"
+	slogan_delay = 18000
 	desc = "Wow, hatlord looked fancy, suitlord looked streamlined, and this is just normal. The guy who designed these must be an idiot."
 	icon_state = "shoes"
 	product_ads = "Put your foot down!;One size fits all!;IM WALKING ON SUNSHINE!;No hobbits allowed.;NO PLEASE WILLY, DONT HURT ME- *BZZT*"
@@ -1309,7 +1331,10 @@
 	/obj/item/clothing/under/schoolgirlblack=10, /obj/item/clothing/under/cuttop_red=10,
 	/obj/item/clothing/under/croptop=10, /obj/item/clothing/under/purpleskirt=10)
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool=1,/obj/item/clothing/mask/balaclava=1,/obj/item/clothing/head/ushanka=1,/obj/item/clothing/under/soviet=1,/obj/item/weapon/storage/belt/fannypack/black=1)
-	premium = list(/obj/item/clothing/under/suit_jacket/checkered=1,/obj/item/clothing/head/mailman=1,/obj/item/clothing/under/rank/mailman=1,/obj/item/clothing/suit/jacket/leather=1,/obj/item/clothing/under/pants/mustangjeans=1)
+	premium = list(/obj/item/clothing/under/suit_jacket/checkered=1,/obj/item/clothing/head/mailman=1,/obj/item/clothing/under/rank/mailman=1,/obj/item/clothing/suit/jacket/leather=1,/obj/item/clothing/under/pants/mustangjeans=1,
+	/obj/item/clothing/under/explorer = 10, /obj/item/clothing/under/bathrobe = 10,
+	/obj/item/clothing/under/sexymaid = 10, /obj/item/clothing/under/redsweptdress = 10,
+	/obj/item/clothing/under/flowerdress = 10)
 	refill_canister = /obj/item/weapon/vending_refill/clothing
 
 /obj/machinery/vending/clothing/New()

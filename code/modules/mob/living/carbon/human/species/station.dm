@@ -569,6 +569,64 @@
 		/mob/living/carbon/human/proc/regrow_limbs
 		)
 
+/datum/species/goo_dragon
+	name = "Goo Dragon"
+	name_plural = "Goo Dragon"
+	default_language = "Galactic Common"
+	language = "Sinta'unathi"
+	icobase = 'icons/mob/human_races/r_goolizard.dmi'
+	deform = 'icons/mob/human_races/r_goolizard.dmi'
+	path = /mob/living/carbon/human/goo_dragon
+	unarmed_type = /datum/unarmed_attack/punch
+	remains_type = /obj/effect/decal/remains/slime
+	tail = "gsogtail"
+
+	// More sensitive to the cold
+	cold_level_1 = 280
+	cold_level_2 = 240
+	cold_level_3 = 200
+	cold_env_multiplier = 3
+
+	oxy_mod = 0
+	brain_mod = 2.5
+
+	male_cough_sounds = list('sound/effects/slime_squish.ogg')
+	female_cough_sounds = list('sound/effects/slime_squish.ogg')
+
+	species_traits = list(LIPS, IS_WHITELISTED, NO_BREATHE, NO_INTORGANS, NO_SCAN)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags = HAS_SKIN_COLOR | NO_EYES | HAS_TAIL | TAIL_WAGGING | HAS_HEAD_ACCESSORY | HAS_BODY_MARKINGS | HAS_ALT_HEADS
+//	dietflags = DIET_CARN
+	dietflags = DIET_OMNI
+	reagent_tag = PROCESS_ORG
+
+	blood_color = "#0064C8"
+	exotic_blood = "water"
+	blood_damage_type = TOX
+
+	butt_sprite = "unathi"
+	//Has default darksight of 2.
+
+	has_organ = list(
+		"brain" = /obj/item/organ/internal/brain/slime
+		)
+
+	allowed_consumed_mobs = list(/mob/living/simple_animal/mouse, /mob/living/simple_animal/lizard, /mob/living/simple_animal/chick, /mob/living/simple_animal/chicken,
+								 /mob/living/simple_animal/crab, /mob/living/simple_animal/butterfly, /mob/living/simple_animal/parrot, /mob/living/simple_animal/tribble)
+
+	suicide_messages = list(
+		"is melting into a puddle!",
+		"is ripping out their own core!",
+		"is turning a dull, brown color and melting into a puddle!")
+
+	species_abilities = list(
+		/mob/living/carbon/human/proc/regrow_limbs
+		)
+
+/datum/species/goo_dragon/handle_death(var/mob/living/carbon/human/H)
+	H.stop_tail_wagging(1)
+
+
 /datum/species/slime/handle_life(var/mob/living/carbon/human/H)
 //This is allegedly for code "style". Like a plaid sweater?
 #define SLIMEPERSON_COLOR_SHIFT_TRIGGER 0.1

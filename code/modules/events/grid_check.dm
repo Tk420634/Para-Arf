@@ -74,3 +74,12 @@
 		S.input_attempt = 1
 		S.update_icon()
 		S.power_change()
+
+/proc/unlimited_power(var/announce = 0)
+	if(announce)
+		event_announcement.Announce("All SMESs on [station_name()] have been given UNLIMITED POWER!", "UNLIMITED POWER!", new_sound = 'sound/misc/unlimitedpower.ogg')
+	for(var/obj/machinery/power/smes/S in machines)
+		if(!is_station_level(S.z))
+			continue
+		new /obj/machinery/power/smes/magical(S.loc)
+		qdel(S)
