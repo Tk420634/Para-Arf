@@ -2741,3 +2741,9 @@
 	species_allowed = list("Unathi")
 	icon_state = "head_sharp"
 	suffix = "sharp"
+
+/datum/sprite_accessory/alt_heads/una_sharp_snout
+	name = "Goo Dragon Sharp Snout"
+	species_allowed = list("Goo Dragon")
+	icon_state = "head_sharp"
+	suffix = "sharp"
