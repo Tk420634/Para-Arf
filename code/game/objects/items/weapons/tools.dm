@@ -464,7 +464,8 @@
 		reagents.remove_reagent("fuel", amount)
 		check_fuel()
 		if(M)
-			M.flash_eyes(light_intensity)
+			if(!M.noeyes)
+				M.flash_eyes(light_intensity)
 		return TRUE
 	else
 		if(M)

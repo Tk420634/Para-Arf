@@ -83,32 +83,39 @@
 /obj/item/device/flash/proc/flash_carbon(var/mob/living/carbon/M, var/mob/user = null, var/power = 5, targeted = 1)
 	add_logs(user, M, "flashed", object="[src.name]")
 	if(user && targeted)
-		if(M.weakeyes)
-			M.Weaken(3) //quick weaken bypasses eye protection but has no eye flash
-		if(M.flash_eyes(1, 1))
-			M.AdjustConfused(power)
-			terrible_conversion_proc(M, user)
-			M.Stun(1)
-			visible_message("<span class='disarm'>[user] blinds [M] with the flash!</span>")
-			to_chat(user, "<span class='danger'>You blind [M] with the flash!</span>")
-			to_chat(M, "<span class='userdanger'>[user] blinds you with the flash!</span>")
-			if(M.weakeyes)
-				M.Stun(2)
-				M.visible_message("<span class='disarm'>[M] gasps and shields their eyes!</span>", "<span class='userdanger'>You gasp and shields your eyes!</span>")
-		else
+		if(M.noeyes)
 			visible_message("<span class='disarm'>[user] fails to blind [M] with the flash!</span>")
-			to_chat(user, "<span class='warning'>You fail to blind [M] with the flash!</span>")
-			to_chat(M, "<span class='danger'>[user] fails to blind you with the flash!</span>")
+			to_chat(user, "<span class='warning'>The flash is ineffective against someone with no eyes!</span>")
+			to_chat(M, "<span class='danger'>[user] tried to flash you, but didn't realize you have no eyes!</span>")
+		else
+			if(M.weakeyes)
+				M.Weaken(3) //quick weaken bypasses eye protection but has no eye flash
+			if(M.flash_eyes(1, 1))
+				M.AdjustConfused(power)
+				terrible_conversion_proc(M, user)
+				M.Stun(1)
+				visible_message("<span class='disarm'>[user] blinds [M] with the flash!</span>")
+				to_chat(user, "<span class='danger'>You blind [M] with the flash!</span>")
+				to_chat(M, "<span class='userdanger'>[user] blinds you with the flash!</span>")
+				if(M.weakeyes)
+					M.Stun(2)
+					M.visible_message("<span class='disarm'>[M] gasps and shields their eyes!</span>", "<span class='userdanger'>You gasp and shields your eyes!</span>")
+			else
+				visible_message("<span class='disarm'>[user] fails to blind [M] with the flash!</span>")
+				to_chat(user, "<span class='warning'>You fail to blind [M] with the flash!</span>")
+				to_chat(M, "<span class='danger'>[user] fails to blind you with the flash!</span>")
 	else
-		if(M.flash_eyes())
-			M.AdjustConfused(power)
+		if(!M.noeyes)
+			if(M.flash_eyes())
+				M.AdjustConfused(power)
 
 /obj/item/device/flash/attack(mob/living/M, mob/user)
 	if(!try_use_flash(user))
 		return 0
 
 	if(iscarbon(M))
-		flash_carbon(M, user, 5, 1)
+		if(!M.noeyes)
+			flash_carbon(M, user, 5, 1)
 		if(overcharged)
 			M.adjust_fire_stacks(6)
 			M.IgniteMob()
@@ -138,14 +145,16 @@
 		return 0
 	user.visible_message("<span class='disarm'>[user]'s [src.name] emits a blinding light!</span>", "<span class='danger'>Your [src.name] emits a blinding light!</span>")
 	for(var/mob/living/carbon/M in oviewers(3, null))
-		flash_carbon(M, user, 3, 0)
+		if(!M.noeyes)
+			flash_carbon(M, user, 3, 0)
 
 
 /obj/item/device/flash/emp_act(severity)
 	if(!try_use_flash())
 		return 0
 	for(var/mob/living/carbon/M in viewers(3, null))
-		flash_carbon(M, null, 10, 0)
+		if(!M.noeyes)
+			flash_carbon(M, null, 10, 0)
 	burn_out()
 	..()
 

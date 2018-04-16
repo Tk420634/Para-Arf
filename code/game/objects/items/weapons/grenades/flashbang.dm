@@ -35,21 +35,22 @@
 	var/distance = max(1,get_dist(src,T))
 
 //Flash
-	if(M.weakeyes)
-		M.visible_message("<span class='disarm'><b>[M]</b> screams and collapses!</span>")
-		to_chat(M, "<span class='userdanger'><font size=3>AAAAGH!</font></span>")
-		M.Weaken(15) //hella stunned
-		M.Stun(15)
-		if(ishuman(M))
-			M.emote("scream")
-			var/mob/living/carbon/human/H = M
-			var/obj/item/organ/internal/eyes/E = H.get_int_organ(/obj/item/organ/internal/eyes)
-			if(E)
-				E.receive_damage(8, 1)
+	if(!M.noeyes) //Check if they have eyes first
+		if(M.weakeyes)
+			M.visible_message("<span class='disarm'><b>[M]</b> screams and collapses!</span>")
+			to_chat(M, "<span class='userdanger'><font size=3>AAAAGH!</font></span>")
+			M.Weaken(15) //hella stunned
+			M.Stun(15)
+			if(ishuman(M))
+				M.emote("scream")
+				var/mob/living/carbon/human/H = M
+				var/obj/item/organ/internal/eyes/E = H.get_int_organ(/obj/item/organ/internal/eyes)
+				if(E)
+					E.receive_damage(8, 1)
 
-	if(M.flash_eyes(affect_silicon = 1))
-		M.Stun(max(10/distance, 3))
-		M.Weaken(max(10/distance, 3))
+		if(M.flash_eyes(affect_silicon = 1))
+			M.Stun(max(10/distance, 3))
+			M.Weaken(max(10/distance, 3))
 
 
 //Bang
