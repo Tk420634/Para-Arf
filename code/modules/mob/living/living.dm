@@ -776,6 +776,9 @@
 
 //called when the mob receives a bright flash
 /mob/living/proc/flash_eyes(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /obj/screen/fullscreen/flash)
+	var/obj/item/organ/internal/eyes/E = get_int_organ(/obj/item/organ/internal/eyes)
+	if(!E || (E && E.weld_proof)) //if mob has no eyes or has weldproof eyes, do not flash the screen. DOES NOT NEGATE STUN EFFECTS.
+		return 1
 	if(check_eye_prot() < intensity && (override_blindness_check || !(disabilities & BLIND)))
 		overlay_fullscreen("flash", type)
 		addtimer(src, "clear_fullscreen", 25, FALSE, "flash", 25)
