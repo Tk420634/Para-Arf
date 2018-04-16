@@ -72,11 +72,12 @@
 		if(get_dist(src, L) > range)
 			continue
 
-		if(L.flash_eyes(affect_silicon = 1))
-			L.Weaken(strength)
-			if(L.weakeyes)
-				L.Weaken(strength * 1.5)
-				L.visible_message("<span class='disarm'><b>[L]</b> gasps and shields their eyes!</span>")
+		if(!L.noeyes)
+			if(L.flash_eyes(affect_silicon = 1))
+				L.Weaken(strength)
+				if(L.weakeyes)
+					L.Weaken(strength * 1.5)
+					L.visible_message("<span class='disarm'><b>[L]</b> gasps and shields their eyes!</span>")
 
 /obj/machinery/flasher/emp_act(severity)
 	if(stat & (BROKEN|NOPOWER))

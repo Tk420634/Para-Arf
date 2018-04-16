@@ -107,8 +107,10 @@
 			else if(prob(50))
 				severity = 0
 
+			if(!C.noeyes)
+				outmsg = "<span class='notice'>You shine [src] at [C]'s head but they have no eyes!</span>"
 			//20% chance to actually hit the eyes
-			if(prob(effectchance * diode.rating) && C.flash_eyes(severity))
+			else if(prob(effectchance * diode.rating) && C.flash_eyes(severity))
 				outmsg = "<span class='notice'>You blind [C] by shining [src] in their eyes.</span>"
 				if(C.weakeyes)
 					C.Stun(1)

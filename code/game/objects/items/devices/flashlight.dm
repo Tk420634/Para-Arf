@@ -60,7 +60,9 @@
 			return
 
 		if(M == user)	//they're using it on themselves
-			if(M.flash_eyes(visual = 1))
+			if(!M.noeyes)
+				M.visible_message("<span class='notice'>You don't have any eyes to wave the light into.</span>")
+			else if(M.flash_eyes(visual = 1))
 				M.visible_message("<span class='notice'>[M] directs [src] to \his eyes.</span>", \
 									 "<span class='notice'>You wave the light in front of your eyes! Trippy!</span>")
 			else
@@ -73,7 +75,9 @@
 
 			if(istype(H)) //robots and aliens are unaffected
 				var/obj/item/organ/internal/eyes/eyes = H.get_int_organ(/obj/item/organ/internal/eyes)
-				if(M.stat == DEAD || !eyes || M.disabilities & BLIND)	//mob is dead or fully blind
+				if(M.noeyes)
+					to_chat(user, "<span class='notice'>[M] doesn't have any eyes!</span>")
+				else if(M.stat == DEAD || !eyes || M.disabilities & BLIND)	//mob is dead or fully blind
 					to_chat(user, "<span class='notice'>[M]'s pupils are unresponsive to the light!</span>")
 				else if((XRAY in M.mutations) || (eyes.colourblind_darkview && eyes.colourblind_darkview == eyes.get_dark_view())) //The mob's either got the X-RAY vision or has a tapetum lucidum (extreme nightvision, i.e. Vulp/Tajara with COLOURBLIND & their monkey forms).
 					to_chat(user, "<span class='notice'>[M]'s pupils glow eerily!</span>")

@@ -622,6 +622,8 @@
 	species_abilities = list(
 		/mob/living/carbon/human/proc/regrow_limbs
 		)
+/datum/species/goo_dragon/handle_life(var/mob/living/carbon/human/H)
+	H.noeyes = 1
 
 /datum/species/goo_dragon/handle_death(var/mob/living/carbon/human/H)
 	H.stop_tail_wagging(1)
@@ -632,6 +634,9 @@
 #define SLIMEPERSON_COLOR_SHIFT_TRIGGER 0.1
 #define SLIMEPERSON_ICON_UPDATE_PERIOD 200 // 20 seconds
 #define SLIMEPERSON_BLOOD_SCALING_FACTOR 5 // Used to adjust how much of an effect the blood has on the rate of color change. Higher is slower.
+
+	H.noeyes = 1 //No eyes, cannot be blinded.
+
 	// Slowly shifting to the color of the reagents
 	if((H in recolor_list) && H.reagents.total_volume > SLIMEPERSON_COLOR_SHIFT_TRIGGER)
 		var/blood_amount = H.blood_volume

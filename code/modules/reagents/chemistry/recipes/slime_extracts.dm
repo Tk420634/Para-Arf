@@ -168,7 +168,8 @@
 	playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
 
 	for(var/mob/living/carbon/C in viewers(get_turf(holder.my_atom), null))
-		C.flash_eyes()
+		if(!C.noeyes)
+			C.flash_eyes()
 
 	for(var/i = 1, i <= 4 + rand(1,2), i++)
 		var/chosen = pick(borks)
@@ -198,7 +199,8 @@
 	playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
 
 	for(var/mob/living/carbon/M in viewers(get_turf(holder.my_atom), null))
-		M.flash_eyes()
+		if(!M.noeyes)
+			M.flash_eyes()
 
 	for(var/i = 1, i <= 4 + rand(1,2), i++)
 		var/chosen = pick(borks)

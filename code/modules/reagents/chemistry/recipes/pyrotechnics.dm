@@ -163,11 +163,12 @@ datum/chemical_reaction/flash_powder
 	s.set_up(2, 1, location)
 	s.start()
 	for(var/mob/living/carbon/C in viewers(5, location))
-		if(C.flash_eyes())
-			if(get_dist(C, location) < 4)
-				C.Weaken(5)
-				continue
-			C.Stun(5)
+		if(!C.noeyes)
+			if(C.flash_eyes())
+				if(get_dist(C, location) < 4)
+					C.Weaken(5)
+					continue
+				C.Stun(5)
 	holder.remove_reagent("flash_powder", created_volume)
 
 /datum/chemical_reaction/flash_powder_flash
@@ -183,11 +184,12 @@ datum/chemical_reaction/flash_powder
 	s.set_up(2, 1, location)
 	s.start()
 	for(var/mob/living/carbon/C in viewers(5, location))
-		if(C.flash_eyes())
-			if(get_dist(C, location) < 4)
-				C.Weaken(5)
-				continue
-			C.Stun(5)
+		if(!C.noeyes)
+			if(C.flash_eyes())
+				if(get_dist(C, location) < 4)
+					C.Weaken(5)
+					continue
+				C.Stun(5)
 
 /datum/chemical_reaction/smoke_powder
 	name = "smoke_powder"
