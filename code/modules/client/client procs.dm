@@ -392,6 +392,21 @@
 		del(src)
 		return
 
+	var/DBQuery/query_zeroday = dbcon.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM [format_table_name("player")] WHERE ckey = '[ckey]'")
+	query_zeroday.Execute()
+	player_age = 0	// New players won't have an entry so knowing we have a connection we set this to zero to be updated if there is a record.
+	while(query_zeroday.NextRow())
+		player_age = text2num(query_zeroday.item[2])
+		break
+
+	if(player_age == 0 && config.panic_bunker) //PANIC BUNKER BOIS
+		log_access("Failed Login: [ckey] - New account attempting to connect during panic bunker")
+		message_admins("<span class='adminnotice'>Failed Login: [ckey] - New account attempting to connect during panic bunker</span>")
+		to_chat(src, "Sorry but the server is currently not accepting connections from never before seen players.")
+		del(src)
+		return
+
+
 	// Change the way they should download resources.
 	if(config.resource_urls)
 		preload_rsc = pick(config.resource_urls)
@@ -520,7 +535,6 @@
 	if(!dbcon.IsConnected())
 		return
 
-
 	var/DBQuery/query = dbcon.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM [format_table_name("player")] WHERE ckey = '[ckey]'")
 	query.Execute()
 	var/sql_id = 0
@@ -529,7 +543,6 @@
 		sql_id = query.item[1]
 		player_age = text2num(query.item[2])
 		break
-
 
 	var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM [format_table_name("player")] WHERE ip = '[address]'")
 	query_ip.Execute()
