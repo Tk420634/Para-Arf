@@ -1543,6 +1543,8 @@
 			if(is_mhelp)
 				helptype = "MENTORHELP"
 			var/take_msg = "<span class='notice'><b>[helptype]</b>: <b>[key_name(usr.client)]</b> is attending to <b>[key_name(M)]'s</b> question.</span>"
+			var/irc_take_msg = "[usr.ckey] is attending to [M.ckey]'s question."
+			send2adminirc(irc_take_msg)
 			for(var/client/X in admins)
 				if(check_rights(R_ADMIN, 0, X.mob))
 					to_chat(X, take_msg)
