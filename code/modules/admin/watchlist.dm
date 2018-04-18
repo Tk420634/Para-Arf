@@ -114,8 +114,8 @@
 	usr << browse(output, "window=watchwin;size=900x500")
 
 /client/proc/check_watchlist(target_ckey)
-	if(!check_rights(R_ADMIN,0))
-		return
+	//if(!check_rights(R_ADMIN,0))  WHY ARE YOU CHECKING IF THE PLAYER IS AN ADMIN AND SKIPPING THE WHITELIST CHECK IF THEY'RE NOT!?
+	//	return
 	var/target_sql_ckey = sanitizeSQL(target_ckey)
 	var/DBQuery/query_watch = dbcon.NewQuery("SELECT reason FROM [format_table_name("watch")] WHERE ckey = '[target_sql_ckey]'")
 	if(!query_watch.Execute())
