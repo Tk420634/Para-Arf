@@ -12,14 +12,14 @@
 	else
 		config.panic_bunker = 1
 		temp = "on"
-		send2adminirc("[key_name_admin(usr)] activated the panic bunker.")
+		send2adminirc("[src.key] activated the panic bunker.")
 
-	log_admin("[key_name_admin(usr)] has toggled the Panic Bunker, it is now [temp]")
-	message_admins("[key_name_admin(usr)] has toggled the Panic Bunker, it is now [temp].")
+	log_admin("[src.key] has toggled the Panic Bunker, it is now [temp]")
+	message_admins("[src.key] has toggled the Panic Bunker, it is now [temp].")
 	if (!dbcon.IsConnected())
 		message_admins("The Database is not connected! Panic bunker will not work until the connection is reestablished.")
 
 /client/proc/requestmoreadmins()
 	set category = "Admin"
 	set name = "Request More Admins"
-	send2adminirc("[key_name_admin(usr)] has requested additional admins.")
+	send2adminirc("[src.key] has requested additional admins.")
