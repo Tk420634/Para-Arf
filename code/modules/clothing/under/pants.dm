@@ -9,6 +9,12 @@
 	icon_state = "jeansclassic"
 	item_color = "jeansclassic"
 
+/obj/item/clothing/under/pants/bluespacejeans
+	name = "bluespace jeans"
+	desc = "Classic jeans with a bluespace inner lining. Perfect for larger crew members."
+	icon_state = "jeansclassic"
+	item_color = "jeansclassic"
+
 /obj/item/clothing/under/pants/mustangjeans
 	name = "Must Hang jeans"
 	desc = "Made in the finest space jeans factory this side of Alpha Centauri."
