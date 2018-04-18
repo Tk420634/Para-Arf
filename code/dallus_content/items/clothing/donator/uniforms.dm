@@ -31,7 +31,8 @@
 //Donation items
 	//Andyman
 
-/obj/item/weapon/rig/breacher/fancy/andy
+*/
+/obj/item/weapon/rig/unathi/fancy/andy
 	name = "breacher chassis control module"
 	desc = "A specially modified and stripped down Unathi Breacher RIG. It looks as though all the armor plating has been removed. It displays 'OWEN' on a holotag affixed to the left side of the chestplate, along with a CentCom identification number, permitting possession and deployment of this RIG solely to a Mr. Dameon Owen"
 	suit_type = "breacher chassis"
@@ -45,14 +46,15 @@
 	offline_slowdown = 5
 	offline_vision_restriction = 0
 
-/obj/item/clothing/head/helmet/space/rig/breacher/andy
+/*
+/obj/item/clothing/head/helmet/space/rig/unathi/andy
 	species_restricted = list("Unathi")
 	force = 5
 
-/obj/item/clothing/suit/space/rig/breacher/andy
+/obj/item/clothing/suit/space/rig/unathi/andy
 	species_restricted = list("Unathi")
 
-/obj/item/clothing/shoes/magboots/rig/breacher/andy
+/obj/item/clothing/shoes/magboots/rig/unathi/andy
 	species_restricted = list("Unathi")
 
 	//Gozulio

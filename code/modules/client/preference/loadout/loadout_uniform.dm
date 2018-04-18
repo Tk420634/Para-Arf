@@ -184,6 +184,10 @@
 	display_name = "jeans, classic"
 	path = /obj/item/clothing/under/pants/classicjeans
 
+/datum/gear/uniform/pants/bsjeans
+	display_name = "jeans, bluespace"
+	path = /obj/item/clothing/under/pants/bluespacejeans
+
 /datum/gear/uniform/pants/mjeans
 	display_name = "jeans, mustang"
 	path = /obj/item/clothing/under/pants/mustangjeans
