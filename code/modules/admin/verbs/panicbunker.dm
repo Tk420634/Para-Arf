@@ -9,6 +9,7 @@
 	if (config.panic_bunker)
 		config.panic_bunker = 0
 		temp = "off"
+		send2adminirc("[src.key] deactivated the panic bunker.")
 	else
 		config.panic_bunker = 1
 		temp = "on"
