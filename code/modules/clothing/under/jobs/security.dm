@@ -45,6 +45,13 @@
 	item_color = "secredf"
 	flags_size = null
 
+/obj/item/clothing/under/rank/security/skirt/alt
+	desc = "Non-standard feminine fashion for Security Officers. It's made of sturdier material than the standard jumpskirts."
+	icon_state = "blackskirt"
+	item_state = "blackskirt"
+	item_color = "blackskirt"
+
+
 /obj/item/clothing/under/rank/dispatch
 	name = "dispatcher's uniform"
 	desc = "A dress shirt and khakis with a security patch sewn on."
