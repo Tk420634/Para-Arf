@@ -438,8 +438,9 @@
 	taste_message = "eggs"
 
 /datum/reagent/consumable/egg/on_mob_life(mob/living/M)
-	if(prob(8))
-		M.emote("fart")
+	//This is just annoying
+	//if(prob(8))
+	//	M.emote("fart")
 	if(prob(3))
 		M.reagents.add_reagent("cholesterol", rand(1,2))
 	..()
@@ -631,6 +632,7 @@
 	reagent_state = LIQUID
 	color = "#684435"
 	taste_message = "burritos"
+
 
 /datum/reagent/consumable/beans/on_mob_life(mob/living/M)
 	if(prob(10))

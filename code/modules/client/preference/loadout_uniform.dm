@@ -98,6 +98,11 @@
 	path = /obj/item/clothing/under/rank/security/skirt
 	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
 
+/datum/gear/uniform/skirt/job/security/alt
+	display_name = "skirt, alt, security"
+	path = /obj/item/clothing/under/rank/security/skirt/alt
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
+
 /datum/gear/uniform/skirt/job/head_of_security
 	display_name = "skirt, hos"
 	path = /obj/item/clothing/under/rank/head_of_security/skirt
