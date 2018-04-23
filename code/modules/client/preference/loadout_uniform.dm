@@ -24,6 +24,10 @@
 	display_name = "skirt, black"
 	path = /obj/item/clothing/under/blackskirt
 
+/datum/gear/uniform/skirt/white
+	display_name = "skirt, white"
+	path = /obj/item/clothing/under/whiteskirt
+
 /datum/gear/uniform/skirt/job
 	subtype_path = /datum/gear/uniform/skirt/job
 	subtype_cost_overlap = FALSE
@@ -117,7 +121,6 @@
 	display_name = "skirt, blueshield"
 	path = /obj/item/clothing/under/rank/blueshield/skirt
 	allowed_roles = list("Blueshield")
-
 
 /datum/gear/uniform/medical
 	subtype_path = /datum/gear/uniform/medical
