@@ -60,7 +60,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(istype(C))
 		client = C
 		client_ckey = C.ckey
-		load_vore(C)
+		load_vore()
 
 //
 //	Check if an object is capable of eating things, based on vore_organs

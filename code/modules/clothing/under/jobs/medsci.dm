@@ -146,6 +146,10 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_size = null
 
+/obj/item/clothing/under/rank/medical/skirt/alt
+	icon_state = "mwhiteskirt"
+	item_color = "mwhiteskirt"
+
 /obj/item/clothing/under/rank/medical/blue
 	name = "medical scrubs"
 	desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in baby blue."

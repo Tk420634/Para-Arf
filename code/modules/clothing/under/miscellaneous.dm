@@ -367,6 +367,13 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	burn_state = FIRE_PROOF
 
+/obj/item/clothing/under/whiteskirt
+	name = "white skirt"
+	desc = "A white skirt, very fancy!"
+	icon_state = "whiteskirt"
+	item_color = "whiteskirt"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+
 //dress
 
 /obj/item/clothing/under/dress/dress_fire

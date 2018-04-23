@@ -104,6 +104,7 @@
 	icon_state = "bowlingoutfit"
 	item_color = "bowlingoutfit"
 	item_state = "bowlingoutfit"
+
 	//Andy
 /obj/item/clothing/under/middriftturtleneck
 	name = "mid-driff turtleneck"
@@ -112,3 +113,10 @@
 	icon_state = "middriftturtleneck"
 	item_color = "middriftturtleneck"
 	item_state = "middriftturtleneck"
+
+/obj/item/clothing/under/whiteskirt/twopiece
+	name = "two piece white skirt"
+	desc = "A two-piece white skirt"
+	icon_state = "cwhiteskirt"
+	item_state = "cwhiteskirt"
+	item_color = "cwhiteskirt"
