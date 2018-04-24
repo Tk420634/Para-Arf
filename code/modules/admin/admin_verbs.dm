@@ -12,6 +12,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/player_panel,			/*shows an interface for all players, with links to various panels (old style)*/
 	/client/proc/player_panel_new,		/*shows an interface for all players, with links to various panels*/
 	/client/proc/invisimin,				/*allows our mob to go invisible/visible*/
+	/client/proc/superinvisimin,		/*allows our mob to not be seen by anyone, including ghosts and other admins*/
 	/datum/admins/proc/toggleenter,		/*toggles whether people can join the current game*/
 	/datum/admins/proc/toggleguests,	/*toggles whether guests can join the current game*/
 	/datum/admins/proc/announce,		/*priority announce something to all clients.*/
@@ -357,6 +358,26 @@ var/list/admin_verbs_snpc = list(
 			mob.invisibility = INVISIBILITY_OBSERVER
 			to_chat(mob, "<span class='notice'>Invisimin on. You are now as invisible as a ghost.</span>")
 			mob.remove_from_all_data_huds()
+
+/client/proc/superinvisimin()
+	set name = "Super Invisimin"
+	set category = "Admin"
+	set desc = "Toggles complete invisibility (Seriously. Don't abuse this)"
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(mob)
+		if(mob.invisibility == 100)
+			mob.invisibility = initial(mob.invisibility)
+			to_chat(mob, "<span class='danger'>Super Invisimin off. Invisibility reset.</span>")
+			mob.add_to_all_human_data_huds()
+			//TODO: Make some kind of indication for the badmin that they are currently invisible
+		else
+			mob.invisibility = 100
+			to_chat(mob, "<span class='notice'>Super Invisimin on. You are now as invisible to everyone.</span>")
+			mob.remove_from_all_data_huds()
+
 
 /client/proc/player_panel()
 	set name = "Player Panel"
