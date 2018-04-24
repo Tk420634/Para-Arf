@@ -470,7 +470,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	s += "[game_version]"
 	s += "</a>"
 	s += ")"
-	s += "<br>The Perfect Mix of RP & Action<br>"
+	s += "<br>The Comfy Roleplaying 18+ Furry Para-Code Server.<br>"
 
 
 
