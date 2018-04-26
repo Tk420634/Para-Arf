@@ -23,13 +23,16 @@
 	else if (returncode == 10)
 		message_admins("Warning: [arg1] appears to have logged in from a proxy server!")
 		log_admin("Warning: [arg1] appears to have logged in from a proxy server!")
+		send2adminirc("Warning: [arg1] appears to have logged in from a proxy server!")
 
 	else if (returncode == 20)
 		message_admins("Warning: [arg1] appears to have logged in from a VPN!")
 		log_admin("Warning: [arg1] appears to have logged in from a VPN!")
+		send2adminirc("Warning: [arg1] appears to have logged in from a VPN!")
 
 	else if (returncode == 30)
 		message_admins("Warning: [arg1] appears to have logged in from a proxy server / VPN!")
 		log_admin("Warning: [arg1] appears to have logged in from a proxy server / VPN!")
+		send2adminirc("Warning: [arg1] appears to have logged in from a proxy server / VPN!")
 
 	return
