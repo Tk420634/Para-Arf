@@ -406,6 +406,7 @@
 		del(src)
 		return
 
+	check_shodan()
 
 	// Change the way they should download resources.
 	if(config.resource_urls)
@@ -694,6 +695,9 @@
 				message_admins("<span class='adminnotice'>[key_name_admin(src)] has been allowed to connect after appearing to have attempted to spoof a cid randomizer check because it <i>appears</i> they aren't spoofing one this time</span>")
 				cidcheck_spoofckeys -= ckey
 			cidcheck -= ckey
+
+/client/proc/check_shodan()
+	ext_python_shodan("CheckShodan.py", ckey, address)
 
 /client/proc/note_randomizer_user()
 	var/const/adminckey = "CID-Error"

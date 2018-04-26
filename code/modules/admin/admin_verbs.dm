@@ -375,7 +375,7 @@ var/list/admin_verbs_snpc = list(
 			//TODO: Make some kind of indication for the badmin that they are currently invisible
 		else
 			mob.invisibility = 100
-			to_chat(mob, "<span class='notice'>Super Invisimin on. You are now as invisible to everyone.</span>")
+			to_chat(mob, "<span class='notice'>Super Invisimin on. You are now invisible to everyone.</span>")
 			mob.remove_from_all_data_huds()
 
 
