@@ -3,6 +3,7 @@
 	damage_overlays = 'icons/mob/human_races/masks/dam_digimon.dmi'
 	blood_mask = 'icons/mob/human_races/masks/blood_digimon.dmi'
 	path = /mob/living/carbon/human/digimon
+	species_traits = list(IS_WHITELISTED)
 
 	reagent_tag = PROCESS_ORG
 
@@ -121,6 +122,7 @@ and then all the contents from above goes below that, modify it to what you want
 
 	language = null
 	default_language = "Sol Common"
+	species_traits = list(IS_WHITELISTED)
 
 	is_small = 1
 	has_fine_manipulation = 0
