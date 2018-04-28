@@ -549,6 +549,7 @@
 	blood_color = "#0064C8"
 	exotic_blood = "water"
 	blood_damage_type = TOX
+	ventcrawler = 1
 
 	butt_sprite = "slime"
 	//Has default darksight of 2.
@@ -603,6 +604,7 @@
 	blood_color = "#0064C8"
 	exotic_blood = "water"
 	blood_damage_type = TOX
+	ventcrawler = 1
 
 	butt_sprite = "unathi"
 	//Has default darksight of 2.
