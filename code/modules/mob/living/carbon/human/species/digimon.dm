@@ -1,16 +1,4 @@
 // Setting all digimon to these values. The actual definition of each individual digimon should be made at the bottom.
-/datum/species/digimon
-	damage_overlays = 'icons/mob/human_races/masks/dam_digimon.dmi'
-	blood_mask = 'icons/mob/human_races/masks/blood_digimon.dmi'
-	path = /mob/living/carbon/human/digimon
-	species_traits = list(IS_WHITELISTED)
-
-	reagent_tag = PROCESS_ORG
-
-	total_health = 75
-	brute_mod = 1.5
-	burn_mod = 1.5
-
 /*
 /datum/species/digimon
 	name = "Digimon"
@@ -114,8 +102,8 @@ and then all the contents from above goes below that, modify it to what you want
 */
 /datum/species/digimon
 	name = "Digimon"
-	name_plural = "NOES"
-	blurb = "YOU SHOULDNT SEE THIS!"
+	name_plural = "Digimons"
+	blurb = "Digivolve!"
 
 	icobase = 'icons/mob/human_races/digimon/r_digimon.dmi'
 	deform = 'icons/mob/human_races/digimon/r_digimon.dmi'
@@ -126,6 +114,16 @@ and then all the contents from above goes below that, modify it to what you want
 
 	is_small = 1
 	has_fine_manipulation = 0
+
+	damage_overlays = 'icons/mob/human_races/masks/dam_digimon.dmi'
+	blood_mask = 'icons/mob/human_races/masks/blood_digimon.dmi'
+	path = /mob/living/carbon/human/digimon
+
+	reagent_tag = PROCESS_ORG
+
+	total_health = 75
+	brute_mod = 1.5
+	burn_mod = 1.5
 
 	ventcrawler = 1
 	show_ssd = 0
