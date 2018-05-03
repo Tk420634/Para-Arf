@@ -6,7 +6,7 @@
 
 /datum/event/spider_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + 50)
-	spawncount = round(num_players() * 0.8)
+	spawncount = round(num_players() * 0.25)
 	sent_spiders_to_station = 1
 
 /datum/event/spider_infestation/announce()
