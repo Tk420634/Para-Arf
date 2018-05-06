@@ -247,6 +247,7 @@
 			raw_list[i] = readd_quotes(raw_list[i])
 			//Also fix % sign for var replacement
 			raw_list[i] = replacetext(raw_list[i],"&#37;","%")
+			raw_list[i] = replacetext(raw_list[i],"&#39;","'")
 
 	ASSERT(raw_list.len <= 10) //Sanity
 
