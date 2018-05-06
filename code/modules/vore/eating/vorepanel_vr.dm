@@ -268,10 +268,10 @@
 		if(0)
 			dat += "<a href='?src=\ref[src];togglemv=1'><span style='color:green;'>Toggle Mob Vore</span></a>"
 
-	dat += "<br><a href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Drop-nom Prey</a>" //These two get their own, custom row, too.
-	dat += "<a href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Drop-nom Pred</a>"
+	//dat += "<br><a href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Drop-nom Prey</a>" //These two get their own, custom row, too. We do not use these
+	//dat += "<a href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Drop-nom Pred</a>"
 	dat += "<br><a href='?src=\ref[src];setflavor=1'>Set Your Taste</a>"
-	dat += "<a href='?src=\ref[src];togglenoisy=1'>Toggle Hunger Noises</a>"
+	//dat += "<a href='?src=\ref[src];togglenoisy=1'>Toggle Hunger Noises</a>" //Noises are disabled.
 
 	dat += "<HR>"
 
@@ -287,8 +287,8 @@
 	for(var/H in href_list)
 
 	if(href_list["close"])
-		qdel(src)  // Cleanup
 		user.openpanel = 0
+		qdel(src)  // Cleanup
 		return
 
 	if(href_list["show_int"])
@@ -501,8 +501,8 @@
 			selected.items_preserved.Cut() //Re-evaltuate all items in belly on belly-mode change
 
 	if(href_list["b_desc"])
-		var/new_desc = html_encode(input(usr,"Belly Description (1024 char limit):","New Description",selected.inside_flavor) as message|null)
-
+		//var/new_desc = html_encode(input(usr,"Belly Description (1024 char limit):","New Description",selected.inside_flavor) as message|null) //THIS IS BROKEN. DO NOT USE HTML ENCODING
+		var/new_desc = input(usr,"Belly Description (1024 char limit):","New Description",selected.inside_flavor)
 		if(new_desc)
 			new_desc = readd_quotes(new_desc)
 			if(length(new_desc) > BELLIES_DESC_MAX)
