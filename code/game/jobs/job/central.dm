@@ -12,6 +12,7 @@
 	minimal_access = list()
 	admin_only = 1
 	outfit = /datum/outfit/job/ntnavyofficer
+	alt_titles = list("Dragon Commander of A.R.F.")
 
 /datum/job/ntnavyofficer/get_access()
 	return get_centcom_access(title)
