@@ -598,7 +598,8 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	for(var/datum/job/job in job_master.occupations)
 
 		if(job.admin_only)
-			continue
+			if(!is_admin(user))
+				continue
 
 		index += 1
 		if((index >= limit) || (job.title in splitJobs))
