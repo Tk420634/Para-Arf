@@ -414,7 +414,7 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	alt_titles = list("Console Monitor","Bridge Bunny", "Bridge Liason", "Bridge Secretary")
+	alt_titles = list("Console Monitor","Bridge Bunny", "Bridge Liason", "Bridge Secretary", "Communications Officer")
 	supervisors = "the Command Staff.  You are also <b>NOT A MEMBER OF COMMAND STAFF, YOU ARE NOT IN THE CHAIN OF COMMAND.</b>  You are not a beat cop, you aren't here to arrest people.  <b>You are a glorified console watcher</b>, and probably cocksleeve."
 	selection_color = "#DAA520"
 
