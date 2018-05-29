@@ -572,9 +572,12 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	metadata["[tweak]"] = new_metadata
 
 
-/datum/preferences/proc/SetChoices(mob/user, limit = 13, list/splitJobs = list("Civilian","Research Director","AI","Bartender"), width = 760, height = 790)
+/datum/preferences/proc/SetChoices(mob/user, limit = 13, list/splitJobs = list("Civilian","Research Director","AI","Bartender"), width = 820, height = 850)
 	if(!job_master)
 		return
+
+	if(is_admin(user))
+		width = 950
 
 	//limit 	 - The amount of jobs allowed per column. Defaults to 17 to make it look nice.
 	//splitJobs - Allows you split the table by job. You can make different tables for each department by including their heads. Defaults to CE to make it look nice.
@@ -597,9 +600,8 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 	if(!job_master)		return
 	for(var/datum/job/job in job_master.occupations)
 
-		if(job.admin_only)
-			if(!is_admin(user))
-				continue
+		if(job.admin_only && !is_admin(user))
+			continue
 
 		index += 1
 		if((index >= limit) || (job.title in splitJobs))
