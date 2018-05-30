@@ -19,7 +19,7 @@
 	var/allow_upgrade = 1
 	var/last_upgrade = 0
 	var/last_hit_zone = 0
-//	var/force_down //determines if the affecting mob will be pinned to the ground //disabled due to balance, kept for an example for any new things.
+	var/force_down //determines if the affecting mob will be pinned to the ground //disabled due to balance, kept for an example for any new things.
 	var/dancing //determines if assailant and affecting keep looking at each other. Basically a wrestling position
 
 	layer = 21
@@ -143,12 +143,12 @@
 		affecting.drop_l_hand()
 
 
-		//var/announce = 0
-		//(hit_zone != last_hit_zone)
-			//announce = 1
-	/*	if(ishuman(affecting))
+		var/announce = 0
+		(hit_zone != last_hit_zone)
+			announce = 1
+		if(ishuman(affecting))
 			switch(hit_zone)
-				/*if("mouth")
+				if("mouth")
 					if(announce)
 						assailant.visible_message("<span class='warning'>[assailant] covers [affecting]'s mouth!</span>")
 					if(affecting.silent < 3)
@@ -157,7 +157,15 @@
 					if(announce)
 						assailant.visible_message("<span class='warning'>[assailant] covers [affecting]'s eyes!</span>")
 					if(affecting.eye_blind < 3)
-						affecting.eye_blind = 3*///These are being left in the code as an example for adding new hit-zone based things.
+						affecting.eye_blind = 3//These are being left in the code as an example for adding new hit-zone based things.
+				if("head")
+					if(affecting.lying)
+						if(announce)
+						assailant.visible_message("<span class='warning'>[assailant] moves their ass to [affecting]'s head, sitting down on them, making them unable to see anything else than [assailant]'s butt!</span>")
+						if(affecting.silent < 3)
+							affecting.silent = 3
+						if(affecting.eye_blind < 3)
+							affecting.eye_blind = (3)
 
 		if(force_down)
 			if(affecting.loc != assailant.loc)
@@ -165,7 +173,7 @@
 			else
 				affecting.Weaken(3) //This is being left in the code as an example of adding a new variable to do something in grab code.
 
-*/
+
 
 	var/breathing_tube = affecting.get_organ_slot("breathing_tube")
 
