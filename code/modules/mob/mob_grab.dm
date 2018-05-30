@@ -143,9 +143,9 @@
 		affecting.drop_l_hand()
 
 
-		var/announce = 0
+		/* var/announce = 0
 		(hit_zone != last_hit_zone)
-			announce = 1
+			announce = 1*/
 		if(ishuman(affecting))
 			switch(hit_zone)
 				if("mouth")
@@ -160,7 +160,7 @@
 						affecting.eye_blind = 3//These are being left in the code as an example for adding new hit-zone based things.
 				if("head")
 					if(affecting.lying)
-						if(announce)
+						//if(announce)
 						assailant.visible_message("<span class='warning'>[assailant] moves their ass to [affecting]'s head, sitting down on them, making them unable to see anything else than [assailant]'s butt!</span>")
 						if(affecting.silent < 3)
 							affecting.silent = 3
