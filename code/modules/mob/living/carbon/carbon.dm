@@ -297,6 +297,10 @@
 					"<span class='notice'>[M] pats [src] on the head.</span>",\
 					"<span class='notice'>You pat [src] on the head.</span>",\
 					)
+				if(M.zone_sel.selecting == "r_hand" || M.zone_sel.selecting == "l_hand")
+					M.visible_message(\
+					"<span class='notice'>[M] shakes [src]'s hand.</span>",\
+					)
 				else
 
 					M.visible_message(\
