@@ -184,6 +184,28 @@
 	desc = "A flag proudly boasting the logo of the cultists, sworn enemies of NT."
 	icon_state = "cultflag"
 
+//Faction
+
+/obj/item/flag/emf
+	name = "Exus Mining Force flag"
+	desc = "a coal stained flag, symbol of the willpower of the EMF and its passion for mining."
+	icon_state = "emfflag"
+
+/obj/item/flag/sin
+	name = "Sindycate flag"
+	desc = "Proudly exposing the red cat as their logo this flag represents the strenght of the SINs."
+	icon_state = "sindyflag"
+
+/obj/item/flag/npl
+	name = "Nindras Paladin League flag"
+	desc = "A flag that shows the blue cross of the paladins, a symbol of wisdom and peace for the galaxies."
+	icon_state = "nplflag"
+
+/obj/item/flag/tcf
+	name = "Terra Conquer Force flag"
+	desc = "A flag showing the green planet of the Terra Conquer Force, the flag inspires the charisma of the leader of this faction."
+	icon_state = "tcflag"
+
 //Chameleon
 
 /obj/item/flag/chameleon
