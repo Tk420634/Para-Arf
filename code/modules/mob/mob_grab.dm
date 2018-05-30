@@ -164,8 +164,6 @@
 						assailant.visible_message("<span class='warning'>[assailant] moves their ass to [affecting]'s head, sitting down on them, making them unable to see anything else than [assailant]'s butt!</span>")
 						if(affecting.silent < 3)
 							affecting.silent = 3
-						if(affecting.eye_blind < 3)
-							affecting.eye_blind = (3)
 
 		if(force_down)
 			if(affecting.loc != assailant.loc)
