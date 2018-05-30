@@ -143,9 +143,11 @@
 		affecting.drop_l_hand()
 
 
-		/* var/announce = 0
-		(hit_zone != last_hit_zone)
-			announce = 1*/
+		var/announce = 0
+		
+		if(hit_zone != last_hit_zone)
+			announce = 1
+		
 		if(ishuman(affecting))
 			switch(hit_zone)
 				if("mouth")
