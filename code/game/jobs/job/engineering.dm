@@ -55,8 +55,8 @@
 	flag = ENGINEER
 	department_flag = ENGSEC
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "the captain"
 	department_head = list("Captain")
 	#else

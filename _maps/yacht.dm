@@ -33,6 +33,7 @@ DECLARE_LEVEL(CENTCOMM, SELFLOOPING, list(ADMIN_LEVEL, BLOCK_TELEPORT, IMPEDES_M
         #define MAP_FILE "yacht.dmm"
         #define MAP_ID 999//Map ID is for compiling certain code for specific maps. To find these, ctrl-f for [#if MAP_ID == 999].
         #define MAP_NAME "ARFS Endeavor"
+        #define STATION_NAME "ARFS Endeavor"
         #define MAP_TRANSITION_CONFIG list(\
 DECLARE_LEVEL(MAIN_STATION, CROSSLINKED, list(STATION_LEVEL,STATION_CONTACT,REACHABLE,AI_OK)),\
 DECLARE_LEVEL(CENTCOMM, SELFLOOPING, list(ADMIN_LEVEL, BLOCK_TELEPORT, IMPEDES_MAGIC)),\

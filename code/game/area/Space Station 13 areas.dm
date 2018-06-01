@@ -2508,7 +2508,6 @@ area/security/podbay
 /area/crew_quarters/apartment
 	icon_state = "Sleep"
 	name = "\improper Apartment Complex"
-
 /area/crew_quarters/apartment/port_1
 	name = "\improper Port Apartment 1"
 /area/crew_quarters/apartment/port_2
@@ -2521,14 +2520,31 @@ area/security/podbay
 	name = "\improper Starboard Apartment 2"
 /area/crew_quarters/apartment/sb_3
 	name = "\improper Starboard Apartment 3"
+
 /area/crew_quarters/coffeeshop
 	name = "\improper Coffee Shop"
 	icon_state = "bar"
+
+/area/crew_quarters/gameroom1
+	name = "\improper Game Room 1"
+/area/crew_quarters/gameroom2
+	name = "\improper Game Room 2"
 
 //Service Areas
 /area/room_service
 	name = "\improper Room Service"
 	icon_state = "red"
+
+//Expedition Team Areas
+/area/expedition/gear
+	name = "\improper Expedition Team Storage"
+
+/area/expedition/briefing
+	name = "\improper Expedition Briefing"
+
+/area/expedition/hangar
+	name = "\improper Expedition Shuttle Hangar"
+
 #endif
 
 

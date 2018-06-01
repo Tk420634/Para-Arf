@@ -58,7 +58,16 @@
 // Credit to Neinhaus for making these into individual decals.
 
 /obj/effect/decal/warning_stripes/arrow
-	icon_state = "4"
+	icon_state = "arw-s"
+
+/obj/effect/decal/warning_stripes/arrow/south
+	icon_state = "arw-s"
+/obj/effect/decal/warning_stripes/arrow/north
+	icon_state = "arw-n"
+/obj/effect/decal/warning_stripes/arrow/east
+	icon_state = "arw-e"
+/obj/effect/decal/warning_stripes/arrow/west
+	icon_state = "arw-w"
 
 /obj/effect/decal/warning_stripes/yellow
 	icon_state = "5"

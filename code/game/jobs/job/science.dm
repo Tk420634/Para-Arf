@@ -60,8 +60,8 @@
 	flag = SCIENTIST
 	department_flag = MEDSCI
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 4
+	spawn_positions = 4
 	#else
 	total_positions = 6
 	spawn_positions = 6
@@ -104,8 +104,8 @@
 	flag = ROBOTICIST
 	department_flag = MEDSCI
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	#else
 	total_positions = 2
 	spawn_positions = 2

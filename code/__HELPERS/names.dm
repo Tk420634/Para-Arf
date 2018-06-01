@@ -47,6 +47,9 @@ var/religion_name = null
 	return "Nyx"
 
 /proc/station_name()
+	#ifdef STATION_NAME
+	return STATION_NAME
+	#endif
 	if(station_name)
 		return station_name
 

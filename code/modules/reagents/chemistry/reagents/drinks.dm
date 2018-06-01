@@ -267,11 +267,11 @@
 	adj_sleepy = -2
 	adj_temp_hot = 25
 	overdose_threshold = 45
-	addiction_chance = 1 // It's true.
+	addiction_chance = 0.1 // It's true.
 	heart_rate_increase = 1
-	drink_icon = "glass_brown"
-	drink_name = "Glass of coffee"
-	drink_desc = "Don't drop it, or you'll send scalding liquid and glass shards everywhere."
+	drink_icon = "coffeemug"
+	drink_name = "mug of coffee"
+	drink_desc = "A piping hot cuppa' joe; Often consumed with breakfast or dinner for a burst of energy! Mix in sugar, cream, milk, flavor shots, or none of those for an enhanced experience!"
 	taste_message = "coffee"
 
 /datum/reagent/consumable/drink/coffee/on_mob_life(mob/living/M)

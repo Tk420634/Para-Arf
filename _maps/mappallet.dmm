@@ -3,26 +3,26 @@
 "ac" = (/turf/simulated/floor/plasteel{dir = 9; icon_state = "darkred"},/area/space)
 "ad" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "darkred"},/area/space)
 "ae" = (/turf/simulated/floor/plasteel{dir = 5; icon_state = "darkred"},/area/space)
-"af" = (/turf/simulated/floor/plasteel{dir = 9; icon_state = "warnwhite"; tag = "icon-warnwhite (NORTHEAST)"},/area/space)
-"ag" = (/turf/simulated/floor/plasteel{tag = "icon-warnwhite (NORTH)"; icon_state = "warnwhite"; dir = 1},/area/space)
-"ah" = (/turf/simulated/floor/plasteel{tag = "icon-warnwhite (NORTHEAST)"; icon_state = "warnwhite"; dir = 5},/area/space)
-"ai" = (/turf/simulated/floor/plasteel{tag = "icon-greenblue (NORTHWEST)"; icon_state = "greenblue"; dir = 9},/area/space)
-"aj" = (/turf/simulated/floor/plasteel{tag = "icon-greenblue (NORTH)"; icon_state = "greenblue"; dir = 1},/area/space)
-"ak" = (/turf/simulated/floor/plasteel{tag = "icon-greenblue (NORTHEAST)"; icon_state = "greenblue"; dir = 5},/area/space)
-"al" = (/turf/simulated/floor/plasteel{tag = "icon-bcarpet01"; icon_state = "bcarpet01"; dir = 2},/area/space)
-"am" = (/turf/simulated/floor/plasteel{tag = "icon-bcarpet02"; icon_state = "bcarpet02"; dir = 2},/area/space)
-"an" = (/turf/simulated/floor/plasteel{tag = "icon-bcarpet03"; icon_state = "bcarpet03"; dir = 2},/area/space)
-"ao" = (/obj/structure/closet/walllocker/emerglocker/north{pixel_y = -32},/turf/simulated/floor/plasteel,/area/space)
-"ap" = (/obj/structure/closet/hydrant{pixel_y = -32},/turf/simulated/floor/plasteel,/area/space)
-"aq" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "darkredcorners"},/area/space)
-"ar" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "darkredcorners"},/area/space)
-"as" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "darkred"},/area/space)
-"at" = (/turf/simulated/floor/plasteel{tag = "icon-darkredfull (SOUTHEAST)"; icon_state = "darkredfull"; dir = 6},/area/space)
-"au" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "darkred"},/area/space)
-"av" = (/turf/simulated/floor/plasteel{tag = "icon-warnwhitecorner"; icon_state = "warnwhitecorner"; dir = 2},/area/space)
-"aw" = (/turf/simulated/floor/plasteel{tag = "icon-warnwhitecorner (NORTH)"; icon_state = "warnwhitecorner"; dir = 1},/area/space)
-"ax" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "warnwhite"; tag = "icon-warnwhite (NORTH)"},/area/space)
-"ay" = (/turf/simulated/floor/plasteel{tag = "icon-white (NORTH)"; icon_state = "white"; dir = 1},/area/space)
+"af" = (/turf/simulated/floor/plasteel{tag = "icon-white (NORTH)"; icon_state = "white"; dir = 1},/area/space)
+"ag" = (/turf/simulated/floor/plasteel{dir = 9; icon_state = "warnwhite"; tag = "icon-warnwhite (NORTHEAST)"},/area/space)
+"ah" = (/turf/simulated/floor/plasteel{tag = "icon-warnwhite (NORTH)"; icon_state = "warnwhite"; dir = 1},/area/space)
+"ai" = (/turf/simulated/floor/plasteel{tag = "icon-warnwhite (NORTHEAST)"; icon_state = "warnwhite"; dir = 5},/area/space)
+"aj" = (/turf/simulated/floor/plasteel{tag = "icon-greenblue (NORTHWEST)"; icon_state = "greenblue"; dir = 9},/area/space)
+"ak" = (/turf/simulated/floor/plasteel{tag = "icon-greenblue (NORTH)"; icon_state = "greenblue"; dir = 1},/area/space)
+"al" = (/turf/simulated/floor/plasteel{tag = "icon-greenblue (NORTHEAST)"; icon_state = "greenblue"; dir = 5},/area/space)
+"am" = (/turf/simulated/floor/plasteel{tag = "icon-bcarpet01"; icon_state = "bcarpet01"; dir = 2},/area/space)
+"an" = (/turf/simulated/floor/plasteel{tag = "icon-bcarpet02"; icon_state = "bcarpet02"; dir = 2},/area/space)
+"ao" = (/turf/simulated/floor/plasteel{tag = "icon-bcarpet03"; icon_state = "bcarpet03"; dir = 2},/area/space)
+"ap" = (/obj/structure/closet/walllocker/emerglocker/north{pixel_y = -32},/turf/simulated/floor/plasteel,/area/space)
+"aq" = (/obj/structure/closet/hydrant{pixel_y = -32},/turf/simulated/floor/plasteel,/area/space)
+"ar" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "darkredcorners"},/area/space)
+"as" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "darkredcorners"},/area/space)
+"at" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "darkred"},/area/space)
+"au" = (/turf/simulated/floor/plasteel{tag = "icon-darkredfull (SOUTHEAST)"; icon_state = "darkredfull"; dir = 6},/area/space)
+"av" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "darkred"},/area/space)
+"aw" = (/turf/simulated/floor/plasteel{tag = "icon-warnwhitecorner"; icon_state = "warnwhitecorner"; dir = 2},/area/space)
+"ax" = (/turf/simulated/floor/plasteel{tag = "icon-warnwhitecorner (NORTH)"; icon_state = "warnwhitecorner"; dir = 1},/area/space)
+"ay" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "warnwhite"; tag = "icon-warnwhite (NORTH)"},/area/space)
 "az" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "warnwhite"; tag = "icon-warnwhite (NORTH)"},/area/space)
 "aA" = (/turf/simulated/floor/plasteel{tag = "icon-greenblue (WEST)"; icon_state = "greenblue"; dir = 8},/area/space)
 "aB" = (/turf/simulated/floor/plasteel{tag = "icon-greenbluefull (NORTH)"; icon_state = "greenbluefull"; dir = 1},/area/space)
@@ -260,50 +260,50 @@
 "eZ" = (/turf/simulated/floor/plasteel{tag = "icon-redyellow (WEST)"; icon_state = "redyellow"; dir = 8},/area/space)
 "fa" = (/turf/simulated/floor/plasteel{tag = "icon-redyellowfull"; icon_state = "redyellowfull"; dir = 2},/area/space)
 "fb" = (/turf/simulated/floor/plasteel{tag = "icon-redyellow (EAST)"; icon_state = "redyellow"; dir = 4},/area/space)
-"fc" = (/turf/simulated/floor/plasteel{tag = "icon-purple (NORTHWEST)"; icon_state = "purple"; dir = 9},/area/space)
-"fd" = (/turf/simulated/floor/plasteel{tag = "icon-purple (NORTH)"; icon_state = "purple"; dir = 1},/area/space)
-"fe" = (/turf/simulated/floor/plasteel{tag = "icon-purple (NORTHEAST)"; icon_state = "purple"; dir = 5},/area/space)
-"ff" = (/turf/simulated/floor/plasteel{dir = 9; icon_state = "whitered"},/area/space)
-"fg" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "whitered"},/area/space)
-"fh" = (/turf/simulated/floor/plasteel{dir = 5; icon_state = "whitered"},/area/space)
-"fi" = (/turf/simulated/floor/plasteel{tag = "icon-redyellow (SOUTHWEST)"; icon_state = "redyellow"; dir = 10},/area/space)
-"fj" = (/turf/simulated/floor/plasteel{tag = "icon-redyellow"; icon_state = "redyellow"; dir = 2},/area/space)
-"fk" = (/turf/simulated/floor/plasteel{tag = "icon-redyellow (SOUTHEAST)"; icon_state = "redyellow"; dir = 6},/area/space)
-"fl" = (/turf/simulated/floor/plasteel{tag = "icon-purplecorner"; icon_state = "purplecorner"; dir = 2},/area/space)
-"fm" = (/turf/simulated/floor/plasteel{tag = "icon-purplecorner (WEST)"; icon_state = "purplecorner"; dir = 8},/area/space)
-"fn" = (/turf/simulated/floor/plasteel{tag = "icon-purple (WEST)"; icon_state = "purple"; dir = 8},/area/space)
-"fo" = (/turf/simulated/floor/plasteel{tag = "icon-purplefull"; icon_state = "purplefull"; dir = 2},/area/space)
-"fp" = (/turf/simulated/floor/plasteel{tag = "icon-purple (EAST)"; icon_state = "purple"; dir = 4},/area/space)
-"fq" = (/turf/simulated/floor/plasteel{tag = "icon-whiteredcorner"; icon_state = "whiteredcorner"; dir = 2},/area/space)
-"fr" = (/turf/simulated/floor/plasteel{tag = "icon-whiteredcorner (WEST)"; icon_state = "whiteredcorner"; dir = 8},/area/space)
-"fs" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "whitered"},/area/space)
-"ft" = (/turf/simulated/floor/plasteel{tag = "icon-whiteredfull (EAST)"; icon_state = "whiteredfull"; dir = 4},/area/space)
-"fu" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "whitered"},/area/space)
-"fv" = (/turf/simulated/floor/plasteel{tag = "icon-purplecorner (EAST)"; icon_state = "purplecorner"; dir = 4},/area/space)
-"fw" = (/turf/simulated/floor/plasteel{tag = "icon-purplecorner (NORTH)"; icon_state = "purplecorner"; dir = 1},/area/space)
-"fx" = (/turf/simulated/floor/plasteel{dir = 10; icon_state = "purple"},/area/space)
-"fy" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "purple"},/area/space)
-"fz" = (/turf/simulated/floor/plasteel{dir = 6; icon_state = "purple"},/area/space)
-"fA" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "whiteredcorner"},/area/space)
-"fB" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "whiteredcorner"},/area/space)
-"fC" = (/turf/simulated/floor/plasteel{dir = 10; icon_state = "whitered"},/area/space)
-"fD" = (/turf/simulated/floor/plasteel{dir = 3; icon_state = "whitered"},/area/space)
-"fE" = (/turf/simulated/floor/plasteel{dir = 6; icon_state = "whitered"},/area/space)
-"fF" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/space)
-"fG" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
-"fH" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/space)
-"fI" = (/turf/simulated/floor/plasteel{tag = "icon-escape (NORTHWEST)"; icon_state = "escape"; dir = 9},/area/space)
-"fJ" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "escape"},/area/space)
-"fK" = (/turf/simulated/floor/plasteel{icon_state = "escape"; dir = 5},/area/space)
-"fL" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner"; icon_state = "orangecorner"; dir = 2},/area/space)
-"fM" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (WEST)"; icon_state = "orangecorner"; dir = 8},/area/space)
-"fN" = (/turf/simulated/floor/plasteel{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/space)
-"fO" = (/turf/simulated/floor/plasteel{tag = "icon-orangefull (WEST)"; icon_state = "orangefull"; dir = 8},/area/space)
-"fP" = (/turf/simulated/floor/plasteel{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
-"fQ" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "escapecorner"},/area/space)
-"fR" = (/turf/simulated/floor/plasteel{tag = "icon-escapecorner (WEST)"; icon_state = "escapecorner"; dir = 8},/area/space)
-"fS" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "escape"},/area/space)
-"fT" = (/turf/simulated/floor/plasteel,/area/space)
+"fc" = (/turf/simulated/floor/plasteel,/area/space)
+"fd" = (/turf/simulated/floor/plasteel{tag = "icon-purple (NORTHWEST)"; icon_state = "purple"; dir = 9},/area/space)
+"fe" = (/turf/simulated/floor/plasteel{tag = "icon-purple (NORTH)"; icon_state = "purple"; dir = 1},/area/space)
+"ff" = (/turf/simulated/floor/plasteel{tag = "icon-purple (NORTHEAST)"; icon_state = "purple"; dir = 5},/area/space)
+"fg" = (/turf/simulated/floor/plasteel{dir = 9; icon_state = "whitered"},/area/space)
+"fh" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "whitered"},/area/space)
+"fi" = (/turf/simulated/floor/plasteel{dir = 5; icon_state = "whitered"},/area/space)
+"fj" = (/turf/simulated/floor/plasteel{tag = "icon-redyellow (SOUTHWEST)"; icon_state = "redyellow"; dir = 10},/area/space)
+"fk" = (/turf/simulated/floor/plasteel{tag = "icon-redyellow"; icon_state = "redyellow"; dir = 2},/area/space)
+"fl" = (/turf/simulated/floor/plasteel{tag = "icon-redyellow (SOUTHEAST)"; icon_state = "redyellow"; dir = 6},/area/space)
+"fm" = (/turf/simulated/floor/plasteel{tag = "icon-purplecorner"; icon_state = "purplecorner"; dir = 2},/area/space)
+"fn" = (/turf/simulated/floor/plasteel{tag = "icon-purplecorner (WEST)"; icon_state = "purplecorner"; dir = 8},/area/space)
+"fo" = (/turf/simulated/floor/plasteel{tag = "icon-purple (WEST)"; icon_state = "purple"; dir = 8},/area/space)
+"fp" = (/turf/simulated/floor/plasteel{tag = "icon-purplefull"; icon_state = "purplefull"; dir = 2},/area/space)
+"fq" = (/turf/simulated/floor/plasteel{tag = "icon-purple (EAST)"; icon_state = "purple"; dir = 4},/area/space)
+"fr" = (/turf/simulated/floor/plasteel{tag = "icon-whiteredcorner"; icon_state = "whiteredcorner"; dir = 2},/area/space)
+"fs" = (/turf/simulated/floor/plasteel{tag = "icon-whiteredcorner (WEST)"; icon_state = "whiteredcorner"; dir = 8},/area/space)
+"ft" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "whitered"},/area/space)
+"fu" = (/turf/simulated/floor/plasteel{tag = "icon-whiteredfull (EAST)"; icon_state = "whiteredfull"; dir = 4},/area/space)
+"fv" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "whitered"},/area/space)
+"fw" = (/turf/simulated/floor/plasteel{tag = "icon-purplecorner (EAST)"; icon_state = "purplecorner"; dir = 4},/area/space)
+"fx" = (/turf/simulated/floor/plasteel{tag = "icon-purplecorner (NORTH)"; icon_state = "purplecorner"; dir = 1},/area/space)
+"fy" = (/turf/simulated/floor/plasteel{dir = 10; icon_state = "purple"},/area/space)
+"fz" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "purple"},/area/space)
+"fA" = (/turf/simulated/floor/plasteel{dir = 6; icon_state = "purple"},/area/space)
+"fB" = (/turf/simulated/floor/plasteel{dir = 4; icon_state = "whiteredcorner"},/area/space)
+"fC" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "whiteredcorner"},/area/space)
+"fD" = (/turf/simulated/floor/plasteel{dir = 10; icon_state = "whitered"},/area/space)
+"fE" = (/turf/simulated/floor/plasteel{dir = 3; icon_state = "whitered"},/area/space)
+"fF" = (/turf/simulated/floor/plasteel{dir = 6; icon_state = "whitered"},/area/space)
+"fG" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/space)
+"fH" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
+"fI" = (/turf/simulated/floor/plasteel{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/space)
+"fJ" = (/turf/simulated/floor/plasteel{tag = "icon-escape (NORTHWEST)"; icon_state = "escape"; dir = 9},/area/space)
+"fK" = (/turf/simulated/floor/plasteel{dir = 1; icon_state = "escape"},/area/space)
+"fL" = (/turf/simulated/floor/plasteel{icon_state = "escape"; dir = 5},/area/space)
+"fM" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner"; icon_state = "orangecorner"; dir = 2},/area/space)
+"fN" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (WEST)"; icon_state = "orangecorner"; dir = 8},/area/space)
+"fO" = (/turf/simulated/floor/plasteel{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/space)
+"fP" = (/turf/simulated/floor/plasteel{tag = "icon-orangefull (WEST)"; icon_state = "orangefull"; dir = 8},/area/space)
+"fQ" = (/turf/simulated/floor/plasteel{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
+"fR" = (/turf/simulated/floor/plasteel{dir = 2; icon_state = "escapecorner"},/area/space)
+"fS" = (/turf/simulated/floor/plasteel{tag = "icon-escapecorner (WEST)"; icon_state = "escapecorner"; dir = 8},/area/space)
+"fT" = (/turf/simulated/floor/plasteel{dir = 8; icon_state = "escape"},/area/space)
 "fU" = (/turf/simulated/floor/plasteel{icon_state = "escape"; dir = 4},/area/space)
 "fV" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (EAST)"; icon_state = "orangecorner"; dir = 4},/area/space)
 "fW" = (/turf/simulated/floor/plasteel{tag = "icon-orangecorner (NORTH)"; icon_state = "orangecorner"; dir = 1},/area/space)
@@ -351,34 +351,34 @@
 "gM" = (/turf/simulated/floor/plasteel{dir = 6; icon_state = "yellow"},/area/space)
 
 (1,1,1) = {"
-aaabacadaeababafagahabaiajakabalamanabababababababababaoababababapababababaoababababapababababababab
-aqarasatauavawaxayazabaAaBaCabaDaEaFabababababababababaGababababaGababababaHababababaHababababababab
+aaabacadaeafabagahaiabajakalabamanaoabababababababababapababababaqababababapababababaqababababababab
+arasatauavawaxayafazabaAaBaCabaDaEaFabababababababababaGababababaGababababaHababababaHababababababab
 aIaJaKaLaMaNaOaPaQaRabaSaTaUabaVaWaXabababababababaYaGabaGaZbaaGabaGbbaYaHabaHaZbaaHabaHbbababababab
-bcbdbebfbgababbhbibjabababababababababababababababababaGababababaGababababaHababababaHababababababab
+bcbdbebfbgafabbhbibjabababababababababababababababababaGababababaGababababaHababababaHababababababab
 bkblbmbnbobpbqbrbsbtabbubvbwabbxabbyabbzabbAabbBabababbCababababbDababababbCababababbDababababababab
 ababbEbFbGbHbIbJbKbLabbMbNbOabababababababababababababbPababababbQababababbPababababbRababababababab
-ababbSbTbUababbVbWbXabbYbZcaabcbabccabcdabceabababababaGababababaGababababaHababababaHababababababab
+aaabbSbTbUafabbVbWbXabbYbZcaabcbabccabcdabceabababababaGababababaGababababaHababababaHababababababab
 cfcgchcicjckclcmcncoabababababababababababababababcpaGabaGcqcraGabaGcscpaHabaHcqctaHabaHcuababababab
 cvcwcxcyczcAcBcCcDcEabcFcGcHabcIabcJabcKabcLabababababaGababababaGababababaHababababaHababababababab
-ababcMcNcOababcPcQcRabcScTcUabababababababababababababcVababababcWababababcVababababcXababababababab
+aaabcMcNcOafabcPcQcRabcScTcUabababababababababababababcVababababcWababababcVababababcXababababababab
 cYcZdadbdcdddedfdgdhabdidjdkabdldmdndodpdqababababababababababababababababababababababababababababab
 drdsdtdudvdwdxdydzdAabababababdBdCdDdEdFdGababababababababababababababababababababababababababababab
-ababdHdIdJababdKdLdMabdNdOdPabdQdRdSdTdUdVababababababababababababababababababababababababababababab
+aaabdHdIdJafabdKdLdMabdNdOdPabdQdRdSdTdUdVababababababababababababababababababababababababababababab
 dWdXdYdZeaebecedeeefabegeheiabababababababababababababababababababababababababababababababababababab
 ejekelemeneoepeqeresabeteuevabababababababababababababababababababababababababababababababababababab
-ababewexeyababezeAeBabababababababababababababababababababababababababababababababababababababababab
+aaabewexeyafabezeAeBabababababababababababababababababababababababababababababababababababababababab
 eCeDeEeFeGeHeIeJeKeLabeMeNeOabababababababababababababababababababababababababababababababababababab
 ePeQeReSeTeUeVeWeXeYabeZfafbabababababababababababababababababababababababababababababababababababab
-ababfcfdfeababfffgfhabfifjfkabababababababababababababababababababababababababababababababababababab
-flfmfnfofpfqfrfsftfuabababababababababababababababababababababababababababababababababababababababab
-fvfwfxfyfzfAfBfCfDfEabababababababababababababababababababababababababababababababababababababababab
-ababfFfGfHababfIfJfKabababababababababababababababababababababababababababababababababababababababab
-fLfMfNfOfPfQfRfSfTfUabababababababababababababababababababababababababababababababababababababababab
+fcabfdfeffafabfgfhfiabfjfkflabababababababababababababababababababababababababababababababababababab
+fmfnfofpfqfrfsftfufvabababababababababababababababababababababababababababababababababababababababab
+fwfxfyfzfAfBfCfDfEfFabababababababababababababababababababababababababababababababababababababababab
+fcabfGfHfIababfJfKfLabababababababababababababababababababababababababababababababababababababababab
+fMfNfOfPfQfRfSfTfcfUabababababababababababababababababababababababababababababababababababababababab
 fVfWfXfYfZgagbgcgdgeabababababababababababababababababababababababababababababababababababababababab
-ababcFcGcHababgfggghabababababababababababababababababababababababababababababababababababababababab
+ababcFcGcHfcabgfggghabababababababababababababababababababababababababababababababababababababababab
 ababcScTcUgigjgkglgmabababababababababababababababababababababababababababababababababababababababab
 ababdidjdkgngogpgqgrabababababababababababababababababababababababababababababababababababababababab
-ababgsgtguababgvgwgxabababababababababababababababababababababababababababababababababababababababab
+ababgsgtgufcabgvgwgxabababababababababababababababababababababababababababababababababababababababab
 ababgyabgzgAgBgCgDgEabababababababababababababababababababababababababababababababababababababababab
 ababgFgGgHgIgJgKgLgMabababababababababababababababababababababababababababababababababababababababab
 abababababababababababababababababababababababababababababababababababababababababababababababababab
