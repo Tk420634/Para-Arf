@@ -6,8 +6,13 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_service = 1
+	#if MAP_ID == 999//ARFS Endeavor
+	supervisors = "the captain"
+	department_head = list("Captain")
+	#else
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
+	#endif
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue, access_weapons, access_mineral_storeroom)
 	minimal_access = list(access_bar, access_maint_tunnels, access_weapons, access_mineral_storeroom)
@@ -49,8 +54,13 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_service = 1
+	#if MAP_ID == 999//ARFS Endeavor
+	supervisors = "the captain"
+	department_head = list("Captain")
+	#else
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
+	#endif
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue)
 	minimal_access = list(access_kitchen, access_maint_tunnels)
@@ -74,11 +84,18 @@
 	title = "Botanist"
 	flag = BOTANIST
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the captain"
+	department_head = list("Captain")
+	#else
 	total_positions = 3
 	spawn_positions = 2
-	is_service = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
+	#endif
+	is_service = 1
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue)
 	minimal_access = list(access_hydroponics, access_morgue, access_maint_tunnels)
@@ -108,8 +125,13 @@
 	title = "Quartermaster"
 	flag = QUARTERMASTER
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_supply = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
@@ -137,11 +159,18 @@
 	title = "Cargo Technician"
 	flag = CARGOTECH
 	department_flag = SUPPORT
-	total_positions = 2
-	spawn_positions = 2
 	is_supply = 1
+	#if MAP_ID == 999//ARFS Endeavor
+	supervisors = "the captain"
+	department_head = list("Captain")
+	total_positions = 4
+	spawn_positions = 4
+	#else
 	supervisors = "the quartermaster"
 	department_head = list("Head of Personnel")
+	total_positions = 2
+	spawn_positions = 2
+	#endif
 	selection_color = "#dddddd"
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station, access_mineral_storeroom)
 	minimal_access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting, access_mineral_storeroom)
@@ -164,11 +193,18 @@
 	title = "Shaft Miner"
 	flag = MINER
 	department_flag = SUPPORT
-	total_positions = 3
-	spawn_positions = 3
 	is_supply = 1
+	#if MAP_ID == 999//ARFS Endeavor
+	supervisors = "the captain"
+	department_head = list("Captain")
+	total_positions = 5//Just because people like mining. Will be cramped with this many, but at least they get the job.
+	spawn_positions = 5
+	#else
 	supervisors = "the quartermaster"
 	department_head = list("Head of Personnel")
+	total_positions = 3
+	spawn_positions = 3
+	#endif
 	selection_color = "#dddddd"
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station, access_mineral_storeroom)
 	minimal_access = list(access_mining, access_mint, access_mining_station, access_mailsorting, access_maint_tunnels, access_mineral_storeroom)
@@ -203,8 +239,13 @@
 	title = "Clown"
 	flag = CLOWN
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_service = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
@@ -263,8 +304,13 @@
 	title = "Mime"
 	flag = MIME
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_service = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
@@ -316,11 +362,18 @@
 	title = "Janitor"
 	flag = JANITOR
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	supervisors = "the captain"
+	department_head = list("Captain")
+	total_positions = 4
+	spawn_positions = 4
+	#else
+	supervisors = "the quartermaster"
+	department_head = list("Head of Personnel")
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_service = 1
-	supervisors = "the head of personnel"
-	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
 	access = list(access_janitor, access_maint_tunnels)
 	minimal_access = list(access_janitor, access_maint_tunnels)
@@ -342,8 +395,13 @@
 	title = "Librarian"
 	flag = LIBRARIAN
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_service = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
@@ -370,8 +428,13 @@
 	title = "Barber"
 	flag = BARBER
 	department_flag = KARMA
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_service = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")

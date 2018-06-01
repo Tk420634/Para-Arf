@@ -1,5 +1,9 @@
 /datum/job/civilian
+	#if MAP_ID == 999//ARFS Endeavor
+	title = "Colonist"
+	#else
 	title = "Civilian"
+	#endif
 	flag = CIVILIAN
 	department_flag = SUPPORT
 	total_positions = -1

@@ -2,8 +2,13 @@
 	title = "Head of Security"
 	flag = HOS
 	department_flag = ENGSEC
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_security = 1
 	supervisors = "the captain"
 	department_head = list("Captain")
@@ -57,8 +62,13 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_security = 1
+	#if MAP_ID == 999//ARFS Endeavor
+	supervisors = "the captain"
+	department_head = list("Captain")
+	#else
 	supervisors = "the head of security"
 	department_head = list("Head of Security")
+	#endif
 	selection_color = "#ffeeee"
 	access = list(access_security, access_sec_doors, access_brig, access_armory, access_court, access_maint_tunnels, access_morgue, access_weapons)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_armory, access_court, access_maint_tunnels, access_weapons)
@@ -99,8 +109,13 @@
 	title = "Detective"
 	flag = DETECTIVE
 	department_flag = ENGSEC
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_security = 1
 	supervisors = "the head of security"
 	department_head = list("Head of Security")
@@ -158,11 +173,18 @@
 	title = "Security Officer"
 	flag = OFFICER
 	department_flag = ENGSEC
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the captain"
+	department_head = list("Captain")
+	#else
 	total_positions = 7
 	spawn_positions = 7
-	is_security = 1
 	supervisors = "the head of security"
 	department_head = list("Head of Security")
+	#endif
+	is_security = 1
 	selection_color = "#ffeeee"
 	access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_morgue, access_weapons)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_weapons)
@@ -202,8 +224,13 @@
 	title = "Brig Physician"
 	flag = BRIGDOC
 	department_flag = KARMA
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_security = 1
 	supervisors = "the head of security"
 	department_head = list("Head of Security")
@@ -238,8 +265,13 @@
 	title = "Security Pod Pilot"
 	flag = PILOT
 	department_flag = KARMA
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_security = 1
 	supervisors = "the head of security"
 	department_head = list("Head of Security")

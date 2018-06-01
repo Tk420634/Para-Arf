@@ -2,8 +2,13 @@
 	title = "Chief Medical Officer"
 	flag = CMO
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_medical = 1
 	supervisors = "the captain"
 	department_head = list("Captain")
@@ -44,8 +49,13 @@
 	title = "Medical Doctor"
 	flag = DOCTOR
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 3
+	spawn_positions = 3
+	#else
 	total_positions = 5
 	spawn_positions = 3
+	#endif
 	is_medical = 1
 	supervisors = "the chief medical officer"
 	department_head = list("Chief Medical Officer")
@@ -79,11 +89,18 @@
 	title = "Coroner"
 	flag = CORONER
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	supervisors = "the captain"
+	department_head = list("Captain")
+	#else
 	total_positions = 1
 	spawn_positions = 1
-	is_medical = 1
 	supervisors = "the chief medical officer"
 	department_head = list("Chief Medical Officer")
+	#endif
+	is_medical = 1
 	selection_color = "#ffeef0"
 	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_mineral_storeroom)
 	minimal_access = list(access_medical, access_morgue, access_maint_tunnels)
@@ -141,8 +158,13 @@
 	title = "Chemist"
 	flag = CHEMIST
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 2
 	spawn_positions = 2
+	#endif
 	is_medical = 1
 	supervisors = "the chief medical officer"
 	department_head = list("Chief Medical Officer")
@@ -175,8 +197,13 @@
 	title = "Geneticist"
 	flag = GENETICIST
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 2
 	spawn_positions = 2
+	#endif
 	is_medical = 1
 	supervisors = "the chief medical officer and the research director"
 	department_head = list("Chief Medical Officer", "Research Director")
@@ -209,8 +236,13 @@
 	title = "Virologist"
 	flag = VIROLOGIST
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_medical = 1
 	supervisors = "the chief medical officer"
 	department_head = list("Chief Medical Officer")
@@ -244,8 +276,13 @@
 	title = "Psychiatrist"
 	flag = PSYCHIATRIST
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_medical = 1
 	supervisors = "the chief medical officer"
 	department_head = list("Chief Medical Officer")
@@ -282,8 +319,13 @@
 	title = "Paramedic"
 	flag = PARAMEDIC
 	department_flag = MEDSCI
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	is_medical = 1
 	supervisors = "the chief medical officer"
 	department_head = list("Chief Medical Officer")

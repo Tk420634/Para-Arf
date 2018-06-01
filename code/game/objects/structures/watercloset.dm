@@ -252,8 +252,8 @@
 
 /obj/machinery/shower/New(turf/T, newdir = SOUTH, building = FALSE)
 	..()
-	dir = newdir
 	if(building)
+		dir = newdir
 		pixel_x = 0
 		pixel_y = 0
 		switch(newdir)

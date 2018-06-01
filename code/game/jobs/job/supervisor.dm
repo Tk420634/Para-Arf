@@ -63,8 +63,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	title = "Head of Personnel"
 	flag = HOP
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	supervisors = "the captain"
 	department_head = list("Captain")
 	selection_color = "#ddddff"
@@ -112,8 +117,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	title = "A.R.F. Representative"
 	flag = NANO
 	department_flag = KARMA
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	supervisors = "the command staff"
 	department_head = list("Captain")
 	selection_color = "#ddddff"
@@ -158,8 +168,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	title = "Blueshield"
 	flag = BLUESHIELD
 	department_flag = KARMA
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	supervisors = "the A.R.F. representative"
 	department_head = list("Captain")
 	selection_color = "#ddddff"
@@ -205,8 +220,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	title = "Magistrate"
 	flag = JUDGE
 	department_flag = KARMA
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 1
 	spawn_positions = 1
+	#endif
 	supervisors = "the A.R.F. Supreme Court"
 	department_head = list("Captain")
 	selection_color = "#ddddff"
@@ -253,8 +273,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 0)
 	title = "Internal Affairs Agent"
 	flag = LAWYER
 	department_flag = SUPPORT
+	#if MAP_ID == 999//ARFS Endeavor
+	total_positions = 0
+	spawn_positions = 0
+	#else
 	total_positions = 2
 	spawn_positions = 2
+	#endif
 	is_legal = 1
 	supervisors = "the magistrate"
 	department_head = list("Captain")

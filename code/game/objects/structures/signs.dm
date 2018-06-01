@@ -242,3 +242,8 @@
 	desc = "Prickly and festive."
 	icon = 'icons/obj/christmas.dmi'
 	icon_state = "doorwreath"
+
+/obj/structure/sign/noentry
+	name = "\improper NO ENTRY"
+	desc = "A warning sign portaying a 'NO ENTRY' design. You should probably not go here."
+	icon_state = "noentry"

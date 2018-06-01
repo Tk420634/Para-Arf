@@ -39,10 +39,11 @@
 #define AALARM_MODE_OFF 8
 #define AALARM_MODE_FLOOD 9 //Emagged mode; turns off scrubbers and pressure checks on vents
 
-#define AALARM_PRESET_HUMAN     1 // Default
-#define AALARM_PRESET_VOX       2 // Support Vox
-#define AALARM_PRESET_COLDROOM  3 // Kitchen coldroom
-#define AALARM_PRESET_SERVER    4 // Server coldroom
+#define AALARM_PRESET_HUMAN     	1 // Default
+#define AALARM_PRESET_VOX       	2 // Support Vox
+#define AALARM_PRESET_COLDROOM  	3 // Kitchen coldroom
+#define AALARM_PRESET_SERVER    	4 // Server coldroom
+#define AALARM_PRESET_TURBINE	5 // Turbine engine room
 
 #define AALARM_SCREEN_MAIN		1
 #define AALARM_SCREEN_VENT		2
@@ -132,6 +133,9 @@
 /obj/machinery/alarm/kitchen_cold_room
 	preset = AALARM_PRESET_COLDROOM
 
+/obj/machinery/alarm/turbine
+	preset = AALARM_PRESET_TURBINE
+
 /obj/machinery/alarm/proc/apply_preset(var/no_cycle_after=0)
 	// Propogate settings.
 	for(var/obj/machinery/alarm/AA in alarm_area)
@@ -178,6 +182,16 @@
 				"other"          = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), // Partial pressure, kpa
 				"pressure"       = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), /* kpa */
 				"temperature"    = new/datum/tlv(0, 0, T20C + 5, T20C + 15), // K
+			)
+		if(AALARM_PRESET_TURBINE)
+			TLV = list(
+				"oxygen"         = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), // Partial pressure, kpa
+				"nitrogen"       = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), // Partial pressure, kpa
+				"carbon dioxide" = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), // Partial pressure, kpa
+				"plasma"         = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), // Partial pressure, kpa
+				"other"          = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), // Partial pressure, kpa
+				"pressure"       = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), /* kpa */
+				"temperature"    = new/datum/tlv(-1.0, -1.0, -1.0, -1.0), // K
 			)
 
 	if(!no_cycle_after)
@@ -708,7 +722,8 @@
 		AALARM_PRESET_HUMAN		= list("name"="Human",     	 "desc"="Checks for oxygen and nitrogen"),\
 		AALARM_PRESET_VOX 		= list("name"="Vox",       	 "desc"="Checks for nitrogen only"),\
 		AALARM_PRESET_COLDROOM 	= list("name"="Coldroom", 	 "desc"="For freezers"),\
-		AALARM_PRESET_SERVER 	= list("name"="Server Room", "desc"="For server rooms")
+		AALARM_PRESET_SERVER 	= list("name"="Server Room", "desc"="For server rooms"),\
+		AALARM_PRESET_TURBINE 	= list("name"="Turbine Room","desc"="For turbine rooms; Disables all alarms.")
 	)
 	data["preset"] = preset
 	data["screen"] = screen
