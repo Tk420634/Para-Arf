@@ -473,27 +473,26 @@
 
 	if(istype(W, /obj/item/stack))
 		var/material
-		switch(W.type)
-			if(/obj/item/stack/sheet/mineral/gold)
-				material = MAT_GOLD
-			if(/obj/item/stack/sheet/mineral/silver)
-				material = MAT_SILVER
-			if(/obj/item/stack/sheet/mineral/diamond)
-				material = MAT_DIAMOND
-			if(/obj/item/stack/sheet/mineral/plasma)
-				material = MAT_PLASMA
-			if(/obj/item/stack/sheet/metal)
-				material = MAT_METAL
-			if(/obj/item/stack/sheet/glass)
-				material = MAT_GLASS
-			if(/obj/item/stack/sheet/mineral/bananium)
-				material = MAT_BANANIUM
-			if(/obj/item/stack/sheet/mineral/tranquillite)
-				material = MAT_TRANQUILLITE
-			if(/obj/item/stack/sheet/mineral/uranium)
-				material = MAT_URANIUM
-			else
-				return ..()
+		if(istype(W, /obj/item/stack/sheet/mineral/gold))
+			material = MAT_GOLD
+		else if(istype(W, /obj/item/stack/sheet/mineral/silver))
+			material = MAT_SILVER
+		else if(istype(W, /obj/item/stack/sheet/mineral/diamond))
+			material = MAT_DIAMOND
+		else if(istype(W, /obj/item/stack/sheet/mineral/plasma))
+			material = MAT_PLASMA
+		else if(istype(W, /obj/item/stack/sheet/metal))
+			material = MAT_METAL
+		else if(istype(W, /obj/item/stack/sheet/glass))
+			material = MAT_GLASS
+		else if(istype(W, /obj/item/stack/sheet/mineral/bananium))
+			material = MAT_BANANIUM
+		else if(istype(W, /obj/item/stack/sheet/mineral/tranquillite))
+			material = MAT_TRANQUILLITE
+		else if(istype(W, /obj/item/stack/sheet/mineral/uranium))
+			material = MAT_URANIUM
+		else
+			return ..()
 
 		if(being_built)
 			to_chat(user, "\The [src] is currently processing. Please wait until completion.")
