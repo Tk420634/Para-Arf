@@ -18,6 +18,18 @@
 	send2irc(config.admin_irc, queuedmsg)
 	return
 
+/proc/send2generalirc(var/msg)
+	var/queuedmsg = '[General]' + " [msg]"
+
+	send2irc(config.main_irc, msg)
+	return
+
+/proc/send2commandirc(var/msg)
+	var/queuedmsg = '[Command Report]' + " [msg]"
+
+	send2irc(config.main_irc, msg)
+	return
+
 /hook/startup/proc/ircNotify()
 	send2mainirc("Server starting up on [config.server? "byond://[config.server]" : "byond://[world.address]:[world.port]"]")
 	return 1
