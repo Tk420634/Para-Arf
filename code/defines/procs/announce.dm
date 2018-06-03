@@ -51,6 +51,9 @@
 	var/tmp/message_title = new_title ? new_title : title
 	var/tmp/message_sound = new_sound ? sound(new_sound) : sound
 
+	var/tmp/ircmessage = "[new_title]\n[message]"
+	send2commandirc(ircmessage)
+
 	if(!msg_sanitized)
 		message = trim_strip_html_properly(message, allow_lines = 1)
 	message_title = html_encode(message_title)
