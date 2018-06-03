@@ -19,13 +19,13 @@
 	return
 
 /proc/send2generalirc(var/msg)
-	var/queuedmsg = "\[Common\] [msg]"
+	var/queuedmsg = "RADIO - [msg]"
 
 	send2irc(config.main_irc, queuedmsg)
 	return
 
 /proc/send2commandirc(var/msg)
-	var/queuedmsg = "Incoming announcement: \n [msg]"
+	var/queuedmsg = "ANNOUNCEMENT - [msg]"
 
 	send2irc(config.main_irc, queuedmsg)
 	return
