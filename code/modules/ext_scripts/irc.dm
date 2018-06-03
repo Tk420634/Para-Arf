@@ -19,15 +19,15 @@
 	return
 
 /proc/send2generalirc(var/msg)
-	var/queuedmsg = '[General]' + " [msg]"
+	var/queuedmsg = "\[Common\] [msg]"
 
-	send2irc(config.main_irc, msg)
+	send2irc(config.main_irc, queuedmsg)
 	return
 
 /proc/send2commandirc(var/msg)
-	var/queuedmsg = '[Command Report]' + " [msg]"
+	var/queuedmsg = "Incoming announcement: \n [msg]"
 
-	send2irc(config.main_irc, msg)
+	send2irc(config.main_irc, queuedmsg)
 	return
 
 /hook/startup/proc/ircNotify()
