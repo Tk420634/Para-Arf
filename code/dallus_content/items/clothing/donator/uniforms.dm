@@ -40,11 +40,12 @@
 	vision_restriction = 0
 	siemens_coefficient = 0
 	w_class = WEIGHT_CLASS_SMALL
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 50)
 	emp_protection = 0
-	slowdown = 3
-	offline_slowdown = 5
+	slowdown = 0
+	offline_slowdown = 2
 	offline_vision_restriction = 0
+	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
 
 /*
 /obj/item/clothing/head/helmet/space/rig/unathi/andy
