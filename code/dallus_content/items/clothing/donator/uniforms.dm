@@ -34,7 +34,7 @@
 */
 /obj/item/weapon/rig/unathi/fancy/andy
 	name = "breacher chassis control module"
-	desc = "A specially modified and stripped down Unathi Breacher RIG. It looks as though all the armor plating has been removed. It displays 'OWEN' on a holotag affixed to the left side of the chestplate, along with a CentCom identification number, permitting possession and deployment of this RIG solely to a Mr. Dameon Owen"
+	desc = "A specially modified Unathi Breacher RIG. It looks as though most of the armor plating has been removed and it has been refitted for engineering use. It displays 'OWEN' on a holotag affixed to the left side of the chestplate, along with a CentCom identification number, permitting possession and deployment of this RIG solely to a Mr. Dameon Owen"
 	suit_type = "breacher chassis"
 	icon_state = "breacher_rig"
 	vision_restriction = 0
@@ -42,10 +42,14 @@
 	w_class = WEIGHT_CLASS_SMALL
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 50)
 	emp_protection = 0
-	slowdown = 0
+	slowdown = 1
 	offline_slowdown = 2
 	offline_vision_restriction = 0
-	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
+	initial_modules = list(
+			/obj/item/rig_module/maneuvering_jets,
+			/obj/item/rig_module/vision/meson,
+			/obj/item/rig_module/device/plasmacutter
+			)
 
 /*
 /obj/item/clothing/head/helmet/space/rig/unathi/andy
