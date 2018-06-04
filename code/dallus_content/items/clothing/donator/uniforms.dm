@@ -45,8 +45,6 @@
 	slowdown = 1
 	offline_slowdown = 2
 	offline_vision_restriction = 0
-
-/obj/item/weapon/rig/unathi/fancy/andy/equipped
 	initial_modules = list(
 			/obj/item/rig_module/maneuvering_jets,
 			/obj/item/rig_module/vision/meson,
