@@ -733,7 +733,7 @@
 		return 0
 	var/list/free_cryopods = list()
 	for(var/obj/machinery/cryopod/P in machines)
-		if(!P.occupant && istype(get_area(P), /area/crew_quarters/sleep))
+		if(!P.occupant && istype(get_area(P), /area/medical/cryo))
 			free_cryopods += P
 	var/obj/machinery/cryopod/target_cryopod = null
 	if(free_cryopods.len)
