@@ -731,7 +731,7 @@
 	item_color = "sin_suit"
 
 /obj/item/clothing/under/emfsuit
-	name = "Flower Dress"
+	name = "Exus mining force suit"
 	desc = "A mining suit with powerful decorations that reminds the people on station what they are made of"
 	icon_state = "emf_suit"
 	item_state = "emf_suit"
