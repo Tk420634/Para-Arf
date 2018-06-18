@@ -3,7 +3,6 @@
 	var/safe_zones = list(
 		/area/maintenance,
 		/area/crew_quarters/sleep,
-		/area/crew_quarters/apartment,
 		/area/security/brig,
 		/area/shuttle,
 		/area/vox_station,
