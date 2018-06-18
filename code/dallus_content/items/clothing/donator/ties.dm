@@ -6,6 +6,11 @@
 	icon_state = "watch"
 	item_state = "watch"
 	item_color = "watch"
+
+/obj/item/clothing/accessory/watch/attack_self(mob/user as mob)
+	mob.set_size()
+	to_chat(usr, "<span class='notice'>You press the buttons on your watch.</span>")
+
 /*
 //TechnicalMagi
 /obj/item/clothing/accessory/collar/bell/naomi
