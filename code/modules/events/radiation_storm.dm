@@ -9,6 +9,9 @@
 		/area/syndicate_station
 		)
 
+#if MAP_ID == 999//ARFS Endeavor
+safe_zones += /area/crew_quarters/apartment
+#endif
 
 /datum/event/radiation_storm/announce()
 	// Don't do anything, we want to pack the announcement with the actual event
