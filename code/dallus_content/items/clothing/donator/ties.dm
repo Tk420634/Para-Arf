@@ -6,10 +6,32 @@
 	icon_state = "watch"
 	item_state = "watch"
 	item_color = "watch"
+	var/cooldown_timer = 300
 
-/obj/item/clothing/accessory/watch/attack_self(mob/user as mob)
-	mob.set_size()
-	to_chat(usr, "<span class='notice'>You press the buttons on your watch.</span>")
+/obj/item/clothing/accessory/watch/attack_self(mob/usr)
+	var/mob/living/carbon/human/H = usr
+	if (!cooldown)
+		var/size_name = input(usr, "Pick a Size") in player_sizes_list
+		if (size_name && player_sizes_list[size_name] && !cooldown)
+			if(size_name=="Macro" && H.size_multiplier == 2)
+				return
+			else if(size_name == "Big" && H.size_multiplier == 1.5)
+				return
+			else if(size_name == "Normal" && H.size_multiplier == 1)
+				return
+			else if(size_name == "Small" && H.size_multiplier == 0.75)
+				return
+			else if(size_name == "Tiny" && H.size_multiplier == 0.4)
+				return
+			else
+				cooldown = 1
+				H.resize(player_sizes_list[size_name])
+				usr.visible_message("<span class='notice'>[usr] begins to change size!</span>", "<span class='notice'>You begin to change size! You are now [size_name].</span>")
+				sleep(cooldown_timer)
+				cooldown = 0
+	else
+		to_chat(usr, "<span class='notice'>Your watch is still recharging!</span>")
+
 
 /*
 //TechnicalMagi
