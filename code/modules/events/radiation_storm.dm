@@ -1,5 +1,16 @@
 /datum/event/radiation_storm
 	announceWhen	= 1
+	#if MAP_ID == 999//ARFS Endeavor
+	var/safe_zones = list(
+		/area/maintenance,
+		/area/crew_quarters/sleep,
+		/area/security/brig,
+		/area/shuttle,
+		/area/vox_station,
+		/area/syndicate_station,
+		/area/crew_quarters/apartment
+		)
+	#else
 	var/safe_zones = list(
 		/area/maintenance,
 		/area/crew_quarters/sleep,
@@ -8,8 +19,6 @@
 		/area/vox_station,
 		/area/syndicate_station
 		)
-	#if MAP_ID == 999//ARFS Endeavor
-	safe_zones += /area/crew_quarters/apartment
 	#endif
 
 /datum/event/radiation_storm/announce()
