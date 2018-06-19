@@ -6,6 +6,38 @@
 	icon_state = "watch"
 	item_state = "watch"
 	item_color = "watch"
+	var/cooldown_timer = 300
+
+/obj/item/clothing/accessory/watch/attack_self(mob/user as mob)
+	if(!is_admin(user))
+		return
+	if(!istype(user,/mob/living/carbon/human))
+		to_chat(user, "<span class='warning'>You must be human to use this item.</span>")
+		return
+	var/mob/living/carbon/human/H = user
+	if (!cooldown)
+		var/size_name = input(user, "Pick a Size") in player_sizes_list
+		if (size_name && player_sizes_list[size_name] && !cooldown)
+			if(size_name=="Macro" && H.size_multiplier == 2)
+				return
+			else if(size_name == "Big" && H.size_multiplier == 1.5)
+				return
+			else if(size_name == "Normal" && H.size_multiplier == 1)
+				return
+			else if(size_name == "Small" && H.size_multiplier == 0.75)
+				return
+			else if(size_name == "Tiny" && H.size_multiplier == 0.4)
+				return
+			else
+				cooldown = 1
+				H.resize(player_sizes_list[size_name])
+				user.visible_message("<span class='notice'>[user] begins to change size!</span>", "<span class='notice'>You begin to change size! You are now [size_name].</span>")
+				sleep(cooldown_timer)
+				cooldown = 0
+	else
+		to_chat(user, "<span class='notice'>Your watch is still recharging!</span>")
+
+
 /*
 //TechnicalMagi
 /obj/item/clothing/accessory/collar/bell/naomi
