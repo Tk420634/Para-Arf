@@ -726,7 +726,6 @@
 /obj/item/clothing/under/sinsuit
 	name = "Sindycate suit"
 	desc = "a blanck and red trenchcoat with the red cat on the back. the insigna of the SINs"
-	icon = 'icons/mob/uniform.dmi'
 	icon_state = "sin_suit"
 	item_state = "sin_suit"
 	item_color = "sin_suit"
@@ -734,7 +733,6 @@
 /obj/item/clothing/under/emfsuit
 	name = "Exus mining force suit"
 	desc = "A mining suit with powerful decorations that reminds the people on station what they are made of"
-	icon = 'icons/mob/uniform.dmi'
 	icon_state = "emf_suit"
 	item_state = "emf_suit"
 	item_color = "emf_suit"
