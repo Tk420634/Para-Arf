@@ -19,6 +19,8 @@
 	var/ckey=null
 	var/mind=null
 	var/languages=null
+	var/flavortext=null
+	var/oocnotes=null
 
 /datum/dna2/record/proc/GetData()
 	var/list/ser=list("data" = null, "owner" = null, "label" = null, "type" = null, "ue" = 0)
@@ -45,6 +47,8 @@
 	newrecord.ckey = ckey
 	newrecord.languages = languages
 	newrecord.implant = implant
+	newrecord.flavortext = flavortext
+	newrecord.oocnotes = oocnotes
 	return newrecord
 
 

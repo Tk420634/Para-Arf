@@ -235,6 +235,8 @@
 	else
 		H.real_name = R.dna.real_name
 
+	H.ooc_prefs = R.oocnotes
+	H.flavor_text = R.flavortext
 	H.dna = R.dna.Clone()
 
 	for(var/datum/language/L in R.languages)
