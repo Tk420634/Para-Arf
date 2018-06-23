@@ -3,7 +3,7 @@
 
 //Potential replacement for genetics revives or something I dunno (?)
 
-#define CLONE_BIOMASS 150
+#define CLONE_BIOMASS 100
 #define BIOMASS_MEAT_AMOUNT 50
 #define MINIMUM_HEAL_LEVEL 40
 #define CLONE_INITIAL_DAMAGE 190
@@ -48,7 +48,7 @@
 		set_light(0)
 
 /obj/machinery/clonepod/biomass
-	biomass = CLONE_BIOMASS
+	biomass = 1000
 
 /obj/machinery/clonepod/New()
 	..()
@@ -81,7 +81,7 @@
 	component_parts += new /obj/item/weapon/stock_parts/console_screen(null)
 	component_parts += new /obj/item/stack/cable_coil(null, 1)
 	component_parts += new /obj/item/stack/cable_coil(null, 1)
-	biomass = CLONE_BIOMASS
+	biomass = 1000
 	RefreshParts()
 
 /obj/machinery/clonepod/Destroy()
@@ -235,6 +235,10 @@
 	else
 		H.real_name = R.dna.real_name
 
+	H.ooc_prefs = R.oocnotes
+	H.flavor_text = R.flavortext
+	H.resize(R.sizemult)
+
 	H.dna = R.dna.Clone()
 
 	for(var/datum/language/L in R.languages)
@@ -267,6 +271,7 @@
 		clonemind.transfer_to(H)
 		H.ckey = R.ckey
 		update_clone_antag(H) //Since the body's got the mind, update their antag stuff right now. Otherwise, wait until they get kicked out (as per the CLONER_MATURE_CLONE business) to do it.
+		H.copy_from_prefs_vr()
 		to_chat(H, {"<span class='notice'><b>Consciousness slowly creeps over you
 			as your body regenerates.</b><br><i>So this is what cloning
 			feels like?</i></span>"})
@@ -453,6 +458,7 @@
 		clonemind.transfer_to(occupant)
 		occupant.grab_ghost()
 		update_clone_antag(occupant)
+		occupant.copy_from_prefs_vr()
 		to_chat(occupant, "<span class='notice'><b>There is a bright flash!</b><br>\
 			<i>You feel like a new being.</i></span>")
 		occupant.flash_eyes(visual = 1)
