@@ -2,12 +2,12 @@
 
 /datum/event/spider_infestation
 	announceWhen	= 400
-	var/spawncount = 1
+	var/spawncount = 0
 
 /datum/event/spider_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + 50)
 	spawncount = round(num_players() * 0.25)
-	sent_spiders_to_station = 1
+	sent_spiders_to_station = 0
 
 /datum/event/spider_infestation/announce()
 	event_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
