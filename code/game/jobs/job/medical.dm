@@ -3,8 +3,8 @@
 	flag = CMO
 	department_flag = MEDSCI
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	#else
 	total_positions = 1
 	spawn_positions = 1
@@ -90,8 +90,8 @@
 	flag = CORONER
 	department_flag = MEDSCI
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the captain"
 	department_head = list("Captain")
 	#else
@@ -159,8 +159,8 @@
 	flag = CHEMIST
 	department_flag = MEDSCI
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	#else
 	total_positions = 2
 	spawn_positions = 2
@@ -277,8 +277,8 @@
 	flag = PSYCHIATRIST
 	department_flag = MEDSCI
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	#else
 	total_positions = 1
 	spawn_positions = 1
