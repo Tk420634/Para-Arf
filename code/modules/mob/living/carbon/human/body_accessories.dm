@@ -215,6 +215,7 @@ var/global/list/body_accessory_by_species = list("None" = null)
 /datum/body_accessory/tail/dragon
 	name = "Dragon Tail and Wings"
 	icon_state = "dragon"
+	animated_icon_state = "dragonw_a"
 
 /*
 /datum/body_accessory/tail/tajytail  //:3c
