@@ -7,10 +7,10 @@
 	item_state = "watch"
 	item_color = "watch"
 	var/cooldown_timer = 300
+	var/time
 
 /obj/item/clothing/accessory/watch/attack_self(mob/user as mob)
-	/var/time = worldtime2text()
-	    																//Get world time
+	time = worldtime2text()    																//Get world time
 	if(!is_admin(user) && istype(user,/mob/living/carbon/human))									//Check if user is not an admin and is human. If true, display world time.
 		to_chat(user, "<span class='notice'>You check the time on your watch. It is [time].</span>")
 		return
