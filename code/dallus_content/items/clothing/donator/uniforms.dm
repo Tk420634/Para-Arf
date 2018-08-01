@@ -57,24 +57,24 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/dragon
 
 /obj/item/clothing/suit/space/new_rig/dragon
-	icon = 'icons/obj/clothing/species/unathi/suits.dmi'
+	icon = 'icons/obj/clothing/species/dragon/suits.dmi'
 	species_restricted = list("Dragon")
-	sprite_sheets = list("Dragon" = 'icons/mob/species/unathi/suit.dmi')
+	sprite_sheets = list("Dragon" = 'icons/mob/species/dragon/suit.dmi')
 
 /obj/item/clothing/head/helmet/space/new_rig/dragon
-	icon = 'icons/obj/clothing/species/unathi/hats.dmi'
+	icon = 'icons/obj/clothing/species/dragon/hats.dmi'
 	species_restricted = list("Dragon")
-	sprite_sheets = list("Dragon" = 'icons/mob/species/unathi/helmet.dmi')
+	sprite_sheets = list("Dragon" = 'icons/mob/species/dragon/helmet.dmi')
 
 /obj/item/clothing/gloves/rig/dragon
-	icon = 'icons/obj/clothing/species/unathi/gloves.dmi'
+	icon = 'icons/obj/clothing/species/dragon/gloves.dmi'
 	species_restricted = list("Dragon")
-	sprite_sheets = list("Dragon" = 'icons/mob/species/unathi/gloves.dmi')
+	sprite_sheets = list("Dragon" = 'icons/mob/species/dragon/gloves.dmi')
 
 /obj/item/clothing/shoes/magboots/rig/dragon
-	icon = 'icons/obj/clothing/species/unathi/shoes.dmi'
+	icon = 'icons/obj/clothing/species/dragon/shoes.dmi'
 	species_restricted = list("Dragon")
-	sprite_sheets = list("Dragon" = 'icons/mob/species/unathi/feet.dmi')
+	sprite_sheets = list("Dragon" = 'icons/mob/species/dragon/feet.dmi')
 
 /*
 
