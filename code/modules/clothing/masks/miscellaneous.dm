@@ -34,13 +34,14 @@
 	w_class = WEIGHT_CLASS_TINY
 	resist_time = 150
 	mute = 0
-	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Grey")
+	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Grey", "Dragon")
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/species/vox/mask.dmi',
 		"Unathi" = 'icons/mob/species/unathi/mask.dmi',
 		"Tajaran" = 'icons/mob/species/tajaran/mask.dmi',
 		"Vulpkanin" = 'icons/mob/species/vulpkanin/mask.dmi',
-		"Grey" = 'icons/mob/species/grey/mask.dmi'
+		"Grey" = 'icons/mob/species/grey/mask.dmi',
+		"Dragon" = 'icons/mob/species/dragon/mask.dmi'
 		)
 
 /obj/item/clothing/mask/muzzle/tapegag/dropped(mob/living/carbon/human/user)
@@ -64,13 +65,14 @@
 	permeability_coefficient = 0.01
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 25, rad = 0)
 	actions_types = list(/datum/action/item_action/adjust)
-	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Grey")
+	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Grey", "Dragon")
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/species/vox/mask.dmi',
 		"Unathi" = 'icons/mob/species/unathi/mask.dmi',
 		"Tajaran" = 'icons/mob/species/tajaran/mask.dmi',
 		"Vulpkanin" = 'icons/mob/species/vulpkanin/mask.dmi',
-		"Grey" = 'icons/mob/species/grey/mask.dmi'
+		"Grey" = 'icons/mob/species/grey/mask.dmi',
+		"Dragon" = 'icons/mob/species/dragon/mask.dmi'
 		)
 
 
@@ -83,13 +85,14 @@
 	icon_state = "fake-moustache"
 	flags_inv = HIDEFACE
 	actions_types = list(/datum/action/item_action/pontificate)
-	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Grey")
+	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Grey", "Dragon")
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/species/vox/mask.dmi',
 		"Unathi" = 'icons/mob/species/unathi/mask.dmi',
 		"Tajaran" = 'icons/mob/species/tajaran/mask.dmi',
 		"Vulpkanin" = 'icons/mob/species/vulpkanin/mask.dmi',
-		"Grey" = 'icons/mob/species/grey/mask.dmi'
+		"Grey" = 'icons/mob/species/grey/mask.dmi',
+		"Dragon" = 'icons/mob/species/dragon/mask.dmi'
 		)
 
 /obj/item/clothing/mask/fakemoustache/attack_self(mob/user)
@@ -268,13 +271,14 @@
 	slot_flags = SLOT_MASK
 	adjusted_flags = SLOT_HEAD
 	icon_state = "bandbotany"
-	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Grey")
+	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Grey", "Dragon")
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/species/vox/mask.dmi',
 		"Unathi" = 'icons/mob/species/unathi/mask.dmi',
 		"Tajaran" = 'icons/mob/species/tajaran/mask.dmi',
 		"Vulpkanin" = 'icons/mob/species/vulpkanin/mask.dmi',
-		"Grey" = 'icons/mob/species/grey/mask.dmi'
+		"Grey" = 'icons/mob/species/grey/mask.dmi',
+		"Dragon" = 'icons/mob/species/dragon/mask.dmi'
 		)
 	actions_types = list(/datum/action/item_action/adjust)
 

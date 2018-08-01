@@ -59,12 +59,13 @@
 	icon_state = "welding"
 	item_state = "welding"
 	burn_state = FIRE_PROOF
-	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin")
+	species_fit = list("Vox", "Unathi", "Tajaran", "Vulpkanin", "Dragon")
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/species/vox/helmet.dmi',
 		"Unathi" = 'icons/mob/species/unathi/mask.dmi',
 		"Tajaran" = 'icons/mob/species/tajaran/mask.dmi',
-		"Vulpkanin" = 'icons/mob/species/vulpkanin/mask.dmi'
+		"Vulpkanin" = 'icons/mob/species/vulpkanin/mask.dmi',
+		"Dragon" = 'icons/mob/species/dragon/mask.dmi'
 		)
 
 /obj/item/clothing/head/collectable/slime

@@ -166,18 +166,20 @@
 	desc = "A lightweight space suit with the basic ability to protect the wearer from the vacuum of space during emergencies."
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 20)
 	species_restricted = list("exclude", "Diona", "Wryn")
-	species_fit = list("Tajaran", "Unathi", "Vox", "Vulpkanin")
+	species_fit = list("Tajaran", "Unathi", "Vox", "Vulpkanin", "Dragon")
 	sprite_sheets = list(
 		"Tajaran" = 'icons/mob/species/tajaran/suit.dmi',
 		"Unathi" = 'icons/mob/species/unathi/suit.dmi',
 		"Vox" = 'icons/mob/species/vox/suit.dmi',
 		"Vulpkanin" = 'icons/mob/species/vulpkanin/suit.dmi',
+		"Dragon" = 'icons/mob/species/dragon/suit.dmi'
 		)
 	sprite_sheets_obj = list(
 		"Tajaran" = 'icons/obj/clothing/species/tajaran/suits.dmi',
 		"Unathi" = 'icons/obj/clothing/species/unathi/suits.dmi',
 		"Vox" = 'icons/obj/clothing/species/vox/suits.dmi',
-		"Vulpkanin" = 'icons/obj/clothing/species/vulpkanin/suits.dmi'
+		"Vulpkanin" = 'icons/obj/clothing/species/vulpkanin/suits.dmi',
+		"Dragon" = 'icons/obj/clothing/species/dragon/suits.dmi'
 		)
 
 /obj/item/clothing/head/helmet/space/eva
@@ -189,13 +191,14 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 20)
 	flash_protect = 0
 	species_restricted = list("exclude", "Diona", "Wryn")
-	species_fit = list("Tajaran", "Unathi", "Vox", "Vulpkanin", "Grey")
+	species_fit = list("Tajaran", "Unathi", "Vox", "Vulpkanin", "Grey", "Dragon")
 	sprite_sheets = list(
 		"Tajaran" = 'icons/mob/species/tajaran/helmet.dmi',
 		"Unathi" = 'icons/mob/species/unathi/helmet.dmi',
 		"Vox" = 'icons/mob/species/vox/helmet.dmi',
 		"Vulpkanin" = 'icons/mob/species/vulpkanin/helmet.dmi',
-		"Grey" = 'icons/mob/species/grey/helmet.dmi'
+		"Grey" = 'icons/mob/species/grey/helmet.dmi',
+		"Dragon" = 'icons/mob/species/dragon/helmet.dmi'
 		)
 	sprite_sheets_obj = list(
 		"Vox" = 'icons/obj/clothing/species/vox/hats.dmi',

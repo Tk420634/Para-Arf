@@ -84,7 +84,8 @@
 	var/obj/item/weapon/rig/holder
 	sprite_sheets = list(
 		"Tajaran" = 'icons/mob/species/tajaran/suit.dmi',
-		"Unathi" = 'icons/mob/species/unathi/suit.dmi'
+		"Unathi" = 'icons/mob/species/unathi/suit.dmi',
+		"Dragon" = 'icons/mob/species/dragon/suit.dmi'
 		)
 
 //TODO: move this to modules
