@@ -311,7 +311,7 @@ var/global/list/special_role_times = list( //minimum age (in days) for accounts 
 
 			if(S.bodyflags & HAS_HEAD_ACCESSORY) //Species that have head accessories.
 				var/headaccessoryname = "Head Accessory: "
-				if(species == "Unathi")
+				if(species == "Unathi" || species == "Dragon")
 					headaccessoryname = "Horns: "
 				dat += "<b>[headaccessoryname]</b>"
 				dat += "<a href='?_src_=prefs;preference=ha_style;task=input'>[ha_style]</a> "

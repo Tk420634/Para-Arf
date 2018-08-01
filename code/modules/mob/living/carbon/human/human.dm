@@ -81,6 +81,9 @@
 /mob/living/carbon/human/unathi/New(var/new_loc)
 	..(new_loc, "Unathi")
 
+/mob/living/carbon/human/dragon/New(var/new_loc)
+	..(new_loc, "Dragon")
+
 /mob/living/carbon/human/vox/New(var/new_loc)
 	..(new_loc, "Vox")
 
