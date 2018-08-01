@@ -32,9 +32,9 @@
 	//Andyman
 
 */
-/obj/item/weapon/rig/unathi/fancy/andy
+/obj/item/weapon/rig/dragon
 	name = "breacher chassis control module"
-	desc = "A specially modified Unathi Breacher RIG. It looks as though most of the armor plating has been removed and it has been refitted for engineering use. It displays 'OWEN' on a holotag affixed to the left side of the chestplate, along with a CentCom identification number, permitting possession and deployment of this RIG solely to a Mr. Dameon Owen"
+	desc = "A specially modified Unathi Breacher RIG, made to fit a dragon. It looks as though most of the armor plating has been removed and it has been refitted for engineering use. It displays 'OWEN' on a holotag affixed to the left side of the chestplate, along with a CentCom identification number, permitting possession and deployment of this RIG solely to a Mr. Dameon Owen"
 	suit_type = "breacher chassis"
 	icon_state = "breacher_rig"
 	vision_restriction = 0
@@ -51,16 +51,32 @@
 			/obj/item/rig_module/device/plasmacutter
 			)
 
+	chest_type = /obj/item/clothing/suit/space/new_rig/dragon
+	helm_type = /obj/item/clothing/head/helmet/space/new_rig/dragon
+	glove_type = /obj/item/clothing/gloves/rig/dragon
+	boot_type = /obj/item/clothing/shoes/magboots/rig/dragon
+
+/obj/item/clothing/suit/space/new_rig/dragon
+	icon = 'icons/obj/clothing/species/unathi/suits.dmi'
+	species_restricted = list("Dragon")
+	sprite_sheets = list("Dragon" = 'icons/mob/species/unathi/suit.dmi')
+
+/obj/item/clothing/head/helmet/space/new_rig/dragon
+	icon = 'icons/obj/clothing/species/unathi/hats.dmi'
+	species_restricted = list("Dragon")
+	sprite_sheets = list("Dragon" = 'icons/mob/species/unathi/helmet.dmi')
+
+/obj/item/clothing/gloves/rig/dragon
+	icon = 'icons/obj/clothing/species/unathi/gloves.dmi'
+	species_restricted = list("Dragon")
+	sprite_sheets = list("Dragon" = 'icons/mob/species/unathi/gloves.dmi')
+
+/obj/item/clothing/shoes/magboots/rig/dragon
+	icon = 'icons/obj/clothing/species/unathi/shoes.dmi'
+	species_restricted = list("Dragon")
+	sprite_sheets = list("Dragon" = 'icons/mob/species/unathi/feet.dmi')
+
 /*
-/obj/item/clothing/head/helmet/space/rig/unathi/andy
-	species_restricted = list("Unathi")
-	force = 5
-
-/obj/item/clothing/suit/space/rig/unathi/andy
-	species_restricted = list("Unathi")
-
-/obj/item/clothing/shoes/magboots/rig/unathi/andy
-	species_restricted = list("Unathi")
 
 	//Gozulio
 /obj/item/clothing/suit/radiation/gozu

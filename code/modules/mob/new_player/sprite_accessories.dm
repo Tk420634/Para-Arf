@@ -885,7 +885,7 @@
 */
 
 /datum/sprite_accessory/hair/unathi
-	species_allowed = list("Unathi")
+	species_allowed = list("Unathi", "Dragon")
 	glasses_over = 1
 	icon = 'icons/mob/body_accessory.dmi'
 
@@ -2087,7 +2087,7 @@
 	icon_state = "accessory_none"
 
 /datum/sprite_accessory/head_accessory/unathi
-	species_allowed = list("Unathi")
+	species_allowed = list("Unathi", "Dragon")
 	over_hair = 1
 
 /datum/sprite_accessory/head_accessory/unathi/simple
@@ -2342,7 +2342,7 @@
 	icon_state = "markings_outline_kid"
 
 /datum/sprite_accessory/body_markings/unathi
-	species_allowed = list("Unathi")
+	species_allowed = list("Unathi", "Dragon")
 
 /datum/sprite_accessory/body_markings/unathi/stripe_una
 	name = "Unathi Stripe"
