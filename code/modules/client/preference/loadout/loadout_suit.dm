@@ -158,3 +158,9 @@
 /datum/gear/suit/purplesuit
 	display_name = "suit jacket, purple"
 	path = /obj/item/clothing/suit/storage/lawyer/purpjacket
+
+//Added in by Luke Vale
+
+/datum/gear/suit/labcoat_fur
+	display_name = "labcoat, formal"
+	path = /obj/item/clothing/suit/storage/labcoat/fur
