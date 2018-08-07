@@ -252,3 +252,17 @@
  	force = 0
  	silence_steps = TRUE
  	w_class = WEIGHT_CLASS_SMALL
+
+//added in by Luke Vale
+
+/obj/item/clothing/shoes/jackboots/digi
+	name = "digitgrade boots"
+	desc = "A set of boots made for those people with digitgrade footing."
+	icon_state = "digi_boots"
+	item_state = "digi_boots"
+
+/obj/item/clothing/shoes/foot
+	name = "foot sheild"
+	desc = "A localized shield projector that protects your feel from outside harm. A inbuilt camo projector makes it invisible while being worn."
+	icon_state = "foot_sheild"
+	item_state = null
