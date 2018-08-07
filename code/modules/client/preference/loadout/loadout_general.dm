@@ -154,3 +154,10 @@
 	display_name = "explorer satchel"
 	path = "/obj/item/weapon/storage/backpack/explorer/satchel"
 	cost = 2
+
+
+//added in by Luke Vale
+
+/datum/gear/bags/plasmalighter
+	display_name = "ligher, plasma"
+	path = "/obj/item/weapon/lighter/plasma"

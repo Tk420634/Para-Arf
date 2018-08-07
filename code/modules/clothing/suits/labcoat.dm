@@ -63,3 +63,11 @@
 	desc = "A comfortable suit for paramedics. Has dark colours."
 	icon_state = "labcoat_emt_open"
 	item_state = "labcoat_emt_open"
+
+//Added in by Luke Vale
+
+/obj/item/clothing/suit/storage/labcoat/fur
+	name = "Formal labcoat"
+	desc = "A labcoat made for more formal occasions  with synthfur trimmings on the cuffs and bottom. Vary Fancy"
+	icon_state = "labcoat_formal"
+	item_state = "labcoat_formal"
