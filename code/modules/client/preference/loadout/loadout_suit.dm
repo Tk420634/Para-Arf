@@ -164,3 +164,7 @@
 /datum/gear/suit/labcoat_fur
 	display_name = "labcoat, formal"
 	path = /obj/item/clothing/suit/storage/labcoat/fur
+
+/datum/gear/suit/faded_b
+	display_name = "faded blue jacket"
+	path = /obj/item/clothing/suit/faded/blue
