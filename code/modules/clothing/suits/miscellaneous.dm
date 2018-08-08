@@ -966,3 +966,38 @@
 	name = "ladies red victorian coat"
 	icon_state = "ladiesredvictoriancoat"
 	item_state = "ladiesredvictoriancoat"
+
+
+//added by Luke Vale
+
+
+/obj/item/clothing/suit/faded/blue
+	name = "faded blue jacket"
+	desc = "A zip up jacket with a light blue fade."
+	icon_state = "fade_blue_hoodie"
+	item_state = "fade_blue_hoodie"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	allowed = list(/obj/item/device/flashlight, /obj/item/weapon/tank/emergency_oxygen, /obj/item/toy, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/lighter)
+
+	var/unbuttoned = 0
+
+	verb/toggle()
+		set name = "Toggle jacket zipper"
+		set category = "Object"
+		set src in usr
+
+		if(!usr.canmove || usr.stat || usr.restrained())
+			return 0
+
+		switch(unbuttoned)
+			if(0)
+				icon_state = "[initial(icon_state)]_open"
+				item_state = "[initial(item_state)]_open"
+				unbuttoned = 1
+				usr << "You unzip the jacket."
+			if(1)
+				icon_state = "[initial(icon_state)]"
+				item_state = "[initial(item_state)]"
+				unbuttoned = 0
+				usr << "You zip up the jacket."
+		usr.update_inv_wear_suit()
