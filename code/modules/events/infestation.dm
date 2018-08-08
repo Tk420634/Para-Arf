@@ -11,8 +11,8 @@
 
 #define VERM_MICE 0
 #define VERM_LIZARDS 1
-#define VERM_SPIDERS 2
-
+#define VERM_FOXES 2
+/*
 /datum/event/infestation
 	announceWhen = 10
 	endWhen = 11
@@ -76,10 +76,10 @@
 			spawn_types = list(/mob/living/simple_animal/lizard)
 			max_number = 6
 			vermstring = "lizards"
-		if(VERM_SPIDERS)
-			spawn_types = list(/obj/structure/spider/spiderling)
-			max_number = 3
-			vermstring = "spiders"
+		if(VERM_FOXES)
+			spawn_types = list(/mob/living/simple_animal/pet/fox, /mob/living/simple_animal/fox/fennec)
+			max_number = 2
+			vermstring = "foxes"
 
 	spawn(0)
 		var/num = rand(2,max_number)
@@ -88,7 +88,7 @@
 			turfs.Remove(T)
 			num--
 
-			if(vermin == VERM_SPIDERS)
+			if(vermin == VERM_FOXES)
 				var/obj/structure/spider/spiderling/S = new(T)
 				S.amount_grown = -1
 			else
@@ -98,7 +98,7 @@
 
 /datum/event/infestation/announce()
 	event_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Lifesign Alert")
-
+*/
 #undef LOC_KITCHEN
 #undef LOC_ATMOS
 #undef LOC_INCIN
