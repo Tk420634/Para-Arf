@@ -25,7 +25,6 @@
 
 	uniform = /obj/item/clothing/under/rank/bartender
 	suit = /obj/item/clothing/suit/armor/vest
-	belt = /obj/item/weapon/storage/belt/bandolier/full
 	shoes = /obj/item/clothing/shoes/black
 	l_ear = /obj/item/device/radio/headset/headset_service
 	glasses = /obj/item/clothing/glasses/sunglasses/reagent
