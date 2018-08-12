@@ -3,8 +3,8 @@
 	flag = CHIEF
 	department_flag = ENGSEC
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	#else
 	total_positions = 1
 	spawn_positions = 1
@@ -100,8 +100,8 @@
 	flag = ATMOSTECH
 	department_flag = ENGSEC
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 3
+	spawn_positions = 2
 	#else
 	total_positions = 3
 	spawn_positions = 2
@@ -139,8 +139,8 @@
 	flag = MECHANIC
 	department_flag = KARMA
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	#else
 	total_positions = 1
 	spawn_positions = 1

@@ -25,7 +25,6 @@
 
 	uniform = /obj/item/clothing/under/rank/bartender
 	suit = /obj/item/clothing/suit/armor/vest
-	belt = /obj/item/weapon/storage/belt/bandolier/full
 	shoes = /obj/item/clothing/shoes/black
 	l_ear = /obj/item/device/radio/headset/headset_service
 	glasses = /obj/item/clothing/glasses/sunglasses/reagent
@@ -305,8 +304,8 @@
 	flag = MIME
 	department_flag = SUPPORT
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	#else
 	total_positions = 1
 	spawn_positions = 1
@@ -396,8 +395,8 @@
 	flag = LIBRARIAN
 	department_flag = SUPPORT
 	#if MAP_ID == 999//ARFS Endeavor
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	#else
 	total_positions = 1
 	spawn_positions = 1
