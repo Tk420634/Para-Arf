@@ -189,3 +189,57 @@
 			cig.light("<span class='notice'>[user] holds the [name] out for [M], and lights the [cig.name].</span>")
 	else
 		..()
+
+
+//added in by Luke Vale
+
+/obj/item/weapon/lighter/plasma
+	name = "plasma lighter"
+	desc = "Created by a mad man, this lighter uses a actual plasma fire to light up your cigarette. In fine print, it warns to not try to use it as a makeshift plasma cutter."
+	icon_state = "P_lighter_off"
+	item_state = "zippo"
+	icon_on = "P_lighter_on"
+	icon_off = "P_lighter_off"
+
+/obj/item/weapon/lighter/plasma/attack_self(mob/living/user)
+	if(user.r_hand == src || user.l_hand == src || isrobot(user))
+		if(!lit)
+			lit = 1
+			w_class = WEIGHT_CLASS_BULKY
+			icon_state = icon_on
+			item_state = icon_on
+			if(istype(src, /obj/item/weapon/lighter/plasma) )
+				user.visible_message("<span class='rose'>Without even breaking stride, [user] activates and ignites [src] in one smooth movement.</span>")
+				playsound(src.loc, 'sound/items/ZippoLight.ogg', 25, 1)
+			else
+				if(prob(75))
+					user.visible_message("<span class='notice'>After a few attempts, [user] manages to light the [src].</span>")
+				else
+					to_chat(user, "<span class='warning'>You burn yourself while lighting the lighter.</span>")
+					var/mob/living/M = user
+					if(ishuman(M))
+						var/mob/living/carbon/human/H = M
+						var/obj/item/organ/external/affecting = H.get_organ("[user.hand ? "l" : "r" ]_hand")
+						if(affecting.take_damage( 0, 5 ))		//INFERNO
+							H.UpdateDamageIcon()
+							H.updatehealth()
+					user.visible_message("<span class='notice'>After a few attempts, [user] manages to light the [src], they however burn their finger in the process.</span>")
+
+			set_light(2)
+			processing_objects.Add(src)
+		else
+			lit = 0
+			w_class = WEIGHT_CLASS_TINY
+			icon_state = icon_off
+			item_state = icon_off
+			if(istype(src, /obj/item/weapon/lighter/zippo) )
+				user.visible_message("<span class='rose'>You hear a quiet click, as [user] shuts off [src] without even looking at what they're doing. Wow.")
+				playsound(src.loc, 'sound/items/ZippoClose.ogg', 25, 1)
+			else
+				user.visible_message("<span class='notice'>[user] quietly shuts off the [src].")
+
+			set_light(0)
+			processing_objects.Remove(src)
+	else
+		return ..()
+	return

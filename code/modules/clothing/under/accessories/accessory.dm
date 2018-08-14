@@ -671,3 +671,14 @@
 			index++
 
 		return "[output]and \a [A[index]]"
+
+
+//added in by Luke Vale
+
+/obj/item/clothing/accessory/collar/pink
+	name = "pink wide banded collar"
+	desc = "A wide banded collar, blank with a pink strip running over it to give it some flare."
+	item_state = "collar_p"
+	icon_state = "collar_p"
+	item_color = "collar_p"
+	slot_flags = SLOT_MASK | SLOT_TIE

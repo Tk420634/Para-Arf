@@ -146,3 +146,15 @@
 	display_name = "blue performers boots"
 	cost = 1
 	path = /obj/item/clothing/shoes/singerb
+
+//added in by Luke Vale
+
+/datum/gear/shoes/digi_boots
+	display_name = "digitgrade boots"
+	cost = 2
+	path = /obj/item/clothing/shoes/jackboots/digi
+
+/datum/gear/shoes/footshield
+	display_name = "foot forcefield"
+	cost = 1
+	path = /obj/item/clothing/shoes/foot

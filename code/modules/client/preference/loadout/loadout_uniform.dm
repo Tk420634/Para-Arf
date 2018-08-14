@@ -574,3 +574,9 @@
 /datum/gear/uniform/under/cuttopred
 	display_name = "red cut top"
 	path =/obj/item/clothing/under/cuttop_red
+
+//added in by Luke Vale
+
+/datum/gear/uniform/under/purp_skirt
+	display_name = ""
+	path =/obj/item/clothing/under/purp_skirt
