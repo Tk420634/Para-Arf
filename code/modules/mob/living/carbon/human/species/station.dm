@@ -125,9 +125,13 @@
 		"is twisting their own neck!",
 		"is holding their breath!")
 
+/datum/species/dragon/handle_life(var/mob/living/carbon/human/H)
+	if(H.mind)
+		if(H.mind.spell_list.len == 0)
+			H.mind.AddSpell(new /obj/effect/proc_holder/spell/dragonfireball(null))
+
 /datum/species/dragon/handle_death(var/mob/living/carbon/human/H)
 	H.stop_tail_wagging(1)
-
 
 /datum/species/tajaran
 	name = "Tajaran"

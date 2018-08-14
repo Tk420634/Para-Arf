@@ -235,3 +235,43 @@
 	for(var/turf/T in wipe_colours)
 		T.color = null
 		T.maptext = ""
+
+/proc/fakeexplosion(turf/epicenter, flash_range, smoke = 1, silent = 0)
+	src = null
+	epicenter = get_turf(epicenter)
+	spawn(0)
+
+		if(!epicenter) return
+
+		if(!silent)
+			var/frequency = get_rand_frequency()
+			var/sound/global_boom = sound('sound/effects/explosionfar.ogg')
+
+			for(var/P in player_list)
+				var/mob/M = P
+				// Double check for client
+				if(M && M.client)
+					var/turf/M_turf = get_turf(M)
+					if(M_turf && M_turf.z == epicenter.z)
+						var/dist = get_dist(M_turf, epicenter)
+						// If inside the blast radius + world.view - 2
+						if(dist <= round(world.view - 2, 1))
+							M.playsound_local(epicenter, null, 100, 1, frequency, falloff = 5, S = global_boom)
+
+		if(smoke)
+			var/datum/effect/system/explosion/smoke/E = new/datum/effect/system/explosion/smoke()
+			E.set_up(epicenter)
+			E.start()
+
+		var/list/affected_turfs = epicenter
+
+		for(var/A in affected_turfs)
+			var/turf/T = A
+			if(!T)
+				continue
+
+			if(T)
+				if(!istype(T, /turf/space) && !T.density)
+					new /obj/effect/hotspot(T)
+
+	return 1
