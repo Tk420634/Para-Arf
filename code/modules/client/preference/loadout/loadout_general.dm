@@ -158,6 +158,10 @@
 
 //added in by Luke Vale
 
-/datum/gear/bags/plasmalighter
+/datum/gear/plasmalighter
 	display_name = "ligher, plasma"
 	path = "/obj/item/weapon/lighter/plasma"
+
+/datum/gear/h_fan
+	display_name = "Bamboo hand fan"
+	path = "/obj/item/weapon/h_fan"

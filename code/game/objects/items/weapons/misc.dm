@@ -143,3 +143,32 @@
 	if(cooldown < world.time - 20)
 		playsound(user.loc, 'sound/weapons/ring.ogg', 50, 1)
 		cooldown = world.time
+
+//added in by luke vale
+
+/obj/item/weapon/h_fan
+	name = "hand fan"
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "hfan"
+	desc = "A small bamboo frame, with paper interlacing it's spokes, used to fan ones self off in hot weather."
+	var/fanned = 0
+
+/obj/item/weapon/h_fan/attack_self(mob/living/user)
+	if(user.r_hand == src || user.l_hand == src || isrobot(user))
+		if(!fanned)
+			fanned = 1
+			w_class = WEIGHT_CLASS_BULKY
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(icon_state)]_open"
+			user.visible_message("<span class='rose'>[user] with a gesture of the hand, flips open [src].</span>")
+			processing_objects.Add(src)
+		else
+			fanned = 0
+			w_class = WEIGHT_CLASS_TINY
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(icon_state)]"
+			user.visible_message("<span class='rose'>[user] snaps [src] close, compacting it down to it's original state.</span>")
+			processing_objects.Remove(src)
+	else
+		return ..()
+	return
