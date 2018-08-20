@@ -578,5 +578,5 @@
 //added in by Luke Vale
 
 /datum/gear/uniform/under/purp_skirt
-	display_name = ""
+	display_name = "Purple Skirtsweater"
 	path =/obj/item/clothing/under/purp_skirt
