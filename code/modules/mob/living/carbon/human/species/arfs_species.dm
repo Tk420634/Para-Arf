@@ -299,6 +299,14 @@
 /mob/living/carbon/human/zigzagoon/New(var/new_loc)
     ..(new_loc, "Zigzagoon")
 
+/mob/living/carbon/human/umbreon/New(var/new_loc)
+    ..(new_loc, "Umbreon")
+
+/mob/living/carbon/human/hellhound/New(var/new_loc)
+    ..(new_loc, "Hellhound")
+
+
+
 
 
 
@@ -1138,6 +1146,24 @@
 	speech_chance = 20
 	male_scream_sound = 'sound/misc/arf_race_sounds/bird1.ogg'
 	female_scream_sound = 'sound/misc/arf_race_sounds/bird1.ogg'
+	reagent_tag = PROCESS_ORG
+
+
+/datum/species/hellhound
+	name = "Hellhound"
+	name_plural = "Hellhounds"
+	icobase = 'icons/mob/human_races/ARF Races/r_hellhound_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_hellhound_arf.dmi'
+	primitive_form = "Monkey"
+	path = /mob/living/carbon/human/hellhound
+	language = "Sol Common"
+	tail = "helltail"
+	species_traits = list(LIPS, IS_WHITELISTED)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
 	reagent_tag = PROCESS_ORG
 
 /datum/species/hippo
@@ -2073,6 +2099,24 @@
 	blurb = "Placeholder."
 	reagent_tag = PROCESS_ORG
 
+
+/datum/species/umbreon
+	name = "Umbreon"
+	name_plural = "Umbreons"
+	icobase = 'icons/mob/human_races/ARF Races/r_umbreon_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_umbreon_arf.dmi'
+	primitive_form = "umbreon"
+	path = /mob/living/carbon/human/umbreon
+	language = "Sol Common"
+	tail = "umbreontail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
 /datum/species/vulpix
 	name = "Vulpix"
 	name_plural = "Vulpix"
@@ -2781,3 +2825,10 @@
 	species_allowed = list("Zebra")
 	icon = 'icons/mob/human_races/ARF Races/arf color layers/zebraf2.dmi'
 	icon_state = "zebra_f_s_2"
+
+/datum/sprite_accessory/body_markings/arf_species/umbreon_color1
+	name = "umbreon spots"
+	species_allowed = list("Umbreon")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/umbreon.dmi'
+	icon_state = "umbreon_s"
+
