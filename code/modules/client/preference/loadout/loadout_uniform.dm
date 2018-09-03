@@ -578,5 +578,9 @@
 //added in by Luke Vale
 
 /datum/gear/uniform/under/purp_skirt
-	display_name = ""
+	display_name = "purple sweater skirt"
 	path =/obj/item/clothing/under/purp_skirt
+
+/datum/gear/uniform/under
+	display_name = "virgin killer sweater, light blue"
+	path =/obj/item/clothing/under/v_sweater_lblue
