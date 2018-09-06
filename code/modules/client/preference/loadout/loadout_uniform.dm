@@ -581,6 +581,6 @@
 	display_name = "purple sweater skirt"
 	path =/obj/item/clothing/under/purp_skirt
 
-/datum/gear/uniform/under
-	display_name = "virgin killer sweater, light blue"
-	path =/obj/item/clothing/under/v_sweater_lblue
+/datum/gear/under/virgin_s
+	display_name = "vs sweater, light blue"
+	path = /obj/item/clothing/under/v_sweater_lblue
