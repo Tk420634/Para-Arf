@@ -1950,7 +1950,7 @@
 	tail = "skunktail"
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
-	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Le pew."
@@ -2831,4 +2831,10 @@
 	species_allowed = list("Umbreon")
 	icon = 'icons/mob/human_races/ARF Races/arf color layers/umbreon.dmi'
 	icon_state = "umbreon_s"
+
+/datum/sprite_accessory/body_markings/arf_species/skunk_color1
+	name = "skunk stripe"
+	species_allowed = list("Skunk")
+	icon = 'icons/mob/human_races/ARF Races/arf color layers/skunk.dmi'
+	icon_state = "skunk_s"
 
