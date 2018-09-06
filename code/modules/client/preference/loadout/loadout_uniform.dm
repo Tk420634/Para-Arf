@@ -583,4 +583,4 @@
 
 /datum/gear/uniform/virgin_s
 	display_name = "vs sweater, light blue"
-	path = /obj/item/clothing/under/v_sweater_lblue
+	path =/obj/item/clothing/under/v_sweater_lblue
