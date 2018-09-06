@@ -143,6 +143,41 @@ var/global/list/body_accessory_by_species = list("None" = null)
 
 	pixel_x_offset = -16
 
+
+/datum/body_accessory/body/leoperd
+	name = "Leoperd Taur Body"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "leopard"
+
+	pixel_x_offset = -16
+
+/datum/body_accessory/body/drake
+	name = "Drake Taur Body"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "Drake"
+
+	pixel_x_offset = -16
+
+
+/datum/body_accessory/body/roiztail
+	name = "Big Lizard Tail"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "roiz_tail"
+
+	pixel_x_offset = -16
+
+/datum/body_accessory/body/frog
+	name = "Frog Taur Body"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "Frog"
+
+	pixel_x_offset = -16
+
+
 //Tails
 /datum/body_accessory/tail
 	icon = 'icons/mob/body_accessory.dmi'
