@@ -849,3 +849,12 @@
 	item_color = "purp_skirt"
 	item_state = "purp_skirt"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+
+
+/obj/item/clothing/under/v_sweater_lblue
+	name = "virgin killer sweater"
+	desc = "A odd sweater, the design is ment to be highly procitive, and it won't provide all to much warmth. This is is light blue."
+	icon_state = "v_sweater"
+	item_color = "v_sweater"
+	item_state = "v_sweater"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
