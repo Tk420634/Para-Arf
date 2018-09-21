@@ -161,7 +161,49 @@
 /datum/gear/plasmalighter
 	display_name = "ligher, plasma"
 	path = "/obj/item/weapon/lighter/plasma"
+	cost = 5
 
 /datum/gear/h_fan
 	display_name = "Bamboo hand fan"
 	path = "/obj/item/weapon/h_fan"
+	cost = 2
+
+//Zippo's - TP
+/datum/gear/normalzippo
+	display_name = "Zippo"
+	path = "/obj/item/weapon/lighter/zippo"
+
+/datum/gear/arfzippo
+	display_name = "A.R.F. Zippo"
+	path = "/obj/item/weapon/lighter/zippo/arf_rep"
+	cost = 5
+
+/datum/gear/bluezippo
+	display_name = "Blue Zippo"
+	path = "/obj/item/weapon/lighter/zippo/blue"
+	cost = 5
+
+/datum/gear/blackzippo
+	display_name = "Black Zippo"
+	path = "/obj/item/weapon/lighter/zippo/black"
+	cost = 5
+
+/datum/gear/engravedzippo
+	display_name = "Engraved Zippo"
+	path = "/obj/item/weapon/lighter/zippo/engraved"
+	cost = 5
+
+/datum/gear/Gonzozippo
+	display_name = "Gozno Fist Zippo"
+	path = "/obj/item/weapon/lighter/zippo/gonzo"
+	cost = 5
+
+/datum/gear/ruggedzippo
+	display_name = "Rugged Zippo"
+	path = "/obj/item/weapon/lighter/zippo/rugged"
+	cost = 5
+
+/datum/gear/cosmiczippo
+	display_name = "Cosmic Zippo"
+	path = "/obj/item/weapon/lighter/zippo/cosmic"
+	cost = 5

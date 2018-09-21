@@ -584,3 +584,11 @@
 /datum/gear/uniform/virgin_s
 	display_name = "vs sweater, light blue"
 	path =/obj/item/clothing/under/v_sweater_lblue
+
+/datum/gear/uniform/amishsuit
+	display_name = "amish suit"
+	path = /obj/item/clothing/under/sl_suit
+
+/datum/gear/uniform/amishsuit
+	display_name = "amish suit"
+	path = /obj/item/clothing/under/sl_suit

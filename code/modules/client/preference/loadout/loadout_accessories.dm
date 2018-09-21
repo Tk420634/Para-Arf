@@ -205,22 +205,6 @@
 	display_name = "pink banded collar"
 	path = /obj/item/clothing/accessory/collar/pink
 
-/datum/gear/accessory/collar_silver
-	display_name = "silver tag collar"
-	path = /obj/item/clothing/accessory/collar/silver
-
-/datum/gear/accessory/collar_gold
-	display_name = "gold tag collar"
-	path = /obj/item/clothing/accessory/collar/gold
-
-/datum/gear/accessory/collar_bell
-	display_name = "bell collar"
-	path = /obj/item/clothing/accessory/collar/bell
-
-/datum/gear/accessory/collar_spikes
-	display_name = "spiked collar"
-	path = /obj/item/clothing/accessory/collar/spike
-
-/datum/gear/accessory/collar_fab_pink
-	display_name = "pink collar"
-	path = /obj/item/clothing/accessory/collar/fab_pink
+/datum/gear/accessory/watch
+	display_name = "watch"
+	path = /obj/item/clothing/accessory/watch
