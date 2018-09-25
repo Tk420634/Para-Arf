@@ -130,7 +130,7 @@
 	icon_on = "engravedzippoon"
 	icon_off = "engravedzippo"
 
-/obj/item/weapon/lighter/zippo/gonzo
+/obj/item/weapon/lighter/zippo/gonzofist
 	name = "Gonzo Fist zippo"
 	desc = "A Zippo lighter with the iconic Gonzo Fist on a matte black finish."
 	icon_state = "gonzozippo"
