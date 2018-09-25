@@ -147,6 +147,11 @@
 	desc = "A retro high-powered autorevolver typically used by officers of the New Russia military. Uses .357 ammo."	//>10mm hole >.357
 	icon_state = "mateba"
 
+/obj/item/weapon/gun/projectile/revolver/mateba/wolfy
+	name = "\improper Wolfy's Revolver"
+	desc = "A slightly customized Unica 6 Autorevolver. It has a wolf design on the barrel."//>10mm hole >.357
+	icon_state = "mateba"
+
 /obj/item/weapon/gun/projectile/revolver/golden
 	name = "\improper Golden revolver"
 	desc = "This ain't no game, ain't never been no show, And I'll gladly gun down the oldest lady you know. Uses .357 ammo."
