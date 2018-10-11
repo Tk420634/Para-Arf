@@ -406,6 +406,7 @@
 			while(query_old_ban.NextRow())
 				message_admins("<font color='blue'>[ckey] has a permaban in the old ban database. CKEY: [query_old_ban.item[1]], IP: [query_old_ban.item[2]], CID: [query_old_ban.item[3]], REASON: [query_old_ban.item[4]], ADMIN: [query_old_ban.item[5]]</font>")
 				send2adminirc("Ban Evasion Notification: [ckey] has a permaban in the old ban database. CKEY: [query_old_ban.item[1]], IP: [query_old_ban.item[2]], CID: [query_old_ban.item[3]], REASON: [query_old_ban.item[4]], ADMIN: [query_old_ban.item[5]]")
+				break
 
 		if (config.panic_bunker) //PANIC BUNKER BOIS
 			log_access("Failed Login: [ckey] - New account attempting to connect during panic bunker")
