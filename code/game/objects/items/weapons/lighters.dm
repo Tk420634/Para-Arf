@@ -130,12 +130,33 @@
 	icon_on = "engravedzippoon"
 	icon_off = "engravedzippo"
 
-/obj/item/weapon/lighter/zippo/gonzofist
+/obj/item/weapon/lighter/zippo/gonzo
 	name = "Gonzo Fist zippo"
 	desc = "A Zippo lighter with the iconic Gonzo Fist on a matte black finish."
 	icon_state = "gonzozippo"
 	icon_on = "gonzozippoon"
 	icon_off = "gonzozippo"
+
+/obj/item/weapon/lighter/zippo/rugged
+	name = "Rugged Plazippo"
+	desc = "A Rugged Zippo awarded to officers in the A.R.F.C.G. This one uses plasma."
+	icon_state = "Rugged_Plazippo"
+	icon_on = "Rugged_Plazippo_On"
+	icon_off = "Rugged_Plazippo"
+
+/obj/item/weapon/lighter/zippo/bloodstained
+	name = "Bloddstained Plazippo"
+	desc = "An officers plazippo covered in dried blood. Closer inspection reveals an engraving that reads 'Mama is proud of you'."
+	icon_state = "Bloodstained_Plazippo"
+	icon_on = "Bloodstained_Plazippo_On"
+	icon_off = "Bloodstained_Plazippo"
+
+/obj/item/weapon/lighter/zippo/cosmic
+	name = "Cosmic Guard Zippo"
+	desc = "A Zippo given to members of the A.R.F. Cosmic Guard, the military branch."
+	icon_state = "Cosmic_Guard_Zippo"
+	icon_on = "Cosmic_Guard_Zippo_On"
+	icon_off = "Cosmic_Guard_Zippo"
 
 ///////////
 //MATCHES//

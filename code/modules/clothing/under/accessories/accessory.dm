@@ -681,4 +681,44 @@
 	item_state = "collar_p"
 	icon_state = "collar_p"
 	item_color = "collar_p"
-	slot_flags = SLOT_MASK | SLOT_TIE
+	slot_flags = SLOT_TIE
+
+/obj/item/clothing/accessory/collar/silver
+	name = "silver tag collar"
+	desc = "A simple leather collar with a silver tag attached to it."
+	item_state = "collar_blk"
+	icon_state = "collar_blk"
+	item_color = "collar_blk"
+	slot_flags = SLOT_TIE
+
+/obj/item/clothing/accessory/collar/gold
+	name = "gold tag collar"
+	desc = "A simple leather collar with a golden tag attached to it."
+	item_state = "collar_gld"
+	icon_state = "collar_gld"
+	item_color = "collar_gld"
+	slot_flags = SLOT_TIE
+
+/obj/item/clothing/accessory/collar/bell
+	name = "bell collar"
+	desc = "A simple leather collar with a bell attached to it."
+	item_state = "collar_bell"
+	icon_state = "collar_bell"
+	item_color = "collar_bell"
+	slot_flags = SLOT_TIE
+
+/obj/item/clothing/accessory/collar/spike
+	name = "spiked collar"
+	desc = "A simple leather collar with metal spikes adorned around it."
+	item_state = "collar_spik"
+	icon_state = "collar_spik"
+	item_color = "collar_spik"
+	slot_flags = SLOT_TIE
+
+/obj/item/clothing/accessory/collar/fab_pink
+	name = "pink collar"
+	desc = "A leather collar that's been stained bright pink, and it'll look absolutly fabulous!"
+	item_state = "collar_pnk"
+	icon_state = "collar_pnk"
+	item_color = "collar_pnk"
+	slot_flags = SLOT_TIE

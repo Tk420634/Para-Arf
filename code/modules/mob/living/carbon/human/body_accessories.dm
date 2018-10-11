@@ -511,11 +511,12 @@ datum/body_accessory/tail/foxtail
 	name = "Siamese Tail"
 	icon_state = "siamesetail"
 
-
+*/
 /datum/body_accessory/tail/skunktail
 	name = "Skunk Tail"
-	icon_state = "skunktail"
-
+	icon_state = "skunktail_s"
+	icon = 'icons/effects/species.dmi'
+/*
 
 /datum/body_accessory/tail/snailtail
 	name = "Snail Tail"
@@ -526,11 +527,12 @@ datum/body_accessory/tail/foxtail
 	name = "Snarby Tail"
 	icon_state = "snarbytail"
 
-
+*/
 /datum/body_accessory/tail/squirreltail
 	name = "Squirrel Tail"
-	icon_state = "squirreltail"
-
+	icon_state = "squirreltail_s"
+	icon = 'icons/effects/species.dmi'
+/*
 
 /datum/body_accessory/tail/turtletail
 	name = "Turtle Tail"
@@ -552,145 +554,154 @@ datum/body_accessory/tail/foxtail
 	name = "Zig Tail"
 	icon_state = "zigtail"
 
-
+*/
 /datum/body_accessory/tail/acaeliustail
 	name = "Acaelius Tail"
-	icon_state = "acaeliustail"
+	icon_state = "acaeliustail_s"
 	allowed_species = list("Human", "IPC")
+	icon = 'icons/effects/species.dmi'
 
 
 // ARF WINGS
 //THIS POSISTION IS LIKELY TEMPORARY UNTIL JON CAN FIGURE OUT HOW TO ADD
 //WINGS PROPERLY, WITHOUT TAKING UP THE TAIL SLOT
-
+//Going to take up the tails slot for now, deal with it - TP
 
 /datum/body_accessory/tail/succredtail
 	name = "Succubus Red Wings"
-	icon_state = "succubus-red"
+	icon_state = "succubus-red_s"
+	icon = 'icons/effects/species.dmi'
 
 
 /datum/body_accessory/tail/succbltail
 	name = "Succubus Black Wings"
-	icon_state = "succubus-bl"
-
+	icon_state = "succubus-black_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/succputail
 	name = "Succubus Pink Wings"
-	icon_state = "succubus-pu"
-
+	icon_state = "succubus-purple_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/batbltail
 	name = "Bat Black Wings"
-	icon_state = "bat-black"
-	allowed_species = list("Human", "Bat")
+	icon_state = "bat-black_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/batredtail
 	name = "Bat Red Wings"
-	icon_state = "bat-red"
-	allowed_species = list("Human", "Bat")
-
+	icon_state = "bat-red_s"
+	icon = 'icons/effects/species.dmi'
+/*
 /datum/body_accessory/tail/batcolortail
 	name = "Bat Colorable Wings"
 	icon_state = "bat-color"
-	allowed_species = list("Human", "Bat")
+*/
 
 /datum/body_accessory/tail/feathtail
 	name = "Feathered Wings"
-	icon_state = "feathered"
-
+	icon_state = "feathered_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/mothtail
 	name = "Moth Wings"
-	icon_state = "moth"
-
+	icon_state = "moth_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/mothfulltail
 	name = "Moth Fluff and Wings"
-	icon_state = "moth_full"
-
+	icon_state = "moth_full_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/beewingtail
 	name = "Bee Wings"
-	icon_state = "beewings"
-
+	icon_state = "beewings_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/dragontail
 	name = "Dragon Wings"
-	icon_state = "dragon"
-
+	icon_state = "dragon_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/sepulchretail
 	name = "Sepulchre Wings"
-	icon_state = "sepulchre_wings"
-
+	icon_state = "sepulchre_wings_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/harpytail
 	name = "Harpy Wings"
-	icon_state = "harpywings"
-
+	icon_state = "harpywings_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/miriafluffdragontail
 	name = "Fluff Dragon Tail"
-	icon_state = "miria-fluffdragontail"
-
+	icon_state = "miria-fluffdragontail_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/miriafluffwingstail
 	name = "Fluff Dragon Wings"
-	icon_state = "miria-fluffwings"
-
+	icon_state = "miria-fluffwings_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/screewingtail
 	name = "Scree Wings"
-	icon_state = "scree-wings"
-
+	icon_state = "scree-wings_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/xenobackplatetail
 	name = "Xenomorph Back Growth"
-	icon_state = "snag-backplate"
-
+	icon_state = "snag-backplate_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/kerenawingtail
 	name = "Kerena Wings"
-	icon_state = "kerena-wings"
-
+	icon_state = "kerena-wings_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/spiderwingtail
 	name = "Spider Leg Back Growth"
-	icon_state = "spider-legs"
-
+	icon_state = "spider-legs_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/eyestalkstail
 	name = "Eyestalk Growth"
-	icon_state = "liquidfirefly-eyestalks"
-
+	icon_state = "liquidfirefly-eyestalks_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/tentaclewingtail
 	name = "Tentacle Growth"
-	icon_state = "tentacle"
-
+	icon_state = "tentacle_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/angelwingtail
 	name = "Angel Wings"
-	icon_state = "angel"
-
+	icon_state = "angel_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/butterflybluewingtail
 	name = "Blue Butterfly Wings"
-	icon_state = "butterflymain"
-
+	icon_state = "butterflymain_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/swallowcolorablewingtail
 	name = "Swallowtail Butterfly Colorable Wings"
-	icon_state = "swallowtail"
-
+	icon_state = "swallowtail_s"
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/monarchwingtail
 	name = "Monarch Butterfly Wings"
-	icon_state = "butterflycolor"  //Not supposed to be colored, lol
-
+	icon_state = "butterflycolor_s"  //Not supposed to be colored, lol
+	icon = 'icons/effects/species.dmi'
 
 /datum/body_accessory/tail/monarchcolorwingtail
 	name = "Monarch Butterfly Colorable Wings"
 	icon_state = "monarch"  //Supposed to be colored, lol
+	icon = 'icons/effects/species.dmi'
 
-*/
+/datum/body_accessory/tail/ninetails
+	name = "Nine tails"
+	icon_state = "nine_tails"
+	icon = 'icons/effects/species.dmi'
+
+
+

@@ -204,3 +204,7 @@
 /datum/gear/accessory/collar_pink
 	display_name = "pink banded collar"
 	path = /obj/item/clothing/accessory/collar/pink
+
+/datum/gear/accessory/watch
+	display_name = "watch"
+	path = /obj/item/clothing/accessory/watch
