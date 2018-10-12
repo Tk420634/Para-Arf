@@ -66,6 +66,7 @@
 	var/jobs_have_minimal_access = 0	//determines whether jobs use minimal access or expanded access.
 	var/round_abandon_penalty_period = 30 MINUTES // Time from round start during which ghosting out is penalized
 
+	var/old_bans_table = ""				//name of the old bans table
 	var/panic_bunker = 0 				//panic bunker, bois
 
 	var/reactionary_explosions = 0 //If we use reactionary explosions, explosions that react to walls and doors
@@ -610,6 +611,9 @@
 				if("disable_karma")
 					disable_karma = 1
 
+				if("panic_bunker") 			//Panic bunker
+					panic_bunker = 1
+
 				else
 					diary << "Unknown setting in configuration: '[name]'"
 
@@ -717,6 +721,8 @@
 				sqlfdbktableprefix = value
 			if("db_version")
 				db_version = text2num(value)
+			if("old_bans_table")		//Table for old bans to use
+				old_bans_table = value
 			else
 				diary << "Unknown setting in configuration: '[name]'"
 	if(config.sql_enabled && db_version != SQL_VERSION)
