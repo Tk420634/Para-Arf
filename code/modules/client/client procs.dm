@@ -400,20 +400,27 @@
 		break
 
 	if(player_age == 0)
-		if (config.old_bans_table != "")
-			var/DBQuery/query_old_ban = dbcon.NewQuery("SELECT ckey, ip, computerid, reason, a_ckey FROM [format_table_name(config.old_bans_table)] WHERE (ckey = '[ckey]' OR ip = '[address]' OR computerid = '[computer_id]') AND bantype = 'PERMABAN' AND unbanned IS NULL")
-			query_old_ban.Execute()
-			while(query_old_ban.NextRow())
-				message_admins("<font color='blue'>[ckey] has a permaban in the old ban database. CKEY: [query_old_ban.item[1]], IP: [query_old_ban.item[2]], CID: [query_old_ban.item[3]], REASON: [query_old_ban.item[4]], ADMIN: [query_old_ban.item[5]]</font>")
-				send2adminirc("Ban Evasion Notification: [ckey] has a permaban in the old ban database. CKEY: [query_old_ban.item[1]], IP: [query_old_ban.item[2]], CID: [query_old_ban.item[3]], REASON: [query_old_ban.item[4]], ADMIN: [query_old_ban.item[5]]")
-				break
-
 		if (config.panic_bunker) //PANIC BUNKER BOIS
 			log_access("Failed Login: [ckey] - New account attempting to connect during panic bunker")
 			message_admins("<span class='adminnotice'>Failed Login: [ckey] - New account attempting to connect during panic bunker</span>")
 			to_chat(src, "Sorry but the server is currently not accepting connections from never before seen players.")
 			del(src)
 			return
+
+		if (config.old_bans_table != "")
+			var/DBQuery/query_old_ban = dbcon.NewQuery("SELECT ckey, ip, computerid, reason, a_ckey, bantype FROM [format_table_name(config.old_bans_table)] WHERE (ckey = '[ckey]' OR ip = '[address]' OR computerid = '[computer_id]') AND unbanned IS NULL")
+			query_old_ban.Execute()
+			while(query_old_ban.NextRow())
+				//Check if they have any notes
+				var/DBQuery/query_note_exists = dbcon.NewQuery("SELECT ckey FROM [format_table_name("notes")] WHERE ckey = '[ckey]'")
+				query_note_exists.Execute()
+				if(!query_note_exists.NextRow())  //No notes found, so things need to be done
+					//Notify Admins
+					message_admins("<font color='blue'>[ckey] has a ban in the old ban database. CKEY: [query_old_ban.item[1]], IP: [query_old_ban.item[2]], CID: [query_old_ban.item[3]], REASON: [query_old_ban.item[4]], ADMIN: [query_old_ban.item[5]], TYPE: [query_old_ban.item[6]]</font>")
+					send2adminirc("Ban Evasion Notification: [ckey] has a ban in the old ban database. CKEY: [query_old_ban.item[1]], IP: [query_old_ban.item[2]], CID: [query_old_ban.item[3]], REASON: [query_old_ban.item[4]], ADMIN: [query_old_ban.item[5]], TYPE: [query_old_ban.item[6]]")
+					//Autonote
+					add_note(ckey, "Old ban located in database. CKEY: [query_old_ban.item[1]], IP: [query_old_ban.item[2]], CID: [query_old_ban.item[3]], REASON: [query_old_ban.item[4]], ADMIN: [query_old_ban.item[5]], TYPE: [query_old_ban.item[6]]", adminckey = "Server_Autonoter", logged = 0, checkrights = 0)
+				break
 
 	check_shodan()
 
