@@ -255,6 +255,20 @@
 	new /obj/item/clothing/under/sexymime(src.loc)
 	qdel(src)
 
+//New costumes
+/obj/effect/landmark/costume/deathsquad/New()
+	new /obj/item/clothing/head/deathsquad(src.loc)
+	new /obj/item/clothing/suit/deathsquad(src.loc)
+	new /obj/item/weapon/toy/destroyer(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/costume/pirate/New()
+	new /obj/item/clothing/head/bandana(src.loc)
+	new /obj/item/clothing/under/pirate(src.loc)
+	new /obj/item/clothing/glasses/eyepatch(src.loc)
+	new /obj/item/weapon/toy/sword/pirate(src.loc)
+	qdel(src)
+
 /obj/effect/landmark/ruin
 	var/datum/map_template/ruin/ruin_template
 
