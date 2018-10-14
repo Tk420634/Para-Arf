@@ -1795,3 +1795,45 @@ obj/item/toy/cards/deck/syndicate/black
 	icon_state = "conch"
 	use_action = "pulls the string"
 	possible_answers = list("Yes.", "No.", "Try asking again.", "Nothing.", "I don't think so.", "Neither.", "Maybe someday.")
+
+//Costume equipment
+/obj/item/weapon/toy/destroyer
+	name = "pulse destroyer"
+	desc = "A heavy-duty, pulse-based energy weapon. This one is made of cheap plastic."
+	icon = 'icons/obj/guns/energy.dmi'
+	icon_state = "pulse"
+
+/obj/item/weapon/toy/sword/pirate
+	name = "energy cutlass"
+	desc = "Arrrr matey."
+	icon_state = "cutlass0"
+	item_state = "cutlass1"
+	icon = 'icons/obj/weapons.dmi'
+/*
+/obj/item/weapon/gun/projectile/automatic/candycorn
+	name = "candy-corn SMG"
+	desc = "Hailing from planet Mars, this deadly combination of delicious and deadly will make everyone think twice about messing with you."
+	icon = 'code/cactus/obj/obj.dmi'
+	icon_state = "candy"
+	origin_tech = "combat=1;materials=1"
+	w_class = 3
+	mag_type = /obj/item/ammo_box/magazine/candycorn
+	can_suppress = 1
+	burst_size = 2
+	fire_delay = 2
+	action_button_name = "Toggle Firemode"
+	playsound(src, 'sound/weapons/Gunshot.ogg', 50, 1)
+//	can_suppress = 0
+
+/obj/item/ammo_casing/candycorn
+	name = "candy-corn cartridge"
+	desc = "Is this edible, too?"
+	fire_sound = 'code/cactus/sound/pew2.ogg'
+	caliber = "candy"
+	projectile_type = /obj/item/projectile/candycorn
+
+/obj/item/projectile/candycorn
+	damage = 0
+	stamina = 5
+	icon_state = "ccorn"
+*/
