@@ -1011,3 +1011,17 @@
 				unbuttoned = 0
 				usr << "You zip up the jacket."
 		usr.update_inv_wear_suit()
+
+//Costumes! -Thingpony~
+
+/obj/item/clothing/head/deathsquad
+	name = "deathsquad helmet"
+	desc = "That's not red paint. That's real blood. Looking closer, it is red paint!"
+	icon_state = "deathsquad"
+	item_state = "deathsquad"
+
+/obj/item/clothing/suit/deathsquad
+	name = "deathsquad suit"
+	desc = "A heavily armored, advanced space suit that protects against most forms of damage. This one looks made of cheap plastic."
+	icon_state = "deathsquad"
+	item_state = "swat_suit"
