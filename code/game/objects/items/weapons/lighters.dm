@@ -158,6 +158,56 @@
 	icon_on = "Cosmic_Guard_Zippo_On"
 	icon_off = "Cosmic_Guard_Zippo"
 
+//New zippo's from AIEOU station
+
+/obj/item/weapon/lighter/zippo/moffzippo
+	name = "Moff Zippo"
+	desc = "A dark grey zippo with a pretty moff on it!."
+	icon_state = "moffzippo"
+	icon_on = "moffzippoon"
+	icon_off = "moffzippo"
+
+/obj/item/weapon/lighter/zippo/red
+	name = "Red Zippo"
+	desc = "A simple red zippo with a sliver band."
+	icon_state = "redzippo"
+	icon_on = "redzippoon"
+	icon_off = "redzippo"
+
+/obj/item/weapon/lighter/zippo/ironiczippo
+	name = "ironic zippo"
+	desc = "A zippo in the shape of a fire extinguisher."
+	icon_state = "ironiczippo"
+	icon_on = "ironiczippoon"
+	icon_off = "ironiczippo"
+
+/obj/item/weapon/lighter/zippo/cappiezippo
+	name = "Captains Zippo"
+	desc = "A gold and black zippo for the Captain."
+	icon_state = "cappiezippo"
+	icon_on = "cappiezippoon"
+	icon_off = "cappiezippo"
+
+/obj/item/weapon/lighter/zippo/rainbowzippo
+	name = "Rainbow Zippo"
+	desc = "A very colorful zippo!."
+	icon_state = "rainbowzippo"
+	icon_on = "rainbowzippoon"
+	icon_off = "rainbowzippo"
+
+/obj/item/weapon/lighter/zippo/royalzippo
+	name = "Captains Zippo"
+	desc = "A very royal looking zippo"
+	icon_state = "royalzippo"
+	icon_on = "royalzippoon"
+	icon_off = "royalzippo"
+
+/obj/item/weapon/lighter/zippo/commiezippo
+	name = "Black and Red Zippo"
+	desc = "It's a black and red zippo"
+	icon_state = "commiezippo"
+	icon_on = "commiezippoon"
+	icon_off = "commiezippo"
 ///////////
 //MATCHES//
 ///////////

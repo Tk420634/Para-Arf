@@ -877,10 +877,16 @@
 	vend_delay = 34
 	icon_state = "cigs"
 	products = list(/obj/item/weapon/storage/fancy/cigarettes = 5,/obj/item/weapon/storage/fancy/cigarettes/cigpack_uplift = 3,/obj/item/weapon/storage/fancy/cigarettes/cigpack_robust = 2,/obj/item/weapon/storage/fancy/cigarettes/cigpack_carp = 3,/obj/item/weapon/storage/fancy/cigarettes/cigpack_midori = 1,/obj/item/weapon/reagent_containers/food/pill/patch/nicotine = 10, /obj/item/weapon/storage/box/matches = 10,/obj/item/weapon/lighter/random = 4,/obj/item/weapon/storage/fancy/rollingpapers = 5,/obj/item/weapon/lighter/zippo = 2,
-	/obj/item/weapon/lighter/zippo/arf_rep = 2, /obj/item/weapon/lighter/zippo/blue = 2, /obj/item/weapon/lighter/zippo/black = 2, /obj/item/weapon/lighter/zippo/engraved = 2,/obj/item/weapon/lighter/zippo/gonzo = 2, /obj/item/weapon/lighter/zippo/rugged = 2, /obj/item/weapon/lighter/zippo/cosmic =2)
+	/obj/item/weapon/lighter/zippo/arf_rep = 2, /obj/item/weapon/lighter/zippo/blue = 2, /obj/item/weapon/lighter/zippo/black = 2, /obj/item/weapon/lighter/zippo/engraved = 2,/obj/item/weapon/lighter/zippo/gonzo = 2, /obj/item/weapon/lighter/zippo/rugged = 2, /obj/item/weapon/lighter/zippo/cosmic =2,
+	/obj/item/weapon/lighter/zippo/moffzippo = 2, /obj/item/weapon/lighter/zippo/red = 2,
+	/obj/item/weapon/lighter/zippo/ironiczippo = 2, /obj/item/weapon/lighter/zippo/rainbowzippo = 2, /obj/item/weapon/lighter/zippo/royalzippo = 2,
+	/obj/item/weapon/lighter/zippo/commiezippo =2)
 	premium = list(/obj/item/clothing/mask/cigarette/cigar/havana = 2,/obj/item/weapon/storage/fancy/cigarettes/cigpack_robustgold = 1)
 	prices = list(/obj/item/weapon/storage/fancy/cigarettes = 60,/obj/item/weapon/storage/fancy/cigarettes/cigpack_uplift = 60,/obj/item/weapon/storage/fancy/cigarettes/cigpack_robust = 60,/obj/item/weapon/storage/fancy/cigarettes/cigpack_carp = 60,/obj/item/weapon/storage/fancy/cigarettes/cigpack_midori = 60,/obj/item/weapon/reagent_containers/food/pill/patch/nicotine = 15, /obj/item/weapon/storage/box/matches = 10,/obj/item/weapon/lighter/random = 60, /obj/item/weapon/storage/fancy/rollingpapers = 20,
-	/obj/item/weapon/lighter/zippo = 100,/obj/item/weapon/lighter/zippo/arf_rep = 100, /obj/item/weapon/lighter/zippo/blue = 100, /obj/item/weapon/lighter/zippo/black = 100, /obj/item/weapon/lighter/zippo/engraved = 100,/obj/item/weapon/lighter/zippo/gonzo = 100, /obj/item/weapon/lighter/zippo/rugged = 100, /obj/item/weapon/lighter/zippo/cosmic =100)
+	/obj/item/weapon/lighter/zippo = 100,/obj/item/weapon/lighter/zippo/arf_rep = 100, /obj/item/weapon/lighter/zippo/blue = 100, /obj/item/weapon/lighter/zippo/black = 100, /obj/item/weapon/lighter/zippo/engraved = 100,/obj/item/weapon/lighter/zippo/gonzo = 100, /obj/item/weapon/lighter/zippo/rugged = 100, /obj/item/weapon/lighter/zippo/cosmic =100,
+	/obj/item/weapon/lighter/zippo/moffzippo = 100, /obj/item/weapon/lighter/zippo/red = 100,
+	/obj/item/weapon/lighter/zippo/ironiczippo = 100, /obj/item/weapon/lighter/zippo/rainbowzippo = 100, /obj/item/weapon/lighter/zippo/royalzippo = 100,
+	/obj/item/weapon/lighter/zippo/commiezippo = 100)
 	refill_canister = /obj/item/weapon/vending_refill/cigarette
 
 /obj/machinery/vending/cigarette/New()
