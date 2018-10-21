@@ -10,6 +10,7 @@ z4 = engineering ship
 z5 = mining
 z6 = russian derelict
 z7 = empty
+z8 = Science Outpost
 */
 
 #if !defined(MAP_FILE)
@@ -21,6 +22,7 @@ z7 = empty
         #include "map_files\generic\z5.dmm"
         #include "map_files\dallus\z6.dmm"
         #include "map_files\generic\z7.dmm"
+        #include "map_files\dallus\z8.dmm"
 
         #define MAP_FILE "dallus.dmm"
         #define MAP_NAME "Dallus"
