@@ -1423,3 +1423,20 @@
 	component_parts += new /obj/item/weapon/vending_refill/crittercare(0)
 	component_parts += new /obj/item/weapon/vending_refill/crittercare(0)
 	component_parts += new /obj/item/weapon/vending_refill/crittercare(0)
+
+//Donut Vendor
+
+/obj/machinery/vending/donut
+	name = "\improper Donut Vendor"
+	slogan_delay = 18000
+	desc = "A vending machine for dispensing donuts! Yum!"
+//	product_slogans = "Aren't you glad you don't have to fertilize the natural way?;Now with 50% less stink!;Plants are people too!"
+//	product_ads = "We like plants!;Don't you want some?;The greenest thumbs ever.;We like big plants.;Soft soil..."
+	icon_state = "Donut"
+	icon_deny = "Donut-deny"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/donut = 20, /obj/item/weapon/reagent_containers/food/snacks/donut/sprinkles = 20,
+	/obj/item/weapon/reagent_containers/food/snacks/donut/jelly = 20)
+	prices = list(/obj/item/weapon/reagent_containers/food/snacks/donut = 10, /obj/item/weapon/reagent_containers/food/snacks/donut/sprinkles = 10,
+	/obj/item/weapon/reagent_containers/food/snacks/donut/jelly = 20)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/donut/chaos = 1)
+
