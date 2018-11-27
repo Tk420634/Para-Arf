@@ -1025,3 +1025,10 @@
 	desc = "A heavily armored, advanced space suit that protects against most forms of damage. This one looks made of cheap plastic."
 	icon_state = "deathsquad"
 	item_state = "swat_suit"
+
+//Making the strapon a suit cause I couldn't find the belts. Fuck it.
+
+/obj/item/clothing/suit/strapon
+	name = "Canine Strapon"
+	icon_state = "strapon"
+	item_state = "strapon"
