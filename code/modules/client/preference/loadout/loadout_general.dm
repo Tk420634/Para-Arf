@@ -237,3 +237,20 @@
 	display_name = "Commie Zippo"
 	path = "/obj/item/weapon/lighter/zippo/commiezippo"
 	cost = 5
+
+//Flasks
+/datum/gear/flask/thermos
+	display_name = "vintage thermos"
+	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/thermos"
+	cost = 5
+
+/datum/gear/flask/hand_made
+	display_name = "handmade flask"
+	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/hand_made"
+	cost = 5
+
+
+/datum/gear/flask/bar
+	display_name = "bar flask"
+	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/barflask"
+	cost = 5
