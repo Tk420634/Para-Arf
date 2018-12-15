@@ -1028,7 +1028,12 @@
 
 //Making the strapon a suit cause I couldn't find the belts. Fuck it.
 
-/obj/item/clothing/suit/strapon
+/obj/item/clothing/suit/strapon/canine
 	name = "Canine Strapon"
 	icon_state = "strapon"
 	item_state = "strapon"
+
+/obj/item/clothing/suit/strapon/equine
+	name = "Equine Strapon"
+	icon_state = "strapon1"
+	item_state = "strapon1"
