@@ -123,3 +123,12 @@
 	w_class = 2.0
 	var/cooldown = 0
 
+//NESgamer190
+/obj/item/weapon/reagent_containers/food/drinks/flask/cryo
+	name = "cryo flask"
+	desc = "A dary grey flask with purple lights running up and down the side of it. While it is ment to resemble a cryo beaker, it does not have the ability of it."
+	icon_state = "cryoflask"
+	materials = list(MAT_METAL=250)
+	volume = 60
+
+
