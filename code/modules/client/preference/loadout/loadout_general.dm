@@ -254,3 +254,8 @@
 	display_name = "bar flask"
 	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/barflask"
 	cost = 5
+
+/datum/gear/flask/cryo
+	display_name = "cryo flask"
+	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/cryo"
+	cost = 5
