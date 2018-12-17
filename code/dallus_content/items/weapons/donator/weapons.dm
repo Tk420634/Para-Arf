@@ -1,8 +1,8 @@
 	//Killbow
 
 /obj/item/weapon/killbowstaff
-	name = "Staff of Arroganaza"
-	desc = "A red glare is in its eyes, it seems to be a staff made in the shape of a cobra and it looks alive."
+	name = "S.I.N. Leader Staff"
+	desc = "An Arf Representative cane modified to sport the classic SIN style, custom made it shows some buttons on the side and seems to spark with power."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "killbow_staff"
 	item_state = "killbow_staff"
