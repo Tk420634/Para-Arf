@@ -207,3 +207,55 @@
 	display_name = "Cosmic Zippo"
 	path = "/obj/item/weapon/lighter/zippo/cosmic"
 	cost = 5
+
+/datum/gear/moffzippo
+	display_name = "Moff Zippo"
+	path = "/obj/item/weapon/lighter/zippo/moffzippo"
+	cost = 5
+
+/datum/gear/redzippo
+	display_name = "Red Zippo"
+	path = "/obj/item/weapon/lighter/zippo/redzippo"
+	cost = 5
+
+/datum/gear/ironiczippo
+	display_name = "Ironic Zippo"
+	path = "/obj/item/weapon/lighter/zippo/ironiczippo"
+	cost = 5
+
+/datum/gear/rainbowzippo
+	display_name = "Rainbow Zippo"
+	path = "/obj/item/weapon/lighter/zippo/rainbowzippo"
+	cost = 5
+
+/datum/gear/royalzippo
+	display_name = "Royal Zippo"
+	path = "/obj/item/weapon/lighter/zippo/royalzippo"
+	cost = 5
+
+/datum/gear/commiezippo
+	display_name = "Commie Zippo"
+	path = "/obj/item/weapon/lighter/zippo/commiezippo"
+	cost = 5
+
+//Flasks
+/datum/gear/flask/thermos
+	display_name = "vintage thermos"
+	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/thermos"
+	cost = 5
+
+/datum/gear/flask/hand_made
+	display_name = "handmade flask"
+	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/hand_made"
+	cost = 5
+
+
+/datum/gear/flask/bar
+	display_name = "bar flask"
+	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/barflask"
+	cost = 5
+
+/datum/gear/flask/cryo
+	display_name = "cryo flask"
+	path = "/obj/item/weapon/reagent_containers/food/drinks/flask/cryo"
+	cost = 5

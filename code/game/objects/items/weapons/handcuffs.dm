@@ -115,6 +115,7 @@
 	name = "fluffy pink handcuffs"
 	desc = "Use this to keep prisoners in line. Or you know, your significant other."
 	icon_state = "pinkcuffs"
+	breakouttime = 5
 
 /obj/item/weapon/restraints/handcuffs/cable/attackby(var/obj/item/I, mob/user as mob, params)
 	..()

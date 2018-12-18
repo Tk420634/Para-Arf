@@ -589,6 +589,10 @@
 	display_name = "amish suit"
 	path = /obj/item/clothing/under/sl_suit
 
-/datum/gear/uniform/amishsuit
-	display_name = "amish suit"
-	path = /obj/item/clothing/under/sl_suit
+/datum/gear/uniform/sinsuit
+	display_name = "S.I.N. Suit"
+	path = /obj/item/clothing/under/sinsuit
+
+/datum/gear/uniform/emfsuit
+	display_name = "E.M.F. Suit"
+	path = /obj/item/clothing/under/emfsuit

@@ -76,7 +76,7 @@
 	species_restricted = list("Dragon")
 	sprite_sheets = list("Dragon" = 'icons/mob/species/dragon/feet.dmi')
 
-/*
+
 
 	//Gozulio
 /obj/item/clothing/suit/radiation/gozu
@@ -84,7 +84,7 @@
 	desc = "An A.R.F. Engineering Corp officers radiation suit, for working around hazardous radioactive materials. This one has \"Glitterpaws\" writen on its back and with A.R.F. Insignia on its front"
 	icon_state = "gozrad"
 	item_state = "gozrad"
-*/
+
 	//Malmarrisa
 /obj/item/clothing/under/hunter
 	name = "hunting outfit"
@@ -96,8 +96,8 @@
 
 
 	//Killbow
-/obj/item/clothing/under/arroganza
-	name = "arroganza"
+/obj/item/clothing/under/killbow
+	name = "S.I.N. Leader Suit"
 	desc = ""
 	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
 	icon_state = "arroganza"

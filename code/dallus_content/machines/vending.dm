@@ -12,7 +12,8 @@
 		/obj/item/weapon/sextoy/dildo/purpledong=4,/obj/item/weapon/sextoy/dildo/bigblackdick=4,
 		/obj/item/weapon/sextoy/dildo/floppydick=4,/obj/item/weapon/sextoy/dildo/bulletvibe=4,
 		/obj/item/weapon/sextoy/dildo/fleshlight=2,/obj/item/weapon/sextoy/dildo/analbeads=2,
-		/obj/item/clothing/under/birthdaysuit=5,/obj/item/clothing/under/nuditypermit=5)
+		/obj/item/clothing/under/birthdaysuit=5,/obj/item/clothing/under/nuditypermit=5,
+		/obj/item/clothing/suit/strapon = 5, /obj/item/clothing/suit/strapon/equine=5)
 //	prices = list(/obj/item/clothing/under/nuditypermit=500)  Cactus please why u do dis  ~TK
 
 /obj/machinery/vending/thingpony/toy

@@ -1158,7 +1158,7 @@
 	path = /mob/living/carbon/human/hellhound
 	language = "Sol Common"
 	tail = "helltail"
-	species_traits = list(LIPS, IS_WHITELISTED)
+	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
 	dietflags = DIET_OMNI
