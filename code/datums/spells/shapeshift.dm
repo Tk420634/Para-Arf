@@ -80,3 +80,14 @@
 	list/current_shapes = list(/mob/living/simple_animal/hostile/megafauna/dragon/lesser)
 	list/current_casters = list()
 	list/possible_shapes = list(/mob/living/simple_animal/hostile/megafauna/dragon/lesser)
+
+/obj/effect/proc_holder/spell/targeted/shapeshift/eevee
+	name = "Pokemon Form"
+	desc = "Take on the shape of an eevee"
+	invocation = "none"
+	invocation_type = "none"
+
+	shapeshift_type = /mob/living/simple_animal/pokemon/eevee
+	list/current_shapes = list(/mob/living/simple_animal/pokemon/eevee)
+	list/current_casters = list()
+	list/possible_shapes = list(/mob/living/simple_animal/pokemon/eevee)

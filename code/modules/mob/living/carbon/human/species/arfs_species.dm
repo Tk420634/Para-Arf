@@ -824,6 +824,12 @@
 	female_scream_sound = 'sound/misc/arf_race_sounds/eevee1.ogg'
 	reagent_tag = PROCESS_ORG
 
+/datum/species/eevee/handle_post_spawn(var/mob/living/carbon/human/H)
+	spawn(10)
+		if(H.mind && is_admin(H) && H.mind.spell_list.len == 0)
+			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/eevee)
+	..()
+
 /datum/species/elephant
 	name = "Elephant"
 	name_plural = "Elephants"
