@@ -405,10 +405,11 @@
 		to_chat(belly_target.owner, "<span class='notice'>[prey] tastes of [prey.get_taste_message(0)].</span>")
 
 	// Inform Admins
-	if (pred == user)
-		message_admins("[key_name(pred)] ate [key_name(prey)]. ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
-	else
-		message_admins("[key_name(user)] forced [key_name(pred)] to eat [key_name(prey)]. ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+	if (prey.mind != null)
+		if (pred == user)
+			message_admins("[key_name(pred)] ate [key_name(prey)]. ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+		else
+			message_admins("[key_name(user)] forced [key_name(pred)] to eat [key_name(prey)]. ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
 	return 1
 
 //
@@ -529,7 +530,8 @@
 		to_chat(belly_target.owner, "<span class='notice'>[prey] tastes of [prey.get_taste_message(0)].</span>")
 
 	// Inform Admins
-	if (pred == user)
-		message_admins("[key_name(pred)] ate [key_name(prey)] via dropnom/slime feeding!. ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
-	else
-		message_admins("[key_name(user)] forced [key_name(pred)] to eat [key_name(prey)] via dropnoms/slime feeding!! ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+	if (prey.mind != null)
+		if (pred == user)
+			message_admins("[key_name(pred)] ate [key_name(prey)] via dropnom/slime feeding!. ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+		else
+			message_admins("[key_name(user)] forced [key_name(pred)] to eat [key_name(prey)] via dropnoms/slime feeding!! ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
