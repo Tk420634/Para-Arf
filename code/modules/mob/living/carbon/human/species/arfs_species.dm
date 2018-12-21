@@ -812,7 +812,7 @@
 	path = /mob/living/carbon/human/eevee
 	language = "Sol Common"
 	tail = "eeveetail"
-	species_traits = list(IS_WHITELISTED, LIPS)
+	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
