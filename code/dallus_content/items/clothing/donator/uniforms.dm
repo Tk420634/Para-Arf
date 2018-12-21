@@ -96,8 +96,8 @@
 
 
 	//Killbow
-/obj/item/clothing/under/arroganza
-	name = "arroganza"
+/obj/item/clothing/under/killbow
+	name = "S.I.N. Leader Suit"
 	desc = ""
 	icon = 'code/dallus_content/icons/custom-items-arf.dmi'
 	icon_state = "arroganza"
