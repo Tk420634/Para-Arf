@@ -126,6 +126,13 @@
 	icon = 'icons/obj/kinky.dmi'
 	attack_verb = list("fucked", "probed", "violated", "teased", "prodded",)
 
+/obj/item/weapon/sextoy/ChemicalsKit
+	name = "Chemical Kit"
+	desc = "This sketchy box contains a series of chemicals contained in colorful syringes. The chemicals are said to be highly dangerous for the normal people and the usage is highly illegal. Though for some reason its still in the kinkmate."
+	icon = 'icons/obj/kinky.dmi'
+	item_state = "ChemicalsKit"
+	icon_state = "ChemicalsKit"
+
 
 /*
 /obj/item/weapon/killbowstaff
