@@ -6,6 +6,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "killbow_staff"
 	item_state = "killbow_staff"
+	force = 10
 	attack_verb = list("mesmerizes")
 
 	//Cebutris
