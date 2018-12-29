@@ -186,15 +186,16 @@
 
 	resting = !resting
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
+	update_icons()
 	update_canmove()
 
-/mob/living/simple_animal/pokemon/proc/update_icon()
+/mob/living/simple_animal/pokemon/update_icons()
 	if(stat == DEAD)
 		if(icon_dead)
 			icon_state = icon_dead
 		else
 			icon_state = "[initial(icon_state)]_d"
-	else if(lying || resting || sleeping)
+	else if(resting || sleeping || lying)
 		icon_state = "[icon_state]_rest"
 	else
 		icon_state = "[icon_living]"
@@ -202,6 +203,7 @@
 
 /mob/living/simple_animal/pokemon/New()
 	..()
+	update_icons()
 	verbs += /mob/living/simple_animal/pokemon/proc/simple_lay_down
 
 /*
