@@ -1,11 +1,12 @@
 	//Killbow
 
-/obj/item/weapon/killbowstaff
+/obj/item/weapon/melee/classic_baton/killbow
 	name = "S.I.N. Leader Staff"
 	desc = "An Arf Representative cane modified to sport the classic SIN style, custom made it shows some buttons on the side and seems to spark with power."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "killbow_staff"
 	item_state = "killbow_staff"
+	force = 10
 	attack_verb = list("mesmerizes")
 
 	//Cebutris
