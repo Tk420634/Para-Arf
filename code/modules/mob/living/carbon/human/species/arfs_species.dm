@@ -242,6 +242,9 @@
 /mob/living/carbon/human/sergal/New(var/new_loc)
     ..(new_loc, "Sergal")
 
+/mob/living/carbon/human/seviper/New(var/new_loc)
+    ..(new_loc, "Seviper")
+
 /mob/living/carbon/human/shark/New(var/new_loc)
     ..(new_loc, "Shark")
 
@@ -1860,6 +1863,24 @@
 	species_traits = list(LIPS)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL | HAS_SKIN_COLOR
+	dietflags = DIET_OMNI
+	unarmed_type = /datum/unarmed_attack/punch
+	blurb = "Placeholder."
+	reagent_tag = PROCESS_ORG
+
+//NESgamer's 2018 giveaway race
+/datum/species/seviper
+	name = "Seviper"
+	name_plural = "Sevipers"
+	icobase = 'icons/mob/human_races/ARF Races/r_seviper_arf.dmi'
+	deform = 'icons/mob/human_races/ARF Races/r_seviper_arf.dmi'
+	primitive_form = "Zangoose"
+	path = /mob/living/carbon/human/seviper
+	language = "Sol Common"
+	tail = "sevipertail"
+	species_traits = list(LIPS)
+	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
+	bodyflags =  HAS_BODY_MARKINGS | HAS_TAIL
 	dietflags = DIET_OMNI
 	unarmed_type = /datum/unarmed_attack/punch
 	blurb = "Placeholder."
