@@ -208,3 +208,8 @@
 /datum/gear/accessory/watch
 	display_name = "watch"
 	path = /obj/item/clothing/accessory/watch
+
+//Masks
+/datum/gear/accessory/mask/jackmask
+	display_name = "jack mask"
+	path = /obj/item/clothing/mask/breath/jackmask
