@@ -714,5 +714,5 @@ datum/body_accessory/tail/foxtail
 
 /datum/body_accessory/tail/seviper
 	name = "Seviper tail"
-	icon_state = "sevipertail"
+	icon_state = "seviper"
 	icon = 'icons/effects/species.dmi'
