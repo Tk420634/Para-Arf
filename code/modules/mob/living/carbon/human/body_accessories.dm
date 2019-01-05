@@ -177,6 +177,15 @@ var/global/list/body_accessory_by_species = list("None" = null)
 
 	pixel_x_offset = -16
 
+/datum/body_accessory/body/seviper
+	name = "Seviper Taur Body"
+
+	icon = 'icons/mob/body_accessory_64.dmi'
+	icon_state = "seviper"
+
+	pixel_x_offset = -16
+
+
 
 //Tails
 /datum/body_accessory/tail
@@ -703,5 +712,7 @@ datum/body_accessory/tail/foxtail
 	icon_state = "nine_tails"
 	icon = 'icons/effects/species.dmi'
 
-
-
+/datum/body_accessory/tail/seviper
+	name = "Seviper tail"
+	icon_state = "sevipertail"
+	icon = 'icons/effects/species.dmi'
