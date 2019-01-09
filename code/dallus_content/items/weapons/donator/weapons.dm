@@ -124,7 +124,7 @@
 	w_class = 2.0
 	var/cooldown = 0
 
-//NESgamer190
+//NESgamer190 giveaway item
 /obj/item/weapon/reagent_containers/food/drinks/flask/cryo
 	name = "cryo flask"
 	desc = "A dary grey flask with purple lights running up and down the side of it. While it is ment to resemble a cryo beaker, it does not have the ability of it."
@@ -132,4 +132,9 @@
 	materials = list(MAT_METAL=250)
 	volume = 60
 
-
+//Dropshotz giveaway item
+/obj/item/weapon/reagent_containers/food/drinks/coffee/bluespace
+	name = "A blucepace cup of coffee"
+	desc = "Careful, the beverage you're about to enjoy is extremely hot."
+	icon_state = "bluespace_coffee"
+	list_reagents = list("coffee" = 9000) //Don't actually know how to make bluespace, so 9000 seems like a good number to make "endless"

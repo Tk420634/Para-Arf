@@ -141,3 +141,18 @@
 	icon_state = "cwhiteskirt"
 	item_state = "cwhiteskirt"
 	item_color = "cwhiteskirt"
+
+//Giveaway item for TheAmazingDaito
+/obj/item/clothing/under/tron/female
+	name = "female tron uniform"
+	desc = "A tron style uniform made to fit the female form."
+	icon_state = "tron_f"
+	item_state = "tron_f"
+	item_color = "tron_f"
+
+/obj/item/clothing/under/tron/male
+	name = "male tron uniform"
+	desc = "A tron style uniform made to fit the male form"
+	icon_state = "tron_m"
+	item_state = "tron_m"
+	item_color = "tron_m"
