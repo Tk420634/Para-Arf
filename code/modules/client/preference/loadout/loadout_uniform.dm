@@ -596,3 +596,11 @@
 /datum/gear/uniform/emfsuit
 	display_name = "E.M.F. Suit"
 	path = /obj/item/clothing/under/emfsuit
+
+/datum/gear/uniform/tron/female
+	display_name = "female tron uniform"
+	path = /obj/item/clothing/under/tron/female
+
+/datum/gear/uniform/tron/male
+	display_name = "male tron uniform"
+	path = /obj/item/clothing/under/tron/male

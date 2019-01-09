@@ -172,6 +172,7 @@
 /datum/gear/normalzippo
 	display_name = "Zippo"
 	path = "/obj/item/weapon/lighter/zippo"
+	cost =  5
 
 /datum/gear/arfzippo
 	display_name = "A.R.F. Zippo"
