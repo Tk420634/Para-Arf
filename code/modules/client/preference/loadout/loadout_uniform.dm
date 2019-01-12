@@ -604,3 +604,7 @@
 /datum/gear/uniform/tron/male
 	display_name = "male tron uniform"
 	path = /obj/item/clothing/under/tron/male
+
+/datum/gear/uniform/crystal
+	display_name = "bikni loincloth"
+	path = /obj/item/clothing/under/crystal
