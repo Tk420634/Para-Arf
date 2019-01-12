@@ -156,3 +156,11 @@
 	icon_state = "tron_m"
 	item_state = "tron_m"
 	item_color = "tron_m"
+
+//Giveaway item for Whovain
+/obj/item/clothing/under/crystal
+	name = "bikni loincloth"
+	desc = "A cream colored loincloth with matching bra."
+	icon_state = "crystal"
+	item_state = "crystal"
+	item_color = "crystal"
