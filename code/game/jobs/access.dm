@@ -112,8 +112,20 @@ var/const/access_trade_sol = 160
 /obj/var/list/req_one_access = null
 /obj/var/req_one_access_txt = "0"
 
+//ARFS Dallus Edit
+//Only this ckey has access. Disabled functionality if set to null
+/obj/var/req_ckey = null
+
 //returns 1 if this mob has sufficient access to use this object
 /obj/proc/allowed(mob/M)
+
+	//ARFS Dallus Edit
+	//Check if it's a ckey restricted access first
+	if(req_ckey)
+		if(req_ckey == M.key) //req_ckey isn't null or 0 and mob's ckey matches req_ckey
+			return 1
+		return 0 //req_ckey is an override for usual access
+
 	//check if we don't require any access at all
 	if(check_access())
 		return 1
