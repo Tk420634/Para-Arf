@@ -175,9 +175,9 @@ var/list/event_last_fired = list()
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Anomaly",		/datum/event/anomaly/anomaly_bluespace,	75,		list(ASSIGNMENT_ENGINEER = 25)),
 	//	new /datum/event_meta(EVENT_LEVEL_MODERATE, "Flux Anomaly",				/datum/event/anomaly/anomaly_flux,		75,		list(ASSIGNMENT_ENGINEER = 50)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravitational Anomaly",	/datum/event/anomaly/anomaly_grav,		200),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Revenant", 				/datum/event/revenant, 					150),
+	//	new /datum/event_meta(EVENT_LEVEL_MODERATE, "Revenant", 				/datum/event/revenant, 					150),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Swarmer Spawn", 			/datum/event/spawn_swarmer, 			0, is_one_shot = 1),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Morph Spawn", 				/datum/event/spawn_morph, 				0, is_one_shot = 1),
+	//	new /datum/event_meta(EVENT_LEVEL_MODERATE, "Morph Spawn", 				/datum/event/spawn_morph, 				0, is_one_shot = 1),
 		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disease Outbreak",			/datum/event/disease_outbreak, 			0,		list(ASSIGNMENT_MEDICAL = 150), 1)
 	)
 
@@ -189,7 +189,7 @@ var/list/event_last_fired = list()
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,	0,			list(ASSIGNMENT_ANY = 5)),
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",			/datum/event/blob, 				0,	is_one_shot = 1),
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Wave",		/datum/event/meteor_wave,		0,						list(ASSIGNMENT_ENGINEER =  5),	1),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Abductor Visit",	/datum/event/abductor, 		    80, is_one_shot = 1),
+		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Abductor Visit",	/datum/event/abductor, 		    80, is_one_shot = 1),
 		//new /datum/event_meta/alien(EVENT_LEVEL_MAJOR, "Alien Infestation",	/datum/event/alien_infestation, 		0,		list(ASSIGNMENT_SECURITY = 15), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Traders",			/datum/event/traders,			0, is_one_shot = 1)
 		/*new /datum/event_meta(EVENT_LEVEL_MAJOR, "Terror Spiders",			/datum/event/spider_terror, 		0,			list(ASSIGNMENT_SECURITY = 15), is_one_shot = 1),
