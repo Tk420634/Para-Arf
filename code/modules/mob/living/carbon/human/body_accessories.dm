@@ -156,7 +156,7 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	name = "Drake Taur Body"
 
 	icon = 'icons/mob/body_accessory_64.dmi'
-	icon_state = "Drake"
+	icon_state = "drake_s"
 
 	pixel_x_offset = -16
 
@@ -165,7 +165,7 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	name = "Big Lizard Tail"
 
 	icon = 'icons/mob/body_accessory_64.dmi'
-	icon_state = "roiz_tail"
+	icon_state = "roiz_tail_s"
 
 	pixel_x_offset = -16
 
@@ -173,7 +173,7 @@ var/global/list/body_accessory_by_species = list("None" = null)
 	name = "Frog Taur Body"
 
 	icon = 'icons/mob/body_accessory_64.dmi'
-	icon_state = "Frog"
+	icon_state = "frog_s"
 
 	pixel_x_offset = -16
 
